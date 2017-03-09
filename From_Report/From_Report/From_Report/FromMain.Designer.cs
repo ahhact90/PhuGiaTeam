@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
+            this.btnMau21 = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // documentViewer1
@@ -40,11 +41,20 @@
             this.documentViewer1.Size = new System.Drawing.Size(1038, 609);
             this.documentViewer1.TabIndex = 0;
             // 
+            // btnMau21
+            // 
+            this.btnMau21.Location = new System.Drawing.Point(12, 110);
+            this.btnMau21.Name = "btnMau21";
+            this.btnMau21.Size = new System.Drawing.Size(102, 41);
+            this.btnMau21.TabIndex = 1;
+            this.btnMau21.Text = "Mẫu 21 BQP";
+            // 
             // FromMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 609);
+            this.Controls.Add(this.btnMau21);
             this.Controls.Add(this.documentViewer1);
             this.Name = "FromMain";
             this.Text = "FromMain";
@@ -55,5 +65,6 @@
         #endregion
 
         private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
+        private DevExpress.XtraEditors.SimpleButton btnMau21;
     }
 }
