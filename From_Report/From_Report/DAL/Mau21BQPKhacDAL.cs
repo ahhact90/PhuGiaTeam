@@ -75,6 +75,14 @@ namespace DAL
             sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
             return ExecuteDataset(sql);
         }
+        public DataSet Select_M21()
+        {
+            var sql = "select * from his_insurance_service_detail_get('2017-01-01 0:0:0|2017-02-28 23:59:59|21|1')";
+            sql = string.Format(sql);
+            return ExecuteDataset(sql);
+
+        }
+
         #endregion
     }
 }

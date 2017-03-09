@@ -44,7 +44,7 @@
             // 
             // btnMau21
             // 
-            this.btnMau21.Location = new System.Drawing.Point(12, 110);
+            this.btnMau21.Location = new System.Drawing.Point(12, 12);
             this.btnMau21.Name = "btnMau21";
             this.btnMau21.Size = new System.Drawing.Size(102, 41);
             this.btnMau21.TabIndex = 1;
