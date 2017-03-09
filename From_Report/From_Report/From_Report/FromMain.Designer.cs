@@ -37,14 +37,14 @@
             this.documentViewer1.IsMetric = false;
             this.documentViewer1.Location = new System.Drawing.Point(0, 0);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(783, 502);
+            this.documentViewer1.Size = new System.Drawing.Size(1038, 609);
             this.documentViewer1.TabIndex = 0;
             // 
             // FromMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 502);
+            this.ClientSize = new System.Drawing.Size(1038, 609);
             this.Controls.Add(this.documentViewer1);
             this.Name = "FromMain";
             this.Text = "FromMain";
