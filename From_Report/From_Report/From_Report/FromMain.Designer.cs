@@ -30,6 +30,7 @@
         {
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.btnMau21 = new DevExpress.XtraEditors.SimpleButton();
+            this.remoteDocumentSource1 = new DevExpress.ReportServer.Printing.RemoteDocumentSource();
             this.SuspendLayout();
             // 
             // documentViewer1
@@ -66,5 +67,6 @@
 
         private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
         private DevExpress.XtraEditors.SimpleButton btnMau21;
+        private DevExpress.ReportServer.Printing.RemoteDocumentSource remoteDocumentSource1;
     }
 }

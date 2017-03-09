@@ -12,6 +12,18 @@ namespace From_Report
 {
     public partial class FromMain : Form
     {
+        #region Variable
+        /// <summary>
+        /// Biến chung
+        /// </summary>
+        DataTable dt = new DataTable();
+        DataSet ds = new DataSet();
+        /// <summary>
+        /// Biến truyền vào Mẫu 21 Khác
+        /// </summary>
+        DAL.Mau21BQPKhacDAL _M21Khac = new DAL.Mau21BQPKhacDAL();
+
+        #endregion
         public FromMain()
         {
             InitializeComponent();
