@@ -82,7 +82,8 @@ namespace From_Report
                 {
                     string exportFilePath = saveDialog.FileName;
                     string fileExtenstion = new FileInfo(exportFilePath).Extension;
-
+                    MessageBox.Show(exportFilePath);
+                    
                     switch (fileExtenstion)
                     {
                         case ".xls":
