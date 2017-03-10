@@ -41,32 +41,91 @@ namespace From_Report
 
         private void btExport_Click(object sender, EventArgs e)
         {
-            //this.gridView1.ExportToXlsx("CV3360.xlsx");           
+            ////this.gridView1.ExportToXlsx("CV3360.xlsx");           
 
-            using (SaveFileDialog sfd = new SaveFileDialog() /*{ Filter = "Excel Workbook|*.xlsx" }*/)
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
-                    MessageBox.Show(path);
-                    string filename_with_ext = Path.GetFileNameWithoutExtension(path); 
-                    FileInfo fi = new FileInfo(path);
-                    string text = fi.Name;
+            //using (SaveFileDialog sfd = new SaveFileDialog() 
+            //        { Filter = "Excel Workbook(*.xlsx)|*.xlsx|All files (*.*)|*.*" 
+            //         // FilterIndex = 2   
+            //        }
 
-                    gridView1.ExportToXlsx(text);
-                   // Thread thread = new Thread(() =>
-                   //{
-                   //    string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
-                   //    MessageBox.Show(path);                       
-                   //    //FileInfo fi = new FileInfo(path);
-                   //    //string text = fi.Name;
-                   //    //MessageBox.Show(text);                      
+            //      )
+            
+            //{
+            //    if (sfd.ShowDialog() == DialogResult.OK)
+            //    {
+            //        string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
+            //        MessageBox.Show(path);
+            //        string filename_with_ext = Path.GetFileNameWithoutExtension(path); 
+            //        FileInfo fi = new FileInfo(path);
+            //        string text = fi.Name;
+            //        MessageBox.Show(text);
+
+            //        gridView1.ExportToXlsx(text);
+            //       // Thread thread = new Thread(() =>
+            //       //{
+            //       //    string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
+            //       //    MessageBox.Show(path);                       
+            //       //    //FileInfo fi = new FileInfo(path);
+            //       //    //string text = fi.Name;
+            //       //    //MessageBox.Show(text);                      
                       
-                   //}
-                   //);
-                   // thread.Start();
-                }
+            //       //}
+            //       //);
+            //       // thread.Start();
+            //    }
 
+            //}
+            using (SaveFileDialog saveDialog = new SaveFileDialog())
+            {
+                saveDialog.Filter = "Excel (2003)(.xls)|*.xls|Excel (2010) (.xlsx)|*.xlsx |RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html";
+                if (saveDialog.ShowDialog() != DialogResult.Cancel)
+                {
+                    string exportFilePath = saveDialog.FileName;
+                    string fileExtenstion = new FileInfo(exportFilePath).Extension;
+
+                    switch (fileExtenstion)
+                    {
+                        case ".xls":
+                            gridView1.ExportToXls(exportFilePath);
+                            break;
+                        case ".xlsx":
+                            gridView1.ExportToXlsx(exportFilePath);
+                            break;
+                        case ".rtf":
+                            gridView1.ExportToRtf(exportFilePath);
+                            break;
+                        case ".pdf":
+                            gridView1.ExportToPdf(exportFilePath);
+                            break;
+                        case ".html":
+                            gridView1.ExportToHtml(exportFilePath);
+                            break;
+                        case ".mht":
+                            gridView1.ExportToMht(exportFilePath);
+                            break;
+                        default:
+                            break;
+                    }
+
+                    if (File.Exists(exportFilePath))
+                    {
+                        try
+                        {
+                            //Try to open the file and let windows decide how to open it.
+                            System.Diagnostics.Process.Start(exportFilePath);
+                        }
+                        catch
+                        {
+                            String msg = "The file could not be opened." + Environment.NewLine + Environment.NewLine + "Path: " + exportFilePath;
+                            MessageBox.Show(msg, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        String msg = "The file could not be saved." + Environment.NewLine + Environment.NewLine + "Path: " + exportFilePath;
+                        MessageBox.Show(msg, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
 
         }
