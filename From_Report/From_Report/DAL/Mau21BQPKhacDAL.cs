@@ -80,9 +80,7 @@ namespace DAL
             var sql = "select * from his_insurance_service_detail_get('2017-01-01 0:0:0|2017-02-28 23:59:59|21|1')";
             sql = string.Format(sql);
             return ExecuteDataset(sql);
-
         }
-
         #endregion
     }
 }
