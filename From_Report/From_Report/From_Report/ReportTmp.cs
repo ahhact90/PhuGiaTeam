@@ -41,40 +41,7 @@ namespace From_Report
 
         private void btExport_Click(object sender, EventArgs e)
         {
-            ////this.gridView1.ExportToXlsx("CV3360.xlsx");           
-
-            //using (SaveFileDialog sfd = new SaveFileDialog() 
-            //        { Filter = "Excel Workbook(*.xlsx)|*.xlsx|All files (*.*)|*.*" 
-            //         // FilterIndex = 2   
-            //        }
-
-            //      )
-            
-            //{
-            //    if (sfd.ShowDialog() == DialogResult.OK)
-            //    {
-            //        string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
-            //        MessageBox.Show(path);
-            //        string filename_with_ext = Path.GetFileNameWithoutExtension(path); 
-            //        FileInfo fi = new FileInfo(path);
-            //        string text = fi.Name;
-            //        MessageBox.Show(text);
-
-            //        gridView1.ExportToXlsx(text);
-            //       // Thread thread = new Thread(() =>
-            //       //{
-            //       //    string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
-            //       //    MessageBox.Show(path);                       
-            //       //    //FileInfo fi = new FileInfo(path);
-            //       //    //string text = fi.Name;
-            //       //    //MessageBox.Show(text);                      
-                      
-            //       //}
-            //       //);
-            //       // thread.Start();
-            //    }
-
-            //}
+           
             using (SaveFileDialog saveDialog = new SaveFileDialog())
             {
                 saveDialog.Filter = "Excel (2003)(.xls)|*.xls|Excel (2010) (.xlsx)|*.xlsx |RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html";
@@ -82,7 +49,7 @@ namespace From_Report
                 {
                     string exportFilePath = saveDialog.FileName;
                     string fileExtenstion = new FileInfo(exportFilePath).Extension;
-                    MessageBox.Show(exportFilePath);
+                    //MessageBox.Show(exportFilePath);
                     
                     switch (fileExtenstion)
                     {
