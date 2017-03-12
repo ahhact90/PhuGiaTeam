@@ -16,7 +16,7 @@ namespace From_Report
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportTmp());
+            Application.Run(new FrmMain());
         }
     }
 }
