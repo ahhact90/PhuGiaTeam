@@ -12,7 +12,7 @@ using System.IO;
 
 namespace From_Report
 {
-    public partial class ReportTmp :  DevExpress.XtraEditors.XtraForm
+    public partial class ReportTmp : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         #region Variable
         /// <summary>
