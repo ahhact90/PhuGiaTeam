@@ -69,6 +69,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,12 +99,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_M21.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\DS_PTTT.cs">
+      <DependentUpon>DS_PTTT.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DS_PTTT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PTTT.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\RptM21Khaccs.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\RptM21Khaccs.Designer.cs">
       <DependentUpon>RptM21Khaccs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Rpt_DS_TT_PT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rpt_DS_TT_PT.Designer.cs">
+      <DependentUpon>Rpt_DS_TT_PT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +146,9 @@
     <EmbeddedResource Include="Report\RptM21Khaccs.resx">
       <DependentUpon>RptM21Khaccs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rpt_DS_TT_PT.resx">
+      <DependentUpon>Rpt_DS_TT_PT.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -141,6 +168,17 @@
     </None>
     <None Include="Report\DS_M21.xss">
       <DependentUpon>DS_M21.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_PTTT.xsc">
+      <DependentUpon>DS_PTTT.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_PTTT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PTTT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_PTTT.xss">
+      <DependentUpon>DS_PTTT.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
