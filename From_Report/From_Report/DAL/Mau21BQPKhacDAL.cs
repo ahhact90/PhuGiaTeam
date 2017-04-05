@@ -89,6 +89,12 @@ namespace DAL
             sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
             return ExecuteQuery(sql);
         }
+        public string tonghop_chiphi_bhyt(long Media)
+        {
+            var sql = "select his_tonghop_chiphi_bhyt({0})";
+            sql = string.Format(sql, Media);
+            return ExecuteQuery(sql).Rows[0][0].ToString(); ;
+        }
         #endregion
     }
 }

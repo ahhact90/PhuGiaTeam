@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBA = new DevExpress.XtraEditors.TextEdit();
             this.btnBhyt = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBA.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // textEdit1
+            // txtBA
             // 
-            this.textEdit1.Location = new System.Drawing.Point(32, 10);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(145, 20);
-            this.textEdit1.TabIndex = 0;
+            this.txtBA.Location = new System.Drawing.Point(32, 10);
+            this.txtBA.Name = "txtBA";
+            this.txtBA.Size = new System.Drawing.Size(145, 20);
+            this.txtBA.TabIndex = 0;
             // 
             // btnBhyt
             // 
@@ -47,24 +47,25 @@
             this.btnBhyt.Size = new System.Drawing.Size(141, 32);
             this.btnBhyt.TabIndex = 1;
             this.btnBhyt.Text = "Tổng hợp BHYT";
+            this.btnBhyt.Click += new System.EventHandler(this.btnBhyt_Click);
             // 
-            // Form1
+            // FrmBHYT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 64);
+            this.ClientSize = new System.Drawing.Size(354, 41);
             this.Controls.Add(this.btnBhyt);
-            this.Controls.Add(this.textEdit1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            this.Controls.Add(this.txtBA);
+            this.Name = "FrmBHYT";
+            this.Text = "Tổng hợp BHYT";
+            ((System.ComponentModel.ISupportInitialize)(this.txtBA.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtBA;
         private DevExpress.XtraEditors.SimpleButton btnBhyt;
     }
 }
