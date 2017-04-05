@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace From_Report
 {
-    public partial class Form1 : Form
+    public partial class FrmBHYT : Form
     {
-        public Form1()
+        public FrmBHYT()
         {
             InitializeComponent();
         }
