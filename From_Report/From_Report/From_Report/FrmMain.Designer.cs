@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBtIt = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBHYT = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -45,7 +45,7 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.barBtIt,
-            this.barButtonItem1});
+            this.barBHYT});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 5;
             this.ribbon.Name = "ribbon";
@@ -63,13 +63,14 @@
             this.barBtIt.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barBtIt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtIt_ItemClick);
             // 
-            // barButtonItem1
+            // barBHYT
             // 
-            this.barButtonItem1.Caption = "Tổng Hợp BHYT";
-            this.barButtonItem1.Glyph = global::From_Report.Properties.Resources._1489554673_ambulance;
-            this.barButtonItem1.Id = 4;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barBHYT.Caption = "Tổng Hợp BHYT";
+            this.barBHYT.Glyph = global::From_Report.Properties.Resources._1489554673_ambulance;
+            this.barBHYT.Id = 4;
+            this.barBHYT.Name = "barBHYT";
+            this.barBHYT.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barBHYT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBHYT_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -88,9 +89,9 @@
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBHYT);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Tổng hợp BHYT";
             // 
             // ribbonStatusBar
             // 
@@ -124,7 +125,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem barBtIt;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barBHYT;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }

@@ -53,6 +53,12 @@ namespace From_Report
             fDichVu.ShowPreview();
         }
 
+        private void barBHYT_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmBHYT fbhyt = new FrmBHYT();
+            fbhyt.Show();
+        }
+
         
     }
 }
