@@ -184,7 +184,66 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Android-Setting.png" />
+    <Content Include="Resources\applyimg.png" />
+    <Content Include="Resources\Bookmaskforder.png" />
+    <Content Include="Resources\btndelete.png" />
+    <Content Include="Resources\btnExit.png" />
+    <Content Include="Resources\capsule.png" />
+    <Content Include="Resources\checklist.png" />
+    <Content Include="Resources\ChecklistFile.png" />
+    <Content Include="Resources\Company.png" />
+    <Content Include="Resources\Control Panel.png" />
+    <Content Include="Resources\cost_icon.png" />
+    <Content Include="Resources\create_key.png" />
+    <Content Include="Resources\database-export.png" />
+    <Content Include="Resources\database_import.png" />
+    <Content Include="Resources\database_refresh.png" />
+    <Content Include="Resources\DiskDelete.png" />
+    <Content Include="Resources\Drugstore.png" />
+    <Content Include="Resources\dvt.png" />
+    <Content Include="Resources\Earth.png" />
+    <Content Include="Resources\file_export.png" />
+    <Content Include="Resources\file_import.png" />
+    <Content Include="Resources\finddata.png" />
+    <Content Include="Resources\Folders.png" />
+    <Content Include="Resources\Gavel.png" />
+    <Content Include="Resources\Gavel_Law.png" />
+    <Content Include="Resources\Gavel_Setting.png" />
+    <Content Include="Resources\hangsx_nuocsx.png" />
+    <Content Include="Resources\Hospital-main.png" />
+    <Content Include="Resources\HospitalRed.png" />
+    <Content Include="Resources\imgExcels.png" />
+    <Content Include="Resources\import_taichinh.png" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\keys.png" />
+    <Content Include="Resources\knewstuff.png" />
+    <Content Include="Resources\Law.png" />
+    <Content Include="Resources\Law1.png" />
+    <Content Include="Resources\Light_Gold.png" />
+    <Content Include="Resources\lock.png" />
+    <Content Include="Resources\medical_tk.png" />
+    <Content Include="Resources\money_tk.png" />
+    <Content Include="Resources\NhomBaoCao.png" />
+    <Content Include="Resources\Notary.png" />
+    <Content Include="Resources\Notepad.png" />
+    <Content Include="Resources\packageEditors.png" />
+    <Content Include="Resources\package_editors.png" />
+    <Content Include="Resources\Reminders.png" />
+    <Content Include="Resources\repass.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\save1.png" />
+    <Content Include="Resources\select_product.png" />
+    <Content Include="Resources\Servicesimg.png" />
+    <Content Include="Resources\Setting.png" />
+    <Content Include="Resources\system_software_update.png" />
+    <Content Include="Resources\Tasklistdelete.png" />
+    <Content Include="Resources\Truck.png" />
+    <Content Include="Resources\unlock.png" />
+    <Content Include="Resources\User Account.png" />
+    <Content Include="Resources\Wordpad.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
