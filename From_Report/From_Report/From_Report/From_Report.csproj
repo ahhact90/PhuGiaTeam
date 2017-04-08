@@ -81,6 +81,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="From CauHinh\FromCauHinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From CauHinh\FromCauHinh.Designer.cs">
+      <DependentUpon>FromCauHinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
