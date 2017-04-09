@@ -8,86 +8,87 @@ using System.Data;
 using System.Drawing;
 using System.Data.OleDb;
 using DevExpress.XtraEditors;
+using DevExpress.Utils;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 
-namespace DauThau.Class
+namespace UTL
 {
     public static class FunctionHelper
     {
         #region Devexpress
-        /// <summary>
-        /// Kiểm tra trùng giá trị của một cột trong Grid, với giá trị input
-        /// </summary>
-        public static Boolean _ValidationSame(this GridView gv, GridColumn colName, string value)
-        {
-            value = value.ToLower();
-            for (int i = 0; i < gv.RowCount; i++)
-            {
-                if (Convert.ToString(gv.GetRowCellValue(i, colName.FieldName) + string.Empty).ToLower() == value && i != gv.FocusedRowHandle)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+        ///// <summary>
+        ///// Kiểm tra trùng giá trị của một cột trong Grid, với giá trị input
+        ///// </summary>
+        //public static Boolean _ValidationSame(this GridView gv, GridColumn colName, string value)
+        //{
+        //    value = value.ToLower();
+        //    for (int i = 0; i < gv.RowCount; i++)
+        //    {
+        //        if (Convert.ToString(gv.GetRowCellValue(i, colName.FieldName) + string.Empty).ToLower() == value && i != gv.FocusedRowHandle)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
 
         /// <summary>
         /// Hiển thị màu cho các dòng thêm, sửa, xóa
         /// </summary>
         /// <param name="p_GridView"></param>
-        public static void _SetDefaultColorRowStyle(this GridView p_GridView)
-        {
+        //public static void _SetDefaultColorRowStyle(this GridView p_GridView)
+        //{
 
 
-            string _addedColor = "-16256";
-            string _modifiedColor = "-128";
-            string _deletedColor = "-64";
+        //    string _addedColor = "-16256";
+        //    string _modifiedColor = "-128";
+        //    string _deletedColor = "-64";
 
 
-            // Nếu mã màu rỗng thì return
-            if (String.IsNullOrEmpty(_addedColor)
-                && String.IsNullOrEmpty(_modifiedColor)
-                && String.IsNullOrEmpty(_deletedColor))
-            {
-                return;
-            }
+        //    // Nếu mã màu rỗng thì return
+        //    if (String.IsNullOrEmpty(_addedColor)
+        //        && String.IsNullOrEmpty(_modifiedColor)
+        //        && String.IsNullOrEmpty(_deletedColor))
+        //    {
+        //        return;
+        //    }
 
-            // Set mã màu cho gridView
-            p_GridView.RowStyle += (sender, e) =>
-            {
-                if (e.RowHandle >= 0)
-                {
-                    var row = p_GridView.GetDataRow(e.RowHandle) as DataRow;
+        //    // Set mã màu cho gridView
+        //    p_GridView.RowStyle += (sender, e) =>
+        //    {
+        //        if (e.RowHandle >= 0)
+        //        {
+        //            var row = p_GridView.GetDataRow(e.RowHandle) as DataRow;
 
-                    //Row null
-                    if (row == null)
-                    {
-                        return;
-                    }
+        //            //Row null
+        //            if (row == null)
+        //            {
+        //                return;
+        //            }
 
-                    // Row added
-                    if (row.RowState == DataRowState.Added
-                        && !String.IsNullOrEmpty(_addedColor))
-                    {
-                        e.Appearance.BackColor = ColorTranslator.FromHtml(_addedColor);
-                    }
-                    // Row modified
-                    else if (row.RowState == DataRowState.Modified
-                        && !String.IsNullOrEmpty(_modifiedColor))
-                    {
-                        e.Appearance.BackColor = ColorTranslator.FromHtml(_modifiedColor);
-                    }
-                }
-            };
+        //            // Row added
+        //            if (row.RowState == DataRowState.Added
+        //                && !String.IsNullOrEmpty(_addedColor))
+        //            {
+        //                e.Appearance.BackColor = ColorTranslator.FromHtml(_addedColor);
+        //            }
+        //            // Row modified
+        //            else if (row.RowState == DataRowState.Modified
+        //                && !String.IsNullOrEmpty(_modifiedColor))
+        //            {
+        //                e.Appearance.BackColor = ColorTranslator.FromHtml(_modifiedColor);
+        //            }
+        //        }
+        //    };
 
-            // Row deleted
-            if (p_GridView.FormatConditions["Deleted"] != null)
-            {
-                p_GridView.FormatConditions["Deleted"].Appearance.BackColor =
-                    ColorTranslator.FromHtml(_deletedColor);
-            }
-        }  
+        //    // Row deleted
+        //    if (p_GridView.FormatConditions["Deleted"] != null)
+        //    {
+        //        p_GridView.FormatConditions["Deleted"].Appearance.BackColor =
+        //            ColorTranslator.FromHtml(_deletedColor);
+        //    }
+        //}  
         #endregion
           
         #region Convert Number To String

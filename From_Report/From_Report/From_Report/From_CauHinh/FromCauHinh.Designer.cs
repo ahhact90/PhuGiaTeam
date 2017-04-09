@@ -40,6 +40,7 @@
             this.txtServer = new DevExpress.XtraEditors.TextEdit();
             this.btOk = new DevExpress.XtraEditors.SimpleButton();
             this.btCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.txtHost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPort.Properties)).BeginInit();
@@ -189,5 +190,6 @@
         private DevExpress.XtraEditors.TextEdit txtServer;
         private DevExpress.XtraEditors.SimpleButton btOk;
         private DevExpress.XtraEditors.SimpleButton btCancel;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
     }
 }
