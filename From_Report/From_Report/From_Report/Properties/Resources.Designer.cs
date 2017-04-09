@@ -73,6 +73,16 @@ namespace From_Report.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Android_Setting {
+            get {
+                object obj = ResourceManager.GetObject("Android-Setting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChecklistFile {
             get {
                 object obj = ResourceManager.GetObject("ChecklistFile", resourceCulture);

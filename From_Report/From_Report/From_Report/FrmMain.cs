@@ -59,6 +59,12 @@ namespace From_Report
             fbhyt.Show();
         }
 
+        private void barbtnSetting_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            From_CauHinh.FromCauHinh fsetting = new From_CauHinh.FromCauHinh();
+            fsetting.Show();
+        }
+
         
     }
 }

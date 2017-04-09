@@ -81,10 +81,10 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="From CauHinh\FromCauHinh.cs">
+    <Compile Include="From_CauHinh\FromCauHinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From CauHinh\FromCauHinh.Designer.cs">
+    <Compile Include="From_CauHinh\FromCauHinh.Designer.cs">
       <DependentUpon>FromCauHinh.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
@@ -132,7 +132,7 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From CauHinh\FromCauHinh.resx">
+    <EmbeddedResource Include="From_CauHinh\FromCauHinh.resx">
       <DependentUpon>FromCauHinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
