@@ -136,6 +136,7 @@
             this.btOk.Size = new System.Drawing.Size(89, 32);
             this.btOk.TabIndex = 6;
             this.btOk.Text = "OK";
+            this.btOk.Click += new System.EventHandler(this.btOk_Click);
             // 
             // btCancel
             // 

@@ -16,5 +16,10 @@ namespace From_Report.From_CauHinh
         {
             InitializeComponent();
         }
+
+        private void btOk_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

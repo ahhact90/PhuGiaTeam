@@ -58,9 +58,9 @@
             this.ribbon.MaxItemId = 10;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage3,
             this.ribbonPage1,
-            this.ribbonPage2,
-            this.ribbonPage3});
+            this.ribbonPage2});
             this.ribbon.Size = new System.Drawing.Size(1282, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -148,15 +148,14 @@
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6});
             this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Cấu Hình";
+            this.ribbonPage3.Text = "Hệ Thống";
             // 
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.AllowTextClipping = false;
             this.ribbonPageGroup6.ItemLinks.Add(this.barbtnSetting);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.ShowCaptionButton = false;
-            this.ribbonPageGroup6.Text = "Cấu Hình Hệ Thống";
+            this.ribbonPageGroup6.Text = "Quản Lý";
             // 
             // ribbonStatusBar
             // 
