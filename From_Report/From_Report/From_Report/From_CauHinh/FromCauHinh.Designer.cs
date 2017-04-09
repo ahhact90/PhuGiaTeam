@@ -41,11 +41,15 @@
             this.btOk = new DevExpress.XtraEditors.SimpleButton();
             this.btCancel = new DevExpress.XtraEditors.SimpleButton();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.txtMa = new DevExpress.XtraEditors.TextEdit();
+            this.txtGiaiMa = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPort.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtServer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGiaiMa.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHost
@@ -146,12 +150,29 @@
             this.btCancel.Size = new System.Drawing.Size(89, 32);
             this.btCancel.TabIndex = 6;
             this.btCancel.Text = "CANCEL";
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
+            // 
+            // txtMa
+            // 
+            this.txtMa.Location = new System.Drawing.Point(535, 39);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(368, 20);
+            this.txtMa.TabIndex = 7;
+            // 
+            // txtGiaiMa
+            // 
+            this.txtGiaiMa.Location = new System.Drawing.Point(535, 98);
+            this.txtGiaiMa.Name = "txtGiaiMa";
+            this.txtGiaiMa.Size = new System.Drawing.Size(368, 20);
+            this.txtGiaiMa.TabIndex = 7;
             // 
             // FromCauHinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 280);
+            this.ClientSize = new System.Drawing.Size(1009, 280);
+            this.Controls.Add(this.txtGiaiMa);
+            this.Controls.Add(this.txtMa);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btOk);
             this.Controls.Add(this.txtServer);
@@ -171,6 +192,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPort.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtServer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGiaiMa.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +214,7 @@
         private DevExpress.XtraEditors.SimpleButton btOk;
         private DevExpress.XtraEditors.SimpleButton btCancel;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private DevExpress.XtraEditors.TextEdit txtMa;
+        private DevExpress.XtraEditors.TextEdit txtGiaiMa;
     }
 }
