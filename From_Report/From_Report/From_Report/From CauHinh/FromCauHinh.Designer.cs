@@ -33,6 +33,18 @@
             this.lbPort = new DevExpress.XtraEditors.LabelControl();
             this.lbUID = new DevExpress.XtraEditors.LabelControl();
             this.lbServer = new DevExpress.XtraEditors.LabelControl();
+            this.txtHost = new DevExpress.XtraEditors.TextEdit();
+            this.txtPass = new DevExpress.XtraEditors.TextEdit();
+            this.txtPort = new DevExpress.XtraEditors.TextEdit();
+            this.txtUid = new DevExpress.XtraEditors.TextEdit();
+            this.txtServer = new DevExpress.XtraEditors.TextEdit();
+            this.btOk = new DevExpress.XtraEditors.SimpleButton();
+            this.btCancel = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPort.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServer.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHost
@@ -80,11 +92,69 @@
             this.lbServer.TabIndex = 4;
             this.lbServer.Text = "Server";
             // 
+            // txtHost
+            // 
+            this.txtHost.Location = new System.Drawing.Point(113, 31);
+            this.txtHost.Name = "txtHost";
+            this.txtHost.Size = new System.Drawing.Size(329, 20);
+            this.txtHost.TabIndex = 5;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(113, 63);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(329, 20);
+            this.txtPass.TabIndex = 5;
+            // 
+            // txtPort
+            // 
+            this.txtPort.Location = new System.Drawing.Point(113, 95);
+            this.txtPort.Name = "txtPort";
+            this.txtPort.Size = new System.Drawing.Size(329, 20);
+            this.txtPort.TabIndex = 5;
+            // 
+            // txtUid
+            // 
+            this.txtUid.Location = new System.Drawing.Point(113, 133);
+            this.txtUid.Name = "txtUid";
+            this.txtUid.Size = new System.Drawing.Size(329, 20);
+            this.txtUid.TabIndex = 5;
+            // 
+            // txtServer
+            // 
+            this.txtServer.Location = new System.Drawing.Point(113, 169);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(329, 20);
+            this.txtServer.TabIndex = 5;
+            // 
+            // btOk
+            // 
+            this.btOk.Location = new System.Drawing.Point(139, 222);
+            this.btOk.Name = "btOk";
+            this.btOk.Size = new System.Drawing.Size(89, 32);
+            this.btOk.TabIndex = 6;
+            this.btOk.Text = "OK";
+            // 
+            // btCancel
+            // 
+            this.btCancel.Location = new System.Drawing.Point(275, 222);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(89, 32);
+            this.btCancel.TabIndex = 6;
+            this.btCancel.Text = "CANCEL";
+            // 
             // FromCauHinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 289);
+            this.ClientSize = new System.Drawing.Size(505, 280);
+            this.Controls.Add(this.btCancel);
+            this.Controls.Add(this.btOk);
+            this.Controls.Add(this.txtServer);
+            this.Controls.Add(this.txtUid);
+            this.Controls.Add(this.txtPort);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtHost);
             this.Controls.Add(this.lbServer);
             this.Controls.Add(this.lbUID);
             this.Controls.Add(this.lbPort);
@@ -92,6 +162,11 @@
             this.Controls.Add(this.lbHost);
             this.Name = "FromCauHinh";
             this.Text = "FromCauHinh";
+            ((System.ComponentModel.ISupportInitialize)(this.txtHost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPort.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtServer.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +179,12 @@
         private DevExpress.XtraEditors.LabelControl lbPort;
         private DevExpress.XtraEditors.LabelControl lbUID;
         private DevExpress.XtraEditors.LabelControl lbServer;
+        private DevExpress.XtraEditors.TextEdit txtHost;
+        private DevExpress.XtraEditors.TextEdit txtPass;
+        private DevExpress.XtraEditors.TextEdit txtPort;
+        private DevExpress.XtraEditors.TextEdit txtUid;
+        private DevExpress.XtraEditors.TextEdit txtServer;
+        private DevExpress.XtraEditors.SimpleButton btOk;
+        private DevExpress.XtraEditors.SimpleButton btCancel;
     }
 }
