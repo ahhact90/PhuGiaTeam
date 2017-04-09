@@ -14,9 +14,7 @@ namespace From_Report.From_CauHinh
 {
     public partial class FromCauHinh : Form
     {
-        public static string _key = "29fa797a-d341-4755-af56-8bf5aa6c9e5d";   
-        //public static string _key = "ARlKSYpaj6s="; 
-        //public static string _key = "123"; 
+        public static string _key = "29fa797a-d341-4755-af56-8bf5aa6c9e5d";        
         public testCDKey e = new testCDKey();
         
         public FromCauHinh()
@@ -39,7 +37,7 @@ namespace From_Report.From_CauHinh
                                                        )
                                           );
             string path = string.Format(@"{0}\Config.xml", folderBrowserDialog.SelectedPath);
-            doc.Save(path);
+            doc.Save(path);            
           
             if (folderBrowserDialog.SelectedPath != string.Empty)
             {
