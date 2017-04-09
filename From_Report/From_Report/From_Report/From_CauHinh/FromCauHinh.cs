@@ -13,7 +13,7 @@ namespace From_Report.From_CauHinh
 {
     public partial class FromCauHinh : Form
     {
-        public static string _key = "MAITHY";
+        public static string _key = "ARlKSYpaj6s=";
         public FromCauHinh()
         {
             InitializeComponent();
