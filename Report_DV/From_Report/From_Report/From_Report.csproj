@@ -84,6 +84,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_CauHinh\FrmReadXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_CauHinh\FrmReadXML.Designer.cs">
+      <DependentUpon>FrmReadXML.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_CauHinh\FromCauHinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From_CauHinh\FrmReadXML.resx">
+      <DependentUpon>FrmReadXML.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_CauHinh\FromCauHinh.resx">
       <DependentUpon>FromCauHinh.cs</DependentUpon>
