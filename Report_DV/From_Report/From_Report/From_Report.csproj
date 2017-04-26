@@ -78,6 +78,12 @@
     <Compile Include="FrmBHYT.Designer.cs">
       <DependentUpon>FrmBHYT.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDMKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDMKT.Designer.cs">
+      <DependentUpon>FrmDMKT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </Compile>
     <EmbeddedResource Include="FrmBHYT.resx">
       <DependentUpon>FrmBHYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDMKT.resx">
+      <DependentUpon>FrmDMKT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
