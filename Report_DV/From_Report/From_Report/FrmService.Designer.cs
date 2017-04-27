@@ -68,7 +68,6 @@
             this.dckPanel.Name = "dckPanel";
             this.dckPanel.OriginalSize = new System.Drawing.Size(200, 461);
             this.dckPanel.Size = new System.Drawing.Size(1066, 461);
-            this.dckPanel.Text = "dockPanel1";
             // 
             // dockPanel1_Container
             // 
@@ -93,6 +92,7 @@
             // 
             this.gridView1.GridControl = this.grdCtrlDM;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // btnExcel
             // 
