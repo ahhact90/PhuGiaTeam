@@ -14,7 +14,8 @@ namespace From_Report.From_CauHinh
 {
     public partial class FromCauHinh : Form
     {
-        public static string _key = "29fa797a-d341-4755-af56-8bf5aa6c9e5d";        
+        public static string _key = "29fa797a-d341-4755-af56-8bf5aa6c9e5d";
+        public static string _key1 = "2010-01-01;TRUONG ANH VU;COD-FWG-674-ECF";
         public testCDKey e = new testCDKey();
         
         public FromCauHinh()
@@ -48,7 +49,7 @@ namespace From_Report.From_CauHinh
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-            txtGiaiMa.Text = this.e.Decrypt(txtMa.Text, _key, true).ToString();           
+            txtGiaiMa.Text = this.e.Decrypt(txtMa.Text, _key1, true).ToString();           
     
         }
     }
