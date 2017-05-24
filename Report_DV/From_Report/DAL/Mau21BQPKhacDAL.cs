@@ -7,7 +7,7 @@ using System.Data;
 
 namespace DAL
 {
-    public class Mau21BQPKhacDAL : BaseDAL, UTL.IBaseDAL
+    public class Mau21BQPKhacDAL :  BaseDAL,UTL.IBaseDAL
     {
         #region Implement
 
@@ -36,7 +36,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public System.Data.DataTable Select()
+        public System.Data.DataTable Select() 
         {
             var sql = "SELECT CASE WHEN b.id IS NOT NULL THEN b.servicename ELSE c.name END As group_name, a.servicename AS name, a.servicegroupline, a.id, c.line, price, insprice FROM hms_service a  LEFT JOIN (SELECT id, servicename FROM hms_service WHERE category = 'GROUP' AND hide = 0) b ON a.servicegroup::integer = b.id  LEFT JOIN (SELECT line, name FROM hms_selection WHERE zone = 'srvcon' AND sector = 'sergrp') c ON SUBSTR(a.accesskey::text,1,2)::integer = c.line  WHERE hide = 0  AND price<>0 ORDER BY CASE WHEN b.id IS NOT NULL THEN b.servicename ELSE c.name END, a.servicename";
             return ExecuteQuery(sql);
@@ -80,6 +80,11 @@ namespace DAL
             throw new NotImplementedException();
         }
 
+        #endregion
+
+        #region Constructors
+        public Mau21BQPKhacDAL() { }
+        public Mau21BQPKhacDAL(string connectString) : base(connectString) { }
         #endregion
 
         #region Mau 21 BQP Khac
