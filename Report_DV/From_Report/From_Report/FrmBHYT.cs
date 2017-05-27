@@ -13,7 +13,8 @@ namespace From_Report
     public partial class FrmBHYT : Form
     {
         #region Variable
-        public static string string1 = "server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS";
+        //public static string string1 = "server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS";
+        public static string string1 = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(string1);
         #endregion
         public FrmBHYT()
