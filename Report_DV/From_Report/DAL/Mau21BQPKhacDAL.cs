@@ -82,12 +82,14 @@ namespace DAL
 
         #endregion
 
-        #region Constructors
-        public Mau21BQPKhacDAL() { }
+
+        #region Contrustor
         public Mau21BQPKhacDAL(string connectString) : base(connectString) { }
         #endregion
 
+
         #region Mau 21 BQP Khac
+
         public DataSet Select_Time(DateTime to, DateTime from)
         {
             var sql = "select * from his_insurance_service_detail_get_bqp_khac('{0}|{1}|21|3')";
