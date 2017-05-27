@@ -21,7 +21,8 @@ namespace From_Report
        
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();
-        DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL();
+        public static string string1 = "server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS";
+        DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(string1);
        
 
         #endregion

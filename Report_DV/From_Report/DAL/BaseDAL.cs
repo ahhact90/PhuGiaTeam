@@ -51,14 +51,14 @@ namespace DAL
         /// <summary>
         /// Constructor
         /// </summary>
-        public BaseDAL()
-        {
-            //Cnn = new NpgsqlConnection(string.Format(DAL.Properties.Settings.Default.Setting)); // default connection string
-            //Cnn = new NpgsqlConnection("server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS");
-            Cnn = new NpgsqlConnection("server = 172.251.110.3; port = 5432; user id = bv121; password = @bv121@ ; Database = HMIS");
-            Cmd = new NpgsqlCommand() { Connection = Cnn };
-            //Da = new NpgsqlDataAdapter();
-        }
+        //public BaseDAL()
+        //{
+        //    //Cnn = new NpgsqlConnection(string.Format(DAL.Properties.Settings.Default.Setting)); // default connection string
+        //    //Cnn = new NpgsqlConnection("server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS");
+        //    Cnn = new NpgsqlConnection("server = 172.251.110.3; port = 5432; user id = bv121; password = @bv121@ ; Database = HMIS");
+        //    Cmd = new NpgsqlCommand() { Connection = Cnn };
+        //    Da = new NpgsqlDataAdapter();
+        //}
 
         public BaseDAL(string connectString)
         {
