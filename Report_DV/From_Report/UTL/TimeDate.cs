@@ -237,6 +237,7 @@ namespace UTL
             return new DateTime(date.Year, date.Month, date.Day, 23, 59, 59, 999);
         }
         #endregion
+
         #region Xulychuoi trong postgrest
 
         public static string getDTValue(DateTime Values)
