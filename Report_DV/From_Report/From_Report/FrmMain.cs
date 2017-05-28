@@ -21,8 +21,8 @@ namespace From_Report
        
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();       
-        public static string string1 = UTL.DataBase.GetConfig();
-        DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(string1);
+        public static string StrConnect = UTL.DataBase.GetConfig();
+        DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
        
 
         #endregion
