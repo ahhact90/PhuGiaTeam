@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
-using System;
 using System.Xml;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +11,6 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Forms;
 
 namespace UTL

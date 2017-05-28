@@ -20,8 +20,7 @@ namespace From_Report
         #region Variable
        
         DataTable dt = new DataTable();
-        DataSet ds = new DataSet();
-        //public static string string1 = "server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS";
+        DataSet ds = new DataSet();       
         public static string string1 = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(string1);
        
