@@ -14,9 +14,12 @@ namespace From_Report.From_CauHinh
 {
     public partial class FromCauHinh : Form
     {
+        #region Varibale
         public static string _key = "29fa797a-d341-4755-af56-8bf5aa6c9e5d";
         public static string _key1 = "2010-01-01;TRUONG ANH VU;COD-FWG-674-ECF";
         public testCDKey e = new testCDKey();
+        #endregion
+        
         
         public FromCauHinh()
         {
