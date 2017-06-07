@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FrmReadXML
+            // FrmMH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 636);
-            this.Name = "FrmReadXML";
-            this.Text = "FrmReadXML";
+            this.Name = "FrmMH";
+            this.Text = "FrmMH";
             this.ResumeLayout(false);
 
         }
