@@ -1,6 +1,6 @@
 ﻿namespace From_Report.From_CauHinh
 {
-    partial class FrmReadXML
+    partial class FrmMH
     {
         /// <summary>
         /// Required designer variable.

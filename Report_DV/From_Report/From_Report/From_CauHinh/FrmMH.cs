@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace From_Report.From_CauHinh
 {
-    public partial class FrmReadXML : Form
+    public partial class FrmMH : Form
     {
-        public FrmReadXML()
+        public FrmMH()
         {
             InitializeComponent();
         }
