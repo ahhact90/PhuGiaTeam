@@ -50,32 +50,32 @@
             this.use_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.creationdate_drug = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.txtDrugName = new DevExpress.XtraEditors.TextEdit();
-            this.txtUsing = new DevExpress.XtraEditors.TextEdit();
-            this.txtDrug = new DevExpress.XtraEditors.TextEdit();
-            this.txtCompont = new DevExpress.XtraEditors.TextEdit();
-            this.txtContent = new DevExpress.XtraEditors.TextEdit();
-            this.txtUnit = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaBV = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaAX = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.txtUseType = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.txtGroup = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSoPhieu = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStock = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.txtCreatdate = new DevExpress.XtraEditors.TextEdit();
+            this.txtStock = new DevExpress.XtraEditors.TextEdit();
+            this.txtSoPhieu = new DevExpress.XtraEditors.TextEdit();
+            this.txtGroup = new DevExpress.XtraEditors.TextEdit();
+            this.txtUseType = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaAX = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaBV = new DevExpress.XtraEditors.TextEdit();
+            this.txtUnit = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.txtContent = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCompont = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDrug = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.txtUsing = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDrugName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -84,19 +84,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCompont.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContent.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaBV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaAX.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUseType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroup.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoPhieu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCreatdate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoPhieu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUseType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaAX.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaBV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContent.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCompont.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -282,9 +282,11 @@
             // creationdate_drug
             // 
             this.creationdate_drug.Caption = "Ngày Thêm Thuốc";
+            this.creationdate_drug.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+            this.creationdate_drug.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.creationdate_drug.FieldName = "creationdate_drug";
-            this.creationdate_drug.GroupFormat.FormatString = "d";
-            this.creationdate_drug.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.creationdate_drug.GroupFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+            this.creationdate_drug.GroupFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.creationdate_drug.Name = "creationdate_drug";
             this.creationdate_drug.Visible = true;
             this.creationdate_drug.VisibleIndex = 12;
@@ -323,174 +325,19 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
             // 
-            // labelControl1
+            // txtCreatdate
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl1.Location = new System.Drawing.Point(20, 89);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(56, 16);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã Thuốc";
+            this.txtCreatdate.Location = new System.Drawing.Point(621, 151);
+            this.txtCreatdate.Name = "txtCreatdate";
+            this.txtCreatdate.Size = new System.Drawing.Size(358, 20);
+            this.txtCreatdate.TabIndex = 1;
             // 
-            // labelControl2
+            // txtStock
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl2.Location = new System.Drawing.Point(20, 56);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(69, 16);
-            this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "UsingDrugId";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl3.Location = new System.Drawing.Point(20, 23);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(61, 16);
-            this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "Tên Thuốc";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl4.Location = new System.Drawing.Point(20, 122);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(56, 16);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "Hoạt Chất";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl5.Location = new System.Drawing.Point(20, 155);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(65, 16);
-            this.labelControl5.TabIndex = 0;
-            this.labelControl5.Text = "Hàm Lượng";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl6.Location = new System.Drawing.Point(20, 188);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(61, 16);
-            this.labelControl6.TabIndex = 0;
-            this.labelControl6.Text = "Đơn vị tính";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl7.Location = new System.Drawing.Point(20, 221);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(78, 16);
-            this.labelControl7.TabIndex = 0;
-            this.labelControl7.Text = "Mã Bệnh Viện";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl8.Location = new System.Drawing.Point(20, 254);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(62, 16);
-            this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "Mã Ánh Xạ";
-            // 
-            // txtDrugName
-            // 
-            this.txtDrugName.Location = new System.Drawing.Point(110, 19);
-            this.txtDrugName.Name = "txtDrugName";
-            this.txtDrugName.Size = new System.Drawing.Size(383, 20);
-            this.txtDrugName.TabIndex = 1;
-            // 
-            // txtUsing
-            // 
-            this.txtUsing.Location = new System.Drawing.Point(110, 52);
-            this.txtUsing.Name = "txtUsing";
-            this.txtUsing.Size = new System.Drawing.Size(383, 20);
-            this.txtUsing.TabIndex = 1;
-            // 
-            // txtDrug
-            // 
-            this.txtDrug.Location = new System.Drawing.Point(110, 85);
-            this.txtDrug.Name = "txtDrug";
-            this.txtDrug.Size = new System.Drawing.Size(383, 20);
-            this.txtDrug.TabIndex = 1;
-            // 
-            // txtCompont
-            // 
-            this.txtCompont.Location = new System.Drawing.Point(110, 118);
-            this.txtCompont.Name = "txtCompont";
-            this.txtCompont.Size = new System.Drawing.Size(383, 20);
-            this.txtCompont.TabIndex = 1;
-            // 
-            // txtContent
-            // 
-            this.txtContent.Location = new System.Drawing.Point(110, 151);
-            this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(383, 20);
-            this.txtContent.TabIndex = 1;
-            // 
-            // txtUnit
-            // 
-            this.txtUnit.Location = new System.Drawing.Point(110, 184);
-            this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(383, 20);
-            this.txtUnit.TabIndex = 1;
-            // 
-            // txtMaBV
-            // 
-            this.txtMaBV.Location = new System.Drawing.Point(110, 217);
-            this.txtMaBV.Name = "txtMaBV";
-            this.txtMaBV.Size = new System.Drawing.Size(383, 20);
-            this.txtMaBV.TabIndex = 1;
-            // 
-            // txtMaAX
-            // 
-            this.txtMaAX.Location = new System.Drawing.Point(110, 250);
-            this.txtMaAX.Name = "txtMaAX";
-            this.txtMaAX.Size = new System.Drawing.Size(383, 20);
-            this.txtMaAX.TabIndex = 1;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl9.Location = new System.Drawing.Point(513, 23);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(71, 16);
-            this.labelControl9.TabIndex = 0;
-            this.labelControl9.Text = "Đường Dùng";
-            // 
-            // txtUseType
-            // 
-            this.txtUseType.Location = new System.Drawing.Point(621, 19);
-            this.txtUseType.Name = "txtUseType";
-            this.txtUseType.Size = new System.Drawing.Size(358, 20);
-            this.txtUseType.TabIndex = 1;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl10.Location = new System.Drawing.Point(513, 59);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(33, 16);
-            this.labelControl10.TabIndex = 0;
-            this.labelControl10.Text = "Nhóm";
-            // 
-            // txtGroup
-            // 
-            this.txtGroup.Location = new System.Drawing.Point(621, 55);
-            this.txtGroup.Name = "txtGroup";
-            this.txtGroup.Size = new System.Drawing.Size(358, 20);
-            this.txtGroup.TabIndex = 1;
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl11.Location = new System.Drawing.Point(513, 92);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(50, 16);
-            this.labelControl11.TabIndex = 0;
-            this.labelControl11.Text = "Số Phiếu";
+            this.txtStock.Location = new System.Drawing.Point(621, 118);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(358, 20);
+            this.txtStock.TabIndex = 1;
             // 
             // txtSoPhieu
             // 
@@ -499,21 +346,40 @@
             this.txtSoPhieu.Size = new System.Drawing.Size(358, 20);
             this.txtSoPhieu.TabIndex = 1;
             // 
-            // labelControl12
+            // txtGroup
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl12.Location = new System.Drawing.Point(513, 122);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(21, 16);
-            this.labelControl12.TabIndex = 0;
-            this.labelControl12.Text = "Kho";
+            this.txtGroup.Location = new System.Drawing.Point(621, 55);
+            this.txtGroup.Name = "txtGroup";
+            this.txtGroup.Size = new System.Drawing.Size(358, 20);
+            this.txtGroup.TabIndex = 1;
             // 
-            // txtStock
+            // txtUseType
             // 
-            this.txtStock.Location = new System.Drawing.Point(621, 118);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(358, 20);
-            this.txtStock.TabIndex = 1;
+            this.txtUseType.Location = new System.Drawing.Point(621, 19);
+            this.txtUseType.Name = "txtUseType";
+            this.txtUseType.Size = new System.Drawing.Size(358, 20);
+            this.txtUseType.TabIndex = 1;
+            // 
+            // txtMaAX
+            // 
+            this.txtMaAX.Location = new System.Drawing.Point(110, 250);
+            this.txtMaAX.Name = "txtMaAX";
+            this.txtMaAX.Size = new System.Drawing.Size(383, 20);
+            this.txtMaAX.TabIndex = 1;
+            // 
+            // txtMaBV
+            // 
+            this.txtMaBV.Location = new System.Drawing.Point(110, 217);
+            this.txtMaBV.Name = "txtMaBV";
+            this.txtMaBV.Size = new System.Drawing.Size(383, 20);
+            this.txtMaBV.TabIndex = 1;
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.Location = new System.Drawing.Point(110, 184);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.Size = new System.Drawing.Size(383, 20);
+            this.txtUnit.TabIndex = 1;
             // 
             // labelControl13
             // 
@@ -524,12 +390,148 @@
             this.labelControl13.TabIndex = 0;
             this.labelControl13.Text = "Ngày Nhập Thuốc";
             // 
-            // txtCreatdate
+            // txtContent
             // 
-            this.txtCreatdate.Location = new System.Drawing.Point(621, 151);
-            this.txtCreatdate.Name = "txtCreatdate";
-            this.txtCreatdate.Size = new System.Drawing.Size(358, 20);
-            this.txtCreatdate.TabIndex = 1;
+            this.txtContent.Location = new System.Drawing.Point(110, 151);
+            this.txtContent.Name = "txtContent";
+            this.txtContent.Size = new System.Drawing.Size(383, 20);
+            this.txtContent.TabIndex = 1;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl12.Location = new System.Drawing.Point(513, 122);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(21, 16);
+            this.labelControl12.TabIndex = 0;
+            this.labelControl12.Text = "Kho";
+            // 
+            // txtCompont
+            // 
+            this.txtCompont.Location = new System.Drawing.Point(110, 118);
+            this.txtCompont.Name = "txtCompont";
+            this.txtCompont.Size = new System.Drawing.Size(383, 20);
+            this.txtCompont.TabIndex = 1;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl11.Location = new System.Drawing.Point(513, 92);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(50, 16);
+            this.labelControl11.TabIndex = 0;
+            this.labelControl11.Text = "Số Phiếu";
+            // 
+            // txtDrug
+            // 
+            this.txtDrug.Location = new System.Drawing.Point(110, 85);
+            this.txtDrug.Name = "txtDrug";
+            this.txtDrug.Size = new System.Drawing.Size(383, 20);
+            this.txtDrug.TabIndex = 1;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl10.Location = new System.Drawing.Point(513, 59);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(33, 16);
+            this.labelControl10.TabIndex = 0;
+            this.labelControl10.Text = "Nhóm";
+            // 
+            // txtUsing
+            // 
+            this.txtUsing.Location = new System.Drawing.Point(110, 52);
+            this.txtUsing.Name = "txtUsing";
+            this.txtUsing.Size = new System.Drawing.Size(383, 20);
+            this.txtUsing.TabIndex = 1;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl9.Location = new System.Drawing.Point(513, 23);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(71, 16);
+            this.labelControl9.TabIndex = 0;
+            this.labelControl9.Text = "Đường Dùng";
+            // 
+            // txtDrugName
+            // 
+            this.txtDrugName.Location = new System.Drawing.Point(110, 19);
+            this.txtDrugName.Name = "txtDrugName";
+            this.txtDrugName.Size = new System.Drawing.Size(383, 20);
+            this.txtDrugName.TabIndex = 1;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl8.Location = new System.Drawing.Point(20, 254);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(62, 16);
+            this.labelControl8.TabIndex = 0;
+            this.labelControl8.Text = "Mã Ánh Xạ";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl7.Location = new System.Drawing.Point(20, 221);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(78, 16);
+            this.labelControl7.TabIndex = 0;
+            this.labelControl7.Text = "Mã Bệnh Viện";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl6.Location = new System.Drawing.Point(20, 188);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(61, 16);
+            this.labelControl6.TabIndex = 0;
+            this.labelControl6.Text = "Đơn vị tính";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl5.Location = new System.Drawing.Point(20, 155);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(65, 16);
+            this.labelControl5.TabIndex = 0;
+            this.labelControl5.Text = "Hàm Lượng";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl4.Location = new System.Drawing.Point(20, 122);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(56, 16);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Hoạt Chất";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl3.Location = new System.Drawing.Point(20, 23);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(61, 16);
+            this.labelControl3.TabIndex = 0;
+            this.labelControl3.Text = "Tên Thuốc";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl2.Location = new System.Drawing.Point(20, 56);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(69, 16);
+            this.labelControl2.TabIndex = 0;
+            this.labelControl2.Text = "UsingDrugId";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl1.Location = new System.Drawing.Point(20, 89);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(56, 16);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Mã Thuốc";
             // 
             // From_Duoc_AnhXa
             // 
@@ -551,19 +553,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCompont.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContent.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaBV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaAX.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUseType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroup.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoPhieu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCreatdate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoPhieu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUseType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaAX.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaBV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContent.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCompont.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
