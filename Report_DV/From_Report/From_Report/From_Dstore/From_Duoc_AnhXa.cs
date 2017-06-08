@@ -29,11 +29,35 @@ namespace From_Report.From_Dstore
             dt = _DanhMuc.Select_Thuoc_AX();
             grdCtrlThuocAX.DataSource = dt;
         }
-
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridView1_Click(object sender, EventArgs e)
         {
+            txtDrugName.Text = gridView1.GetFocusedRowCellValue("drug_name").ToString();
+            txtUsing.Text = gridView1.GetFocusedRowCellValue("usingdrugid").ToString();
+            txtDrug.Text = gridView1.GetFocusedDataRow()["drug_id"].ToString();
+            txtCompont.Text = gridView1.GetFocusedDataRow()["component"].ToString();
+            txtContent.Text = gridView1.GetFocusedDataRow()["content_name"].ToString();           
+            txtUnit.Text = gridView1.GetFocusedDataRow()["unit_name"].ToString();
+            txtMaBV.Text = gridView1.GetFocusedDataRow()["MA_BV"].ToString();
+            txtMaAX.Text = gridView1.GetFocusedDataRow()["Ma_AX"].ToString();
+            txtUseType.Text = gridView1.GetFocusedDataRow()["use_type_id"].ToString();
+            txtStock.Text = gridView1.GetFocusedDataRow()["stockid"].ToString();
+            txtSoPhieu.Text = gridView1.GetFocusedDataRow()["mainimexid"].ToString();
+            txtCreatdate.Text = gridView1.GetFocusedDataRow()["creationdate_drug"].ToString();
+            txtGroup.Text = gridView1.GetFocusedDataRow()["service_type_id"].ToString();
+            //textBox1.Text = gridView1.GetDataRow(e.FocusedRowHandle)["Name"].ToString();
+            //textBox1.Text = gridView1.GetFocusedDataRow()["Name"].ToString();
+            //textBox1.Text = (gridView1.GetFocusedRow() as DataRowView).Row["Name"].ToString();
+            //textBox1.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+
 
         }
+
+       
 
     }
 }
