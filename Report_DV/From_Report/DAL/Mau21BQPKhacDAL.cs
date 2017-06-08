@@ -116,9 +116,7 @@ namespace DAL
         }
         public DataTable Select_Thuoc_AX()
         {
-            var sql = @"SELECT a.id as drug_id,a.usingdrugid,b.drug_name,b.component,b.content_name,b.unit_name,SPLIT_PART(c.description,'|',1) as MA_BV,SPLIT_PART(c.description,'|',2) as Ma_AX,c.use_type_id,c.service_type_id,a.stockid,a.mainimexid,a.creationdate_drug FROM his_drug_ax a" +
-                      @"JOIN (SELECT id,drug_name,component,content_name,unit_name FROM his_vw_usingdrug) b  ON a.usingdrugid = b.id " +
-                      @"JOIN (SELECT id,description,use_type_id,service_type_id FROM his_drug) c on c.id = a.id order by mainimexid,drug_name";
+            var sql = @"SELECT a.id as drug_id,a.usingdrugid,b.drug_name,b.component,b.content_name,b.unit_name,SPLIT_PART(c.description,'|',1) as MA_BV,SPLIT_PART(c.description,'|',2) as Ma_AX,c.use_type_id,c.service_type_id,a.stockid,a.mainimexid,a.creationdate_drug FROM his_drug_ax a JOIN (SELECT id,drug_name,component,content_name,unit_name FROM his_vw_usingdrug) b  ON a.usingdrugid = b.id JOIN (SELECT id,description,use_type_id,service_type_id FROM his_drug) c on c.id = a.id order by mainimexid,drug_name";
             return ExecuteQuery(sql);
         }
 
