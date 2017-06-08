@@ -194,7 +194,7 @@
             this.Ma_AX.FieldName = "ma_ax";
             this.Ma_AX.Name = "Ma_AX";
             this.Ma_AX.Visible = true;
-            this.Ma_AX.VisibleIndex = 6;
+            this.Ma_AX.VisibleIndex = 7;
             // 
             // use_type_id
             // 
@@ -202,7 +202,7 @@
             this.use_type_id.FieldName = "use_type_id";
             this.use_type_id.Name = "use_type_id";
             this.use_type_id.Visible = true;
-            this.use_type_id.VisibleIndex = 7;
+            this.use_type_id.VisibleIndex = 8;
             // 
             // service_type_id
             // 
@@ -210,7 +210,7 @@
             this.service_type_id.FieldName = "service_type_id";
             this.service_type_id.Name = "service_type_id";
             this.service_type_id.Visible = true;
-            this.service_type_id.VisibleIndex = 8;
+            this.service_type_id.VisibleIndex = 9;
             // 
             // stockid
             // 
@@ -218,7 +218,7 @@
             this.stockid.FieldName = "stockid";
             this.stockid.Name = "stockid";
             this.stockid.Visible = true;
-            this.stockid.VisibleIndex = 9;
+            this.stockid.VisibleIndex = 10;
             // 
             // mainimexid
             // 
@@ -226,7 +226,7 @@
             this.mainimexid.FieldName = "mainimexid";
             this.mainimexid.Name = "mainimexid";
             this.mainimexid.Visible = true;
-            this.mainimexid.VisibleIndex = 10;
+            this.mainimexid.VisibleIndex = 11;
             // 
             // creationdate_drug
             // 
@@ -236,7 +236,7 @@
             this.creationdate_drug.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.creationdate_drug.Name = "creationdate_drug";
             this.creationdate_drug.Visible = true;
-            this.creationdate_drug.VisibleIndex = 11;
+            this.creationdate_drug.VisibleIndex = 12;
             // 
             // MA_BV
             // 
@@ -244,7 +244,7 @@
             this.MA_BV.FieldName = "ma_bv";
             this.MA_BV.Name = "MA_BV";
             this.MA_BV.Visible = true;
-            this.MA_BV.VisibleIndex = 12;
+            this.MA_BV.VisibleIndex = 6;
             // 
             // From_Duoc_AnhXa
             // 
