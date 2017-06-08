@@ -42,12 +42,13 @@
             this.component = new DevExpress.XtraGrid.Columns.GridColumn();
             this.content_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.unit_name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.description = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ma_AX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.use_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.service_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.stockid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mainimexid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.creationdate_drug = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_BV = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -128,14 +129,16 @@
             this.component,
             this.content_name,
             this.unit_name,
-            this.description,
-            this.use_type_id,
+            this.Ma_AX,
+            this.MA_BV,
             this.service_type_id,
             this.stockid,
             this.mainimexid,
+            this.use_type_id,
             this.creationdate_drug});
             this.gridView1.GridControl = this.grdCtrlThuocAX;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // Drug_ID
             // 
@@ -156,7 +159,7 @@
             // Drug_name
             // 
             this.Drug_name.Caption = "Tên Thuốc";
-            this.Drug_name.FieldName = "Drug_name";
+            this.Drug_name.FieldName = "drug_name";
             this.Drug_name.Name = "Drug_name";
             this.Drug_name.Visible = true;
             this.Drug_name.VisibleIndex = 2;
@@ -185,13 +188,13 @@
             this.unit_name.Visible = true;
             this.unit_name.VisibleIndex = 5;
             // 
-            // description
+            // Ma_AX
             // 
-            this.description.Caption = "Mã Ánh Xạ";
-            this.description.FieldName = "description";
-            this.description.Name = "description";
-            this.description.Visible = true;
-            this.description.VisibleIndex = 6;
+            this.Ma_AX.Caption = "Mã Ánh Xạ";
+            this.Ma_AX.FieldName = "ma_ax";
+            this.Ma_AX.Name = "Ma_AX";
+            this.Ma_AX.Visible = true;
+            this.Ma_AX.VisibleIndex = 6;
             // 
             // use_type_id
             // 
@@ -235,6 +238,14 @@
             this.creationdate_drug.Visible = true;
             this.creationdate_drug.VisibleIndex = 11;
             // 
+            // MA_BV
+            // 
+            this.MA_BV.Caption = "Mã Bệnh Viện";
+            this.MA_BV.FieldName = "ma_bv";
+            this.MA_BV.Name = "MA_BV";
+            this.MA_BV.Visible = true;
+            this.MA_BV.VisibleIndex = 12;
+            // 
             // From_Duoc_AnhXa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,12 +281,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn component;
         private DevExpress.XtraGrid.Columns.GridColumn content_name;
         private DevExpress.XtraGrid.Columns.GridColumn unit_name;
-        private DevExpress.XtraGrid.Columns.GridColumn description;
+        private DevExpress.XtraGrid.Columns.GridColumn Ma_AX;
         private DevExpress.XtraGrid.Columns.GridColumn use_type_id;
         private DevExpress.XtraGrid.Columns.GridColumn service_type_id;
         private DevExpress.XtraGrid.Columns.GridColumn stockid;
         private DevExpress.XtraGrid.Columns.GridColumn mainimexid;
         private DevExpress.XtraGrid.Columns.GridColumn creationdate_drug;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_BV;
 
     }
 }
