@@ -36,6 +36,18 @@
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.grdCtrlThuocAX = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Drug_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.UsingDrugId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Drug_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.component = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.content_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.unit_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.description = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.use_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.service_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.stockid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.mainimexid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.creationdate_drug = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -109,8 +121,119 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.Drug_ID,
+            this.UsingDrugId,
+            this.Drug_name,
+            this.component,
+            this.content_name,
+            this.unit_name,
+            this.description,
+            this.use_type_id,
+            this.service_type_id,
+            this.stockid,
+            this.mainimexid,
+            this.creationdate_drug});
             this.gridView1.GridControl = this.grdCtrlThuocAX;
             this.gridView1.Name = "gridView1";
+            // 
+            // Drug_ID
+            // 
+            this.Drug_ID.Caption = "Mã Thuốc";
+            this.Drug_ID.FieldName = "drug_id";
+            this.Drug_ID.Name = "Drug_ID";
+            this.Drug_ID.Visible = true;
+            this.Drug_ID.VisibleIndex = 0;
+            // 
+            // UsingDrugId
+            // 
+            this.UsingDrugId.Caption = "UsingdrugId";
+            this.UsingDrugId.FieldName = "usingdrugid";
+            this.UsingDrugId.Name = "UsingDrugId";
+            this.UsingDrugId.Visible = true;
+            this.UsingDrugId.VisibleIndex = 1;
+            // 
+            // Drug_name
+            // 
+            this.Drug_name.Caption = "Tên Thuốc";
+            this.Drug_name.FieldName = "Drug_name";
+            this.Drug_name.Name = "Drug_name";
+            this.Drug_name.Visible = true;
+            this.Drug_name.VisibleIndex = 2;
+            // 
+            // component
+            // 
+            this.component.Caption = "Hoạt Chất";
+            this.component.FieldName = "component";
+            this.component.Name = "component";
+            this.component.Visible = true;
+            this.component.VisibleIndex = 3;
+            // 
+            // content_name
+            // 
+            this.content_name.Caption = "Hàm Lượng";
+            this.content_name.FieldName = "content_name";
+            this.content_name.Name = "content_name";
+            this.content_name.Visible = true;
+            this.content_name.VisibleIndex = 4;
+            // 
+            // unit_name
+            // 
+            this.unit_name.Caption = "Đơn vị tính";
+            this.unit_name.FieldName = "unit_name";
+            this.unit_name.Name = "unit_name";
+            this.unit_name.Visible = true;
+            this.unit_name.VisibleIndex = 5;
+            // 
+            // description
+            // 
+            this.description.Caption = "Mã Ánh Xạ";
+            this.description.FieldName = "description";
+            this.description.Name = "description";
+            this.description.Visible = true;
+            this.description.VisibleIndex = 6;
+            // 
+            // use_type_id
+            // 
+            this.use_type_id.Caption = "Đường Dùng";
+            this.use_type_id.FieldName = "use_type_id";
+            this.use_type_id.Name = "use_type_id";
+            this.use_type_id.Visible = true;
+            this.use_type_id.VisibleIndex = 7;
+            // 
+            // service_type_id
+            // 
+            this.service_type_id.Caption = "Nhóm";
+            this.service_type_id.FieldName = "service_type_id";
+            this.service_type_id.Name = "service_type_id";
+            this.service_type_id.Visible = true;
+            this.service_type_id.VisibleIndex = 8;
+            // 
+            // stockid
+            // 
+            this.stockid.Caption = "Kho";
+            this.stockid.FieldName = "stockid";
+            this.stockid.Name = "stockid";
+            this.stockid.Visible = true;
+            this.stockid.VisibleIndex = 9;
+            // 
+            // mainimexid
+            // 
+            this.mainimexid.Caption = "Số Phiếu";
+            this.mainimexid.FieldName = "mainimexid";
+            this.mainimexid.Name = "mainimexid";
+            this.mainimexid.Visible = true;
+            this.mainimexid.VisibleIndex = 10;
+            // 
+            // creationdate_drug
+            // 
+            this.creationdate_drug.Caption = "Ngày Thêm Thuốc";
+            this.creationdate_drug.FieldName = "creationdate_drug";
+            this.creationdate_drug.GroupFormat.FormatString = "d";
+            this.creationdate_drug.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.creationdate_drug.Name = "creationdate_drug";
+            this.creationdate_drug.Visible = true;
+            this.creationdate_drug.VisibleIndex = 11;
             // 
             // From_Duoc_AnhXa
             // 
@@ -141,6 +264,18 @@
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraGrid.GridControl grdCtrlThuocAX;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn Drug_ID;
+        private DevExpress.XtraGrid.Columns.GridColumn UsingDrugId;
+        private DevExpress.XtraGrid.Columns.GridColumn Drug_name;
+        private DevExpress.XtraGrid.Columns.GridColumn component;
+        private DevExpress.XtraGrid.Columns.GridColumn content_name;
+        private DevExpress.XtraGrid.Columns.GridColumn unit_name;
+        private DevExpress.XtraGrid.Columns.GridColumn description;
+        private DevExpress.XtraGrid.Columns.GridColumn use_type_id;
+        private DevExpress.XtraGrid.Columns.GridColumn service_type_id;
+        private DevExpress.XtraGrid.Columns.GridColumn stockid;
+        private DevExpress.XtraGrid.Columns.GridColumn mainimexid;
+        private DevExpress.XtraGrid.Columns.GridColumn creationdate_drug;
 
     }
 }

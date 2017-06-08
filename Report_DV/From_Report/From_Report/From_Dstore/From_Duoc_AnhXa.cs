@@ -26,7 +26,8 @@ namespace From_Report.From_Dstore
 
         private void From_Duoc_AnhXa_Load(object sender, EventArgs e)
         {
-
+            dt = _DanhMuc.Select_Thuoc_AX();
+            grdCtrlThuocAX.DataSource = dt;
         }
 
     }
