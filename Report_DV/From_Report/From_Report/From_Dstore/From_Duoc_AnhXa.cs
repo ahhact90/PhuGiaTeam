@@ -18,9 +18,16 @@ namespace From_Report.From_Dstore
         public static string StrConnect = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
         #endregion
+
         public From_Duoc_AnhXa()
         {
             InitializeComponent();
         }
+
+        private void From_Duoc_AnhXa_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

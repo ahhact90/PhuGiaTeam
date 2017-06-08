@@ -34,13 +34,13 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grdCtrlThuocAX = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCtrlThuocAX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,26 +90,26 @@
             // 
             // dockPanel2_Container
             // 
-            this.dockPanel2_Container.Controls.Add(this.gridControl1);
+            this.dockPanel2_Container.Controls.Add(this.grdCtrlThuocAX);
             this.dockPanel2_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
             this.dockPanel2_Container.Size = new System.Drawing.Size(1081, 313);
             this.dockPanel2_Container.TabIndex = 0;
             // 
-            // gridControl1
+            // grdCtrlThuocAX
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1081, 313);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdCtrlThuocAX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdCtrlThuocAX.Location = new System.Drawing.Point(0, 0);
+            this.grdCtrlThuocAX.MainView = this.gridView1;
+            this.grdCtrlThuocAX.Name = "grdCtrlThuocAX";
+            this.grdCtrlThuocAX.Size = new System.Drawing.Size(1081, 313);
+            this.grdCtrlThuocAX.TabIndex = 0;
+            this.grdCtrlThuocAX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grdCtrlThuocAX;
             this.gridView1.Name = "gridView1";
             // 
             // From_Duoc_AnhXa
@@ -121,11 +121,12 @@
             this.Controls.Add(this.dockPanel1);
             this.Name = "From_Duoc_AnhXa";
             this.Text = "From_Duoc_AnhXa";
+            this.Load += new System.EventHandler(this.From_Duoc_AnhXa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCtrlThuocAX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -138,7 +139,7 @@
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
         private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grdCtrlThuocAX;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 
     }
