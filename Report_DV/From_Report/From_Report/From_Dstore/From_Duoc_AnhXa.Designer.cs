@@ -43,12 +43,12 @@
             this.content_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.unit_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ma_AX = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.use_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_BV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.service_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.stockid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mainimexid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.use_type_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.creationdate_drug = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MA_BV = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -139,6 +139,7 @@
             this.gridView1.GridControl = this.grdCtrlThuocAX;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // Drug_ID
             // 
@@ -196,13 +197,13 @@
             this.Ma_AX.Visible = true;
             this.Ma_AX.VisibleIndex = 7;
             // 
-            // use_type_id
+            // MA_BV
             // 
-            this.use_type_id.Caption = "Đường Dùng";
-            this.use_type_id.FieldName = "use_type_id";
-            this.use_type_id.Name = "use_type_id";
-            this.use_type_id.Visible = true;
-            this.use_type_id.VisibleIndex = 8;
+            this.MA_BV.Caption = "Mã Bệnh Viện";
+            this.MA_BV.FieldName = "ma_bv";
+            this.MA_BV.Name = "MA_BV";
+            this.MA_BV.Visible = true;
+            this.MA_BV.VisibleIndex = 6;
             // 
             // service_type_id
             // 
@@ -218,7 +219,7 @@
             this.stockid.FieldName = "stockid";
             this.stockid.Name = "stockid";
             this.stockid.Visible = true;
-            this.stockid.VisibleIndex = 10;
+            this.stockid.VisibleIndex = 11;
             // 
             // mainimexid
             // 
@@ -226,7 +227,15 @@
             this.mainimexid.FieldName = "mainimexid";
             this.mainimexid.Name = "mainimexid";
             this.mainimexid.Visible = true;
-            this.mainimexid.VisibleIndex = 11;
+            this.mainimexid.VisibleIndex = 10;
+            // 
+            // use_type_id
+            // 
+            this.use_type_id.Caption = "Đường Dùng";
+            this.use_type_id.FieldName = "use_type_id";
+            this.use_type_id.Name = "use_type_id";
+            this.use_type_id.Visible = true;
+            this.use_type_id.VisibleIndex = 8;
             // 
             // creationdate_drug
             // 
@@ -237,14 +246,6 @@
             this.creationdate_drug.Name = "creationdate_drug";
             this.creationdate_drug.Visible = true;
             this.creationdate_drug.VisibleIndex = 12;
-            // 
-            // MA_BV
-            // 
-            this.MA_BV.Caption = "Mã Bệnh Viện";
-            this.MA_BV.FieldName = "ma_bv";
-            this.MA_BV.Name = "MA_BV";
-            this.MA_BV.Visible = true;
-            this.MA_BV.VisibleIndex = 6;
             // 
             // From_Duoc_AnhXa
             // 

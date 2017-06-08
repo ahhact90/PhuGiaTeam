@@ -30,5 +30,10 @@ namespace From_Report.From_Dstore
             grdCtrlThuocAX.DataSource = dt;
         }
 
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+
+        }
+
     }
 }

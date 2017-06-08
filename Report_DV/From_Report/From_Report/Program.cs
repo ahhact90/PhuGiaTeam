@@ -18,6 +18,8 @@ namespace From_Report
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new From_Dstore.From_Duoc_AnhXa());
+            //Application.Run(new FrmMain());
+            
         }
     }
 }
