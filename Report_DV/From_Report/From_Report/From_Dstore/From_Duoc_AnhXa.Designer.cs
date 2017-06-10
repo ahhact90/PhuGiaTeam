@@ -534,7 +534,7 @@
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanel1);
             this.Name = "From_Duoc_AnhXa";
-            this.Text = "From_Duoc_AnhXa";
+            this.Text = "NHẬP MÃ ÁNH XẠ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.From_Duoc_AnhXa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();

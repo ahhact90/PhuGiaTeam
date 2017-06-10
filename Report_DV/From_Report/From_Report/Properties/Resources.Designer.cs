@@ -73,6 +73,26 @@ namespace From_Report.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1497103727_medical_pot_pills {
+            get {
+                object obj = ResourceManager.GetObject("1497103727_medical_pot_pills", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1497103905_chemistry {
+            get {
+                object obj = ResourceManager.GetObject("1497103905_chemistry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Android_Setting {
             get {
                 object obj = ResourceManager.GetObject("Android-Setting", resourceCulture);

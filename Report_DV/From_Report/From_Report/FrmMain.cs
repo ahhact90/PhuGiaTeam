@@ -66,6 +66,12 @@ namespace From_Report
             fsetting.Show();
         }
 
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            From_Dstore.From_Duoc_AnhXa fDuocAnhXa = new From_Dstore.From_Duoc_AnhXa();
+            fDuocAnhXa.Show();
+        }
+
         
     }
 }

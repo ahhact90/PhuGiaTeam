@@ -235,6 +235,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1489554673_ambulance.png" />
+    <None Include="Resources\1497103727_medical_pot_pills.ico" />
+    <None Include="Resources\1497103905_chemistry.ico" />
     <Content Include="Resources\Android-Setting.png" />
     <Content Include="Resources\applyimg.png" />
     <Content Include="Resources\Bookmaskforder.png" />
