@@ -75,6 +75,8 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.sửaChiTiêtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -94,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -136,20 +139,21 @@
             // 
             // dockPanel2
             // 
+            this.dockPanel2.ContextMenuStrip = this.contextMenuStrip1;
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
             this.dockPanel2.ID = new System.Guid("b434e5f9-3e22-418f-a14f-e386d7d5ddb1");
             this.dockPanel2.Location = new System.Drawing.Point(0, 295);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 340);
-            this.dockPanel2.Size = new System.Drawing.Size(1089, 340);
+            this.dockPanel2.Size = new System.Drawing.Size(1114, 340);
             // 
             // dockPanel2_Container
             // 
             this.dockPanel2_Container.Controls.Add(this.grdCtrlThuocAX);
             this.dockPanel2_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(1081, 313);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(1106, 313);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // grdCtrlThuocAX
@@ -158,7 +162,7 @@
             this.grdCtrlThuocAX.Location = new System.Drawing.Point(0, 0);
             this.grdCtrlThuocAX.MainView = this.gridView1;
             this.grdCtrlThuocAX.Name = "grdCtrlThuocAX";
-            this.grdCtrlThuocAX.Size = new System.Drawing.Size(1081, 313);
+            this.grdCtrlThuocAX.Size = new System.Drawing.Size(1106, 313);
             this.grdCtrlThuocAX.TabIndex = 0;
             this.grdCtrlThuocAX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -500,11 +504,24 @@
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Mã Thuốc";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sửaChiTiêtToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(138, 26);
+            // 
+            // sửaChiTiêtToolStripMenuItem
+            // 
+            this.sửaChiTiêtToolStripMenuItem.Name = "sửaChiTiêtToolStripMenuItem";
+            this.sửaChiTiêtToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.sửaChiTiêtToolStripMenuItem.Text = "Sửa Chi Tiêt";
+            // 
             // From_Duoc_AnhXa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 635);
+            this.ClientSize = new System.Drawing.Size(1114, 635);
             this.Controls.Add(this.txtCreatdate);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtSoPhieu);
@@ -556,6 +573,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,6 +627,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sửaChiTiêtToolStripMenuItem;
 
     }
 }
