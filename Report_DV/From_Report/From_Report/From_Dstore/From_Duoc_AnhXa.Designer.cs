@@ -33,6 +33,8 @@
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.sửaChiTiêtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.grdCtrlThuocAX = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -75,11 +77,10 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.sửaChiTiêtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrlThuocAX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -96,7 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -148,6 +148,19 @@
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 340);
             this.dockPanel2.Size = new System.Drawing.Size(1114, 340);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sửaChiTiêtToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(138, 26);
+            // 
+            // sửaChiTiêtToolStripMenuItem
+            // 
+            this.sửaChiTiêtToolStripMenuItem.Name = "sửaChiTiêtToolStripMenuItem";
+            this.sửaChiTiêtToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.sửaChiTiêtToolStripMenuItem.Text = "Sửa Chi Tiêt";
+            // 
             // dockPanel2_Container
             // 
             this.dockPanel2_Container.Controls.Add(this.grdCtrlThuocAX);
@@ -186,6 +199,9 @@
             this.gridView1.GridControl = this.grdCtrlThuocAX;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
+            this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
             // 
             // Drug_ID
@@ -504,19 +520,6 @@
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Mã Thuốc";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sửaChiTiêtToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(138, 26);
-            // 
-            // sửaChiTiêtToolStripMenuItem
-            // 
-            this.sửaChiTiêtToolStripMenuItem.Name = "sửaChiTiêtToolStripMenuItem";
-            this.sửaChiTiêtToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.sửaChiTiêtToolStripMenuItem.Text = "Sửa Chi Tiêt";
-            // 
             // From_Duoc_AnhXa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,6 +560,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrlThuocAX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -573,7 +577,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
