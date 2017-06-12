@@ -77,8 +77,10 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btSave = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.dockPanel2_Container.SuspendLayout();
@@ -129,9 +131,11 @@
             this.dockPanel1.SavedIndex = 0;
             this.dockPanel1.Size = new System.Drawing.Size(1089, 295);
             this.dockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+            this.dockPanel1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dockPanel1_KeyDown);
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Controls.Add(this.btSave);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             this.dockPanel1_Container.Size = new System.Drawing.Size(1081, 268);
@@ -354,6 +358,7 @@
             this.txtMaAX.Name = "txtMaAX";
             this.txtMaAX.Size = new System.Drawing.Size(383, 20);
             this.txtMaAX.TabIndex = 23;
+            this.txtMaAX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaAX_KeyDown);
             // 
             // txtMaBV
             // 
@@ -521,6 +526,15 @@
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Mã Thuốc";
             // 
+            // btSave
+            // 
+            this.btSave.Location = new System.Drawing.Point(558, 173);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(102, 32);
+            this.btSave.TabIndex = 0;
+            this.btSave.Text = "Lưu";
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
+            // 
             // From_Duoc_AnhXa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -561,6 +575,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.From_Duoc_AnhXa_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.dockPanel2_Container.ResumeLayout(false);
@@ -634,6 +649,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sửaChiTiêtToolStripMenuItem;
+        private DevExpress.XtraEditors.SimpleButton btSave;
 
     }
 }

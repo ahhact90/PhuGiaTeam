@@ -83,14 +83,16 @@ namespace From_Report.From_Dstore
             if (view == null) return;            
             if (e.RowHandle % 2 == 0 )
             {
-                e.Appearance.BackColor = Color.SeaShell;
+                
+                e.Appearance.BackColor = Color.WhiteSmoke;
                 e.Appearance.ForeColor = Color.Green;
                 e.HighPriority = true;
                 
             }
             else
             {
-                e.Appearance.BackColor = Color.WhiteSmoke;
+               
+                e.Appearance.BackColor = Color.SeaShell;
                 e.Appearance.ForeColor = Color.IndianRed;
                 e.HighPriority = true;
             }
@@ -129,21 +131,62 @@ namespace From_Report.From_Dstore
 
         private void From_Duoc_AnhXa_KeyDown(object sender, KeyEventArgs e)
         {
-            string tmp_bv = txtMaBV.Text.ToString();
-            string ax_tmp = txtMaBV.Text.ToString();
+            
 
-            if (e.Control)
+               
+
+            
+            
+        }
+
+        private void txtMaAX_KeyDown(object sender, KeyEventArgs e)
+        {          
+
+        }
+
+        private void btSave_Click(object sender, EventArgs e)
+        { 
+            if (txtMaBV.Text.Length == 0)
             {
-
-                if (e.KeyCode.Equals(Keys.S))//= Ctrl + S
+                MessageBox.Show("Vui lòng nhập mã bệnh viện");
+            }
+            else
+            {
+                if (txtMaAX.Text.Length == 0)
                 {
-
+                     MessageBox.Show("Vui lòng nhập mã ánh xạ trên công thông tin BHYT");
                 }
-
+                else
+                {
+                    try
+                    {
+                        string tmp_bv = txtMaBV.Text.ToString();
+                        string ax_tmp = txtMaAX.Text.ToString();
+                        string text = tmp_bv + '|' + ax_tmp;
+                        Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());
+                        _DanhMuc.Update_AX(text, 1, mDrug);
+                        MessageBox.Show("Cập nhật thành công");
+                        From_Duoc_AnhXa_Load(sender,e);
+                    }
+                    catch (Exception) 
+                    {
+                        DialogResult dialogResult = MessageBox.Show("Cập nhật không thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    };
+                    
+                }
             }
         }
 
+        private void dockPanel1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control)
+            {
+                if (e.KeyCode.Equals(Keys.S))//= Ctrl + S
+                {
+                    From_Duoc_AnhXa_Load(sender, e);
+                }
+            }
+        }          
        
-
     }
 }

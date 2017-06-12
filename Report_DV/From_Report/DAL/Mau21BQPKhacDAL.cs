@@ -120,6 +120,15 @@ namespace DAL
                     @"JOIN (SELECT id,drug_name,component,content_name,unit_name FROM his_vw_usingdrug) b  ON a.usingdrugid = b.id JOIN (SELECT id,description,use_type_id,service_type_id FROM his_drug) c on c.id = a.id order by mainimexid,drug_name";
             return ExecuteQuery(sql);
         }
+        public int Update_AX(string mAX, Int32 mUse_type,Int32 mDrug)
+        {              
+            try
+            {                
+                var sql = @"UPDATE his_drug set description = '{0}',use_type_id = {1} WHERE id = {2}";
+                sql = String.Format(sql, mAX, mUse_type, mDrug);
+                return ExecuteNonQuery(sql);            }
+            catch { return -1; }              
+        }
 
         #endregion
     }
