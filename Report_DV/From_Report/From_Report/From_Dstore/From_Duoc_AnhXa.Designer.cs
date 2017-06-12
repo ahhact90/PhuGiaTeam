@@ -160,6 +160,7 @@
             this.sửaChiTiêtToolStripMenuItem.Name = "sửaChiTiêtToolStripMenuItem";
             this.sửaChiTiêtToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.sửaChiTiêtToolStripMenuItem.Text = "Sửa Chi Tiêt";
+            this.sửaChiTiêtToolStripMenuItem.Click += new System.EventHandler(this.sửaChiTiêtToolStripMenuItem_Click);
             // 
             // dockPanel2_Container
             // 
@@ -557,6 +558,7 @@
             this.Text = "NHẬP MÃ ÁNH XẠ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.From_Duoc_AnhXa_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.From_Duoc_AnhXa_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);

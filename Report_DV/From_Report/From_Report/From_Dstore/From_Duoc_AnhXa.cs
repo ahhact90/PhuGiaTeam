@@ -56,7 +56,20 @@ namespace From_Report.From_Dstore
             //textBox1.Text = (gridView1.GetFocusedRow() as DataRowView).Row["drug_name"].ToString();
             //textBox1.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
             //txtDrugName.Text = (gridView1.GetFocusedRow() as DataRowView).Row["drug_name"].ToString();
-
+            
+            txtDrugName.Enabled = false;
+            txtUsing.Enabled = false;
+            txtDrug.Enabled = false;
+            txtCompont.Enabled = false;
+            txtContent.Enabled = false;
+            txtUnit.Enabled = false;
+            txtMaBV.Enabled = false;
+            txtMaAX.Enabled = false;
+            txtUseType.Enabled = false;
+            txtStock.Enabled = false;
+            txtSoPhieu.Enabled = false;
+            txtCreatdate.Enabled = false;
+            txtGroup.Enabled = false;
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
@@ -104,6 +117,30 @@ namespace From_Report.From_Dstore
             txtSoPhieu.Text = gridView1.GetFocusedDataRow()["mainimexid"].ToString();
             txtCreatdate.Text = gridView1.GetFocusedDataRow()["creationdate_drug"].ToString();
             txtGroup.Text = gridView1.GetFocusedDataRow()["service_type_id"].ToString();
+        }
+
+        private void sửaChiTiêtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtMaBV.Enabled = true;
+            txtMaAX.Enabled = true;
+            txtUseType.Enabled = true;
+            txtDrugName.Enabled = true;
+        }
+
+        private void From_Duoc_AnhXa_KeyDown(object sender, KeyEventArgs e)
+        {
+            string tmp_bv = txtMaBV.Text.ToString();
+            string ax_tmp = txtMaBV.Text.ToString();
+
+            if (e.Control)
+            {
+
+                if (e.KeyCode.Equals(Keys.S))//= Ctrl + S
+                {
+
+                }
+
+            }
         }
 
        
