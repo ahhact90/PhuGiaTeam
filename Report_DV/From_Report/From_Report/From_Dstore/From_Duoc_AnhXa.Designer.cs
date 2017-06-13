@@ -32,6 +32,7 @@
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.btSave = new DevExpress.XtraEditors.SimpleButton();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.sửaChiTiêtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +78,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btSave = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -141,11 +141,21 @@
             this.dockPanel1_Container.Size = new System.Drawing.Size(1081, 268);
             this.dockPanel1_Container.TabIndex = 0;
             // 
+            // btSave
+            // 
+            this.btSave.Location = new System.Drawing.Point(558, 173);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(102, 32);
+            this.btSave.TabIndex = 0;
+            this.btSave.Text = "Lưu";
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
+            // 
             // dockPanel2
             // 
             this.dockPanel2.ContextMenuStrip = this.contextMenuStrip1;
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
+            this.dockPanel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dockPanel2.ID = new System.Guid("b434e5f9-3e22-418f-a14f-e386d7d5ddb1");
             this.dockPanel2.Location = new System.Drawing.Point(0, 295);
             this.dockPanel2.Name = "dockPanel2";
@@ -525,15 +535,6 @@
             this.labelControl1.Size = new System.Drawing.Size(56, 16);
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Mã Thuốc";
-            // 
-            // btSave
-            // 
-            this.btSave.Location = new System.Drawing.Point(558, 173);
-            this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(102, 32);
-            this.btSave.TabIndex = 0;
-            this.btSave.Text = "Lưu";
-            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // From_Duoc_AnhXa
             // 

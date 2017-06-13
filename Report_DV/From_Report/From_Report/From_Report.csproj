@@ -108,6 +108,12 @@
     <Compile Include="From_CauHinh\FromCauHinh.Designer.cs">
       <DependentUpon>FromCauHinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_Dstore\Frm_Use_Type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_Dstore\Frm_Use_Type.Designer.cs">
+      <DependentUpon>Frm_Use_Type.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_Dstore\From_Duoc_AnhXa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From_CauHinh\FromCauHinh.resx">
       <DependentUpon>FromCauHinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From_Dstore\Frm_Use_Type.resx">
+      <DependentUpon>Frm_Use_Type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_Dstore\From_Duoc_AnhXa.resx">
       <DependentUpon>From_Duoc_AnhXa.cs</DependentUpon>

@@ -84,17 +84,18 @@ namespace From_Report.From_Dstore
             if (e.RowHandle % 2 == 0 )
             {
                 
-                e.Appearance.BackColor = Color.WhiteSmoke;
-                e.Appearance.ForeColor = Color.Green;
-                e.HighPriority = true;
+               // e.Appearance.BackColor = Color.WhiteSmoke;
+                e.Appearance.ForeColor = Color.MediumBlue;
+                //e.HighPriority = true;
+                
                 
             }
             else
             {
                
-                e.Appearance.BackColor = Color.SeaShell;
-                e.Appearance.ForeColor = Color.IndianRed;
-                e.HighPriority = true;
+                //e.Appearance.BackColor = Color.SeaShell;
+                e.Appearance.ForeColor = Color.Firebrick;
+                //e.HighPriority = true;
             }
         }
 
@@ -130,17 +131,11 @@ namespace From_Report.From_Dstore
         }
 
         private void From_Duoc_AnhXa_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-
-               
-
-            
-            
+        { 
         }
 
         private void txtMaAX_KeyDown(object sender, KeyEventArgs e)
-        {          
+        {     
 
         }
 
@@ -178,14 +173,8 @@ namespace From_Report.From_Dstore
         }
 
         private void dockPanel1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Control)
-            {
-                if (e.KeyCode.Equals(Keys.S))//= Ctrl + S
-                {
-                    From_Duoc_AnhXa_Load(sender, e);
-                }
-            }
+        {           
+            
         }          
        
     }
