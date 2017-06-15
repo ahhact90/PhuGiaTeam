@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.IO;
 using Npgsql;
+using System.Threading;
 
 namespace WebService
 {
@@ -23,6 +24,7 @@ namespace WebService
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();
         public static string StrConnect = UTL.DataBase.GetConfig();
+        public static string lashpath = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
         /// <summary>
         /// Ket noi Postgrest
@@ -38,6 +40,7 @@ namespace WebService
         private string sobh;
         private string sql;
         private long MedID;
+        //private string lashpath;
 
         #endregion
         #region Methods
@@ -96,6 +99,10 @@ namespace WebService
                     this.sql = this.sql.Replace("</Table1>", "");
                     this.sql = this.sql.Replace("&lt;", "<");
                     this.sql = this.sql.Replace("&gt;", ">");
+                    this.sql = this.sql.Replace("<Tmp>", "");
+                    this.sql = this.sql.Replace("</Tmp>", "");
+                    this.sql = this.sql.Replace("<nam_qt>0</nam_qt>", "<nam_qt>" + DateTime.Now.Year.ToString() + "</nam_qt>");
+                    this.sql = this.sql.Replace("<thang_qt>0</thang_qt>", "<thang_qt>" + DateTime.Now.Month.ToString() + "</thang_qt>");
                     xmlDocument.LoadXml(this.sql);
                     xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_XML1.xml", this.MedID, this.sobh));
                     byte[] inArray = File.ReadAllBytes(path + "\\" + string.Format("{0}_{1}_XML1.xml", this.MedID, this.sobh));
@@ -168,7 +175,7 @@ namespace WebService
             }
             finally
             {
-                this.myPgConnect.Close();
+                //this.myPgConnect.Close();
             }
         }
         /// <summary>
@@ -302,6 +309,40 @@ namespace WebService
         }
 
         #endregion
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {                 
+            //string lashpath = Path.GetFullPath(openFileDialog1.FileName);
+            //txtPath.Text = lashpath;
+            string lashpath = txtPath.Text.Trim();
+            btnExport.Enabled = false;
+            while (true)
+            {
+                try
+                {
+                    MedID = _Export.Select_Medical();
+                    if (MedID > 0L)
+                    {
+                        _Export.his_fee_sync_tonghop(MedID);
+                         Export3file(lashpath, MedID);
+                        _Export.FinishMed(MedID);
+                        
+                    }
+                    Thread.Sleep(5000);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+        
+        
+
+        private void WebService_Load(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

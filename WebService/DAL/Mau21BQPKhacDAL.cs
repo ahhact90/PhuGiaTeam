@@ -90,24 +90,7 @@ namespace DAL
 
         #region Mau 21 BQP Khac
 
-        public DataSet Select_Time(DateTime to, DateTime from)
-        {
-            var sql = "select * from his_insurance_service_detail_get_bqp_khac('{0}|{1}|21|3')";
-            sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
-            return ExecuteDataset(sql);
-        }
-        public DataSet Select_M21()
-        {
-            var sql = "select * from his_insurance_service_detail_get('2017-01-01 0:0:0|2017-02-28 23:59:59|21|1')";
-            sql = string.Format(sql);
-            return ExecuteDataset(sql);
-        }
-        public DataTable Select_QN_NgTru(DateTime to, DateTime from)
-        {
-            var sql = "SELECT ma_lk::integer,ho_ten,ngay_sinh,gioi_tinh,dia_chi,ma_the,ma_dkbd,gt_the_tu,gt_the_den,ma_benh,ma_benhkhac,ma_lydo_vvien,ma_noi_chuyen,ngay_vao::text,ngay_ra::text,so_ngay_dtri,ket_qua_dtri,tinh_trang_rv,t_tongchi,t_xn,t_cdha,t_thuoc,t_mau,t_pttt,t_vtyt,t_dvkt_tyle,t_thuoc_tyle,t_vtyt_tyle,t_kham,t_giuong,t_vanchuyen,t_bntt,t_bhtt,t_ngoaids,ma_khoa,nam_qt,thang_qt,ma_khuvuc,ma_loai_kcb,ma_cskcb from his_bhxh_3360_97_get_bqp_khac('{0}|{1}|1^3^4')";
-            sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
-            return ExecuteQuery(sql);
-        }
+        
         public string his_fee_sync_tonghop(long Media)
         {
             var sql = "select his_fee_sync_tonghop_all({0})";
@@ -121,22 +104,7 @@ namespace DAL
             sql = string.Format(sql);
             return  long.Parse(ExecuteQuery(sql).Rows[0][0].ToString());
         }
-
-        public DataTable Select_Thuoc_AX()
-        {
-            var sql = @"SELECT a.id as drug_id,a.usingdrugid,b.drug_name,b.component,b.content_name,b.unit_name,SPLIT_PART(c.description,'|',1) as MA_BV,SPLIT_PART(c.description,'|',2) as Ma_AX,c.use_type_id,c.service_type_id,a.stockid,a.mainimexid,a.creationdate_drug FROM his_drug_ax a " +
-                    @"JOIN (SELECT id,drug_name,component,content_name,unit_name FROM his_vw_usingdrug) b  ON a.usingdrugid = b.id JOIN (SELECT id,description,use_type_id,service_type_id FROM his_drug) c on c.id = a.id order by mainimexid,drug_name";
-            return ExecuteQuery(sql);
-        }
-        public int Update_AX(string mAX, Int32 mUse_type,Int32 mDrug)
-        {              
-            try
-            {                
-                var sql = @"UPDATE his_drug set description = '{0}',use_type_id = {1} WHERE id = {2}";
-                sql = String.Format(sql, mAX, mUse_type, mDrug);
-                return ExecuteNonQuery(sql);            }
-            catch { return -1; }              
-        }
+       
         public DataTable Select_Bang1(long Media)
         {
             var sql = "select * from his_chitieu_tonghop_bang1 where \"MA_LK\" = '{0}' ";
@@ -154,6 +122,21 @@ namespace DAL
             var sql = "select * from his_chitiet_dv_vt_bang3 where \"MA_LK\" = '{0}' ";
             sql = string.Format(sql, Media);
             return ExecuteQuery(sql);
+        }
+        /// <summary>
+        /// update trang thai sao khi xuat thanh cong
+        /// </summary>
+        /// <param name="mMedia"></param>
+        /// <returns></returns>
+        public int FinishMed(long mMedia)
+        {
+            try
+            {
+                var sql = "UPDATE his_chitiet_bhyt SET exportxml = 1 WHERE sohoso = {0}";
+                sql = String.Format(sql, mMedia);
+                return ExecuteNonQuery(sql);
+            }
+            catch { return -1; }
         }
 
         #endregion
