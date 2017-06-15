@@ -20,26 +20,27 @@ namespace WebService
             InitializeComponent();
         }
         #region Variable
-            DataTable dt = new DataTable();
-            DataSet ds = new DataSet();
-            public static string StrConnect = UTL.DataBase.GetConfig();
-            DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
-            /// <summary>
-            /// Ket noi Postgrest
-            /// </summary>
-            public NpgsqlConnection myPgConnect;
-            private NpgsqlCommand myPgCommand;
-            private NpgsqlDataAdapter myPgAdapter;
-            /// <summary>
-            /// 
-            /// </summary>
-            private string PathBHYT;
-            private string FileName;
-            private string sobh;
-            private string sql;
-            private long MedID;
-            
+        DataTable dt = new DataTable();
+        DataSet ds = new DataSet();
+        public static string StrConnect = UTL.DataBase.GetConfig();
+        DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
+        /// <summary>
+        /// Ket noi Postgrest
+        /// </summary>
+        public NpgsqlConnection myPgConnect;
+        private NpgsqlCommand myPgCommand;
+        private NpgsqlDataAdapter myPgAdapter;
+        /// <summary>
+        /// 
+        /// </summary>
+        private string PathBHYT;
+        private string FileName;
+        private string sobh;
+        private string sql;
+        private long MedID;
+
         #endregion
+        #region Methods
 
         /// <summary>
         /// Export 3 bang thanh 1 file xml
@@ -49,18 +50,16 @@ namespace WebService
         private void Export3file(string path, long i)
         {
             try
-            {                
+            {
                 string xml = "";
                 string xml2 = "";
                 string xml3 = "";
                 DataTable dataTable = new DataTable();
                 DataTable dataTable2 = new DataTable();
-                DataTable dataTable3 = new DataTable();              
-
+                DataTable dataTable3 = new DataTable();
                 dataTable = _Export.Select_Bang1(i);
                 dataTable2 = _Export.Select_Bang2(i);
                 dataTable3 = _Export.Select_Bang3(i);
-
                 DataSet dataSet = new DataSet();
                 DataSet dataSet2 = new DataSet();
                 DataSet dataSet3 = new DataSet();
@@ -251,5 +250,58 @@ namespace WebService
             string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_BHXH.xml", Medicalid, this.sobh));
             //this.new_sign(data, Medicalid);
         }
+        public void WriteLog(string Contents)
+        {
+            try
+            {
+                string path = "\\\\172.251.110.194\\Log\\log.txt";
+                if (File.Exists(path))
+                {
+                    File.AppendAllText(path, string.Concat(new string[]
+					{
+						"### ",
+						this.FileName,
+						"|",
+						Contents,
+						Environment.NewLine
+					}));
+                }
+                else
+                {
+                    File.WriteAllText(path, string.Concat(new string[]
+					{
+						"### ",
+						this.FileName,
+						"|",
+						Contents,
+						Environment.NewLine
+					}));
+                }
+            }
+            catch
+            {
+            }
+        }
+        private void writelog(string MedID)
+        {
+            try
+            {
+                string path = "\\\\172.251.110.194\\Log\\log.txt";
+                if (File.Exists(path))
+                {
+                    File.AppendAllText(path, "### " + MedID + Environment.NewLine);
+                }
+                else
+                {
+                    File.WriteAllText(path, "### " + MedID + Environment.NewLine);
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        #endregion
+
     }
 }
