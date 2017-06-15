@@ -17,6 +17,7 @@ namespace UTL
 {
     #region Variable
     
+    
     #endregion
     public static class DataBase
     {
@@ -83,6 +84,7 @@ namespace UTL
         public static string GetConfig()
         {
             string strconnection;
+            string lashpath;
             try
             {
                 using (DataSet dataSet = new DataSet())
@@ -91,7 +93,7 @@ namespace UTL
                     string pass;
                     string port;
                     string database;
-                    string text;
+                    string iPSrv;
                     if (File.Exists(Application.StartupPath + "\\config.xml"))
                     {
                         dataSet.ReadXml(Application.StartupPath + "\\config.xml");
@@ -99,7 +101,8 @@ namespace UTL
                         pass = dataSet.Tables[0].Rows[0]["Pass"].ToString();
                         port = dataSet.Tables[0].Rows[0]["Port"].ToString();
                         database = dataSet.Tables[0].Rows[0]["Host"].ToString();
-                        text = dataSet.Tables[0].Rows[0]["Server"].ToString();
+                        iPSrv = dataSet.Tables[0].Rows[0]["Server"].ToString();
+                        lashpath = dataSet.Tables[0].Rows[0]["pathexport"].ToString();
                     }
                     else
                     {
@@ -107,9 +110,9 @@ namespace UTL
                         pass = "oUIJpYLtYPc=";
                         port = "5432";
                         database = "HMIS";
-                        text = "localhost";
+                        iPSrv = "localhost";
                     }
-                    strconnection = getHosPath(database, pass, text, port, uID);
+                    strconnection = getHosPath(database, pass, iPSrv, port, uID);
                                    
                 }
                 return strconnection;    
