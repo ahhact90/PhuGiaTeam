@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{B13B8369-B22F-4834-A99D-0275A3815766}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTL", "UTL\UTL.csproj", "{C0FC0541-19E5-426E-A605-44F00AE4ADF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{888F445A-CC7F-44CB-A174-583D46C6A5BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{B13B8369-B22F-4834-A99D-0275A3815766}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B13B8369-B22F-4834-A99D-0275A3815766}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B13B8369-B22F-4834-A99D-0275A3815766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0FC0541-19E5-426E-A605-44F00AE4ADF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FC0541-19E5-426E-A605-44F00AE4ADF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FC0541-19E5-426E-A605-44F00AE4ADF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FC0541-19E5-426E-A605-44F00AE4ADF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888F445A-CC7F-44CB-A174-583D46C6A5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888F445A-CC7F-44CB-A174-583D46C6A5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888F445A-CC7F-44CB-A174-583D46C6A5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888F445A-CC7F-44CB-A174-583D46C6A5BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
