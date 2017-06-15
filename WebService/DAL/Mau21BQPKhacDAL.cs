@@ -108,12 +108,20 @@ namespace DAL
             sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
             return ExecuteQuery(sql);
         }
-        public string tonghop_chiphi_bhyt(long Media)
+        public string his_fee_sync_tonghop(long Media)
         {
-            var sql = "select his_tonghop_chiphi_bhyt({0})";
+            var sql = "select his_fee_sync_tonghop_all({0})";
             sql = string.Format(sql, Media);
-            return ExecuteQuery(sql).Rows[0][0].ToString(); ;
+            return ExecuteQuery(sql).Rows[0][0].ToString(); 
         }
+        
+        public long Select_Medical()
+        {
+            var sql = "select sohoso from his_chitiet_bhyt where exportxml = 0 and sohoso > 17000000 and SUBSTR(mathe,4,2)::integer <> 97 order by ngaybc limit 1";
+            sql = string.Format(sql);
+            return  long.Parse(ExecuteQuery(sql).Rows[0][0].ToString());
+        }
+
         public DataTable Select_Thuoc_AX()
         {
             var sql = @"SELECT a.id as drug_id,a.usingdrugid,b.drug_name,b.component,b.content_name,b.unit_name,SPLIT_PART(c.description,'|',1) as MA_BV,SPLIT_PART(c.description,'|',2) as Ma_AX,c.use_type_id,c.service_type_id,a.stockid,a.mainimexid,a.creationdate_drug FROM his_drug_ax a " +
@@ -128,6 +136,24 @@ namespace DAL
                 sql = String.Format(sql, mAX, mUse_type, mDrug);
                 return ExecuteNonQuery(sql);            }
             catch { return -1; }              
+        }
+        public DataTable Select_Bang1(long Media)
+        {
+            var sql = "select * from his_chitieu_tonghop_bang1 where \"MA_LK\" = '{0}' ";
+            sql = string.Format(sql, Media);
+            return ExecuteQuery(sql);
+        }
+        public DataTable Select_Bang2(long Media)
+        {
+            var sql = "select * from his_chitiet_thuoc_bang2 where \"MA_LK\" = '{0}' ";
+            sql = string.Format(sql, Media);
+            return ExecuteQuery(sql);
+        }
+        public DataTable Select_Bang3(long Media)
+        {
+            var sql = "select * from his_chitiet_dv_vt_bang3 where \"MA_LK\" = '{0}' ";
+            sql = string.Format(sql, Media);
+            return ExecuteQuery(sql);
         }
 
         #endregion
