@@ -93,16 +93,35 @@ namespace DAL
         
         public string his_fee_sync_tonghop(long Media)
         {
-            var sql = "select his_fee_sync_tonghop_all({0})";
-            sql = string.Format(sql, Media);
-            return ExecuteQuery(sql).Rows[0][0].ToString(); 
+            try
+            {
+                var sql = "select his_fee_sync_tonghop_all({0})";
+                sql = string.Format(sql, Media);
+                return ExecuteQuery(sql).Rows[0][0].ToString();
+            }
+            catch 
+            {
+                
+                return "-1";
+            }
+             
         }
         
         public long Select_Medical()
         {
-            var sql = "select sohoso from his_chitiet_bhyt where exportxml = 0 and sohoso > 17000000 and SUBSTR(mathe,4,2)::integer <> 97 order by ngaybc limit 1";
-            sql = string.Format(sql);
-            return  long.Parse(ExecuteQuery(sql).Rows[0][0].ToString());
+            try
+            {
+                var sql = "select sohoso from his_chitiet_bhyt where exportxml = 0 and sohoso > 17000000 and SUBSTR(mathe,4,2)::integer <> 97 order by ngaybc limit 1";
+                sql = string.Format(sql);
+                return long.Parse(ExecuteQuery(sql).Rows[0][0].ToString());
+
+            }
+            catch
+            {
+
+                return -1;
+            }
+            
         }
        
         public DataTable Select_Bang1(long Media)

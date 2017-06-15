@@ -321,6 +321,13 @@ namespace WebService
                 try
                 {
                     MedID = _Export.Select_Medical();
+                    if (MedID < 0 )
+                    {
+                        MessageBox.Show("Không có dữ liệu cần Export...");
+                        this.Close();
+                        //Application.Exit();
+                    }
+                   
                     if (MedID > 0L)
                     {
                         _Export.his_fee_sync_tonghop(MedID);
@@ -328,6 +335,7 @@ namespace WebService
                         _Export.FinishMed(MedID);
                         
                     }
+                    
                     Thread.Sleep(5000);
                 }
                 catch (Exception ex)
@@ -341,7 +349,14 @@ namespace WebService
 
         private void WebService_Load(object sender, EventArgs e)
         {
+            string STR_DBNAME = @"E:\Teca\VAS\QD917";
+            txtPath.Text = STR_DBNAME;
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }
