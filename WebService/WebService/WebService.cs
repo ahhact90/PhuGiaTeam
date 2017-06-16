@@ -326,9 +326,10 @@ namespace WebService
                             MedID = _Export.Select_Medical();
                             if (MedID < 0 )
                             {
-                                MessageBox.Show("Không có dữ liệu cần Export...");
-                                this.Close();
+                                //MessageBox.Show("Không có dữ liệu cần Export...");
+                                //this.Close();
                                 //Application.Exit();
+                                goto sleep;
                             }
                    
                             if (MedID > 0L)
@@ -338,7 +339,7 @@ namespace WebService
                                 _Export.FinishMed(MedID);
                         
                             }
-                    
+                            sleep:
                             Thread.Sleep(5000);
                         }
                         catch (Exception ex)
@@ -347,7 +348,7 @@ namespace WebService
                         }
                     }
             }
-            );
+            );  // Tao mot luong du lieu rieng de may chay khong bi treo
             thread.Start();
         }
         
