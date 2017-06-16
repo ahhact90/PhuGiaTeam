@@ -67,13 +67,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(988, 569);
+            this.ClientSize = new System.Drawing.Size(331, 138);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.btnExport);
             this.Name = "WebService";
             this.Text = "WebService";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.WebService_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

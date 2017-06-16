@@ -316,33 +316,39 @@ namespace WebService
             //txtPath.Text = lashpath;
             string lashpath = txtPath.Text.Trim();
             btnExport.Enabled = false;
-            while (true)
+            Thread thread = new Thread(() =>
             {
-                try
-                {
-                    MedID = _Export.Select_Medical();
-                    if (MedID < 0 )
+              
+                    while (true)
                     {
-                        MessageBox.Show("Không có dữ liệu cần Export...");
-                        this.Close();
-                        //Application.Exit();
-                    }
+                        try
+                        {
+                            MedID = _Export.Select_Medical();
+                            if (MedID < 0 )
+                            {
+                                MessageBox.Show("Không có dữ liệu cần Export...");
+                                this.Close();
+                                //Application.Exit();
+                            }
                    
-                    if (MedID > 0L)
-                    {
-                        _Export.his_fee_sync_tonghop(MedID);
-                         Export3file(lashpath, MedID);
-                        _Export.FinishMed(MedID);
+                            if (MedID > 0L)
+                            {
+                                _Export.his_fee_sync_tonghop(MedID);
+                                 Export3file(lashpath, MedID);
+                                _Export.FinishMed(MedID);
                         
-                    }
+                            }
                     
-                    Thread.Sleep(5000);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+                            Thread.Sleep(5000);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                    }
             }
+            );
+            thread.Start();
         }
         
         
