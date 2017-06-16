@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.btnExport = new DevExpress.XtraEditors.SimpleButton();
-            this.txtPath = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPathEx = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExport
@@ -42,13 +43,6 @@
             this.btnExport.TabIndex = 0;
             this.btnExport.Text = "Export Auto";
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // txtPath
-            // 
-            this.txtPath.Location = new System.Drawing.Point(12, 28);
-            this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(295, 20);
-            this.txtPath.TabIndex = 1;
             // 
             // openFileDialog1
             // 
@@ -63,13 +57,34 @@
             this.btnExit.Text = "CanCel";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // txtPathEx
+            // 
+            this.txtPathEx.Location = new System.Drawing.Point(12, 28);
+            this.txtPathEx.Name = "txtPathEx";
+            this.txtPathEx.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPathEx.Size = new System.Drawing.Size(314, 20);
+            this.txtPathEx.TabIndex = 3;
+            this.txtPathEx.Text = "....";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(335, 27);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1.Size = new System.Drawing.Size(22, 20);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "....";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // WebService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 138);
+            this.ClientSize = new System.Drawing.Size(398, 138);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtPathEx);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.txtPath);
             this.Controls.Add(this.btnExport);
             this.Name = "WebService";
             this.Text = "WebService";
@@ -82,9 +97,10 @@
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton btnExport;
-        private System.Windows.Forms.TextBox txtPath;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraEditors.SimpleButton btnExit;
+        private System.Windows.Forms.TextBox txtPathEx;
+        private System.Windows.Forms.Button button1;
     }
 }
 

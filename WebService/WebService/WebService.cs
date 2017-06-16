@@ -314,7 +314,8 @@ namespace WebService
         {                 
             //string lashpath = Path.GetFullPath(openFileDialog1.FileName);
             //txtPath.Text = lashpath;
-            string lashpath = txtPath.Text.Trim();
+            //string lashpath = txtPath.Text.Trim();
+            string lashpath = txtPathEx.Text.Trim();
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
             {
@@ -356,14 +357,25 @@ namespace WebService
 
         private void WebService_Load(object sender, EventArgs e)
         {
-            string STR_DBNAME = @"E:\Teca\VAS\QD917";
-            txtPath.Text = STR_DBNAME;
+            string STR_DBNAME = @"E:\Teca\VAS\QD917";           
+            txtPathEx.Text = STR_DBNAME;
 
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {              
+                txtPathEx.Text = fbd.SelectedPath;
+            }
         }
 
     }
