@@ -78,6 +78,9 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtValue = new DevExpress.XtraEditors.TextEdit();
+            this.txtMd5 = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -99,6 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMd5.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -135,6 +140,9 @@
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Controls.Add(this.simpleButton1);
+            this.dockPanel1_Container.Controls.Add(this.txtMd5);
+            this.dockPanel1_Container.Controls.Add(this.txtValue);
             this.dockPanel1_Container.Controls.Add(this.btSave);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
@@ -157,10 +165,10 @@
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
             this.dockPanel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dockPanel2.ID = new System.Guid("b434e5f9-3e22-418f-a14f-e386d7d5ddb1");
-            this.dockPanel2.Location = new System.Drawing.Point(0, 295);
+            this.dockPanel2.Location = new System.Drawing.Point(0, 309);
             this.dockPanel2.Name = "dockPanel2";
-            this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 340);
-            this.dockPanel2.Size = new System.Drawing.Size(1114, 340);
+            this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 326);
+            this.dockPanel2.Size = new System.Drawing.Size(1114, 326);
             // 
             // contextMenuStrip1
             // 
@@ -181,7 +189,7 @@
             this.dockPanel2_Container.Controls.Add(this.grdCtrlThuocAX);
             this.dockPanel2_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(1106, 313);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(1106, 299);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // grdCtrlThuocAX
@@ -190,7 +198,7 @@
             this.grdCtrlThuocAX.Location = new System.Drawing.Point(0, 0);
             this.grdCtrlThuocAX.MainView = this.gridView1;
             this.grdCtrlThuocAX.Name = "grdCtrlThuocAX";
-            this.grdCtrlThuocAX.Size = new System.Drawing.Size(1106, 313);
+            this.grdCtrlThuocAX.Size = new System.Drawing.Size(1106, 299);
             this.grdCtrlThuocAX.TabIndex = 0;
             this.grdCtrlThuocAX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -536,6 +544,29 @@
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Mã Thuốc";
             // 
+            // txtValue
+            // 
+            this.txtValue.Location = new System.Drawing.Point(751, 170);
+            this.txtValue.Name = "txtValue";
+            this.txtValue.Size = new System.Drawing.Size(165, 20);
+            this.txtValue.TabIndex = 1;
+            // 
+            // txtMd5
+            // 
+            this.txtMd5.Location = new System.Drawing.Point(753, 209);
+            this.txtMd5.Name = "txtMd5";
+            this.txtMd5.Size = new System.Drawing.Size(209, 20);
+            this.txtMd5.TabIndex = 2;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(757, 239);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(74, 28);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // From_Duoc_AnhXa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,6 +626,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDrug.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsing.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDrugName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValue.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMd5.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,6 +684,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sửaChiTiêtToolStripMenuItem;
         private DevExpress.XtraEditors.SimpleButton btSave;
+        private DevExpress.XtraEditors.TextEdit txtMd5;
+        private DevExpress.XtraEditors.TextEdit txtValue;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
 
     }
 }

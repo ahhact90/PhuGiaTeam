@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Security.Cryptography;
 
 namespace From_Report.From_Dstore
 {
@@ -18,6 +19,7 @@ namespace From_Report.From_Dstore
         DataSet ds = new DataSet();
         public static string StrConnect = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
+        //public static string StrPass = UTL.FunctionHelper.EncryptMD5();
         #endregion
 
         public From_Duoc_AnhXa()
@@ -175,7 +177,14 @@ namespace From_Report.From_Dstore
         private void dockPanel1_KeyDown(object sender, KeyEventArgs e)
         {           
             
-        }          
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            txtMd5.Text = UTL.FunctionHelper.Decryptmd5(txtValue.Text.ToString(),true);
+        }
+
+             
        
     }
 }
