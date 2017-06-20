@@ -311,10 +311,7 @@ namespace WebService
         #endregion
 
         private void btnExport_Click(object sender, EventArgs e)
-        {                 
-            //string lashpath = Path.GetFullPath(openFileDialog1.FileName);
-            //txtPath.Text = lashpath;
-            //string lashpath = txtPath.Text.Trim();
+        {    
             string lashpath = txtPathEx.Text.Trim();
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
@@ -326,10 +323,7 @@ namespace WebService
                         {
                             MedID = _Export.Select_Medical();
                             if (MedID < 0 )
-                            {
-                                //MessageBox.Show("Không có dữ liệu cần Export...");
-                                //this.Close();
-                                //Application.Exit();
+                            {                                
                                 goto sleep;
                             }
                    
@@ -368,7 +362,11 @@ namespace WebService
         }
 
         
-
+        /// <summary>
+        /// Lấy đường để xuất file Export XML
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
