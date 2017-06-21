@@ -313,6 +313,7 @@ namespace WebService
         private void btnExport_Click(object sender, EventArgs e)
         {    
             string lashpath = txtPathEx.Text.Trim();
+            string pathBackup = txtBackup.Text.Trim();
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
             {
@@ -331,6 +332,7 @@ namespace WebService
                             {
                                 _Export.his_fee_sync_tonghop(MedID);
                                  Export3file(lashpath, MedID);
+                                 Export3file(pathBackup, MedID);
                                 _Export.FinishMed(MedID);
                         
                             }
@@ -373,6 +375,15 @@ namespace WebService
             if (fbd.ShowDialog() == DialogResult.OK)
             {              
                 txtPathEx.Text = fbd.SelectedPath;
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                txtBackup.Text = fbd.SelectedPath;
             }
         }
 
