@@ -30,8 +30,8 @@ namespace WebService
         /// Ket noi Postgrest
         /// </summary>
         public NpgsqlConnection myPgConnect;
-        private NpgsqlCommand myPgCommand;
-        private NpgsqlDataAdapter myPgAdapter;
+        //private NpgsqlCommand myPgCommand;
+        //private NpgsqlDataAdapter myPgAdapter;
         /// <summary>
         /// 
         /// </summary>
@@ -40,6 +40,9 @@ namespace WebService
         private string sobh;
         private string sql;
         private long MedID;
+        private string sobn;
+        private string doituong_bn;
+
         //private string lashpath;
 
         #endregion
@@ -60,15 +63,22 @@ namespace WebService
                 DataTable dataTable = new DataTable();
                 DataTable dataTable2 = new DataTable();
                 DataTable dataTable3 = new DataTable();
+                DataTable dataTable4 = new DataTable();
                 dataTable = _Export.Select_Bang1(i);
                 dataTable2 = _Export.Select_Bang2(i);
                 dataTable3 = _Export.Select_Bang3(i);
+                dataTable4 = _Export.Select_his_chitiet_bhyt(i);
                 DataSet dataSet = new DataSet();
                 DataSet dataSet2 = new DataSet();
                 DataSet dataSet3 = new DataSet();
+                DataSet dataSet4 = new DataSet();
+
                 dataSet.Tables.Add(_Export.Select_Bang1(i));
                 dataSet2.Tables.Add(_Export.Select_Bang2(i));
                 dataSet3.Tables.Add(_Export.Select_Bang3(i));
+                dataSet4.Tables.Add(_Export.Select_his_chitiet_bhyt(i));
+                                                 
+                
 
                 if (dataTable.Rows.Count == 0)
                 {
@@ -77,6 +87,9 @@ namespace WebService
                 else
                 {
                     this.sobh = dataSet.Tables[0].Rows[0]["ma_the"].ToString();
+                    this.sobn = dataSet.Tables[0].Rows[0]["ma_bn"].ToString();
+                    this.doituong_bn = dataSet4.Tables[0].Rows[0]["doituong_bn"].ToString(); 
+
                     XmlDocument xmlDocument = new XmlDocument();
                     StringBuilder stringBuilder = new StringBuilder();
                     using (XmlWriter xmlWriter = XmlWriter.Create(stringBuilder, new XmlWriterSettings
@@ -251,10 +264,10 @@ namespace WebService
             text = text.Replace("<Table1>", "");
             text = text.Replace("</Table1>", "");
             xmlDocument.LoadXml(text);
-            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_BHXH.xml", Medicalid, this.sobh));
-            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_BHXH.xml", Medicalid, this.sobh);
-            this.FileName = string.Format("{0}_{1}_BHXH.xml", Medicalid, this.sobh);
-            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_BHXH.xml", Medicalid, this.sobh));
+            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn));
+            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn);
+            this.FileName = string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn);
+            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn));
             //this.new_sign(data, Medicalid);
         }
         public void WriteLog(string Contents)

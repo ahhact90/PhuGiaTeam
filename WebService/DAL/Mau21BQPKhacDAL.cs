@@ -143,6 +143,17 @@ namespace DAL
             return ExecuteQuery(sql);
         }
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Media"></param>
+        /// <returns></returns>
+        public DataTable Select_his_chitiet_bhyt(long Media)
+        {
+            var sql = @"Select ngaybc,mabn,sohoso,tenbn,namsinh,gioi,mathe,kytu,manoidkbd,matinh,ngayvao,ngayra,ngaykham,ngaydt,mabenh,kham,giuong,thuoc,vtth,vttt,mau,xn,loai_bn, case when doituong_bn in (1,3) then	'NgoaiTru' else	case when doituong_bn in (4) then 'ThanNhanTao' else 'NoiTru' END END as doituong_bn from his_chitiet_bhyt where sohoso ={0}";
+            sql = string.Format(sql, Media);
+            return ExecuteQuery(sql);
+        }
+        /// <summary>
         /// update trang thai sao khi xuat thanh cong
         /// </summary>
         /// <param name="mMedia"></param>
