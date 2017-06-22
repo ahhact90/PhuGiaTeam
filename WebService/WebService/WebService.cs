@@ -40,6 +40,7 @@ namespace WebService
         private string sobh;
         private string sql;
         private long MedID;
+        private long MedID_tmp;
         private string sobn;
         private string doituong_bn;
 
@@ -306,7 +307,8 @@ namespace WebService
         {
             try
             {
-                string path = "\\\\172.251.110.194\\Log\\log.txt";
+                //string path = "\\\\172.251.110.194\\Log\\log.txt";
+                string path = txtBackup.Text.Trim();
                 if (File.Exists(path))
                 {
                     File.AppendAllText(path, "### " + MedID + Environment.NewLine);
@@ -327,6 +329,8 @@ namespace WebService
         {    
             string lashpath = txtPathEx.Text.Trim();
             string pathBackup = txtBackup.Text.Trim();
+           
+
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
             {
@@ -343,10 +347,26 @@ namespace WebService
                    
                             if (MedID > 0L)
                             {
-                                _Export.his_fee_sync_tonghop(MedID);
-                                 Export3file(lashpath, MedID);
-                                 Export3file(pathBackup, MedID);
-                                _Export.FinishMed(MedID);
+                                string tam = _Export.his_find_medical(MedID);
+                                
+                                if (tam == "Error")
+                                {
+                                    
+                                    _Export.FinishMed(MedID);
+                                    string Medical = MedID.ToString();
+                                    writelog(Medical);
+                                    MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại ", tam);
+                                    goto sleep;
+
+                                }
+                                else
+                                {
+                                    _Export.his_fee_sync_tonghop(MedID);
+                                     Export3file(lashpath, MedID);
+                                     Export3file(pathBackup, MedID);
+                                    _Export.Finish_his_medical(MedID);
+                                }
+                                
                         
                             }
                             sleep:

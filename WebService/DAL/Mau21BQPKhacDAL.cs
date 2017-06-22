@@ -168,6 +168,46 @@ namespace DAL
             }
             catch { return -1; }
         }
+        /// <summary>
+        /// Cap nhat thong tin da ExportXML
+        /// </summary>
+        /// <param name="Media"></param>
+        /// <returns></returns>
+        public string Finish_his_medical(long Media)
+        {
+            try
+            {
+                var sql = "select his_check_bhyt({0})";
+                sql = string.Format(sql, Media);
+                return ExecuteQuery(sql).Rows[0][0].ToString();
+            }
+            catch
+            {
+
+                return "-1";
+            }
+
+        }
+        /// <summary>
+        /// Kiem tra benh an da gui chua
+        /// </summary>
+        /// <param name="Media"></param>
+        /// <returns></returns>
+        public string his_find_medical(long Media)
+        {
+            try
+            {
+                var sql = "select his_find_medical({0})";
+                sql = string.Format(sql, Media);
+                return ExecuteQuery(sql).Rows[0][0].ToString();
+            }
+            catch
+            {
+
+                return "-1";
+            }
+
+        }
 
         #endregion
     }
