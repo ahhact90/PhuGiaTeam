@@ -347,8 +347,7 @@ namespace WebService
                    
                             if (MedID > 0L)
                             {
-                                string tam = _Export.his_find_medical(MedID);
-                                
+                                string tam = _Export.his_find_medical(MedID);                                
                                 if (tam == "Error")
                                 {
                                     
