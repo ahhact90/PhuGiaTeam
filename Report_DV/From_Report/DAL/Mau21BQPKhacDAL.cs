@@ -129,6 +129,12 @@ namespace DAL
                 return ExecuteNonQuery(sql);            }
             catch { return -1; }              
         }
+        public DataTable Duongdung()
+        {
+            var sql = "SELECT line,name FROM  his_drug_config WHERE zone ='drug_use_type' ORDER BY line";
+            sql = string.Format(sql);
+            return ExecuteQuery(sql);
+        }
 
         #endregion
     }

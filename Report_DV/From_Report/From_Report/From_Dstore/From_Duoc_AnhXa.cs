@@ -19,7 +19,7 @@ namespace From_Report.From_Dstore
         DataSet ds = new DataSet();
         public static string StrConnect = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
-        //public static string StrPass = UTL.FunctionHelper.EncryptMD5();
+       
         #endregion
 
         public From_Duoc_AnhXa()
@@ -179,10 +179,7 @@ namespace From_Report.From_Dstore
             
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            txtMd5.Text = UTL.FunctionHelper.Decryptmd5(txtValue.Text.ToString(),true);
-        }
+        
 
              
        
