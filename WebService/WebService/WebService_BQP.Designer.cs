@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPathEx = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBackup = new System.Windows.Forms.TextBox();
             this.btnExport = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnExprot = new System.Windows.Forms.Button();
+            this.btnbackup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,12 +48,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Xuất File";
             // 
-            // textBox1
+            // txtPathEx
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(417, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPathEx.Location = new System.Drawing.Point(30, 48);
+            this.txtPathEx.Name = "txtPathEx";
+            this.txtPathEx.Size = new System.Drawing.Size(417, 20);
+            this.txtPathEx.TabIndex = 1;
             // 
             // label2
             // 
@@ -65,12 +65,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Backup File";
             // 
-            // textBox2
+            // txtBackup
             // 
-            this.textBox2.Location = new System.Drawing.Point(30, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(417, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtBackup.Location = new System.Drawing.Point(30, 116);
+            this.txtBackup.Name = "txtBackup";
+            this.txtBackup.Size = new System.Drawing.Size(417, 20);
+            this.txtBackup.TabIndex = 1;
             // 
             // btnExport
             // 
@@ -82,47 +82,50 @@
             this.btnExport.Text = "Export XML";
             this.btnExport.UseVisualStyleBackColor = true;
             // 
-            // btnCancel
+            // btnExit
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(255, 164);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(122, 43);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "CanCel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnExit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(255, 164);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(122, 43);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "CanCel";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
-            // button3
+            // btnExprot
             // 
-            this.button3.Location = new System.Drawing.Point(469, 48);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 20);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "...";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExprot.Location = new System.Drawing.Point(469, 48);
+            this.btnExprot.Name = "btnExprot";
+            this.btnExprot.Size = new System.Drawing.Size(26, 20);
+            this.btnExprot.TabIndex = 4;
+            this.btnExprot.Text = "...";
+            this.btnExprot.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExprot.UseVisualStyleBackColor = true;
+            this.btnExprot.Click += new System.EventHandler(this.btnExprot_Click);
             // 
-            // button4
+            // btnbackup
             // 
-            this.button4.Location = new System.Drawing.Point(469, 115);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(26, 20);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnbackup.Location = new System.Drawing.Point(469, 115);
+            this.btnbackup.Name = "btnbackup";
+            this.btnbackup.Size = new System.Drawing.Size(26, 20);
+            this.btnbackup.TabIndex = 4;
+            this.btnbackup.Text = "...";
+            this.btnbackup.UseVisualStyleBackColor = true;
+            this.btnbackup.Click += new System.EventHandler(this.btnbackup_Click);
             // 
             // WebService_BQP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 247);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnbackup);
+            this.Controls.Add(this.btnExprot);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBackup);
+            this.Controls.Add(this.txtPathEx);
             this.Controls.Add(this.label1);
             this.Name = "WebService_BQP";
             this.Text = "WebService_BQP";
@@ -134,12 +137,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPathEx;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBackup;
         private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnExprot;
+        private System.Windows.Forms.Button btnbackup;
     }
 }
