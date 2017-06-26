@@ -321,8 +321,8 @@ namespace WebService
         {
             try
             {
-                //string path = "\\\\172.251.110.194\\Log\\log.txt";
-                string path = txtBackup.Text.Trim();
+                string path = "\\\\172.251.110.194\\Log\\log.txt";
+                //string path = txtBackup.Text.Trim();
                 if (File.Exists(path))
                 {
                     File.AppendAllText(path, "### " + MedID + Environment.NewLine);
@@ -368,7 +368,7 @@ namespace WebService
                                     _Export.FinishMed(MedID);
                                     string Medical = MedID.ToString();
                                     writelog(Medical);
-                                    MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại ", tam);                                   
+                                    MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);                                   
                                     goto sleep;
 
                                 }
@@ -432,74 +432,74 @@ namespace WebService
                 txtBackup.Text = fbd.SelectedPath;
             }
         }
-        private void upwebservice()
-        {
+        //private void upwebservice()
+        //{
             
 
-            this.client.get_DefaultRequestHeaders().get_Accept().Clear();
-            this.client.get_DefaultRequestHeaders().get_Accept().Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            Dictionary<string, string> dictionary = new Dictionary<string, string>
-			{
-				{
-					"username",
-					this.username
-				},
-				{
-					"password",
-					this.password
-				}
-			};
-            FormUrlEncodedContent formUrlEncodedContent = new FormUrlEncodedContent(dictionary);
-            HttpResponseMessage result = this.client.PostAsync("api/token/take", formUrlEncodedContent).Result;
-            string result2 = result.get_Content().ReadAsStringAsync().Result;
+        //    this.client.get_DefaultRequestHeaders().get_Accept().Clear();
+        //    this.client.get_DefaultRequestHeaders().get_Accept().Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //    Dictionary<string, string> dictionary = new Dictionary<string, string>
+        //    {
+        //        {
+        //            "username",
+        //            this.username
+        //        },
+        //        {
+        //            "password",
+        //            this.password
+        //        }
+        //    };
+        //    FormUrlEncodedContent formUrlEncodedContent = new FormUrlEncodedContent(dictionary);
+        //    HttpResponseMessage result = this.client.PostAsync("api/token/take", formUrlEncodedContent).Result;
+        //    string result2 = result.get_Content().ReadAsStringAsync().Result;
 
-            this.result1 = result2.Split(new char[]
-			{
-				','
-			});
-            this.ketqua = this.result1[0].Split(new char[]
-			{
-				':'
-			});
-            this.kq = this.ketqua[1].Substring(1, this.ketqua[1].Length - 2);
-            if (int.Parse(this.kq) == 401)
-            {
-                MessageBox.Show("Lỗi xác thực");
-            }
-            this.access = this.result1[1].Split(new char[]
-			{
-				':'
-			});
-            this.access1 = this.access[2].Replace("\"", "");
-            this.idtoken = this.result1[2].Split(new char[]
-			{
-				':'
-			});
-            this.token = this.idtoken[1].Replace("\"", "");
-            FileInfo fileInfo = new FileInfo(this.PathBHYT);
-            byte[] value = null;
-            using (FileStream fileStream = fileInfo.OpenRead())
-            {
-                using (MemoryStream memoryStream = new MemoryStream())
-                {
-                    fileStream.CopyTo(memoryStream);
-                    value = memoryStream.ToArray();
-                }
-            }
-            string str = string.Format("token={0}&id_token={1}&username={2}&password={3}&loaiHoSo={4}&maTinh={5}&maCSKCB={6}", new object[]
-			{
-				this.access1,
-				this.token,
-				"92002_BV",
-				"dfe99ede6292051396d3cbea73f4985d",
-				"3",
-				"92",
-				"92002"
-			});
-            HttpResponseMessage result3 = this.client.PostAsJsonAsync("api/egw/guiHoSoGiamDinh?" + str, value).Result;
-            this.WriteLog(result3.get_Content().ReadAsStringAsync().Result);
-            File.Delete(this.PathBHYT);
-        }
+        //    this.result1 = result2.Split(new char[]
+        //    {
+        //        ','
+        //    });
+        //    this.ketqua = this.result1[0].Split(new char[]
+        //    {
+        //        ':'
+        //    });
+        //    this.kq = this.ketqua[1].Substring(1, this.ketqua[1].Length - 2);
+        //    if (int.Parse(this.kq) == 401)
+        //    {
+        //        MessageBox.Show("Lỗi xác thực");
+        //    }
+        //    this.access = this.result1[1].Split(new char[]
+        //    {
+        //        ':'
+        //    });
+        //    this.access1 = this.access[2].Replace("\"", "");
+        //    this.idtoken = this.result1[2].Split(new char[]
+        //    {
+        //        ':'
+        //    });
+        //    this.token = this.idtoken[1].Replace("\"", "");
+        //    FileInfo fileInfo = new FileInfo(this.PathBHYT);
+        //    byte[] value = null;
+        //    using (FileStream fileStream = fileInfo.OpenRead())
+        //    {
+        //        using (MemoryStream memoryStream = new MemoryStream())
+        //        {
+        //            fileStream.CopyTo(memoryStream);
+        //            value = memoryStream.ToArray();
+        //        }
+        //    }
+        //    string str = string.Format("token={0}&id_token={1}&username={2}&password={3}&loaiHoSo={4}&maTinh={5}&maCSKCB={6}", new object[]
+        //    {
+        //        this.access1,
+        //        this.token,
+        //        "92002_BV",
+        //        "dfe99ede6292051396d3cbea73f4985d",
+        //        "3",
+        //        "92",
+        //        "92002"
+        //    });
+        //    HttpResponseMessage result3 = this.client.PostAsJsonAsync("api/egw/guiHoSoGiamDinh?" + str, value).Result;
+        //    this.WriteLog(result3.get_Content().ReadAsStringAsync().Result);
+        //    File.Delete(this.PathBHYT);
+        //}
 
     }
 }

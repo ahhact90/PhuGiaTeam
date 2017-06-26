@@ -106,7 +106,10 @@ namespace DAL
             }
              
         }
-        
+        /// <summary>
+        /// Tìm bệnh án Cần Thơ
+        /// </summary>
+        /// <returns></returns>
         public long Select_Medical()
         {
             try
@@ -123,6 +126,26 @@ namespace DAL
             }
             
         }
+        /// <summary>
+        /// Tìm bệnh án Bộ Quốc Phòng
+        /// </summary>
+        /// <returns></returns>
+        public long Select_Medical_BQP()
+        {
+            try
+            {
+                var sql = "select sohoso from his_chitiet_bhyt where exportxml = 0 and sohoso > 17000000 and SUBSTR(mathe,4,2)::integer = 97 order by ngaybc limit 1";
+                sql = string.Format(sql);
+                return long.Parse(ExecuteQuery(sql).Rows[0][0].ToString());
+
+            }
+            catch
+            {
+
+                return -1;
+            }
+
+        }       
        
         public DataTable Select_Bang1(long Media)
         {
