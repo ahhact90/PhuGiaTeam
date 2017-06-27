@@ -342,7 +342,7 @@ namespace WebService
         private void btnExport_Click(object sender, EventArgs e)
         {    
             string lashpath = txtPathEx.Text.Trim();
-            string pathBackup = txtBackup.Text.Trim();
+            string pathBackup = txtBackup_BQP.Text.Trim();
            
 
             btnExport.Enabled = false;
@@ -393,19 +393,9 @@ namespace WebService
             }
             );  // Tao mot luong du lieu rieng de may chay khong bi treo
             thread.Start();
-        }
+        }     
+
         
-        
-
-        private void WebService_Load(object sender, EventArgs e)
-        {
-            string STR_DBNAME = @"E:\Teca\VAS\QD917";           
-            txtPathEx.Text = STR_DBNAME;
-
-        }
-
-       
-
         
         /// <summary>
         /// Lấy đường để xuất file Export XML
@@ -434,6 +424,19 @@ namespace WebService
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void WebService_BQP_Load(object sender, EventArgs e)
+        {
+            string STR_DBNAME = @"E:\Teca\VAS\QD917";
+            txtPathEx.Text = STR_DBNAME;            
+            string STR_DBNAME_BACKUP = @"E:\TecaBQP\QD917\Backup";
+            txtBackup_BQP.Text = STR_DBNAME_BACKUP;
+        }
+
+        private void txtBackup_BQP_TextChanged(object sender, EventArgs e)
+        {
+
         }       
 
     }
