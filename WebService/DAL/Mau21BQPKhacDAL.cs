@@ -165,7 +165,24 @@ namespace DAL
                 return -1;
             }
 
-        }  
+        }
+
+        public long Select_Medical_CT_With_doituong(string medical)
+        {
+            try
+            {
+                var sql = "select sohoso from his_chitiet_bhyt where exportxml = 0 and sohoso > 17000000 and SUBSTR(mathe,4,2)::integer <> 97 AND doituong_bn in ({0}) order by ngaybc limit 1";
+                sql = string.Format(sql, medical);
+                return long.Parse(ExecuteQuery(sql).Rows[0][0].ToString());
+
+            }
+            catch
+            {
+
+                return -1;
+            }
+
+        } 
        
         public DataTable Select_Bang1(long Media)
         {

@@ -48,6 +48,7 @@ namespace WebService
         private long MedID_tmp;
         private string sobn;
         private string doituong_bn;
+        private string ten_bn;
         private HttpClient client = new HttpClient();
         private string[] result1;
         private string[] ketqua;
@@ -103,8 +104,8 @@ namespace WebService
                 {
                     this.sobh = dataSet.Tables[0].Rows[0]["ma_the"].ToString();
                     this.sobn = dataSet.Tables[0].Rows[0]["ma_bn"].ToString();
-                    this.doituong_bn = dataSet4.Tables[0].Rows[0]["doituong_bn"].ToString(); 
-
+                    this.doituong_bn = dataSet4.Tables[0].Rows[0]["doituong_bn"].ToString();
+                    this.ten_bn = dataSet4.Tables[0].Rows[0]["tenbn"].ToString(); 
                     XmlDocument xmlDocument = new XmlDocument();
                     StringBuilder stringBuilder = new StringBuilder();
                     using (XmlWriter xmlWriter = XmlWriter.Create(stringBuilder, new XmlWriterSettings
@@ -279,10 +280,10 @@ namespace WebService
             text = text.Replace("<Table1>", "");
             text = text.Replace("</Table1>", "");
             xmlDocument.LoadXml(text);
-            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh, this.sobn ));
-            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh, this.sobn );
-            this.FileName = string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh, this.sobn );
-            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh,this.sobn));
+            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_BQP.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn));
+            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_BQP.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn);
+            this.FileName = string.Format("{0}_{1}_{2}_{3}_{4}_BQP.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn);
+            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_BQP.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn));
             //this.new_sign(data, Medicalid);
         }
         public void WriteLog(string Contents)
@@ -372,7 +373,8 @@ namespace WebService
 
         private void btnExit_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         private void WebService_BQP_Load(object sender, EventArgs e)
@@ -399,7 +401,7 @@ namespace WebService
 
                         if (rdoNgTru.Checked == true)
                         {
-                            string doituongbn = "1";
+                            string doituongbn = "1,3";
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
 
                         }

@@ -48,6 +48,7 @@ namespace WebService
         private long MedID_tmp;
         private string sobn;
         private string doituong_bn;
+        private string ten_bn;
         private HttpClient client = new HttpClient();
         private string[] result1;
         private string[] ketqua;
@@ -103,7 +104,8 @@ namespace WebService
                 {
                     this.sobh = dataSet.Tables[0].Rows[0]["ma_the"].ToString();
                     this.sobn = dataSet.Tables[0].Rows[0]["ma_bn"].ToString();
-                    this.doituong_bn = dataSet4.Tables[0].Rows[0]["doituong_bn"].ToString(); 
+                    this.doituong_bn = dataSet4.Tables[0].Rows[0]["doituong_bn"].ToString();
+                    this.ten_bn = dataSet4.Tables[0].Rows[0]["tenbn"].ToString(); 
 
                     XmlDocument xmlDocument = new XmlDocument();
                     StringBuilder stringBuilder = new StringBuilder();
@@ -279,10 +281,10 @@ namespace WebService
             text = text.Replace("<Table1>", "");
             text = text.Replace("</Table1>", "");
             xmlDocument.LoadXml(text);
-            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn));
-            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn);
-            this.FileName = string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn);
-            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn));
+            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn,this.ten_bn));
+            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn);
+            this.FileName = string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn);
+            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn));
             //this.new_sign(data, Medicalid);
         }
         public void WriteLog(string Contents)
@@ -353,7 +355,34 @@ namespace WebService
                     {
                         try
                         {
-                            MedID = _Export.Select_Medical();
+                            //MedID = _Export.Select_Medical();
+
+                            if (rdoNgTru.Checked == true)
+                            {
+                                string doituongbn = "1,3";
+                                MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
+
+                            }
+                            else if (rdoTNT.Checked == true)
+                            {
+                                string doituongbn = "4";
+                                MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
+
+                            }
+                            else if (rdoNTru.Checked == true)
+                            {
+                                string doituongbn = "2";
+                                MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
+
+                            }
+                            else
+                            {
+                                string doituongbn = "1,2,3,4";
+                                MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
+
+                            }
+
+
                             if (MedID < 0 )
                             {                                
                                 goto sleep;
@@ -406,7 +435,8 @@ namespace WebService
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         
