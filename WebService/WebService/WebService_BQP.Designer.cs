@@ -36,13 +36,17 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnExprot = new System.Windows.Forms.Button();
             this.btnbackup = new System.Windows.Forms.Button();
+            this.rdoNgTru = new System.Windows.Forms.RadioButton();
+            this.rdoTNT = new System.Windows.Forms.RadioButton();
+            this.rdoNTru = new System.Windows.Forms.RadioButton();
+            this.rdoAll = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 109);
+            this.label1.Location = new System.Drawing.Point(32, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 14);
             this.label1.TabIndex = 0;
@@ -50,7 +54,7 @@
             // 
             // txtPathEx
             // 
-            this.txtPathEx.Location = new System.Drawing.Point(30, 135);
+            this.txtPathEx.Location = new System.Drawing.Point(30, 97);
             this.txtPathEx.Name = "txtPathEx";
             this.txtPathEx.Size = new System.Drawing.Size(417, 20);
             this.txtPathEx.TabIndex = 1;
@@ -59,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 174);
+            this.label2.Location = new System.Drawing.Point(32, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 14);
             this.label2.TabIndex = 2;
@@ -67,26 +71,26 @@
             // 
             // txtBackup_BQP
             // 
-            this.txtBackup_BQP.Location = new System.Drawing.Point(30, 203);
+            this.txtBackup_BQP.Location = new System.Drawing.Point(30, 165);
             this.txtBackup_BQP.Name = "txtBackup_BQP";
             this.txtBackup_BQP.Size = new System.Drawing.Size(417, 20);
             this.txtBackup_BQP.TabIndex = 1;
-            this.txtBackup_BQP.TextChanged += new System.EventHandler(this.txtBackup_BQP_TextChanged);
             // 
             // btnExport
             // 
             this.btnExport.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(29, 251);
+            this.btnExport.Location = new System.Drawing.Point(29, 213);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(122, 43);
             this.btnExport.TabIndex = 3;
             this.btnExport.Text = "Export XML";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click_1);
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(255, 251);
+            this.btnExit.Location = new System.Drawing.Point(255, 213);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(122, 43);
             this.btnExit.TabIndex = 3;
@@ -96,7 +100,7 @@
             // 
             // btnExprot
             // 
-            this.btnExprot.Location = new System.Drawing.Point(469, 135);
+            this.btnExprot.Location = new System.Drawing.Point(469, 97);
             this.btnExprot.Name = "btnExprot";
             this.btnExprot.Size = new System.Drawing.Size(26, 20);
             this.btnExprot.TabIndex = 4;
@@ -107,7 +111,7 @@
             // 
             // btnbackup
             // 
-            this.btnbackup.Location = new System.Drawing.Point(469, 202);
+            this.btnbackup.Location = new System.Drawing.Point(469, 164);
             this.btnbackup.Name = "btnbackup";
             this.btnbackup.Size = new System.Drawing.Size(26, 20);
             this.btnbackup.TabIndex = 4;
@@ -115,11 +119,63 @@
             this.btnbackup.UseVisualStyleBackColor = true;
             this.btnbackup.Click += new System.EventHandler(this.btnbackup_Click);
             // 
+            // rdoNgTru
+            // 
+            this.rdoNgTru.AutoSize = true;
+            this.rdoNgTru.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNgTru.Location = new System.Drawing.Point(31, 25);
+            this.rdoNgTru.Name = "rdoNgTru";
+            this.rdoNgTru.Size = new System.Drawing.Size(86, 20);
+            this.rdoNgTru.TabIndex = 5;
+            this.rdoNgTru.TabStop = true;
+            this.rdoNgTru.Text = "Ngoại Trú";
+            this.rdoNgTru.UseVisualStyleBackColor = true;
+            // 
+            // rdoTNT
+            // 
+            this.rdoTNT.AutoSize = true;
+            this.rdoTNT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoTNT.Location = new System.Drawing.Point(164, 25);
+            this.rdoTNT.Name = "rdoTNT";
+            this.rdoTNT.Size = new System.Drawing.Size(120, 20);
+            this.rdoTNT.TabIndex = 6;
+            this.rdoTNT.TabStop = true;
+            this.rdoTNT.Text = "Thận Nhân Tạo";
+            this.rdoTNT.UseVisualStyleBackColor = true;
+            // 
+            // rdoNTru
+            // 
+            this.rdoNTru.AutoSize = true;
+            this.rdoNTru.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNTru.Location = new System.Drawing.Point(319, 25);
+            this.rdoNTru.Name = "rdoNTru";
+            this.rdoNTru.Size = new System.Drawing.Size(70, 20);
+            this.rdoNTru.TabIndex = 7;
+            this.rdoNTru.TabStop = true;
+            this.rdoNTru.Text = "Nội Trú";
+            this.rdoNTru.UseVisualStyleBackColor = true;
+            // 
+            // rdoAll
+            // 
+            this.rdoAll.AutoSize = true;
+            this.rdoAll.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoAll.Location = new System.Drawing.Point(431, 25);
+            this.rdoAll.Name = "rdoAll";
+            this.rdoAll.Size = new System.Drawing.Size(132, 20);
+            this.rdoAll.TabIndex = 8;
+            this.rdoAll.TabStop = true;
+            this.rdoAll.Text = "Tất cả đối tượng";
+            this.rdoAll.UseVisualStyleBackColor = true;
+            // 
             // WebService_BQP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 326);
+            this.ClientSize = new System.Drawing.Size(628, 285);
+            this.Controls.Add(this.rdoAll);
+            this.Controls.Add(this.rdoNTru);
+            this.Controls.Add(this.rdoTNT);
+            this.Controls.Add(this.rdoNgTru);
             this.Controls.Add(this.btnbackup);
             this.Controls.Add(this.btnExprot);
             this.Controls.Add(this.btnExit);
@@ -146,5 +202,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnExprot;
         private System.Windows.Forms.Button btnbackup;
+        private System.Windows.Forms.RadioButton rdoNgTru;
+        private System.Windows.Forms.RadioButton rdoTNT;
+        private System.Windows.Forms.RadioButton rdoNTru;
+        private System.Windows.Forms.RadioButton rdoAll;
     }
 }

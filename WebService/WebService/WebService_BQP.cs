@@ -279,10 +279,10 @@ namespace WebService
             text = text.Replace("<Table1>", "");
             text = text.Replace("</Table1>", "");
             xmlDocument.LoadXml(text);
-            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn));
-            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn);
-            this.FileName = string.Format("{0}_{1}_{2}_{3}_BQP.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn);
-            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml", Medicalid, this.sobh, this.sobn, this.doituong_bn));
+            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh, this.sobn ));
+            this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh, this.sobn );
+            this.FileName = string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh, this.sobn );
+            string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}_BQP.xml",this.doituong_bn, Medicalid, this.sobh,this.sobn));
             //this.new_sign(data, Medicalid);
         }
         public void WriteLog(string Contents)
@@ -341,58 +341,7 @@ namespace WebService
 
         private void btnExport_Click(object sender, EventArgs e)
         {    
-            string lashpath = txtPathEx.Text.Trim();
-            string pathBackup = txtBackup_BQP.Text.Trim();
-           
-
-            btnExport.Enabled = false;
-            Thread thread = new Thread(() =>
-            {
-              
-                    while (true)
-                    {
-                        try
-                        {
-                            MedID = _Export.Select_Medical_BQP();
-                            if (MedID < 0 )
-                            {                                
-                                goto sleep;
-                            }
-                   
-                            if (MedID > 0L)
-                            {
-                                string tam = _Export.his_find_medical(MedID);                                
-                                if (tam == "Error")
-                                {
-                                    
-                                    _Export.FinishMed(MedID);
-                                    string Medical = MedID.ToString();
-                                    writelog(Medical);
-                                    MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);                                   
-                                    goto sleep;
-
-                                }
-                                else
-                                {
-                                    _Export.his_fee_sync_tonghop(MedID);
-                                     Export3file(lashpath, MedID);
-                                     Export3file(pathBackup, MedID);
-                                    _Export.Finish_his_medical(MedID);
-                                }
-                                
-                        
-                            }
-                            sleep:
-                            Thread.Sleep(5000);
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.ToString());
-                        }
-                    }
-            }
-            );  // Tao mot luong du lieu rieng de may chay khong bi treo
-            thread.Start();
+            
         }     
 
         
@@ -428,16 +377,96 @@ namespace WebService
 
         private void WebService_BQP_Load(object sender, EventArgs e)
         {
-            string STR_DBNAME = @"E:\Teca\VAS\QD917";
+            string STR_DBNAME = @"E:\TecaBQP\QD917";
             txtPathEx.Text = STR_DBNAME;            
             string STR_DBNAME_BACKUP = @"E:\TecaBQP\QD917\Backup";
             txtBackup_BQP.Text = STR_DBNAME_BACKUP;
         }
 
-        private void txtBackup_BQP_TextChanged(object sender, EventArgs e)
+        private void btnExport_Click_1(object sender, EventArgs e)
         {
+            string lashpath = txtPathEx.Text.Trim();
+            string pathBackup = txtBackup_BQP.Text.Trim();
+            btnExport.Enabled = false;
+            Thread thread = new Thread(() =>
+            {
 
-        }       
+                while (true)
+                {
+                    try
+                    {
+                        //MedID = _Export.Select_Medical_BQP();
+
+                        if (rdoNgTru.Checked == true)
+                        {
+                            string doituongbn = "1";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+                        else if (rdoTNT.Checked == true)
+                        {
+                            string doituongbn = "4";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+                        else if (rdoNTru.Checked == true)
+                        {
+                            string doituongbn = "2";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+                        else
+                        {
+                            string doituongbn = "1,2,3,4";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+
+
+
+                        if (MedID < 0)
+                        {
+                            goto sleep;
+                        }
+
+                        if (MedID > 0L)
+                        {
+                            string tam = _Export.his_find_medical(MedID);
+                            if (tam == "Error")
+                            {
+
+                                _Export.FinishMed(MedID);
+                                string Medical = MedID.ToString();
+                                writelog(Medical);
+                                MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);
+                                goto sleep;
+
+                            }
+                            else
+                            {
+                                _Export.his_fee_sync_tonghop(MedID);
+                                Export3file(lashpath, MedID);
+                                Export3file(pathBackup, MedID);
+                                _Export.Finish_his_medical(MedID);
+                            }
+
+
+                        }
+                    sleep:
+                        Thread.Sleep(5000);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+            }
+            );  // Tao mot luong du lieu rieng de may chay khong bi treo
+            thread.Start();
+
+        }
+
+            
 
     }
     }

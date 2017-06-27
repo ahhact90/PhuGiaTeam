@@ -150,12 +150,12 @@ namespace DAL
         /// Lay so benh an theo doi tuong noi tru ngoai tru tnt
         /// </summary>
         /// <returns></returns>
-        public long Select_Medical_BQP_With_doituong()
+        public long Select_Medical_BQP_With_doituong(string medical)
         {
             try
             {
-                var sql = "select sohoso from his_chitiet_bhyt where exportxml = 0 and sohoso > 17000000 and SUBSTR(mathe,4,2)::integer = 97 order by ngaybc limit 1";
-                sql = string.Format(sql);
+                var sql = "select sohoso from his_chitiet_bhyt where exportxml = 0 and sohoso > 17000000 and SUBSTR(mathe,4,2)::integer = 97 AND doituong_bn in ({0}) order by ngaybc limit 1";
+                sql = string.Format(sql,medical);
                 return long.Parse(ExecuteQuery(sql).Rows[0][0].ToString());
 
             }
