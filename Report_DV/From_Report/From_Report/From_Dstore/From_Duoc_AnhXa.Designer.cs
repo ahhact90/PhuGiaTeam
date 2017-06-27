@@ -361,6 +361,7 @@
             this.txtUseType.Name = "txtUseType";
             this.txtUseType.Size = new System.Drawing.Size(358, 20);
             this.txtUseType.TabIndex = 24;
+            this.txtUseType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUseType_KeyDown);
             // 
             // txtMaAX
             // 
