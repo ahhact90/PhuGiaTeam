@@ -327,7 +327,7 @@ namespace WebService
                 string path = txtBackup.Text.Trim();
                 if (File.Exists(path))
                 {
-                    File.AppendAllText(path + "\\" + "log.txt", "### Benh an bi loi" + MedID + Environment.NewLine);
+                    File.AppendAllText(path + "\\" + "log.txt", "### " + MedID + Environment.NewLine);
                 }
                 else
                 {
