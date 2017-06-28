@@ -323,15 +323,15 @@ namespace WebService
         {
             try
             {
-                string path = "\\\\172.251.110.194\\Log\\log.txt";
-                //string path = txtBackup.Text.Trim();
+                //string path = "\\\\172.251.110.194\\Log\\log.txt";
+                string path = txtBackup.Text.Trim();
                 if (File.Exists(path))
                 {
-                    File.AppendAllText(path, "### " + MedID + Environment.NewLine);
+                    File.AppendAllText(path + "\\" + "log.txt", "### Benh an bi loi" + MedID + Environment.NewLine);
                 }
                 else
                 {
-                    File.WriteAllText(path, "### " + MedID + Environment.NewLine);
+                    File.WriteAllText(path + "\\" + "log.txt", "### " + MedID + Environment.NewLine);
                 }
             }
             catch
@@ -397,7 +397,7 @@ namespace WebService
                                     _Export.FinishMed(MedID);
                                     string Medical = MedID.ToString();
                                     writelog(Medical);
-                                    MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);                                   
+                                    //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);                                   
                                     goto sleep;
 
                                 }
