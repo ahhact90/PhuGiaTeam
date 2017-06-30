@@ -26,8 +26,7 @@ namespace WebService
             InitializeComponent();
         }
         #region Variable
-        DataTable dt = new DataTable();
-        DataSet ds = new DataSet();
+       
         public static string StrConnect = UTL.DataBase.GetConfig();
         public static string lashpath = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
@@ -323,19 +322,27 @@ namespace WebService
         }
         private void writelog(string MedID)
         {
+            long sohoso;
+            DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
             try
             {
                 //string path = "\\\\172.251.110.194\\Log\\log.txt";
                 string path = txtBackup.Text.Trim() + string.Format("\\log_{0}.txt", System.DateTime.Now.ToString("yyyyMMdd"));
-               
-
+                sohoso = Int64.Parse(MedID);
+                //dt = _Export.Select_his_chitiet_bhyt(sohoso);                
+                ds.Tables.Add(_Export.Select_his_chitiet_bhyt(sohoso));
+                log_tenbn = ds.Tables[0].Rows[0]["tenbn"].ToString();
+                log_doituongbn = ds.Tables[0].Rows[0]["doituong_bn"].ToString();
                 if (File.Exists(path))
                 {
-                    File.AppendAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + this.ten_bn + " " + "Đối tượng BN " + this.doituong_bn + Environment.NewLine);
+                    File.AppendAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
+                    MessageBox.Show("file log noi tiep " + MedID);
                 }
                 else
                 {
-                    File.WriteAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + this.ten_bn + " " + "Đối tượng BN " + this.doituong_bn + Environment.NewLine);
+                    File.WriteAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
+                    MessageBox.Show("File mới tạo " + MedID);
                 }
             }
             catch
@@ -411,7 +418,8 @@ namespace WebService
                                     _Export.FinishMed(MedID);
                                     string Medical = MedID.ToString();
                                     writelog(Medical);
-                                    //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);                                   
+                                    //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);
+                                    //writelog(Medical);
                                     goto sleep;
 
                                 }
