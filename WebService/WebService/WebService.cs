@@ -337,12 +337,12 @@ namespace WebService
                 if (File.Exists(path))
                 {
                     File.AppendAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
-                    MessageBox.Show("file log noi tiep " + MedID);
+                    //MessageBox.Show("file log noi tiep " + MedID);
                 }
                 else
                 {
                     File.WriteAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
-                    MessageBox.Show("File mới tạo " + MedID);
+                   // MessageBox.Show("File mới tạo " + MedID);
                 }
             }
             catch
