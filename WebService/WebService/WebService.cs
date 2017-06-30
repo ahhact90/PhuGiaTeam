@@ -49,6 +49,8 @@ namespace WebService
         private string sobn;
         private string doituong_bn;
         private string ten_bn;
+        private string log_tenbn;
+        private string log_doituongbn;
         private HttpClient client = new HttpClient();
         private string[] result1;
         private string[] ketqua;
@@ -324,14 +326,16 @@ namespace WebService
             try
             {
                 //string path = "\\\\172.251.110.194\\Log\\log.txt";
-                string path = txtBackup.Text.Trim();
+                string path = txtBackup.Text.Trim() + string.Format("\\log_{0}.txt", System.DateTime.Now.ToString("yyyyMMdd"));
+               
+
                 if (File.Exists(path))
                 {
-                    File.AppendAllText(path + "\\" + "log.txt", "### " + MedID + Environment.NewLine);
+                    File.AppendAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + this.ten_bn + " " + "Đối tượng BN " + this.doituong_bn + Environment.NewLine);
                 }
                 else
                 {
-                    File.WriteAllText(path + "\\" + "log.txt", "### " + MedID + Environment.NewLine);
+                    File.WriteAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + this.ten_bn + " " + "Đối tượng BN " + this.doituong_bn + Environment.NewLine);
                 }
             }
             catch
@@ -356,25 +360,35 @@ namespace WebService
                         try
                         {
                             //MedID = _Export.Select_Medical();
-
+                            /// Ngoại Trú
                             if (rdoNgTru.Checked == true)
                             {
                                 string doituongbn = "1,3";
                                 MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
 
                             }
+                                /// TNT
                             else if (rdoTNT.Checked == true)
                             {
                                 string doituongbn = "4";
                                 MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
 
                             }
+                                /// Nội Trú
                             else if (rdoNTru.Checked == true)
                             {
                                 string doituongbn = "2";
                                 MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
 
                             }
+                                //// Ngoại trú + TNT
+                            else if (rdoNgT.Checked == true)
+                            {
+                                string doituongbn = "1,3,4";
+                                MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
+
+                            }
+                                //// Tất cả đối tượng
                             else
                             {
                                 string doituongbn = "1,2,3,4";

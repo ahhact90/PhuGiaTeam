@@ -326,11 +326,11 @@ namespace WebService
                 string path = txtBackup_BQP.Text.Trim();
                 if (File.Exists(path))
                 {
-                    File.AppendAllText(path + "\\" + "log.txt", "### " + MedID + Environment.NewLine);
+                    File.AppendAllText(path + "\\" + "log.txt", System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + MedID + " " + this.ten_bn + "Doi Tuong BN" + this.doituong_bn + Environment.NewLine);
                 }
                 else
                 {
-                    File.WriteAllText(path + "\\" + "log.txt", "### " + MedID + Environment.NewLine);
+                    File.WriteAllText(path + "\\" + "log.txt", System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + MedID + " " + this.ten_bn + "Doi Tuong BN" + this.doituong_bn + Environment.NewLine);
                 }
             }
             catch
