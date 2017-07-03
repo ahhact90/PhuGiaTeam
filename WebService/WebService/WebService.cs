@@ -328,7 +328,7 @@ namespace WebService
             try
             {
                 //string path = "\\\\172.251.110.194\\Log\\log.txt";
-                string path = txtBackup.Text.Trim() + string.Format("\\log_{0}.txt", System.DateTime.Now.ToString("yyyyMMdd"));
+                string path = txtBackup.Text.Trim() + string.Format("\\log_{0}_CanTho.txt", System.DateTime.Now.ToString("yyyyMMdd"));
                 sohoso = Int64.Parse(MedID);
                 //dt = _Export.Select_his_chitiet_bhyt(sohoso);                
                 ds.Tables.Add(_Export.Select_his_chitiet_bhyt(sohoso));

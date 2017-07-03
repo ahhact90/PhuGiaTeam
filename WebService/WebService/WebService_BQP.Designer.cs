@@ -40,6 +40,7 @@
             this.rdoTNT = new System.Windows.Forms.RadioButton();
             this.rdoNTru = new System.Windows.Forms.RadioButton();
             this.rdoAll = new System.Windows.Forms.RadioButton();
+            this.rdoNgTNT = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -159,7 +160,7 @@
             // 
             this.rdoAll.AutoSize = true;
             this.rdoAll.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoAll.Location = new System.Drawing.Point(431, 25);
+            this.rdoAll.Location = new System.Drawing.Point(644, 25);
             this.rdoAll.Name = "rdoAll";
             this.rdoAll.Size = new System.Drawing.Size(132, 20);
             this.rdoAll.TabIndex = 8;
@@ -167,11 +168,24 @@
             this.rdoAll.Text = "Tất cả đối tượng";
             this.rdoAll.UseVisualStyleBackColor = true;
             // 
+            // rdoNgTNT
+            // 
+            this.rdoNgTNT.AutoSize = true;
+            this.rdoNgTNT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNgTNT.Location = new System.Drawing.Point(435, 25);
+            this.rdoNgTNT.Name = "rdoNgTNT";
+            this.rdoNgTNT.Size = new System.Drawing.Size(199, 20);
+            this.rdoNgTNT.TabIndex = 9;
+            this.rdoNgTNT.TabStop = true;
+            this.rdoNgTNT.Text = "Thận Nhân Tạo + Ngoại Trú";
+            this.rdoNgTNT.UseVisualStyleBackColor = true;
+            // 
             // WebService_BQP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 285);
+            this.ClientSize = new System.Drawing.Size(901, 285);
+            this.Controls.Add(this.rdoNgTNT);
             this.Controls.Add(this.rdoAll);
             this.Controls.Add(this.rdoNTru);
             this.Controls.Add(this.rdoTNT);
@@ -206,5 +220,6 @@
         private System.Windows.Forms.RadioButton rdoTNT;
         private System.Windows.Forms.RadioButton rdoNTru;
         private System.Windows.Forms.RadioButton rdoAll;
+        private System.Windows.Forms.RadioButton rdoNgTNT;
     }
 }

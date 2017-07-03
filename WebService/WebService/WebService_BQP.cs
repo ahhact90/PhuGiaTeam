@@ -49,6 +49,8 @@ namespace WebService
         private string sobn;
         private string doituong_bn;
         private string ten_bn;
+        private string log_tenbn;
+        private string log_doituongbn;
         private HttpClient client = new HttpClient();
         private string[] result1;
         private string[] ketqua;
@@ -320,17 +322,27 @@ namespace WebService
         }
         private void writelog(string MedID)
         {
+            long sohoso;
+            DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
             try
             {
                 //string path = "\\\\172.251.110.194\\Log\\log.txt";
-                string path = txtBackup_BQP.Text.Trim();
+                string path = txtBackup_BQP.Text.Trim() + string.Format("\\log_{0}_BQP.txt", System.DateTime.Now.ToString("yyyyMMdd"));
+                sohoso = Int64.Parse(MedID);
+                //dt = _Export.Select_his_chitiet_bhyt(sohoso);                
+                ds.Tables.Add(_Export.Select_his_chitiet_bhyt(sohoso));
+                log_tenbn = ds.Tables[0].Rows[0]["tenbn"].ToString();
+                log_doituongbn = ds.Tables[0].Rows[0]["doituong_bn"].ToString();
                 if (File.Exists(path))
                 {
-                    File.AppendAllText(path + "\\" + "log.txt", System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + MedID + " " + this.ten_bn + "Doi Tuong BN" + this.doituong_bn + Environment.NewLine);
+                    File.AppendAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
+                    //MessageBox.Show("file log noi tiep " + MedID);
                 }
                 else
                 {
-                    File.WriteAllText(path + "\\" + "log.txt", System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + MedID + " " + this.ten_bn + "Doi Tuong BN" + this.doituong_bn + Environment.NewLine);
+                    File.WriteAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
+                    // MessageBox.Show("File mới tạo " + MedID);
                 }
             }
             catch
@@ -405,12 +417,21 @@ namespace WebService
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
 
                         }
+                        //// Thận Nhân Tạo
                         else if (rdoTNT.Checked == true)
                         {
                             string doituongbn = "4";
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
 
                         }
+                        //// Thận Nhân Tạo + Ngoại Trú
+                        else if (rdoNgTNT.Checked == true)
+                        {
+                            string doituongbn = "1,3,4";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+                        //// Nội Trú
                         else if (rdoNTru.Checked == true)
                         {
                             string doituongbn = "2";
@@ -421,7 +442,6 @@ namespace WebService
                         {
                             string doituongbn = "1,2,3,4";
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
-
                         }
 
 
