@@ -416,6 +416,7 @@ namespace WebService
                             string doituongbn = "1,3";
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
 
+
                         }
                         //// Thận Nhân Tạo
                         else if (rdoTNT.Checked == true)
@@ -428,7 +429,7 @@ namespace WebService
                         else if (rdoNgTNT.Checked == true)
                         {
                             string doituongbn = "1,3,4";
-                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);                            
 
                         }
                         //// Nội Trú
