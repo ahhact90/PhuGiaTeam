@@ -45,6 +45,7 @@ namespace From_Report.From_Dstore
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+               // Application.Exit();
             }
         }
 
@@ -62,10 +63,10 @@ namespace From_Report.From_Dstore
             }
         }
 
-        private void gridView1_RowClick(object sender, RowClickEventArgs e)
-        {
+        //private void gridView1_RowClick(object sender, RowClickEventArgs e)
+        //{
 
-        }
+        //}
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {

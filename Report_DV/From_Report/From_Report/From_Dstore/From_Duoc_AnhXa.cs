@@ -185,12 +185,12 @@ namespace From_Report.From_Dstore
             {
                 From_Dstore.Frm_Use_Type frm = new From_Dstore.Frm_Use_Type();
                 var locationInForm = txtUseType.Location;
-                var locationOnScreen = PointToScreen(locationInForm);
+                var locationOnScreen = this.PointToScreen(locationInForm);
                 frm.Location = new Point(locationOnScreen.X, locationOnScreen.Y);
                 //MessageBox.Show("Toa do X: " + frm.Location.X, " Toa do Y:" + frm.Location.Y);
                 frm.ShowDialog();
                 txtUseType.Text = frm.Passvalue;
-                //txtNgheNghiep.Focus();
+                txtUseType.Focus();
             }
         }
 

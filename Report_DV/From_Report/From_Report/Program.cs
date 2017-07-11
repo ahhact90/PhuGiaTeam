@@ -17,8 +17,9 @@ namespace From_Report
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new From_Dstore.From_Duoc_AnhXa());
-            //Application.Run(new FrmMain());
+            //Application.Run(new From_Dstore.From_Duoc_AnhXa());
+            //Application.Run(new From_CauHinh.FrmMH());
+            Application.Run(new FrmMain());
             
             //Application.Run(new From_Dstore.Frm_Use_Type());
             

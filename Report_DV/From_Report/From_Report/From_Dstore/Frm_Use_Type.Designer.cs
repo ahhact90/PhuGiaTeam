@@ -68,7 +68,6 @@
             this.gridView1.GridControl = this.gridControl_Use_Type;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
@@ -97,6 +96,7 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Use_Type";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Đường Dùng";
             this.Load += new System.EventHandler(this.Frm_Use_Type_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
