@@ -13,12 +13,20 @@ namespace From_Report.From_Dstore
 {
     public partial class Frm_Use_Type : Form
     {
-        public static string a;       
+        public static string a;
+        public static Int32 b; 
         public string Nm;
         public string Passvalue
         {
             get { return Nm; }
             set { Nm = value; }
+        }
+        public Int32 _id;
+
+        public Int32 PassId
+        {
+            get { return _id; }
+            set { _id = value; }
         }
 
         #region Variable
@@ -73,10 +81,14 @@ namespace From_Report.From_Dstore
             if (e.KeyCode == Keys.Enter)
             {
                 string cellValue;
-                cellValue = gridView1.GetFocusedRowCellValue("name").ToString();               
+                Int32 cellId;
+                cellValue = gridView1.GetFocusedRowCellValue("name").ToString();
+                cellId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("line")); 
                 a = cellValue;
                 Passvalue = cellValue;
-                this.Hide();
+                b = cellId;
+                PassId = cellId;
+                this.Close();
             }
         }
 

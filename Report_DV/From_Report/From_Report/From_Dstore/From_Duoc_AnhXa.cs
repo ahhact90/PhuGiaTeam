@@ -18,6 +18,7 @@ namespace From_Report.From_Dstore
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();
         public static string StrConnect = UTL.DataBase.GetConfig();
+        public static Int32 use_type;
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
        
         #endregion
@@ -93,11 +94,9 @@ namespace From_Report.From_Dstore
                 
             }
             else
-            {
-               
-                //e.Appearance.BackColor = Color.SeaShell;
+            {                             
                 e.Appearance.ForeColor = Color.Firebrick;
-                //e.HighPriority = true;
+               
             }
         }
 
@@ -160,8 +159,8 @@ namespace From_Report.From_Dstore
                         string tmp_bv = txtMaBV.Text.ToString();
                         string ax_tmp = txtMaAX.Text.ToString();
                         string text = tmp_bv + '|' + ax_tmp;
-                        Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());
-                        _DanhMuc.Update_AX(text, 1, mDrug);
+                        Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());  
+                        _DanhMuc.Update_AX(text, use_type, mDrug);
                         MessageBox.Show("Cập nhật thành công");
                         From_Duoc_AnhXa_Load(sender,e);
                     }
@@ -190,6 +189,7 @@ namespace From_Report.From_Dstore
                 //MessageBox.Show("Toa do X: " + frm.Location.X, " Toa do Y:" + frm.Location.Y);
                 frm.ShowDialog();
                 txtUseType.Text = frm.Passvalue;
+                use_type = frm.PassId;
                 txtUseType.Focus();
             }
         }
