@@ -20,11 +20,11 @@ namespace From_Report.From_Dstore
         public static string StrConnect = UTL.DataBase.GetConfig();
         private static Int32 use_type;
 
-        public static Int32 Use_type
-        {
-            get { return From_Duoc_AnhXa.use_type; }
-            set { From_Duoc_AnhXa.use_type = value; }
-        }
+        //public static Int32 Use_type
+        //{
+        //    get { return From_Duoc_AnhXa.use_type; }
+        //    set { From_Duoc_AnhXa.use_type = value; }
+        //}
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
 
         #endregion
@@ -135,6 +135,8 @@ namespace From_Report.From_Dstore
             txtMaAX.Enabled = true;
             txtUseType.Enabled = true;
             txtDrugName.Enabled = true;
+            txtGroup.Enabled = true;
+            txtContent.Enabled = true;
         }
 
         private void From_Duoc_AnhXa_KeyDown(object sender, KeyEventArgs e)
@@ -198,6 +200,23 @@ namespace From_Report.From_Dstore
                 use_type = frm.PassId;
                 txtUseType.Focus();
             }
+        }
+
+        private void txtGroup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                From_Dstore.Frm_Group_type frm = new From_Dstore.Frm_Group_type();
+                var locationInForm = txtGroup.Location;
+                var locationOnScreen = this.PointToScreen(locationInForm);
+                frm.Location = new Point(locationOnScreen.X, locationOnScreen.Y);
+                //MessageBox.Show("Toa do X: " + frm.Location.X, " Toa do Y:" + frm.Location.Y);
+                frm.ShowDialog();
+                txtGroup.Text = frm.Passvalue1;
+                use_type = frm.PassId1;
+                txtGroup.Focus();
+            }
+
         }
 
 

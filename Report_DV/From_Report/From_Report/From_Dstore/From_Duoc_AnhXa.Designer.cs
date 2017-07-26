@@ -354,6 +354,7 @@
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.Size = new System.Drawing.Size(358, 20);
             this.txtGroup.TabIndex = 25;
+            this.txtGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGroup_KeyDown);
             // 
             // txtUseType
             // 

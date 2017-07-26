@@ -135,6 +135,12 @@ namespace DAL
             sql = string.Format(sql);
             return ExecuteQuery(sql);
         }
+        public DataTable MaNhom()
+        {
+            var sql = "SELECT line,name FROM  his_drug_config WHERE zone ='group_type' ORDER BY line";
+            sql = string.Format(sql);
+            return ExecuteQuery(sql);
+        }
 
         #endregion
     }
