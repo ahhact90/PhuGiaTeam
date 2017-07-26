@@ -18,9 +18,15 @@ namespace From_Report.From_Dstore
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();
         public static string StrConnect = UTL.DataBase.GetConfig();
-        public static Int32 use_type;
+        private static Int32 use_type;
+
+        public static Int32 Use_type
+        {
+            get { return From_Duoc_AnhXa.use_type; }
+            set { From_Duoc_AnhXa.use_type = value; }
+        }
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
-       
+
         #endregion
 
         public From_Duoc_AnhXa()
@@ -31,8 +37,8 @@ namespace From_Report.From_Dstore
         private void From_Duoc_AnhXa_Load(object sender, EventArgs e)
         {
             dt = _DanhMuc.Select_Thuoc_AX();
-            grdCtrlThuocAX.DataSource = dt;            
-            
+            grdCtrlThuocAX.DataSource = dt;
+
         }
         /// <summary>
         /// 
@@ -59,7 +65,7 @@ namespace From_Report.From_Dstore
             //textBox1.Text = (gridView1.GetFocusedRow() as DataRowView).Row["drug_name"].ToString();
             //textBox1.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
             //txtDrugName.Text = (gridView1.GetFocusedRow() as DataRowView).Row["drug_name"].ToString();
-            
+
             txtDrugName.Enabled = false;
             txtUsing.Enabled = false;
             txtDrug.Enabled = false;
@@ -83,26 +89,26 @@ namespace From_Report.From_Dstore
         private void gridView1_RowStyle(object sender, RowStyleEventArgs e)
         {
             GridView view = sender as GridView;
-            if (view == null) return;            
-            if (e.RowHandle % 2 == 0 )
+            if (view == null) return;
+            if (e.RowHandle % 2 == 0)
             {
-                
-               // e.Appearance.BackColor = Color.WhiteSmoke;
+
+                // e.Appearance.BackColor = Color.WhiteSmoke;
                 e.Appearance.ForeColor = Color.MediumBlue;
                 //e.HighPriority = true;
-                
-                
+
+
             }
             else
-            {                             
+            {
                 e.Appearance.ForeColor = Color.Firebrick;
-               
+
             }
         }
 
         private void gridView1_RowClick(object sender, RowClickEventArgs e)
         {
-           
+
 
         }
 
@@ -132,16 +138,16 @@ namespace From_Report.From_Dstore
         }
 
         private void From_Duoc_AnhXa_KeyDown(object sender, KeyEventArgs e)
-        { 
+        {
         }
 
         private void txtMaAX_KeyDown(object sender, KeyEventArgs e)
-        {     
+        {
 
         }
 
         private void btSave_Click(object sender, EventArgs e)
-        { 
+        {
             if (txtMaBV.Text.Length == 0)
             {
                 MessageBox.Show("Vui lòng nhập mã bệnh viện");
@@ -150,7 +156,7 @@ namespace From_Report.From_Dstore
             {
                 if (txtMaAX.Text.Length == 0)
                 {
-                     MessageBox.Show("Vui lòng nhập mã ánh xạ trên công thông tin BHYT");
+                    MessageBox.Show("Vui lòng nhập mã ánh xạ trên công thông tin BHYT");
                 }
                 else
                 {
@@ -159,23 +165,23 @@ namespace From_Report.From_Dstore
                         string tmp_bv = txtMaBV.Text.ToString();
                         string ax_tmp = txtMaAX.Text.ToString();
                         string text = tmp_bv + '|' + ax_tmp;
-                        Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());  
+                        Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());
                         _DanhMuc.Update_AX(text, use_type, mDrug);
                         MessageBox.Show("Cập nhật thành công");
-                        From_Duoc_AnhXa_Load(sender,e);
+                        From_Duoc_AnhXa_Load(sender, e);
                     }
-                    catch (Exception) 
+                    catch (Exception)
                     {
                         DialogResult dialogResult = MessageBox.Show("Cập nhật không thành công", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     };
-                    
+
                 }
             }
         }
 
         private void dockPanel1_KeyDown(object sender, KeyEventArgs e)
-        {           
-            
+        {
+
         }
 
         private void txtUseType_KeyDown(object sender, KeyEventArgs e)
@@ -194,9 +200,9 @@ namespace From_Report.From_Dstore
             }
         }
 
-        
 
-             
-       
+
+
+
     }
 }

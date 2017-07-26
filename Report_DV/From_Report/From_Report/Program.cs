@@ -19,7 +19,8 @@ namespace From_Report
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new From_Dstore.From_Duoc_AnhXa());
             //Application.Run(new From_CauHinh.FrmMH());
-            Application.Run(new FrmMain());
+            //Application.Run(new FrmMain());
+           Application.Run(new From_CV3360.CV3360_CT());
             
             //Application.Run(new From_Dstore.Frm_Use_Type());
             

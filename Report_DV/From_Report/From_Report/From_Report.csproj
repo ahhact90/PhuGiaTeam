@@ -108,6 +108,12 @@
     <Compile Include="From_CauHinh\FromCauHinh.Designer.cs">
       <DependentUpon>FromCauHinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_CV3360\CV3360_CT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_CV3360\CV3360_CT.Designer.cs">
+      <DependentUpon>CV3360_CT.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_Dstore\Frm_Use_Type.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From_CauHinh\FromCauHinh.resx">
       <DependentUpon>FromCauHinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From_CV3360\CV3360_CT.resx">
+      <DependentUpon>CV3360_CT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_Dstore\Frm_Use_Type.resx">
       <DependentUpon>Frm_Use_Type.cs</DependentUpon>
