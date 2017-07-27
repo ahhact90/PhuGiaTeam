@@ -19,6 +19,7 @@ namespace From_Report.From_Dstore
         DataSet ds = new DataSet();
         public static string StrConnect = UTL.DataBase.GetConfig();
         private static Int32 use_type;
+        private static string group_type;
 
         //public static Int32 Use_type
         //{
@@ -168,7 +169,7 @@ namespace From_Report.From_Dstore
                         string ax_tmp = txtMaAX.Text.ToString();
                         string text = tmp_bv + '|' + ax_tmp;
                         Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());
-                        _DanhMuc.Update_AX(text, use_type, mDrug);
+                        _DanhMuc.Update_AX(text, use_type, mDrug,group_type);
                         MessageBox.Show("Cập nhật thành công");
                         From_Duoc_AnhXa_Load(sender, e);
                     }
@@ -196,7 +197,8 @@ namespace From_Report.From_Dstore
                 frm.Location = new Point(locationOnScreen.X, locationOnScreen.Y);
                 //MessageBox.Show("Toa do X: " + frm.Location.X, " Toa do Y:" + frm.Location.Y);
                 frm.ShowDialog();
-                txtUseType.Text = frm.Passvalue;
+                txtUseType.Text = frm.Passvalue; //// Hiển thị chi tiết name
+                //txtUseType.Text = frm.PassId; /// Hiển thị chi tiết Id
                 use_type = frm.PassId;
                 txtUseType.Focus();
             }
@@ -212,8 +214,8 @@ namespace From_Report.From_Dstore
                 frm.Location = new Point(locationOnScreen.X, locationOnScreen.Y);
                 //MessageBox.Show("Toa do X: " + frm.Location.X, " Toa do Y:" + frm.Location.Y);
                 frm.ShowDialog();
-                txtGroup.Text = frm.Passvalue1;
-                use_type = frm.PassId1;
+                txtGroup.Text = frm.PassId1;
+                group_type = frm.PassId1;
                 txtGroup.Focus();
             }
 

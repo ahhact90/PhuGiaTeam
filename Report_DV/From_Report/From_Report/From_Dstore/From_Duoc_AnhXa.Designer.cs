@@ -224,6 +224,10 @@
             this.Drug_ID.Caption = "Mã Thuốc";
             this.Drug_ID.FieldName = "drug_id";
             this.Drug_ID.Name = "Drug_ID";
+            this.Drug_ID.OptionsColumn.AllowEdit = false;
+            this.Drug_ID.OptionsColumn.AllowMove = false;
+            this.Drug_ID.OptionsColumn.AllowSize = false;
+            this.Drug_ID.OptionsColumn.FixedWidth = true;
             this.Drug_ID.Visible = true;
             this.Drug_ID.VisibleIndex = 0;
             // 
@@ -232,6 +236,9 @@
             this.UsingDrugId.Caption = "UsingdrugId";
             this.UsingDrugId.FieldName = "usingdrugid";
             this.UsingDrugId.Name = "UsingDrugId";
+            this.UsingDrugId.OptionsColumn.AllowEdit = false;
+            this.UsingDrugId.OptionsColumn.AllowMove = false;
+            this.UsingDrugId.OptionsColumn.FixedWidth = true;
             this.UsingDrugId.Visible = true;
             this.UsingDrugId.VisibleIndex = 1;
             // 
@@ -240,6 +247,9 @@
             this.Drug_name.Caption = "Tên Thuốc";
             this.Drug_name.FieldName = "drug_name";
             this.Drug_name.Name = "Drug_name";
+            this.Drug_name.OptionsColumn.AllowEdit = false;
+            this.Drug_name.OptionsColumn.AllowMove = false;
+            this.Drug_name.OptionsColumn.FixedWidth = true;
             this.Drug_name.Visible = true;
             this.Drug_name.VisibleIndex = 2;
             // 
@@ -248,6 +258,9 @@
             this.component.Caption = "Hoạt Chất";
             this.component.FieldName = "component";
             this.component.Name = "component";
+            this.component.OptionsColumn.AllowEdit = false;
+            this.component.OptionsColumn.AllowMove = false;
+            this.component.OptionsColumn.FixedWidth = true;
             this.component.Visible = true;
             this.component.VisibleIndex = 3;
             // 
@@ -256,6 +269,9 @@
             this.content_name.Caption = "Hàm Lượng";
             this.content_name.FieldName = "content_name";
             this.content_name.Name = "content_name";
+            this.content_name.OptionsColumn.AllowEdit = false;
+            this.content_name.OptionsColumn.AllowMove = false;
+            this.content_name.OptionsColumn.FixedWidth = true;
             this.content_name.Visible = true;
             this.content_name.VisibleIndex = 4;
             // 
@@ -264,6 +280,9 @@
             this.unit_name.Caption = "Đơn vị tính";
             this.unit_name.FieldName = "unit_name";
             this.unit_name.Name = "unit_name";
+            this.unit_name.OptionsColumn.AllowEdit = false;
+            this.unit_name.OptionsColumn.AllowMove = false;
+            this.unit_name.OptionsColumn.FixedWidth = true;
             this.unit_name.Visible = true;
             this.unit_name.VisibleIndex = 5;
             // 
@@ -272,6 +291,9 @@
             this.Ma_AX.Caption = "Mã Ánh Xạ";
             this.Ma_AX.FieldName = "ma_ax";
             this.Ma_AX.Name = "Ma_AX";
+            this.Ma_AX.OptionsColumn.AllowEdit = false;
+            this.Ma_AX.OptionsColumn.AllowMove = false;
+            this.Ma_AX.OptionsColumn.FixedWidth = true;
             this.Ma_AX.Visible = true;
             this.Ma_AX.VisibleIndex = 7;
             // 
@@ -280,6 +302,9 @@
             this.MA_BV.Caption = "Mã Bệnh Viện";
             this.MA_BV.FieldName = "ma_bv";
             this.MA_BV.Name = "MA_BV";
+            this.MA_BV.OptionsColumn.AllowEdit = false;
+            this.MA_BV.OptionsColumn.AllowMove = false;
+            this.MA_BV.OptionsColumn.FixedWidth = true;
             this.MA_BV.Visible = true;
             this.MA_BV.VisibleIndex = 6;
             // 
@@ -288,6 +313,9 @@
             this.service_type_id.Caption = "Nhóm";
             this.service_type_id.FieldName = "service_type_id";
             this.service_type_id.Name = "service_type_id";
+            this.service_type_id.OptionsColumn.AllowEdit = false;
+            this.service_type_id.OptionsColumn.AllowMove = false;
+            this.service_type_id.OptionsColumn.FixedWidth = true;
             this.service_type_id.Visible = true;
             this.service_type_id.VisibleIndex = 9;
             // 
@@ -296,6 +324,9 @@
             this.stockid.Caption = "Kho";
             this.stockid.FieldName = "stockid";
             this.stockid.Name = "stockid";
+            this.stockid.OptionsColumn.AllowEdit = false;
+            this.stockid.OptionsColumn.AllowMove = false;
+            this.stockid.OptionsColumn.FixedWidth = true;
             this.stockid.Visible = true;
             this.stockid.VisibleIndex = 11;
             // 
@@ -304,6 +335,8 @@
             this.mainimexid.Caption = "Số Phiếu";
             this.mainimexid.FieldName = "mainimexid";
             this.mainimexid.Name = "mainimexid";
+            this.mainimexid.OptionsColumn.AllowMove = false;
+            this.mainimexid.OptionsColumn.FixedWidth = true;
             this.mainimexid.Visible = true;
             this.mainimexid.VisibleIndex = 10;
             // 
@@ -312,6 +345,10 @@
             this.use_type_id.Caption = "Đường Dùng";
             this.use_type_id.FieldName = "use_type_id";
             this.use_type_id.Name = "use_type_id";
+            this.use_type_id.OptionsColumn.AllowEdit = false;
+            this.use_type_id.OptionsColumn.AllowMove = false;
+            this.use_type_id.OptionsColumn.AllowShowHide = false;
+            this.use_type_id.OptionsColumn.FixedWidth = true;
             this.use_type_id.Visible = true;
             this.use_type_id.VisibleIndex = 8;
             // 
@@ -324,6 +361,9 @@
             this.creationdate_drug.GroupFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.creationdate_drug.GroupFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.creationdate_drug.Name = "creationdate_drug";
+            this.creationdate_drug.OptionsColumn.AllowEdit = false;
+            this.creationdate_drug.OptionsColumn.AllowMove = false;
+            this.creationdate_drug.OptionsColumn.FixedWidth = true;
             this.creationdate_drug.Visible = true;
             this.creationdate_drug.VisibleIndex = 12;
             // 

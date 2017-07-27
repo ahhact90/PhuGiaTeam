@@ -21,15 +21,15 @@ namespace From_Report.From_Dstore
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);   
         #endregion
         public static string a;
-        public static Int32 b; 
+        public static string b; 
         private string Passvalue;
         public string Passvalue1
         {
           get { return Passvalue; }
           set { Passvalue = value; }
         }
-        private Int32 PassId;
-        public Int32 PassId1
+        private string PassId;
+        public string PassId1
         {
           get { return PassId; }
           set { PassId = value; }
@@ -67,21 +67,23 @@ namespace From_Report.From_Dstore
             {
                 e.Appearance.ForeColor = Color.Firebrick;
             }
-        }
+        }        
+
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 string cellValue;
-                Int32 cellId;
+                string cellId;
                 cellValue = gridView1.GetFocusedRowCellValue("name").ToString();
-                cellId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("line"));
+                cellId = gridView1.GetFocusedRowCellValue("line").ToString();
                 a = cellValue;
                 Passvalue1 = cellValue;
                 b = cellId;
                 PassId1 = cellId;
                 this.Close();
             }
+
         }
        
     }
