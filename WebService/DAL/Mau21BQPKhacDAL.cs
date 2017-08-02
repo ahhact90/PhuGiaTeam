@@ -90,7 +90,11 @@ namespace DAL
 
         #region Mau 21 BQP Khac
 
-        
+        /// <summary>
+        /// Tong hop 3 bang BHYT Can Tho
+        /// </summary>
+        /// <param name="Media"></param>
+        /// <returns></returns>
         public string his_fee_sync_tonghop(long Media)
         {
             try
@@ -105,6 +109,26 @@ namespace DAL
                 return "-1";
             }
              
+        }
+        /// <summary>
+        ///  Tong hop bao hiem BQP
+        /// </summary>
+        /// <param name="Media"></param>
+        /// <returns></returns>
+        public string his_fee_sync_tonghop_bqp(long Media)
+        {
+            try
+            {
+                var sql = "select his_fee_sync_tonghop_all_bqp({0})";
+                sql = string.Format(sql, Media);
+                return ExecuteQuery(sql).Rows[0][0].ToString();
+            }
+            catch
+            {
+
+                return "-1";
+            }
+
         }
         /// <summary>
         /// Tìm bệnh án Cần Thơ
