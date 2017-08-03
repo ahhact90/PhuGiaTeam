@@ -400,7 +400,15 @@ namespace WebService
         private void btnExport_Click_1(object sender, EventArgs e)
         {
             string lashpath = txtPathEx.Text.Trim();
-            string pathBackup = txtBackup_BQP.Text.Trim();
+            //string pathBackup = txtBackup_BQP.Text.Trim();
+
+            string pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
+
+            if (!Directory.Exists(pathBackup))
+            {
+                Directory.CreateDirectory(pathBackup);
+            }
+
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
             {
@@ -467,8 +475,9 @@ namespace WebService
                             }
                             else
                             {
-                                _Export.his_fee_sync_tonghop(MedID);
+                                _Export.his_fee_sync_tonghop_bqp(MedID);
                                 Export3file(lashpath, MedID);
+                                //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + MedID);
                                 Export3file(pathBackup, MedID);
                                 _Export.Finish_his_medical(MedID);
                             }

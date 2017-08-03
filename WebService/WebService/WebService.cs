@@ -26,7 +26,7 @@ namespace WebService
             InitializeComponent();
         }
         #region Variable
-       
+
         public static string StrConnect = UTL.DataBase.GetConfig();
         public static string lashpath = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
@@ -94,8 +94,8 @@ namespace WebService
                 dataSet2.Tables.Add(_Export.Select_Bang2(i));
                 dataSet3.Tables.Add(_Export.Select_Bang3(i));
                 dataSet4.Tables.Add(_Export.Select_his_chitiet_bhyt(i));
-                                                 
-                
+
+
 
                 if (dataTable.Rows.Count == 0)
                 {
@@ -106,7 +106,7 @@ namespace WebService
                     this.sobh = dataSet.Tables[0].Rows[0]["ma_the"].ToString();
                     this.sobn = dataSet.Tables[0].Rows[0]["ma_bn"].ToString();
                     this.doituong_bn = dataSet4.Tables[0].Rows[0]["doituong_bn"].ToString();
-                    this.ten_bn = dataSet4.Tables[0].Rows[0]["tenbn"].ToString(); 
+                    this.ten_bn = dataSet4.Tables[0].Rows[0]["tenbn"].ToString();
 
                     XmlDocument xmlDocument = new XmlDocument();
                     StringBuilder stringBuilder = new StringBuilder();
@@ -282,7 +282,7 @@ namespace WebService
             text = text.Replace("<Table1>", "");
             text = text.Replace("</Table1>", "");
             xmlDocument.LoadXml(text);
-            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn,this.ten_bn));
+            xmlDocument.Save(path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn));
             this.PathBHYT = path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn);
             this.FileName = string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn);
             string data = File.ReadAllText(path + "\\" + string.Format("{0}_{1}_{2}_{3}_{4}_CanTho.xml", this.doituong_bn, Medicalid, this.sobh, this.sobn, this.ten_bn));
@@ -337,12 +337,12 @@ namespace WebService
                 if (File.Exists(path))
                 {
                     File.AppendAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
-                    //MessageBox.Show("file log noi tiep " + MedID);
+
                 }
                 else
                 {
                     File.WriteAllText(path, System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ": " + MedID + " " + log_tenbn + " " + "Đối tượng BN " + log_doituongbn + Environment.NewLine);
-                   // MessageBox.Show("File mới tạo " + MedID);
+
                 }
             }
             catch
@@ -355,8 +355,13 @@ namespace WebService
         private void btnExport_Click(object sender, EventArgs e)
         {    
             string lashpath = txtPathEx.Text.Trim();
-            string pathBackup = txtBackup.Text.Trim();
+            string pathBackup = txtBackup.Text.Trim() +"\\"+ DateTime.Now.ToString("yyyyMMdd");
            
+                if(!Directory.Exists(pathBackup))
+                {
+                  Directory.CreateDirectory(pathBackup); 
+                }
+                //MessageBox.Show(pathBackup);
 
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
@@ -445,12 +450,12 @@ namespace WebService
             );  // Tao mot luong du lieu rieng de may chay khong bi treo
             thread.Start();
         }
-        
-        
+
+
 
         private void WebService_Load(object sender, EventArgs e)
         {
-            string STR_DBNAME = @"E:\Teca\VAS\QD917";           
+            string STR_DBNAME = @"E:\Teca\VAS\QD917";
             txtPathEx.Text = STR_DBNAME;
 
         }
@@ -461,7 +466,7 @@ namespace WebService
             Application.Exit();
         }
 
-        
+
         /// <summary>
         /// Lấy đường để xuất file Export XML
         /// </summary>
@@ -471,7 +476,7 @@ namespace WebService
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
-            {              
+            {
                 txtPathEx.Text = fbd.SelectedPath;
             }
         }
@@ -484,85 +489,87 @@ namespace WebService
                 txtBackup.Text = fbd.SelectedPath;
             }
         }
-        private void upwebservice()
-        {
-            string lashpath = txtPathEx.Text.Trim();                
-            string username;
-            string password;
-            string[] result1;
-            string[] ketqua;
-            string kq;
-            string[] access;
-            string access1;
-            string[] idtoken;
-            string token;
+        //private void upwebservice()
+        //{
+        //    string lashpath = txtPathEx.Text.Trim();                
+        //    string username;
+        //    string password;
+        //    string[] result1;
+        //    string[] ketqua;
+        //    string kq;
+        //    string[] access;
+        //    string access1;
+        //    string[] idtoken;
+        //    string token;
 
 
-            HttpClient httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("http://egw.baohiemxahoi.gov.vn");
-            httpClient.get_DefaultRequestHeaders().get_Accept().Clear();
-            httpClient.get_DefaultRequestHeaders().get_Accept().Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            Dictionary<string, string> dictionary = new Dictionary<string, string>
-            {
-                {
-                    "username",
-                    username
-                },
-                {
-                    "password",
-                    password
-                }
-            };
-            FormUrlEncodedContent formUrlEncodedContent = new FormUrlEncodedContent(dictionary);
-            HttpResponseMessage result = httpClient.PostAsync("api/token/take", formUrlEncodedContent).Result;
-            string result2 = result.Content.ReadAsStringAsync().Result;
-            result1 = result2.Split(new char[]
-            {
-                ','
-            });
-            ketqua = result1[0].Split(new char[]
-            {
-                ':'
-            });
-            kq = ketqua[1].Substring(1, ketqua[1].Length - 2);
-            if (int.Parse(kq) == 401)
-            {
-                MessageBox.Show("Lỗi xác thực");
-            }
-            access = result1[1].Split(new char[]
-            {
-                ':'
-            });
-            access1 = access[2].Replace("\"", "");
-            idtoken = result1[2].Split(new char[]
-            {
-                ':'
-            });
-            token = idtoken[1].Replace("\"", "");
-            FileInfo fileInfo = new FileInfo(lashpath);
-            byte[] value = null;
-            using (FileStream fileStream = fileInfo.OpenRead())
-            {
-                using (MemoryStream memoryStream = new MemoryStream())
-                {
-                    fileStream.CopyTo(memoryStream);
-                    value = memoryStream.ToArray();
-                }
-            }
-            string str = string.Format("token={0}&id_token={1}&username={2}&password={3}&loaiHoSo={4}&maTinh={5}&maCSKCB={6}", new object[]
-            {
-                access1,
-                token,
-                "92002_BV",
-                "dfe99ede6292051396d3cbea73f4985d",
-                "3",
-                "92",
-                "92002"
-            });
-            HttpResponseMessage result3 = httpClient.PostAsJsonAsync("api/egw/guiHoSoGiamDinh?" + str, value).Result;
-            WriteLog(result3.Content.ReadAsStringAsync().Result);
-            File.Delete(lashpath);            
-        }
+        //    HttpClient httpClient = new HttpClient();
+        //    httpClient.BaseAddress = new Uri("http://egw.baohiemxahoi.gov.vn");
+        //    //httpClient.get_DefaultRequestHeaders().get_Accept().Clear();
+        //    httpClient.DefaultRequestHeaders.Accept.Clear();
+        //    //httpClient.get_DefaultRequestHeaders().get_Accept().Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //    httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+        //    Dictionary<string, string> dictionary = new Dictionary<string, string>
+        //    {
+        //        {
+        //            "username",
+        //            username
+        //        },
+        //        {
+        //            "password",
+        //            password
+        //        }
+        //    };
+        //    FormUrlEncodedContent formUrlEncodedContent = new FormUrlEncodedContent(dictionary);
+        //    HttpResponseMessage result = httpClient.PostAsync("api/token/take", formUrlEncodedContent).Result;
+        //    string result2 = result.Content.ReadAsStringAsync().Result;
+        //    result1 = result2.Split(new char[]
+        //    {
+        //        ','
+        //    });
+        //    ketqua = result1[0].Split(new char[]
+        //    {
+        //        ':'
+        //    });
+        //    kq = ketqua[1].Substring(1, ketqua[1].Length - 2);
+        //    if (int.Parse(kq) == 401)
+        //    {
+        //        MessageBox.Show("Lỗi xác thực");
+        //    }
+        //    access = result1[1].Split(new char[]
+        //    {
+        //        ':'
+        //    });
+        //    access1 = access[2].Replace("\"", "");
+        //    idtoken = result1[2].Split(new char[]
+        //    {
+        //        ':'
+        //    });
+        //    token = idtoken[1].Replace("\"", "");
+        //    FileInfo fileInfo = new FileInfo(lashpath);
+        //    byte[] value = null;
+        //    using (FileStream fileStream = fileInfo.OpenRead())
+        //    {
+        //        using (MemoryStream memoryStream = new MemoryStream())
+        //        {
+        //            fileStream.CopyTo(memoryStream);
+        //            value = memoryStream.ToArray();
+        //        }
+        //    }
+        //    string str = string.Format("token={0}&id_token={1}&username={2}&password={3}&loaiHoSo={4}&maTinh={5}&maCSKCB={6}", new object[]
+        //    {
+        //        access1,
+        //        token,
+        //        "92002_BV",
+        //        "dfe99ede6292051396d3cbea73f4985d",
+        //        "3",
+        //        "92",
+        //        "92002"
+        //    });
+        //    HttpResponseMessage result3 = httpClient.PostAsJsonAsync("api/egw/guiHoSoGiamDinh?" + str, value).Result;
+        //    WriteLog(result3.Content.ReadAsStringAsync().Result);
+        //    File.Delete(lashpath);            
+        //}
 
-    }
+    } ////
 }

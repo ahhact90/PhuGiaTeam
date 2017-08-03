@@ -29,14 +29,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTinh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCSKB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.chkBxPass = new System.Windows.Forms.CheckBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.txtPath = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,13 +52,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Tỉnh:";
             // 
-            // textBox1
+            // txtTinh
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(97, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtTinh.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTinh.Location = new System.Drawing.Point(97, 26);
+            this.txtTinh.Name = "txtTinh";
+            this.txtTinh.Size = new System.Drawing.Size(97, 23);
+            this.txtTinh.TabIndex = 1;
             // 
             // label2
             // 
@@ -67,13 +70,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "T. Khoản:";
             // 
-            // textBox2
+            // txtUser
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(97, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 23);
-            this.textBox2.TabIndex = 3;
+            this.txtUser.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(97, 68);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(252, 23);
+            this.txtUser.TabIndex = 3;
             // 
             // label3
             // 
@@ -85,13 +88,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Mã CSKB:";
             // 
-            // textBox3
+            // txtCSKB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(294, 26);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 23);
-            this.textBox3.TabIndex = 5;
+            this.txtCSKB.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCSKB.Location = new System.Drawing.Point(294, 26);
+            this.txtCSKB.Name = "txtCSKB";
+            this.txtCSKB.Size = new System.Drawing.Size(158, 23);
+            this.txtCSKB.TabIndex = 5;
             // 
             // label4
             // 
@@ -103,13 +106,14 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Mật Khẩu:";
             // 
-            // textBox4
+            // txtPass
             // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(97, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(252, 23);
-            this.textBox4.TabIndex = 7;
+            this.txtPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(97, 111);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(252, 23);
+            this.txtPass.TabIndex = 7;
             // 
             // chkBxPass
             // 
@@ -117,24 +121,55 @@
             this.chkBxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBxPass.Location = new System.Drawing.Point(372, 117);
             this.chkBxPass.Name = "chkBxPass";
-            this.chkBxPass.Size = new System.Drawing.Size(45, 20);
+            this.chkBxPass.Size = new System.Drawing.Size(59, 20);
             this.chkBxPass.TabIndex = 8;
-            this.chkBxPass.Text = "Ẩn";
+            this.chkBxPass.Text = "Hiện";
             this.chkBxPass.UseVisualStyleBackColor = true;
+            this.chkBxPass.CheckedChanged += new System.EventHandler(this.chkBxPass_CheckedChanged);
+            // 
+            // btnSend
+            // 
+            this.btnSend.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.Location = new System.Drawing.Point(30, 179);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(86, 34);
+            this.btnSend.TabIndex = 9;
+            this.btnSend.Text = "SEND";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // txtPath
+            // 
+            this.txtPath.Location = new System.Drawing.Point(629, 22);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(296, 20);
+            this.txtPath.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(495, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Duong dan xuat file";
             // 
             // WebService_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 542);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPath);
+            this.Controls.Add(this.btnSend);
             this.Controls.Add(this.chkBxPass);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCSKB);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTinh);
             this.Controls.Add(this.label1);
             this.Name = "WebService_Update";
             this.Text = "WebService_Update";
@@ -147,13 +182,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTinh;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCSKB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.CheckBox chkBxPass;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.Label label5;
     }
 }
