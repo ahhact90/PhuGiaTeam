@@ -468,16 +468,15 @@ namespace WebService
 
                                 _Export.FinishMed(MedID);
                                 string Medical = MedID.ToString();
-                                writelog(Medical);
-                                //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + Medical);
+                                //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + MedID);
+                                writelog(Medical);                               
                                 goto sleep;
 
                             }
                             else
                             {
                                 _Export.his_fee_sync_tonghop_bqp(MedID);
-                                Export3file(lashpath, MedID);
-                                //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + MedID);
+                                Export3file(lashpath, MedID);                                
                                 Export3file(pathBackup, MedID);
                                 _Export.Finish_his_medical(MedID);
                             }
