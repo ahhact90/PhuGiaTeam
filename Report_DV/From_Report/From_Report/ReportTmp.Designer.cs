@@ -1516,7 +1516,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(7, 148);
+            this.gridControl1.Location = new System.Drawing.Point(0, 144);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.ribbonControl1;
             this.gridControl1.Name = "gridControl1";
@@ -1536,7 +1536,7 @@
             // 
             this.dte_To.EditValue = "";
             this.dte_To.EnterMoveNextControl = true;
-            this.dte_To.Location = new System.Drawing.Point(72, 507);
+            this.dte_To.Location = new System.Drawing.Point(388, 616);
             this.dte_To.MenuManager = this.ribbonControl1;
             this.dte_To.Name = "dte_To";
             this.dte_To.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -1554,7 +1554,7 @@
             // dte_From
             // 
             this.dte_From.EditValue = "";
-            this.dte_From.Location = new System.Drawing.Point(299, 507);
+            this.dte_From.Location = new System.Drawing.Point(637, 616);
             this.dte_From.MenuManager = this.ribbonControl1;
             this.dte_From.Name = "dte_From";
             this.dte_From.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1570,7 +1570,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 514);
+            this.label1.Location = new System.Drawing.Point(314, 619);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 14;
@@ -1579,7 +1579,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(238, 514);
+            this.label2.Location = new System.Drawing.Point(566, 619);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 15;
@@ -1587,7 +1587,7 @@
             // 
             // btOK
             // 
-            this.btOK.Location = new System.Drawing.Point(511, 491);
+            this.btOK.Location = new System.Drawing.Point(496, 515);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(90, 36);
             this.btOK.TabIndex = 18;
@@ -1596,7 +1596,7 @@
             // 
             // btExport
             // 
-            this.btExport.Location = new System.Drawing.Point(637, 489);
+            this.btExport.Location = new System.Drawing.Point(611, 515);
             this.btExport.Name = "btExport";
             this.btExport.Size = new System.Drawing.Size(98, 40);
             this.btExport.TabIndex = 21;
