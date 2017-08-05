@@ -141,6 +141,11 @@ namespace DAL
             sql = string.Format(sql);
             return ExecuteQuery(sql);
         }
+        public System.Data.DataTable Select_Service()
+        {
+            var sql = "SELECT * FROM hms_service Where hide = 0 ORDER BY id";
+            return ExecuteQuery(sql);
+        }
 
         #endregion
     }
