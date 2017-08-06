@@ -42,10 +42,13 @@
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel4 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dockPanel5 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
@@ -53,12 +56,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel2.SuspendLayout();
             this.dockPanel1.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             this.dockPanel3.SuspendLayout();
             this.dockPanel4.SuspendLayout();
             this.dockPanel4_Container.SuspendLayout();
-            this.dockPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.dockPanel5.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // documentManager1
@@ -139,12 +144,22 @@
             this.dockPanel1.ID = new System.Guid("169f2962-6e63-4a0c-8c19-b59aa208508f");
             this.dockPanel1.Location = new System.Drawing.Point(0, 747);
             this.dockPanel1.Name = "dockPanel1";
+            this.dockPanel1.Options.AllowDockAsTabbedDocument = false;
+            this.dockPanel1.Options.AllowDockFill = false;
+            this.dockPanel1.Options.AllowDockLeft = false;
+            this.dockPanel1.Options.AllowDockRight = false;
+            this.dockPanel1.Options.AllowDockTop = false;
+            this.dockPanel1.Options.AllowFloating = false;
+            this.dockPanel1.Options.FloatOnDblClick = false;
+            this.dockPanel1.Options.ShowAutoHideButton = false;
+            this.dockPanel1.Options.ShowCloseButton = false;
             this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 45);
             this.dockPanel1.Size = new System.Drawing.Size(1219, 45);
             this.dockPanel1.Text = "dockPanel1";
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Controls.Add(this.statusStrip1);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             this.dockPanel1_Container.Size = new System.Drawing.Size(1211, 18);
@@ -175,6 +190,14 @@
             this.dockPanel4.ID = new System.Guid("b09f174c-d546-4a7e-95ef-d76fc77044ce");
             this.dockPanel4.Location = new System.Drawing.Point(0, 114);
             this.dockPanel4.Name = "dockPanel4";
+            this.dockPanel4.Options.AllowDockAsTabbedDocument = false;
+            this.dockPanel4.Options.AllowDockBottom = false;
+            this.dockPanel4.Options.AllowDockFill = false;
+            this.dockPanel4.Options.AllowDockRight = false;
+            this.dockPanel4.Options.AllowDockTop = false;
+            this.dockPanel4.Options.AllowFloating = false;
+            this.dockPanel4.Options.FloatOnDblClick = false;
+            this.dockPanel4.Options.ShowAutoHideButton = false;
             this.dockPanel4.OriginalSize = new System.Drawing.Size(207, 200);
             this.dockPanel4.Size = new System.Drawing.Size(207, 633);
             // 
@@ -186,6 +209,21 @@
             this.dockPanel4_Container.Name = "dockPanel4_Container";
             this.dockPanel4_Container.Size = new System.Drawing.Size(199, 606);
             this.dockPanel4_Container.TabIndex = 0;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Location = new System.Drawing.Point(1, 286);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(199, 313);
+            this.groupControl2.TabIndex = 1;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Location = new System.Drawing.Point(2, -21);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(196, 306);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "groupControl1";
             // 
             // dockPanel5
             // 
@@ -206,20 +244,28 @@
             this.dockPanel5_Container.Size = new System.Drawing.Size(1006, 605);
             this.dockPanel5_Container.TabIndex = 0;
             // 
-            // groupControl1
+            // statusStrip1
             // 
-            this.groupControl1.Location = new System.Drawing.Point(2, 3);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(196, 282);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "groupControl1";
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripProgressBar1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, -4);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1211, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
-            // groupControl2
+            // toolStripStatusLabel1
             // 
-            this.groupControl2.Location = new System.Drawing.Point(4, 289);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(192, 313);
-            this.groupControl2.TabIndex = 1;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
             // Frm_TiepDon
             // 
@@ -239,12 +285,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel1.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
+            this.dockPanel1_Container.PerformLayout();
             this.dockPanel3.ResumeLayout(false);
             this.dockPanel4.ResumeLayout(false);
             this.dockPanel4_Container.ResumeLayout(false);
-            this.dockPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.dockPanel5.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -268,5 +318,8 @@
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel5_Container;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }

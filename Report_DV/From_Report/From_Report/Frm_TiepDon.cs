@@ -16,5 +16,10 @@ namespace From_Report
         {
             InitializeComponent();
         }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
