@@ -56,10 +56,12 @@
             this.dockPanel11_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel12 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel12_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.btn_SQL = new DevExpress.XtraEditors.SimpleButton();
             this.btnExport = new DevExpress.XtraEditors.SimpleButton();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.dockPanel14 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dp_TruyVan = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.richtxtSQL = new System.Windows.Forms.RichTextBox();
             this.dockPanel15 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel15_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.grdCtrlDM = new DevExpress.XtraGrid.GridControl();
@@ -74,8 +76,6 @@
             this.dockPanel15Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.dockPanel6Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
-            this.richtxtSQL = new System.Windows.Forms.RichTextBox();
-            this.btn_SQL = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel3.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -429,6 +429,15 @@
             this.dockPanel12_Container.Size = new System.Drawing.Size(222, 721);
             this.dockPanel12_Container.TabIndex = 0;
             // 
+            // btn_SQL
+            // 
+            this.btn_SQL.Location = new System.Drawing.Point(4, 148);
+            this.btn_SQL.Name = "btn_SQL";
+            this.btn_SQL.Size = new System.Drawing.Size(118, 64);
+            this.btn_SQL.TabIndex = 2;
+            this.btn_SQL.Text = "Truy Vấn SQL";
+            this.btn_SQL.Click += new System.EventHandler(this.btn_SQL_Click);
+            // 
             // btnExport
             // 
             this.btnExport.Location = new System.Drawing.Point(3, 79);
@@ -450,8 +459,10 @@
             // dockPanel14
             // 
             this.dockPanel14.Controls.Add(this.dp_TruyVan);
+            this.dockPanel14.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
             this.dockPanel14.DockedAsTabbedDocument = true;
             this.dockPanel14.ID = new System.Guid("aa893c34-6378-469d-8190-b3ed6555c3fe");
+            this.dockPanel14.Location = new System.Drawing.Point(0, 0);
             this.dockPanel14.Name = "dockPanel14";
             this.dockPanel14.Options.AllowDockBottom = false;
             this.dockPanel14.Options.AllowDockFill = false;
@@ -462,6 +473,7 @@
             this.dockPanel14.Options.ShowAutoHideButton = false;
             this.dockPanel14.Options.ShowCloseButton = false;
             this.dockPanel14.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel14.Size = new System.Drawing.Size(1252, 346);
             this.dockPanel14.TabStop = false;
             this.dockPanel14.Text = "Lệnh Truy Vấn";
             // 
@@ -472,6 +484,15 @@
             this.dp_TruyVan.Name = "dp_TruyVan";
             this.dp_TruyVan.Size = new System.Drawing.Size(1252, 346);
             this.dp_TruyVan.TabIndex = 0;
+            // 
+            // richtxtSQL
+            // 
+            this.richtxtSQL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richtxtSQL.Location = new System.Drawing.Point(0, 0);
+            this.richtxtSQL.Name = "richtxtSQL";
+            this.richtxtSQL.Size = new System.Drawing.Size(1252, 346);
+            this.richtxtSQL.TabIndex = 0;
+            this.richtxtSQL.Text = "";
             // 
             // dockPanel15
             // 
@@ -532,6 +553,7 @@
             // 
             this.gridView1.GridControl = this.grdCtrlDM;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // documentManager1
@@ -591,24 +613,6 @@
             this.dockPanel6Document.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
             this.dockPanel6Document.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.dockPanel6Document.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // richtxtSQL
-            // 
-            this.richtxtSQL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richtxtSQL.Location = new System.Drawing.Point(0, 0);
-            this.richtxtSQL.Name = "richtxtSQL";
-            this.richtxtSQL.Size = new System.Drawing.Size(1252, 346);
-            this.richtxtSQL.TabIndex = 0;
-            this.richtxtSQL.Text = "";
-            // 
-            // btn_SQL
-            // 
-            this.btn_SQL.Location = new System.Drawing.Point(4, 148);
-            this.btn_SQL.Name = "btn_SQL";
-            this.btn_SQL.Size = new System.Drawing.Size(118, 64);
-            this.btn_SQL.TabIndex = 2;
-            this.btn_SQL.Text = "Truy Vấn SQL";
-            this.btn_SQL.Click += new System.EventHandler(this.btn_SQL_Click);
             // 
             // FrmService
             // 
