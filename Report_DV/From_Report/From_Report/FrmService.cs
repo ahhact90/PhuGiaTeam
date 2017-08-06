@@ -50,7 +50,7 @@ namespace From_Report
             //// Ham xuat Excel Bang Dev Nhanh
             using (SaveFileDialog saveDialog = new SaveFileDialog())
             {
-                saveDialog.Filter = "Excel (2003)(.xls)|*.xls|Excel (2010-2013-2016) (.xlsx)|*.xlsx |RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html|All File (.*)|*.*";
+                saveDialog.Filter = "Excel (2010-2013-2016) (.xlsx)|*.xlsx |Excel (2003)(.xls)|*.xls|RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html|All File (.*)|*.*";
                 if (saveDialog.ShowDialog() != DialogResult.Cancel)
                 {
                     string exportFilePath = saveDialog.FileName;
@@ -110,7 +110,7 @@ namespace From_Report
             //// Ham xuat Excel Bang Dev Nhanh
             using (SaveFileDialog saveDialog = new SaveFileDialog())
             {
-                saveDialog.Filter = "Excel (2003)(.xls)|*.xls|Excel (2010-2013-2016) (.xlsx)|*.xlsx |RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html|All File (.*)|*.*";
+                saveDialog.Filter = "Excel (2010-2013-2016) (.xlsx)|*.xlsx |Excel (2003)(.xls)|*.xls|RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html|All File (.*)|*.*";
                 if (saveDialog.ShowDialog() != DialogResult.Cancel)
                 {
                     string exportFilePath = saveDialog.FileName;
@@ -119,12 +119,12 @@ namespace From_Report
 
                     switch (fileExtenstion)
                     {
-                        case ".xls":
-                            gridView1.ExportToXls(exportFilePath);
-                            break;
                         case ".xlsx":
                             gridView1.ExportToXlsx(exportFilePath);
                             break;
+                        case ".xls":
+                            gridView1.ExportToXls(exportFilePath);
+                            break;                       
                         case ".rtf":
                             gridView1.ExportToRtf(exportFilePath);
                             break;
