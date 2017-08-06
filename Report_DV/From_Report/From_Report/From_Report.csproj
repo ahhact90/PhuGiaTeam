@@ -96,6 +96,12 @@
     <Compile Include="FrmService.Designer.cs">
       <DependentUpon>FrmService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_TiepDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TiepDon.Designer.cs">
+      <DependentUpon>Frm_TiepDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_CauHinh\FrmMH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmService.resx">
       <DependentUpon>FrmService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TiepDon.resx">
+      <DependentUpon>Frm_TiepDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_CauHinh\FrmMH.resx">
       <DependentUpon>FrmMH.cs</DependentUpon>
