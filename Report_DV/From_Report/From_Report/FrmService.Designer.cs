@@ -74,6 +74,8 @@
             this.dockPanel15Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.dockPanel6Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
+            this.richtxtSQL = new System.Windows.Forms.RichTextBox();
+            this.btn_SQL = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel3.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -90,6 +92,7 @@
             this.dockPanel12.SuspendLayout();
             this.dockPanel12_Container.SuspendLayout();
             this.dockPanel14.SuspendLayout();
+            this.dp_TruyVan.SuspendLayout();
             this.dockPanel15.SuspendLayout();
             this.dockPanel15_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrlDM)).BeginInit();
@@ -418,6 +421,7 @@
             // 
             // dockPanel12_Container
             // 
+            this.dockPanel12_Container.Controls.Add(this.btn_SQL);
             this.dockPanel12_Container.Controls.Add(this.btnExport);
             this.dockPanel12_Container.Controls.Add(this.btnOK);
             this.dockPanel12_Container.Location = new System.Drawing.Point(4, 23);
@@ -427,7 +431,7 @@
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(3, 103);
+            this.btnExport.Location = new System.Drawing.Point(3, 79);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(123, 56);
             this.btnExport.TabIndex = 1;
@@ -463,6 +467,7 @@
             // 
             // dp_TruyVan
             // 
+            this.dp_TruyVan.Controls.Add(this.richtxtSQL);
             this.dp_TruyVan.Location = new System.Drawing.Point(0, 0);
             this.dp_TruyVan.Name = "dp_TruyVan";
             this.dp_TruyVan.Size = new System.Drawing.Size(1252, 346);
@@ -587,6 +592,24 @@
             this.dockPanel6Document.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.dockPanel6Document.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
+            // richtxtSQL
+            // 
+            this.richtxtSQL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richtxtSQL.Location = new System.Drawing.Point(0, 0);
+            this.richtxtSQL.Name = "richtxtSQL";
+            this.richtxtSQL.Size = new System.Drawing.Size(1252, 346);
+            this.richtxtSQL.TabIndex = 0;
+            this.richtxtSQL.Text = "";
+            // 
+            // btn_SQL
+            // 
+            this.btn_SQL.Location = new System.Drawing.Point(4, 148);
+            this.btn_SQL.Name = "btn_SQL";
+            this.btn_SQL.Size = new System.Drawing.Size(118, 64);
+            this.btn_SQL.TabIndex = 2;
+            this.btn_SQL.Text = "Truy Vấn SQL";
+            this.btn_SQL.Click += new System.EventHandler(this.btn_SQL_Click);
+            // 
             // FrmService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,6 +635,7 @@
             this.dockPanel12.ResumeLayout(false);
             this.dockPanel12_Container.ResumeLayout(false);
             this.dockPanel14.ResumeLayout(false);
+            this.dp_TruyVan.ResumeLayout(false);
             this.dockPanel15.ResumeLayout(false);
             this.dockPanel15_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrlDM)).EndInit();
@@ -676,5 +700,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exportExcelToolStripMenuItem;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup2;
+        private System.Windows.Forms.RichTextBox richtxtSQL;
+        private DevExpress.XtraEditors.SimpleButton btn_SQL;
     }
 }

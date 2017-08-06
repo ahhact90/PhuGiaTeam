@@ -135,15 +135,33 @@ namespace DAL
             sql = string.Format(sql);
             return ExecuteQuery(sql);
         }
+        /// <summary>
+        /// Lấy Mã nhóm trong để ánh xạ thuốc
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataTable MaNhom()
         {
             var sql = "SELECT line,name FROM  his_drug_config WHERE zone ='group_type' ORDER BY line";
             sql = string.Format(sql);
             return ExecuteQuery(sql);
         }
+        /// <summary>
+        /// Lấy dữ liệu table hms_service
+        /// </summary>
+        /// <returns></returns>
         public System.Data.DataTable Select_Service()
         {
             var sql = "SELECT * FROM hms_service Where hide = 0 ORDER BY id";
+            return ExecuteQuery(sql);
+        }
+        /// <summary>
+        /// Truy vân cơ sở dữ liệu trực tiếp trên phần mềm
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public System.Data.DataTable Select_SQL(string sql)
+        {           
             return ExecuteQuery(sql);
         }
 
