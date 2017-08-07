@@ -41,7 +41,7 @@ namespace From_Report
         private void btnOK_Click(object sender, EventArgs e)
         {
             grdCtrlDM.DataSource = null;
-            gridView1.Columns.Clear();
+            gridView1.Columns.Clear();            
             dt = _DanhMuc.Select_Service();
             grdCtrlDM.DataSource = dt;
         }
