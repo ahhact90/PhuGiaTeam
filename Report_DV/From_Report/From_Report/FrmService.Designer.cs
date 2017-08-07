@@ -415,9 +415,9 @@
             this.dockPanel12.Options.FloatOnDblClick = false;
             this.dockPanel12.Options.ShowAutoHideButton = false;
             this.dockPanel12.Options.ShowCloseButton = false;
-            this.dockPanel12.OriginalSize = new System.Drawing.Size(230, 200);
-            this.dockPanel12.Size = new System.Drawing.Size(230, 748);
-            this.dockPanel12.Text = "Danh sách bệnh nhân";
+            this.dockPanel12.OriginalSize = new System.Drawing.Size(146, 200);
+            this.dockPanel12.Size = new System.Drawing.Size(146, 748);
+            this.dockPanel12.Text = "Menu Chức Năng";
             // 
             // dockPanel12_Container
             // 
@@ -426,14 +426,14 @@
             this.dockPanel12_Container.Controls.Add(this.btnOK);
             this.dockPanel12_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel12_Container.Name = "dockPanel12_Container";
-            this.dockPanel12_Container.Size = new System.Drawing.Size(222, 721);
+            this.dockPanel12_Container.Size = new System.Drawing.Size(138, 721);
             this.dockPanel12_Container.TabIndex = 0;
             // 
             // btn_SQL
             // 
-            this.btn_SQL.Location = new System.Drawing.Point(4, 148);
+            this.btn_SQL.Location = new System.Drawing.Point(4, 144);
             this.btn_SQL.Name = "btn_SQL";
-            this.btn_SQL.Size = new System.Drawing.Size(118, 64);
+            this.btn_SQL.Size = new System.Drawing.Size(122, 64);
             this.btn_SQL.TabIndex = 2;
             this.btn_SQL.Text = "Truy Vấn SQL";
             this.btn_SQL.Click += new System.EventHandler(this.btn_SQL_Click);
@@ -473,7 +473,7 @@
             this.dockPanel14.Options.ShowAutoHideButton = false;
             this.dockPanel14.Options.ShowCloseButton = false;
             this.dockPanel14.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel14.Size = new System.Drawing.Size(1252, 346);
+            this.dockPanel14.Size = new System.Drawing.Size(1336, 346);
             this.dockPanel14.TabStop = false;
             this.dockPanel14.Text = "Lệnh Truy Vấn";
             // 
@@ -482,7 +482,7 @@
             this.dp_TruyVan.Controls.Add(this.richtxtSQL);
             this.dp_TruyVan.Location = new System.Drawing.Point(0, 0);
             this.dp_TruyVan.Name = "dp_TruyVan";
-            this.dp_TruyVan.Size = new System.Drawing.Size(1252, 346);
+            this.dp_TruyVan.Size = new System.Drawing.Size(1336, 346);
             this.dp_TruyVan.TabIndex = 0;
             // 
             // richtxtSQL
@@ -490,7 +490,7 @@
             this.richtxtSQL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richtxtSQL.Location = new System.Drawing.Point(0, 0);
             this.richtxtSQL.Name = "richtxtSQL";
-            this.richtxtSQL.Size = new System.Drawing.Size(1252, 346);
+            this.richtxtSQL.Size = new System.Drawing.Size(1336, 346);
             this.richtxtSQL.TabIndex = 0;
             this.richtxtSQL.Text = "";
             // 
@@ -511,7 +511,7 @@
             this.dockPanel15.Options.ShowAutoHideButton = false;
             this.dockPanel15.Options.ShowCloseButton = false;
             this.dockPanel15.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel15.Size = new System.Drawing.Size(1252, 345);
+            this.dockPanel15.Size = new System.Drawing.Size(1336, 345);
             this.dockPanel15.Text = "Chi tiết thuốc";
             // 
             // dockPanel15_Container
@@ -519,7 +519,7 @@
             this.dockPanel15_Container.Controls.Add(this.grdCtrlDM);
             this.dockPanel15_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel15_Container.Name = "dockPanel15_Container";
-            this.dockPanel15_Container.Size = new System.Drawing.Size(1252, 345);
+            this.dockPanel15_Container.Size = new System.Drawing.Size(1336, 345);
             this.dockPanel15_Container.TabIndex = 0;
             // 
             // grdCtrlDM
@@ -529,7 +529,7 @@
             this.grdCtrlDM.Location = new System.Drawing.Point(0, 0);
             this.grdCtrlDM.MainView = this.gridView1;
             this.grdCtrlDM.Name = "grdCtrlDM";
-            this.grdCtrlDM.Size = new System.Drawing.Size(1252, 345);
+            this.grdCtrlDM.Size = new System.Drawing.Size(1336, 345);
             this.grdCtrlDM.TabIndex = 0;
             this.grdCtrlDM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
