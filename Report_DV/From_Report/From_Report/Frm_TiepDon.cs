@@ -17,7 +17,7 @@ namespace From_Report
             InitializeComponent();
         }
 
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void dockPanel2_Click(object sender, EventArgs e)
         {
 
         }
