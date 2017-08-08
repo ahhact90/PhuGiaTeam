@@ -435,6 +435,7 @@
             // 
             // btn_SQL
             // 
+            this.btn_SQL.Enabled = false;
             this.btn_SQL.Location = new System.Drawing.Point(4, 144);
             this.btn_SQL.Name = "btn_SQL";
             this.btn_SQL.Size = new System.Drawing.Size(122, 64);
