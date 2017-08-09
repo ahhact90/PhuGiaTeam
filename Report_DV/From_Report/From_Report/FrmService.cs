@@ -174,6 +174,11 @@ namespace From_Report
             grdCtrlDM.DataSource = dt;
         }
 
+        private void grdCtrlDM_Click(object sender, EventArgs e)
+        {
+
+        }
+
      
     }
 }
