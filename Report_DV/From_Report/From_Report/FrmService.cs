@@ -40,10 +40,10 @@ namespace From_Report
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            grdCtrlDM.DataSource = null;
+            gridControl1.DataSource = null;
             gridView1.Columns.Clear();            
             dt = _DanhMuc.Select_Service();
-            grdCtrlDM.DataSource = dt;
+            gridControl1.DataSource = dt;
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -168,10 +168,10 @@ namespace From_Report
 
         private void btn_SQL_Click(object sender, EventArgs e)
         {
-            grdCtrlDM.DataSource = null;
+            gridControl1.DataSource = null;
             gridView1.Columns.Clear();
             dt = _DanhMuc.Select_SQL(richtxtSQL.Text.Trim());
-            grdCtrlDM.DataSource = dt;
+            gridControl1.DataSource = dt;
         }
 
         private void grdCtrlDM_Click(object sender, EventArgs e)

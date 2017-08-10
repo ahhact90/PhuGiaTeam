@@ -64,47 +64,10 @@
             this.richtxtSQL = new System.Windows.Forms.RichTextBox();
             this.dockPanel15 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel15_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.grdCtrlDM = new DevExpress.XtraGrid.GridControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.code = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.servicetype = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.category = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.servicegroup = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.servicegroupline = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.servicename = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.price = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.unit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.femalestandard = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.malestandard = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.note = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.hide = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.reportid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.insprice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.optprice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.controlfield = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.limitedsubject = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.limiteddivision = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.otherprice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.highservice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.callzoneid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.forcompany = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.itemid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.shorttext = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.divisionid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.othername = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.report = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.insname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.feereport = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.para_result = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.surgery_code = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.accesskey = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.service_unit = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.is_service = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lab_code = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.paid_rate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.documentGroup3 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
@@ -132,9 +95,9 @@
             this.dp_TruyVan.SuspendLayout();
             this.dockPanel15.SuspendLayout();
             this.dockPanel15_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCtrlDM)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup3)).BeginInit();
@@ -554,24 +517,30 @@
             // 
             // dockPanel15_Container
             // 
-            this.dockPanel15_Container.Controls.Add(this.grdCtrlDM);
+            this.dockPanel15_Container.Controls.Add(this.gridControl1);
             this.dockPanel15_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel15_Container.Name = "dockPanel15_Container";
             this.dockPanel15_Container.Size = new System.Drawing.Size(1336, 345);
             this.dockPanel15_Container.TabIndex = 0;
             // 
-            // grdCtrlDM
+            // gridControl1
             // 
-            this.grdCtrlDM.ContextMenuStrip = this.contextMenuStrip1;
-            this.grdCtrlDM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdCtrlDM.Location = new System.Drawing.Point(0, 0);
-            this.grdCtrlDM.MainView = this.gridView1;
-            this.grdCtrlDM.Name = "grdCtrlDM";
-            this.grdCtrlDM.Size = new System.Drawing.Size(1336, 345);
-            this.grdCtrlDM.TabIndex = 0;
-            this.grdCtrlDM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1336, 345);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.grdCtrlDM.Click += new System.EventHandler(this.grdCtrlDM_Click);
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // contextMenuStrip1
             // 
@@ -587,424 +556,6 @@
             this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exportExcelToolStripMenuItem.Text = "Export Excel";
             this.exportExcelToolStripMenuItem.Click += new System.EventHandler(this.exportExcelToolStripMenuItem_Click);
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.id,
-            this.code,
-            this.servicetype,
-            this.category,
-            this.servicegroup,
-            this.servicegroupline,
-            this.servicename,
-            this.price,
-            this.unit,
-            this.femalestandard,
-            this.malestandard,
-            this.note,
-            this.hide,
-            this.reportid,
-            this.insprice,
-            this.optprice,
-            this.controlfield,
-            this.limitedsubject,
-            this.limiteddivision,
-            this.otherprice,
-            this.highservice,
-            this.callzoneid,
-            this.forcompany,
-            this.itemid,
-            this.shorttext,
-            this.divisionid,
-            this.othername,
-            this.report,
-            this.insname,
-            this.feereport,
-            this.para_result,
-            this.surgery_code,
-            this.accesskey,
-            this.service_unit,
-            this.is_service,
-            this.lab_code,
-            this.paid_rate});
-            this.gridView1.GridControl = this.grdCtrlDM;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.RowAutoHeight = true;
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // id
-            // 
-            this.id.Caption = "ID";
-            this.id.FieldName = "id";
-            this.id.Name = "id";
-            this.id.OptionsColumn.AllowMove = false;
-            this.id.OptionsColumn.FixedWidth = true;
-            this.id.Visible = true;
-            this.id.VisibleIndex = 0;
-            this.id.Width = 20;
-            // 
-            // code
-            // 
-            this.code.Caption = "Code";
-            this.code.FieldName = "code";
-            this.code.Name = "code";
-            this.code.OptionsColumn.FixedWidth = true;
-            this.code.Visible = true;
-            this.code.VisibleIndex = 1;
-            this.code.Width = 20;
-            // 
-            // servicetype
-            // 
-            this.servicetype.Caption = "Servicetype";
-            this.servicetype.FieldName = "servicetype";
-            this.servicetype.Name = "servicetype";
-            this.servicetype.OptionsColumn.FixedWidth = true;
-            this.servicetype.Visible = true;
-            this.servicetype.VisibleIndex = 2;
-            this.servicetype.Width = 20;
-            // 
-            // category
-            // 
-            this.category.Caption = "Category";
-            this.category.FieldName = "category";
-            this.category.Name = "category";
-            this.category.OptionsColumn.FixedWidth = true;
-            this.category.Visible = true;
-            this.category.VisibleIndex = 3;
-            this.category.Width = 20;
-            // 
-            // servicegroup
-            // 
-            this.servicegroup.Caption = "Servicegroup";
-            this.servicegroup.FieldName = "servicegroup";
-            this.servicegroup.Name = "servicegroup";
-            this.servicegroup.OptionsColumn.FixedWidth = true;
-            this.servicegroup.Visible = true;
-            this.servicegroup.VisibleIndex = 4;
-            this.servicegroup.Width = 22;
-            // 
-            // servicegroupline
-            // 
-            this.servicegroupline.Caption = "Servicegroupline";
-            this.servicegroupline.FieldName = "servicegroupline";
-            this.servicegroupline.Name = "servicegroupline";
-            this.servicegroupline.OptionsColumn.FixedWidth = true;
-            this.servicegroupline.Visible = true;
-            this.servicegroupline.VisibleIndex = 5;
-            this.servicegroupline.Width = 29;
-            // 
-            // servicename
-            // 
-            this.servicename.Caption = "Servicename";
-            this.servicename.FieldName = "servicename";
-            this.servicename.Name = "servicename";
-            this.servicename.OptionsColumn.FixedWidth = true;
-            this.servicename.Visible = true;
-            this.servicename.VisibleIndex = 6;
-            this.servicename.Width = 20;
-            // 
-            // price
-            // 
-            this.price.Caption = "Price";
-            this.price.FieldName = "price";
-            this.price.Name = "price";
-            this.price.OptionsColumn.FixedWidth = true;
-            this.price.Visible = true;
-            this.price.VisibleIndex = 7;
-            this.price.Width = 20;
-            // 
-            // unit
-            // 
-            this.unit.Caption = "Unit";
-            this.unit.FieldName = "unit";
-            this.unit.Name = "unit";
-            this.unit.OptionsColumn.FixedWidth = true;
-            this.unit.Visible = true;
-            this.unit.VisibleIndex = 8;
-            this.unit.Width = 20;
-            // 
-            // femalestandard
-            // 
-            this.femalestandard.Caption = "femalestandard";
-            this.femalestandard.FieldName = "femalestandard";
-            this.femalestandard.Name = "femalestandard";
-            this.femalestandard.OptionsColumn.FixedWidth = true;
-            this.femalestandard.Visible = true;
-            this.femalestandard.VisibleIndex = 9;
-            this.femalestandard.Width = 20;
-            // 
-            // malestandard
-            // 
-            this.malestandard.Caption = "malestandard";
-            this.malestandard.FieldName = "malestandard";
-            this.malestandard.Name = "malestandard";
-            this.malestandard.OptionsColumn.FixedWidth = true;
-            this.malestandard.Visible = true;
-            this.malestandard.VisibleIndex = 10;
-            this.malestandard.Width = 24;
-            // 
-            // note
-            // 
-            this.note.Caption = "note";
-            this.note.FieldName = "note";
-            this.note.Name = "note";
-            this.note.OptionsColumn.FixedWidth = true;
-            this.note.Visible = true;
-            this.note.VisibleIndex = 11;
-            this.note.Width = 20;
-            // 
-            // hide
-            // 
-            this.hide.Caption = "hide";
-            this.hide.FieldName = "hide";
-            this.hide.Name = "hide";
-            this.hide.OptionsColumn.FixedWidth = true;
-            this.hide.Visible = true;
-            this.hide.VisibleIndex = 14;
-            this.hide.Width = 20;
-            // 
-            // reportid
-            // 
-            this.reportid.Caption = "reportid";
-            this.reportid.FieldName = "reportid";
-            this.reportid.Name = "reportid";
-            this.reportid.OptionsColumn.FixedWidth = true;
-            this.reportid.Visible = true;
-            this.reportid.VisibleIndex = 12;
-            this.reportid.Width = 20;
-            // 
-            // insprice
-            // 
-            this.insprice.Caption = "insprice";
-            this.insprice.FieldName = "insprice";
-            this.insprice.Name = "insprice";
-            this.insprice.OptionsColumn.FixedWidth = true;
-            this.insprice.Visible = true;
-            this.insprice.VisibleIndex = 13;
-            this.insprice.Width = 20;
-            // 
-            // optprice
-            // 
-            this.optprice.Caption = "optprice";
-            this.optprice.FieldName = "optprice";
-            this.optprice.Name = "optprice";
-            this.optprice.OptionsColumn.FixedWidth = true;
-            this.optprice.Visible = true;
-            this.optprice.VisibleIndex = 15;
-            this.optprice.Width = 24;
-            // 
-            // controlfield
-            // 
-            this.controlfield.Caption = "controlfield";
-            this.controlfield.FieldName = "controlfield";
-            this.controlfield.Name = "controlfield";
-            this.controlfield.OptionsColumn.FixedWidth = true;
-            this.controlfield.Visible = true;
-            this.controlfield.VisibleIndex = 16;
-            this.controlfield.Width = 36;
-            // 
-            // limitedsubject
-            // 
-            this.limitedsubject.Caption = "limitedsubject";
-            this.limitedsubject.FieldName = "limitedsubject";
-            this.limitedsubject.Name = "limitedsubject";
-            this.limitedsubject.OptionsColumn.FixedWidth = true;
-            this.limitedsubject.Visible = true;
-            this.limitedsubject.VisibleIndex = 17;
-            this.limitedsubject.Width = 24;
-            // 
-            // limiteddivision
-            // 
-            this.limiteddivision.Caption = "limiteddivision";
-            this.limiteddivision.FieldName = "limiteddivision";
-            this.limiteddivision.Name = "limiteddivision";
-            this.limiteddivision.OptionsColumn.FixedWidth = true;
-            this.limiteddivision.Visible = true;
-            this.limiteddivision.VisibleIndex = 18;
-            this.limiteddivision.Width = 20;
-            // 
-            // otherprice
-            // 
-            this.otherprice.Caption = "otherprice";
-            this.otherprice.FieldName = "otherprice";
-            this.otherprice.Name = "otherprice";
-            this.otherprice.OptionsColumn.FixedWidth = true;
-            this.otherprice.Visible = true;
-            this.otherprice.VisibleIndex = 19;
-            this.otherprice.Width = 39;
-            // 
-            // highservice
-            // 
-            this.highservice.Caption = "highservice";
-            this.highservice.FieldName = "highservice";
-            this.highservice.Name = "highservice";
-            this.highservice.OptionsColumn.FixedWidth = true;
-            this.highservice.Visible = true;
-            this.highservice.VisibleIndex = 20;
-            this.highservice.Width = 45;
-            // 
-            // callzoneid
-            // 
-            this.callzoneid.Caption = "callzoneid";
-            this.callzoneid.FieldName = "callzoneid";
-            this.callzoneid.Name = "callzoneid";
-            this.callzoneid.OptionsColumn.FixedWidth = true;
-            this.callzoneid.Visible = true;
-            this.callzoneid.VisibleIndex = 21;
-            this.callzoneid.Width = 38;
-            // 
-            // forcompany
-            // 
-            this.forcompany.Caption = "forcompany";
-            this.forcompany.FieldName = "forcompany";
-            this.forcompany.Name = "forcompany";
-            this.forcompany.OptionsColumn.FixedWidth = true;
-            this.forcompany.Visible = true;
-            this.forcompany.VisibleIndex = 22;
-            this.forcompany.Width = 49;
-            // 
-            // itemid
-            // 
-            this.itemid.Caption = "itemid";
-            this.itemid.FieldName = "itemid";
-            this.itemid.Name = "itemid";
-            this.itemid.OptionsColumn.FixedWidth = true;
-            this.itemid.Visible = true;
-            this.itemid.VisibleIndex = 23;
-            this.itemid.Width = 25;
-            // 
-            // shorttext
-            // 
-            this.shorttext.Caption = "shorttext";
-            this.shorttext.FieldName = "shorttext";
-            this.shorttext.Name = "shorttext";
-            this.shorttext.OptionsColumn.FixedWidth = true;
-            this.shorttext.Visible = true;
-            this.shorttext.VisibleIndex = 24;
-            this.shorttext.Width = 36;
-            // 
-            // divisionid
-            // 
-            this.divisionid.Caption = "divisionid";
-            this.divisionid.FieldName = "divisionid";
-            this.divisionid.Name = "divisionid";
-            this.divisionid.OptionsColumn.FixedWidth = true;
-            this.divisionid.Visible = true;
-            this.divisionid.VisibleIndex = 25;
-            this.divisionid.Width = 37;
-            // 
-            // othername
-            // 
-            this.othername.Caption = "othername";
-            this.othername.FieldName = "othername";
-            this.othername.Name = "othername";
-            this.othername.OptionsColumn.FixedWidth = true;
-            this.othername.Visible = true;
-            this.othername.VisibleIndex = 26;
-            this.othername.Width = 53;
-            // 
-            // report
-            // 
-            this.report.Caption = "report";
-            this.report.FieldName = "report";
-            this.report.Name = "report";
-            this.report.OptionsColumn.FixedWidth = true;
-            this.report.Visible = true;
-            this.report.VisibleIndex = 27;
-            this.report.Width = 43;
-            // 
-            // insname
-            // 
-            this.insname.Caption = "insname";
-            this.insname.FieldName = "insname";
-            this.insname.Name = "insname";
-            this.insname.OptionsColumn.FixedWidth = true;
-            this.insname.Visible = true;
-            this.insname.VisibleIndex = 28;
-            this.insname.Width = 41;
-            // 
-            // feereport
-            // 
-            this.feereport.Caption = "feereport";
-            this.feereport.FieldName = "feereport";
-            this.feereport.Name = "feereport";
-            this.feereport.OptionsColumn.FixedWidth = true;
-            this.feereport.Visible = true;
-            this.feereport.VisibleIndex = 29;
-            this.feereport.Width = 53;
-            // 
-            // para_result
-            // 
-            this.para_result.Caption = "para_result";
-            this.para_result.FieldName = "para_result";
-            this.para_result.Name = "para_result";
-            this.para_result.OptionsColumn.FixedWidth = true;
-            this.para_result.Visible = true;
-            this.para_result.VisibleIndex = 30;
-            this.para_result.Width = 59;
-            // 
-            // surgery_code
-            // 
-            this.surgery_code.Caption = "surgery_code";
-            this.surgery_code.FieldName = "surgery_code";
-            this.surgery_code.Name = "surgery_code";
-            this.surgery_code.OptionsColumn.FixedWidth = true;
-            this.surgery_code.Visible = true;
-            this.surgery_code.VisibleIndex = 31;
-            this.surgery_code.Width = 82;
-            // 
-            // accesskey
-            // 
-            this.accesskey.Caption = "accesskey";
-            this.accesskey.FieldName = "accesskey";
-            this.accesskey.Name = "accesskey";
-            this.accesskey.Visible = true;
-            this.accesskey.VisibleIndex = 32;
-            this.accesskey.Width = 67;
-            // 
-            // service_unit
-            // 
-            this.service_unit.Caption = "service_unit";
-            this.service_unit.FieldName = "service_unit";
-            this.service_unit.Name = "service_unit";
-            this.service_unit.OptionsColumn.FixedWidth = true;
-            this.service_unit.Visible = true;
-            this.service_unit.VisibleIndex = 33;
-            this.service_unit.Width = 81;
-            // 
-            // is_service
-            // 
-            this.is_service.Caption = "is_service";
-            this.is_service.FieldName = "is_service";
-            this.is_service.Name = "is_service";
-            this.is_service.OptionsColumn.FixedWidth = true;
-            this.is_service.Visible = true;
-            this.is_service.VisibleIndex = 34;
-            this.is_service.Width = 64;
-            // 
-            // lab_code
-            // 
-            this.lab_code.Caption = "lab_code";
-            this.lab_code.FieldName = "lab_code";
-            this.lab_code.Name = "lab_code";
-            this.lab_code.OptionsColumn.FixedWidth = true;
-            this.lab_code.Visible = true;
-            this.lab_code.VisibleIndex = 35;
-            this.lab_code.Width = 57;
-            // 
-            // paid_rate
-            // 
-            this.paid_rate.Caption = "paid_rate";
-            this.paid_rate.FieldName = "paid_rate";
-            this.paid_rate.Name = "paid_rate";
-            this.paid_rate.OptionsColumn.FixedWidth = true;
-            this.paid_rate.Visible = true;
-            this.paid_rate.VisibleIndex = 36;
-            this.paid_rate.Width = 30;
             // 
             // documentManager1
             // 
@@ -1092,9 +643,9 @@
             this.dp_TruyVan.ResumeLayout(false);
             this.dockPanel15.ResumeLayout(false);
             this.dockPanel15_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdCtrlDM)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup3)).EndInit();
@@ -1147,8 +698,6 @@
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel15_Container;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document dockPanel15Document;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup3;
-        private DevExpress.XtraGrid.GridControl grdCtrlDM;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton btnExport;
         private DevExpress.XtraEditors.SimpleButton btnOK;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -1156,42 +705,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup2;
         private System.Windows.Forms.RichTextBox richtxtSQL;
         private DevExpress.XtraEditors.SimpleButton btn_SQL;
-        private DevExpress.XtraGrid.Columns.GridColumn id;
-        private DevExpress.XtraGrid.Columns.GridColumn code;
-        private DevExpress.XtraGrid.Columns.GridColumn servicetype;
-        private DevExpress.XtraGrid.Columns.GridColumn category;
-        private DevExpress.XtraGrid.Columns.GridColumn servicegroup;
-        private DevExpress.XtraGrid.Columns.GridColumn servicegroupline;
-        private DevExpress.XtraGrid.Columns.GridColumn servicename;
-        private DevExpress.XtraGrid.Columns.GridColumn price;
-        private DevExpress.XtraGrid.Columns.GridColumn unit;
-        private DevExpress.XtraGrid.Columns.GridColumn femalestandard;
-        private DevExpress.XtraGrid.Columns.GridColumn malestandard;
-        private DevExpress.XtraGrid.Columns.GridColumn note;
-        private DevExpress.XtraGrid.Columns.GridColumn hide;
-        private DevExpress.XtraGrid.Columns.GridColumn reportid;
-        private DevExpress.XtraGrid.Columns.GridColumn insprice;
-        private DevExpress.XtraGrid.Columns.GridColumn optprice;
-        private DevExpress.XtraGrid.Columns.GridColumn controlfield;
-        private DevExpress.XtraGrid.Columns.GridColumn limitedsubject;
-        private DevExpress.XtraGrid.Columns.GridColumn limiteddivision;
-        private DevExpress.XtraGrid.Columns.GridColumn otherprice;
-        private DevExpress.XtraGrid.Columns.GridColumn highservice;
-        private DevExpress.XtraGrid.Columns.GridColumn callzoneid;
-        private DevExpress.XtraGrid.Columns.GridColumn forcompany;
-        private DevExpress.XtraGrid.Columns.GridColumn itemid;
-        private DevExpress.XtraGrid.Columns.GridColumn shorttext;
-        private DevExpress.XtraGrid.Columns.GridColumn divisionid;
-        private DevExpress.XtraGrid.Columns.GridColumn othername;
-        private DevExpress.XtraGrid.Columns.GridColumn report;
-        private DevExpress.XtraGrid.Columns.GridColumn insname;
-        private DevExpress.XtraGrid.Columns.GridColumn feereport;
-        private DevExpress.XtraGrid.Columns.GridColumn para_result;
-        private DevExpress.XtraGrid.Columns.GridColumn surgery_code;
-        private DevExpress.XtraGrid.Columns.GridColumn accesskey;
-        private DevExpress.XtraGrid.Columns.GridColumn service_unit;
-        private DevExpress.XtraGrid.Columns.GridColumn is_service;
-        private DevExpress.XtraGrid.Columns.GridColumn lab_code;
-        private DevExpress.XtraGrid.Columns.GridColumn paid_rate;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
