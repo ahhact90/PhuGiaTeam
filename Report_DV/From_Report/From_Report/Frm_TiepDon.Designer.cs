@@ -406,7 +406,7 @@
             // 
             this.dockPanel4.Controls.Add(this.dockPanel4_Container);
             this.dockPanel4.DockedAsTabbedDocument = true;
-            this.dockPanel4.FloatLocation = new System.Drawing.Point(729, 544);
+            this.dockPanel4.FloatLocation = new System.Drawing.Point(554, 377);
             this.dockPanel4.ID = new System.Guid("edda5c8e-ea94-443f-80d9-e2a22f304799");
             this.dockPanel4.Name = "dockPanel4";
             this.dockPanel4.Options.AllowDockBottom = false;
@@ -479,8 +479,8 @@
             this.tabbedView1.DocumentGroups.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup[] {
             this.documentGroup1});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
-            this.document1,
-            this.document2});
+            this.document2,
+            this.document1});
             // 
             // documentGroup1
             // 
@@ -492,7 +492,7 @@
             // 
             this.document1.Caption = "Y Lệnh Thuốc";
             this.document1.ControlName = "dockPanel4";
-            this.document1.FloatLocation = new System.Drawing.Point(729, 544);
+            this.document1.FloatLocation = new System.Drawing.Point(554, 377);
             this.document1.FloatSize = new System.Drawing.Size(200, 200);
             this.document1.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.False;
             this.document1.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
@@ -590,12 +590,12 @@
         private DevExpress.XtraBars.Docking.DockPanel dockPanel4;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel4_Container;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
         private DevExpress.XtraBars.Docking.DockPanel dockPanel5;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel5_Container;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
 
 
     }
