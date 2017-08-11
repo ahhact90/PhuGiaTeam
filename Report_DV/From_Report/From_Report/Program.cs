@@ -20,7 +20,9 @@ namespace From_Report
             //Application.Run(new From_Dstore.From_Duoc_AnhXa());
             //Application.Run(new From_CauHinh.FrmMH());
             //Application.Run(new Frm_TiepDon());
-            Application.Run(new FrmService());
+            //Application.Run(new FrmService())
+                 Application.Run(new FrmMain());
+            //Application.Run(new FrmReception());
             //Application.Run(new From_CV3360.CV3360_CT());
 
             //Application.Run(new From_Dstore.Frm_Group_type());

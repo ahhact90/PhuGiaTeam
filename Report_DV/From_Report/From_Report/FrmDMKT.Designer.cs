@@ -38,11 +38,10 @@
             // 
             // grdCtrlDM
             // 
-            this.grdCtrlDM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdCtrlDM.Location = new System.Drawing.Point(0, 0);
             this.grdCtrlDM.MainView = this.gridView1;
             this.grdCtrlDM.Name = "grdCtrlDM";
-            this.grdCtrlDM.Size = new System.Drawing.Size(1054, 633);
+            this.grdCtrlDM.Size = new System.Drawing.Size(710, 433);
             this.grdCtrlDM.TabIndex = 0;
             this.grdCtrlDM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

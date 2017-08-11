@@ -90,6 +90,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReception.Designer.cs">
+      <DependentUpon>FrmReception.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmService.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,11 @@
     <Compile Include="ReportTmp.Designer.cs">
       <DependentUpon>ReportTmp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\DS_chuyenvien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_chuyenvien.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\DS_M21.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +182,12 @@
     <Compile Include="Report\RptM21Khaccs.Designer.cs">
       <DependentUpon>RptM21Khaccs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Rpt_Chuyentuyen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rpt_Chuyentuyen.Designer.cs">
+      <DependentUpon>Rpt_Chuyentuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Rpt_DS_TT_PT.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -185,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReception.resx">
+      <DependentUpon>FrmReception.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmService.resx">
       <DependentUpon>FrmService.cs</DependentUpon>
@@ -231,6 +251,9 @@
     <EmbeddedResource Include="Report\RptM21Khaccs.resx">
       <DependentUpon>RptM21Khaccs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rpt_Chuyentuyen.resx">
+      <DependentUpon>Rpt_Chuyentuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Rpt_DS_TT_PT.resx">
       <DependentUpon>Rpt_DS_TT_PT.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +266,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Report\DS_chuyenvien.xsc">
+      <DependentUpon>DS_chuyenvien.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_chuyenvien.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_chuyenvien.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_chuyenvien.xss">
+      <DependentUpon>DS_chuyenvien.xsd</DependentUpon>
+    </None>
     <None Include="Report\DS_M21.xsc">
       <DependentUpon>DS_M21.xsd</DependentUpon>
     </None>
