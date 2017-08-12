@@ -28,117 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBA = new DevExpress.XtraEditors.TextEdit();
-            this.txtFullName = new DevExpress.XtraEditors.TextEdit();
-            this.txtBHYT = new DevExpress.XtraEditors.TextEdit();
-            this.txtFrom = new DevExpress.XtraEditors.TextEdit();
-            this.txtBN = new DevExpress.XtraEditors.TextEdit();
-            this.txtNamSinh = new DevExpress.XtraEditors.TextEdit();
-            this.txtSex = new DevExpress.XtraEditors.TextEdit();
-            this.txtTo = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBA.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFullName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBHYT.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFrom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNamSinh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSex.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTo.Properties)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            this.dockPanel1.SuspendLayout();
+            this.dockPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtBA
+            // dockManager1
             // 
-            this.txtBA.Location = new System.Drawing.Point(106, 36);
-            this.txtBA.Name = "txtBA";
-            this.txtBA.Size = new System.Drawing.Size(204, 20);
-            this.txtBA.TabIndex = 0;
+            this.dockManager1.Form = this;
+            this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.dockPanel1,
+            this.dockPanel2});
+            this.dockManager1.TopZIndexControls.AddRange(new string[] {
+            "DevExpress.XtraBars.BarDockControl",
+            "DevExpress.XtraBars.StandaloneBarDockControl",
+            "System.Windows.Forms.StatusBar",
+            "System.Windows.Forms.MenuStrip",
+            "System.Windows.Forms.StatusStrip",
+            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonControl",
+            "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
+            "DevExpress.XtraBars.Navigation.TileNavPane"});
             // 
-            // txtFullName
+            // dockPanel1
             // 
-            this.txtFullName.Location = new System.Drawing.Point(106, 78);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(204, 20);
-            this.txtFullName.TabIndex = 0;
+            this.dockPanel1.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel1.ID = new System.Guid("99fee41e-5c6f-4fe8-acab-8225e690f68e");
+            this.dockPanel1.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel1.Name = "dockPanel1";
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(233, 200);
+            this.dockPanel1.Size = new System.Drawing.Size(233, 528);
+            this.dockPanel1.Text = "dockPanel1";
             // 
-            // txtBHYT
+            // dockPanel1_Container
             // 
-            this.txtBHYT.Location = new System.Drawing.Point(106, 128);
-            this.txtBHYT.Name = "txtBHYT";
-            this.txtBHYT.Size = new System.Drawing.Size(204, 20);
-            this.txtBHYT.TabIndex = 0;
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
+            this.dockPanel1_Container.Size = new System.Drawing.Size(225, 501);
+            this.dockPanel1_Container.TabIndex = 0;
             // 
-            // txtFrom
+            // dockPanel2
             // 
-            this.txtFrom.Location = new System.Drawing.Point(404, 128);
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(204, 20);
-            this.txtFrom.TabIndex = 0;
+            this.dockPanel2.Controls.Add(this.dockPanel2_Container);
+            this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
+            this.dockPanel2.ID = new System.Guid("83c136f8-d587-4e25-8dd1-d27702f83c58");
+            this.dockPanel2.Location = new System.Drawing.Point(233, 0);
+            this.dockPanel2.Name = "dockPanel2";
+            this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel2.Size = new System.Drawing.Size(751, 200);
+            this.dockPanel2.Text = "dockPanel2";
             // 
-            // txtBN
+            // dockPanel2_Container
             // 
-            this.txtBN.Location = new System.Drawing.Point(404, 36);
-            this.txtBN.Name = "txtBN";
-            this.txtBN.Size = new System.Drawing.Size(204, 20);
-            this.txtBN.TabIndex = 0;
+            this.dockPanel2_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel2_Container.Name = "dockPanel2_Container";
+            this.dockPanel2_Container.Size = new System.Drawing.Size(743, 173);
+            this.dockPanel2_Container.TabIndex = 0;
             // 
-            // txtNamSinh
+            // xtraTabControl1
             // 
-            this.txtNamSinh.Location = new System.Drawing.Point(404, 78);
-            this.txtNamSinh.Name = "txtNamSinh";
-            this.txtNamSinh.Size = new System.Drawing.Size(204, 20);
-            this.txtNamSinh.TabIndex = 0;
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Location = new System.Drawing.Point(233, 200);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(751, 328);
+            this.xtraTabControl1.TabIndex = 2;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
             // 
-            // txtSex
+            // xtraTabPage1
             // 
-            this.txtSex.Location = new System.Drawing.Point(768, 78);
-            this.txtSex.Name = "txtSex";
-            this.txtSex.Size = new System.Drawing.Size(204, 20);
-            this.txtSex.TabIndex = 0;
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(745, 300);
+            this.xtraTabPage1.Text = "xtraTabPage1";
             // 
-            // txtTo
+            // xtraTabPage2
             // 
-            this.txtTo.Location = new System.Drawing.Point(768, 128);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(204, 20);
-            this.txtTo.TabIndex = 0;
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(294, 272);
+            this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // FrmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 528);
-            this.Controls.Add(this.txtTo);
-            this.Controls.Add(this.txtFrom);
-            this.Controls.Add(this.txtSex);
-            this.Controls.Add(this.txtBHYT);
-            this.Controls.Add(this.txtNamSinh);
-            this.Controls.Add(this.txtFullName);
-            this.Controls.Add(this.txtBN);
-            this.Controls.Add(this.txtBA);
+            this.Controls.Add(this.xtraTabControl1);
+            this.Controls.Add(this.dockPanel2);
+            this.Controls.Add(this.dockPanel1);
             this.Name = "FrmSearch";
             this.Text = "FrmSearch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.txtBA.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFullName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBHYT.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFrom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNamSinh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSex.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            this.dockPanel1.ResumeLayout(false);
+            this.dockPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit txtBA;
-        private DevExpress.XtraEditors.TextEdit txtFullName;
-        private DevExpress.XtraEditors.TextEdit txtBHYT;
-        private DevExpress.XtraEditors.TextEdit txtFrom;
-        private DevExpress.XtraEditors.TextEdit txtBN;
-        private DevExpress.XtraEditors.TextEdit txtNamSinh;
-        private DevExpress.XtraEditors.TextEdit txtSex;
-        private DevExpress.XtraEditors.TextEdit txtTo;
+        private DevExpress.XtraBars.Docking.DockManager dockManager1;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel2;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
+
     }
 }

@@ -192,6 +192,7 @@
             this.grdCtrlThuocAX.Name = "grdCtrlThuocAX";
             this.grdCtrlThuocAX.Size = new System.Drawing.Size(1106, 299);
             this.grdCtrlThuocAX.TabIndex = 0;
+            this.grdCtrlThuocAX.UseEmbeddedNavigator = true;
             this.grdCtrlThuocAX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -213,6 +214,7 @@
             this.creationdate_drug});
             this.gridView1.GridControl = this.grdCtrlThuocAX;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);

@@ -23,6 +23,7 @@ namespace From_Report
             //Application.Run(new FrmService())
                  Application.Run(new FrmMain());
             //Application.Run(new FrmReception());
+                 Application.Run(new FrmSearch());
             //Application.Run(new From_CV3360.CV3360_CT());
 
             //Application.Run(new From_Dstore.Frm_Group_type());

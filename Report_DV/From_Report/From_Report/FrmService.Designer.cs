@@ -70,7 +70,6 @@
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.documentGroup3 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.dockPanel14Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.dockPanel15Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
@@ -100,7 +99,6 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel14Document)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel15Document)).BeginInit();
@@ -473,7 +471,7 @@
             this.dockPanel14.Options.ShowAutoHideButton = false;
             this.dockPanel14.Options.ShowCloseButton = false;
             this.dockPanel14.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel14.Size = new System.Drawing.Size(1336, 346);
+            this.dockPanel14.Size = new System.Drawing.Size(1336, 720);
             this.dockPanel14.TabStop = false;
             this.dockPanel14.Text = "Lệnh Truy Vấn";
             // 
@@ -482,7 +480,7 @@
             this.dp_TruyVan.Controls.Add(this.richtxtSQL);
             this.dp_TruyVan.Location = new System.Drawing.Point(0, 0);
             this.dp_TruyVan.Name = "dp_TruyVan";
-            this.dp_TruyVan.Size = new System.Drawing.Size(1336, 346);
+            this.dp_TruyVan.Size = new System.Drawing.Size(1336, 720);
             this.dp_TruyVan.TabIndex = 0;
             // 
             // richtxtSQL
@@ -490,7 +488,7 @@
             this.richtxtSQL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richtxtSQL.Location = new System.Drawing.Point(0, 0);
             this.richtxtSQL.Name = "richtxtSQL";
-            this.richtxtSQL.Size = new System.Drawing.Size(1336, 346);
+            this.richtxtSQL.Size = new System.Drawing.Size(1336, 720);
             this.richtxtSQL.TabIndex = 0;
             this.richtxtSQL.Text = "";
             // 
@@ -544,6 +542,7 @@
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             // 
             // contextMenuStrip1
             // 
@@ -571,17 +570,11 @@
             // 
             this.tabbedView1.AllowResetLayout = DevExpress.Utils.DefaultBoolean.False;
             this.tabbedView1.DocumentGroups.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup[] {
-            this.documentGroup3,
             this.documentGroup2});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.dockPanel14Document,
             this.dockPanel15Document});
             this.tabbedView1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            // 
-            // documentGroup3
-            // 
-            this.documentGroup3.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
-            this.dockPanel14Document});
             // 
             // dockPanel14Document
             // 
@@ -596,7 +589,8 @@
             // documentGroup2
             // 
             this.documentGroup2.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
-            this.dockPanel15Document});
+            this.dockPanel15Document,
+            this.dockPanel14Document});
             // 
             // dockPanel15Document
             // 
@@ -652,7 +646,6 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel14Document)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel15Document)).EndInit();
@@ -701,7 +694,6 @@
         private DevExpress.XtraBars.Docking.DockPanel dockPanel15;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel15_Container;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document dockPanel15Document;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup3;
         private DevExpress.XtraEditors.SimpleButton btnExport;
         private DevExpress.XtraEditors.SimpleButton btnOK;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

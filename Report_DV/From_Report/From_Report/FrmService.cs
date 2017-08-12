@@ -11,6 +11,7 @@ using DevExpress.XtraReports.Design.GroupSort;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.BandedGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using System.Threading;
 using System.IO;
 
@@ -182,6 +183,26 @@ namespace From_Report
         private void gridControl1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gridView1_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view == null) return;
+            if (e.RowHandle % 2 == 0)
+            {
+
+                // e.Appearance.BackColor = Color.WhiteSmoke;
+                e.Appearance.ForeColor = Color.MediumBlue;
+                //e.HighPriority = true;
+
+
+            }
+            else
+            {
+                e.Appearance.ForeColor = Color.Firebrick;
+
+            }
         }
 
      
