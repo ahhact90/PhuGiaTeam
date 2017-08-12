@@ -164,6 +164,18 @@ namespace DAL
         {           
             return ExecuteQuery(sql);
         }
+        /// <summary>
+        /// Tìm kiếm thông tin bệnh nhân bằng mã bệnh án
+        /// 
+        /// </summary>
+        /// <param name="sql">ma bệnh án</param>
+        /// <returns>DataTable</returns>
+        public System.Data.DataTable Select_ThongTinBA(string BA)
+        {           
+            var sql = "SELECT * FROM his_medical_info_get('{0}|0|0')";
+            sql = string.Format(sql, BA);
+            return ExecuteQuery(sql);
+        }
 
         #endregion
     }

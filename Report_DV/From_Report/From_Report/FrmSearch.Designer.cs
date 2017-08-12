@@ -80,7 +80,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtsex = new System.Windows.Forms.TextBox();
             this.txtto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
@@ -229,6 +229,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtBA
             // 
@@ -266,13 +267,13 @@
             this.dockPanel2.Options.ShowCloseButton = false;
             this.dockPanel2.Options.ShowMaximizeButton = false;
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel2.Size = new System.Drawing.Size(931, 200);
+            this.dockPanel2.Size = new System.Drawing.Size(1032, 200);
             this.dockPanel2.Text = "Thông Tin Bệnh Nhân";
             // 
             // dockPanel2_Container
             // 
             this.dockPanel2_Container.Controls.Add(this.txtto);
-            this.dockPanel2_Container.Controls.Add(this.textBox13);
+            this.dockPanel2_Container.Controls.Add(this.txtsex);
             this.dockPanel2_Container.Controls.Add(this.txtStatus);
             this.dockPanel2_Container.Controls.Add(this.label15);
             this.dockPanel2_Container.Controls.Add(this.label14);
@@ -301,7 +302,7 @@
             this.dockPanel2_Container.Controls.Add(this.label2);
             this.dockPanel2_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(923, 173);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(1024, 173);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // label12
@@ -468,7 +469,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(266, 200);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(931, 405);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1032, 405);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -482,7 +483,7 @@
             this.xtraTabPage1.Controls.Add(this.panelControl2);
             this.xtraTabPage1.Controls.Add(this.panelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(925, 377);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1026, 377);
             this.xtraTabPage1.Text = "Y Lệnh Thuốc";
             // 
             // panelControl2
@@ -492,7 +493,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl2.Location = new System.Drawing.Point(0, 1);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(923, 138);
+            this.panelControl2.Size = new System.Drawing.Size(1024, 138);
             this.panelControl2.TabIndex = 2;
             // 
             // panelControl1
@@ -502,7 +503,7 @@
             this.panelControl1.Controls.Add(this.gridControl1);
             this.panelControl1.Location = new System.Drawing.Point(-1, 139);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(925, 235);
+            this.panelControl1.Size = new System.Drawing.Size(1026, 235);
             this.panelControl1.TabIndex = 1;
             // 
             // gridControl1
@@ -511,7 +512,7 @@
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(921, 231);
+            this.gridControl1.Size = new System.Drawing.Size(1022, 231);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -623,30 +624,30 @@
             this.txtStatus.Enabled = false;
             this.txtStatus.Location = new System.Drawing.Point(773, 15);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(125, 20);
+            this.txtStatus.Size = new System.Drawing.Size(164, 20);
             this.txtStatus.TabIndex = 7;
             // 
-            // textBox13
+            // txtsex
             // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(773, 46);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(125, 20);
-            this.textBox13.TabIndex = 7;
+            this.txtsex.Enabled = false;
+            this.txtsex.Location = new System.Drawing.Point(773, 46);
+            this.txtsex.Name = "txtsex";
+            this.txtsex.Size = new System.Drawing.Size(164, 20);
+            this.txtsex.TabIndex = 7;
             // 
             // txtto
             // 
             this.txtto.Enabled = false;
             this.txtto.Location = new System.Drawing.Point(773, 77);
             this.txtto.Name = "txtto";
-            this.txtto.Size = new System.Drawing.Size(125, 20);
+            this.txtto.Size = new System.Drawing.Size(164, 20);
             this.txtto.TabIndex = 7;
             // 
             // FrmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 605);
+            this.ClientSize = new System.Drawing.Size(1298, 605);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanelKhamBenh);
@@ -729,7 +730,7 @@
         private System.Windows.Forms.TextBox txtnamsinh;
         private System.Windows.Forms.TextBox txtluutru;
         private System.Windows.Forms.TextBox txtto;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtsex;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
