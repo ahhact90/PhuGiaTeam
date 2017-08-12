@@ -34,7 +34,6 @@
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanelKhamBenh = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
@@ -47,12 +46,15 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanelKhamBenh.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).BeginInit();
@@ -62,6 +64,9 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -117,7 +122,7 @@
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Controls.Add(this.panelControl1);
+            this.dockPanel1_Container.Controls.Add(this.checkBox1);
             this.dockPanel1_Container.Controls.Add(this.xtraTabControl2);
             this.dockPanel1_Container.Controls.Add(this.panelControlKhoa_Bacsy);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
@@ -125,21 +130,13 @@
             this.dockPanel1_Container.Size = new System.Drawing.Size(258, 578);
             this.dockPanel1_Container.TabIndex = 0;
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl1.Controls.Add(this.checkBox1);
-            this.panelControl1.Location = new System.Drawing.Point(2, 537);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(254, 39);
-            this.panelControl1.TabIndex = 3;
-            // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 16);
+            this.checkBox1.Location = new System.Drawing.Point(1, 558);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(250, 17);
+            this.checkBox1.Size = new System.Drawing.Size(257, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Chỉ Hiển Thị Danh Sách Bệnh Nhân Trong Ngày";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -151,8 +148,8 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(2, 133);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
-            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
-            this.xtraTabControl2.Size = new System.Drawing.Size(255, 398);
+            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage4;
+            this.xtraTabControl2.Size = new System.Drawing.Size(255, 419);
             this.xtraTabControl2.TabIndex = 2;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
@@ -161,14 +158,14 @@
             // xtraTabPage3
             // 
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(249, 370);
-            this.xtraTabPage3.Text = "xtraTabPage3";
+            this.xtraTabPage3.Size = new System.Drawing.Size(249, 391);
+            this.xtraTabPage3.Text = "Danh Sách Bệnh Nhân";
             // 
             // xtraTabPage4
             // 
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(249, 370);
-            this.xtraTabPage4.Text = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(249, 391);
+            this.xtraTabPage4.Text = "Danh sách Kết Thúc";
             // 
             // panelControlKhoa_Bacsy
             // 
@@ -205,22 +202,26 @@
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.xtraTabPage2,
+            this.xtraTabPage5,
+            this.xtraTabPage6,
+            this.xtraTabPage7});
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.gridControl1);
+            this.xtraTabPage1.Controls.Add(this.panelControl2);
+            this.xtraTabPage1.Controls.Add(this.panelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(712, 377);
-            this.xtraTabPage1.Text = "xtraTabPage1";
+            this.xtraTabPage1.Text = "Y Lệnh Thuốc";
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(712, 377);
+            this.gridControl1.Size = new System.Drawing.Size(708, 231);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -229,12 +230,53 @@
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(712, 377);
-            this.xtraTabPage2.Text = "xtraTabPage2";
+            this.xtraTabPage2.Text = "Cận Lâm Sàng";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.gridControl1);
+            this.panelControl1.Location = new System.Drawing.Point(-1, 139);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(712, 235);
+            this.panelControl1.TabIndex = 1;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl2.Location = new System.Drawing.Point(0, 1);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(710, 138);
+            this.panelControl2.TabIndex = 2;
+            // 
+            // xtraTabPage5
+            // 
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(712, 377);
+            this.xtraTabPage5.Text = "Phẫu thuật - Thủ Thuật";
+            // 
+            // xtraTabPage6
+            // 
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.Size = new System.Drawing.Size(712, 377);
+            this.xtraTabPage6.Text = "Kết quả Cận Lâm Sàng";
+            // 
+            // xtraTabPage7
+            // 
+            this.xtraTabPage7.Name = "xtraTabPage7";
+            this.xtraTabPage7.Size = new System.Drawing.Size(712, 377);
+            this.xtraTabPage7.Text = "Kết luận Khám";
             // 
             // FrmSearch
             // 
@@ -252,9 +294,7 @@
             this.dockPanel1.ResumeLayout(false);
             this.dockPanelKhamBenh.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            this.dockPanel1_Container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).EndInit();
@@ -264,6 +304,9 @@
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,8 +329,12 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraEditors.PanelControl panelControlKhoa_Bacsy;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage7;
 
     }
 }

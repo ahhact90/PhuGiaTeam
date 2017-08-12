@@ -93,6 +93,13 @@ namespace From_Report
             frm.Show();
         }
 
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            foreach (var x in MdiChildren) if (x is FrmSearch) return;
+            var frm = new FrmSearch() { MdiParent = this };
+            frm.Show();
+        }
+
         
     }
 }
