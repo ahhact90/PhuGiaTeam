@@ -179,6 +179,11 @@ namespace From_Report
 
         }
 
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
      
     }
 }

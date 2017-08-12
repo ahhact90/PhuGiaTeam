@@ -90,6 +90,12 @@
     <Compile Include="FrmReception.Designer.cs">
       <DependentUpon>FrmReception.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearch.Designer.cs">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmService.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReception.resx">
       <DependentUpon>FrmReception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearch.resx">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmService.resx">
       <DependentUpon>FrmService.cs</DependentUpon>
