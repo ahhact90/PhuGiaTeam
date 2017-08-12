@@ -30,25 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
-            this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanelKhamBenh = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
-            this.dockPanel1.SuspendLayout();
+            this.dockPanelKhamBenh.SuspendLayout();
             this.dockPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
             // 
             this.dockManager1.Form = this;
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel1,
+            this.dockPanelKhamBenh,
             this.dockPanel2});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
@@ -61,16 +66,16 @@
             "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
             "DevExpress.XtraBars.Navigation.TileNavPane"});
             // 
-            // dockPanel1
+            // dockPanelKhamBenh
             // 
-            this.dockPanel1.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel1.ID = new System.Guid("99fee41e-5c6f-4fe8-acab-8225e690f68e");
-            this.dockPanel1.Location = new System.Drawing.Point(0, 0);
-            this.dockPanel1.Name = "dockPanel1";
-            this.dockPanel1.OriginalSize = new System.Drawing.Size(233, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(233, 528);
-            this.dockPanel1.Text = "dockPanel1";
+            this.dockPanelKhamBenh.Controls.Add(this.dockPanel1_Container);
+            this.dockPanelKhamBenh.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanelKhamBenh.ID = new System.Guid("99fee41e-5c6f-4fe8-acab-8225e690f68e");
+            this.dockPanelKhamBenh.Location = new System.Drawing.Point(0, 0);
+            this.dockPanelKhamBenh.Name = "dockPanelKhamBenh";
+            this.dockPanelKhamBenh.OriginalSize = new System.Drawing.Size(233, 200);
+            this.dockPanelKhamBenh.Size = new System.Drawing.Size(233, 528);
+            this.dockPanelKhamBenh.Text = "Khám Bệnh";
             // 
             // dockPanel1_Container
             // 
@@ -88,7 +93,7 @@
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
             this.dockPanel2.Size = new System.Drawing.Size(751, 200);
-            this.dockPanel2.Text = "dockPanel2";
+            this.dockPanel2.Text = "Thông Tin Bệnh Nhân";
             // 
             // dockPanel2_Container
             // 
@@ -111,6 +116,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.gridControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(745, 300);
             this.xtraTabPage1.Text = "xtraTabPage1";
@@ -118,8 +124,24 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(294, 272);
+            this.xtraTabPage2.Size = new System.Drawing.Size(745, 300);
             this.xtraTabPage2.Text = "xtraTabPage2";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(745, 300);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
             // FrmSearch
             // 
@@ -128,15 +150,18 @@
             this.ClientSize = new System.Drawing.Size(984, 528);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.dockPanel2);
-            this.Controls.Add(this.dockPanel1);
+            this.Controls.Add(this.dockPanelKhamBenh);
             this.Name = "FrmSearch";
             this.Text = "FrmSearch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
-            this.dockPanel1.ResumeLayout(false);
+            this.dockPanelKhamBenh.ResumeLayout(false);
             this.dockPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,8 +174,10 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraBars.Docking.DockPanel dockPanel2;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanelKhamBenh;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 
     }
 }
