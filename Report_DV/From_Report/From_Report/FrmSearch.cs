@@ -16,5 +16,17 @@ namespace From_Report
         {
             InitializeComponent();
         }
+
+        private void FrmSearch_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xtraTabControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
