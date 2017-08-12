@@ -622,6 +622,7 @@
             this.Controls.Add(this.dockPanel12);
             this.Name = "FrmService";
             this.Text = "FrmService";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmService_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel3.ResumeLayout(false);
