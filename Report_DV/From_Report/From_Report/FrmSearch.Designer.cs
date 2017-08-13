@@ -1,6 +1,6 @@
 ﻿namespace From_Report
 {
-    partial class FrmSearch
+    partial class FrmNgoaiTru
     {
         /// <summary>
         /// Required designer variable.
@@ -36,14 +36,26 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControlKhoa_Bacsy = new DevExpress.XtraEditors.PanelControl();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.txtto = new System.Windows.Forms.TextBox();
+            this.txtsex = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtRavien = new System.Windows.Forms.TextBox();
+            this.txtKhoa = new System.Windows.Forms.TextBox();
+            this.txtfrom = new System.Windows.Forms.TextBox();
+            this.txtnamsinh = new System.Windows.Forms.TextBox();
+            this.txtluutru = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -71,23 +83,20 @@
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
-            this.txtluutru = new System.Windows.Forms.TextBox();
-            this.txtnamsinh = new System.Windows.Forms.TextBox();
-            this.txtfrom = new System.Windows.Forms.TextBox();
-            this.txtKhoa = new System.Windows.Forms.TextBox();
-            this.txtRavien = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.txtsex = new System.Windows.Forms.TextBox();
-            this.txtto = new System.Windows.Forms.TextBox();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.medicalrecordid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.fullname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.status = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanelKhamBenh.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
+            this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).BeginInit();
             this.panelControlKhoa_Bacsy.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -159,8 +168,8 @@
             this.dockPanelKhamBenh.Options.ShowAutoHideButton = false;
             this.dockPanelKhamBenh.Options.ShowCloseButton = false;
             this.dockPanelKhamBenh.Options.ShowMaximizeButton = false;
-            this.dockPanelKhamBenh.OriginalSize = new System.Drawing.Size(266, 200);
-            this.dockPanelKhamBenh.Size = new System.Drawing.Size(266, 605);
+            this.dockPanelKhamBenh.OriginalSize = new System.Drawing.Size(310, 200);
+            this.dockPanelKhamBenh.Size = new System.Drawing.Size(310, 758);
             this.dockPanelKhamBenh.Text = "Khám Bệnh";
             // 
             // dockPanel1_Container
@@ -170,14 +179,14 @@
             this.dockPanel1_Container.Controls.Add(this.panelControlKhoa_Bacsy);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(258, 578);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(302, 731);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // checkBox1
             // 
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1, 558);
+            this.checkBox1.Location = new System.Drawing.Point(1, 711);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(257, 17);
             this.checkBox1.TabIndex = 0;
@@ -191,24 +200,50 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(2, 133);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
-            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage4;
-            this.xtraTabControl2.Size = new System.Drawing.Size(255, 419);
+            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
+            this.xtraTabControl2.Size = new System.Drawing.Size(297, 572);
             this.xtraTabControl2.TabIndex = 2;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
             this.xtraTabPage4});
             // 
-            // xtraTabPage4
-            // 
-            this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(249, 391);
-            this.xtraTabPage4.Text = "Danh sách Kết Thúc";
-            // 
             // xtraTabPage3
             // 
+            this.xtraTabPage3.Controls.Add(this.gridControl2);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(249, 391);
-            this.xtraTabPage3.Text = "Danh Sách Bệnh Nhân";
+            this.xtraTabPage3.Size = new System.Drawing.Size(291, 544);
+            this.xtraTabPage3.Text = "DS Ngoại Trú Chuyển Viện";
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.EmbeddedNavigator.TextStringFormat = "Dòng {0} / {1}";
+            this.gridControl2.Location = new System.Drawing.Point(0, 0);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(291, 544);
+            this.gridControl2.TabIndex = 0;
+            this.gridControl2.UseEmbeddedNavigator = true;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.medicalrecordid,
+            this.fullname,
+            this.name,
+            this.status});
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, null, this.medicalrecordid, "{0}: [#image]{1} {2}")});
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsView.ShowAutoFilterRow = true;
+            this.gridView2.OptionsView.ShowFooter = true;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView2_RowStyle);
+            this.gridView2.Click += new System.EventHandler(this.gridView2_Click);
             // 
             // panelControlKhoa_Bacsy
             // 
@@ -217,13 +252,13 @@
             this.panelControlKhoa_Bacsy.Controls.Add(this.label1);
             this.panelControlKhoa_Bacsy.Location = new System.Drawing.Point(3, 0);
             this.panelControlKhoa_Bacsy.Name = "panelControlKhoa_Bacsy";
-            this.panelControlKhoa_Bacsy.Size = new System.Drawing.Size(253, 127);
+            this.panelControlKhoa_Bacsy.Size = new System.Drawing.Size(296, 127);
             this.panelControlKhoa_Bacsy.TabIndex = 0;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(8, 77);
+            this.btnSearch.Location = new System.Drawing.Point(87, 70);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(129, 23);
             this.btnSearch.TabIndex = 2;
@@ -254,7 +289,7 @@
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Top;
             this.dockPanel2.FloatVertical = true;
             this.dockPanel2.ID = new System.Guid("83c136f8-d587-4e25-8dd1-d27702f83c58");
-            this.dockPanel2.Location = new System.Drawing.Point(266, 0);
+            this.dockPanel2.Location = new System.Drawing.Point(310, 0);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.Options.AllowDockAsTabbedDocument = false;
             this.dockPanel2.Options.AllowDockBottom = false;
@@ -267,7 +302,7 @@
             this.dockPanel2.Options.ShowCloseButton = false;
             this.dockPanel2.Options.ShowMaximizeButton = false;
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel2.Size = new System.Drawing.Size(1032, 200);
+            this.dockPanel2.Size = new System.Drawing.Size(988, 200);
             this.dockPanel2.Text = "Thông Tin Bệnh Nhân";
             // 
             // dockPanel2_Container
@@ -302,8 +337,110 @@
             this.dockPanel2_Container.Controls.Add(this.label2);
             this.dockPanel2_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(1024, 173);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(980, 173);
             this.dockPanel2_Container.TabIndex = 0;
+            // 
+            // txtto
+            // 
+            this.txtto.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtto.Location = new System.Drawing.Point(791, 77);
+            this.txtto.Name = "txtto";
+            this.txtto.Size = new System.Drawing.Size(174, 23);
+            this.txtto.TabIndex = 7;
+            this.txtto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtsex
+            // 
+            this.txtsex.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsex.Location = new System.Drawing.Point(791, 46);
+            this.txtsex.Name = "txtsex";
+            this.txtsex.Size = new System.Drawing.Size(174, 23);
+            this.txtsex.TabIndex = 7;
+            this.txtsex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Location = new System.Drawing.Point(791, 15);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(174, 23);
+            this.txtStatus.TabIndex = 7;
+            this.txtStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(705, 77);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(68, 16);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Đến Ngày";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(705, 46);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 16);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Giới Tính";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(705, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Trạng Thái";
+            // 
+            // txtRavien
+            // 
+            this.txtRavien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRavien.Location = new System.Drawing.Point(510, 135);
+            this.txtRavien.Name = "txtRavien";
+            this.txtRavien.Size = new System.Drawing.Size(235, 23);
+            this.txtRavien.TabIndex = 5;
+            this.txtRavien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtKhoa
+            // 
+            this.txtKhoa.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoa.Location = new System.Drawing.Point(510, 108);
+            this.txtKhoa.Name = "txtKhoa";
+            this.txtKhoa.Size = new System.Drawing.Size(235, 23);
+            this.txtKhoa.TabIndex = 5;
+            this.txtKhoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtfrom
+            // 
+            this.txtfrom.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfrom.Location = new System.Drawing.Point(510, 77);
+            this.txtfrom.Name = "txtfrom";
+            this.txtfrom.Size = new System.Drawing.Size(189, 23);
+            this.txtfrom.TabIndex = 5;
+            this.txtfrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtnamsinh
+            // 
+            this.txtnamsinh.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnamsinh.Location = new System.Drawing.Point(510, 46);
+            this.txtnamsinh.Name = "txtnamsinh";
+            this.txtnamsinh.Size = new System.Drawing.Size(189, 23);
+            this.txtnamsinh.TabIndex = 5;
+            this.txtnamsinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtluutru
+            // 
+            this.txtluutru.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtluutru.Location = new System.Drawing.Point(510, 15);
+            this.txtluutru.Name = "txtluutru";
+            this.txtluutru.Size = new System.Drawing.Size(189, 23);
+            this.txtluutru.TabIndex = 5;
+            this.txtluutru.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -357,11 +494,12 @@
             // 
             // txtBN
             // 
-            this.txtBN.Enabled = false;
+            this.txtBN.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBN.Location = new System.Drawing.Point(315, 15);
             this.txtBN.Name = "txtBN";
-            this.txtBN.Size = new System.Drawing.Size(100, 20);
+            this.txtBN.Size = new System.Drawing.Size(100, 23);
             this.txtBN.TabIndex = 3;
+            this.txtBN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -375,43 +513,47 @@
             // 
             // txtvaovien
             // 
-            this.txtvaovien.Enabled = false;
+            this.txtvaovien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtvaovien.Location = new System.Drawing.Point(101, 135);
             this.txtvaovien.Name = "txtvaovien";
-            this.txtvaovien.Size = new System.Drawing.Size(314, 20);
+            this.txtvaovien.Size = new System.Drawing.Size(314, 23);
             this.txtvaovien.TabIndex = 1;
+            this.txtvaovien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDoituong
             // 
-            this.txtDoituong.Enabled = false;
+            this.txtDoituong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDoituong.Location = new System.Drawing.Point(101, 108);
             this.txtDoituong.Name = "txtDoituong";
-            this.txtDoituong.Size = new System.Drawing.Size(314, 20);
+            this.txtDoituong.Size = new System.Drawing.Size(314, 23);
             this.txtDoituong.TabIndex = 1;
+            this.txtDoituong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBHYT
             // 
-            this.txtBHYT.Enabled = false;
+            this.txtBHYT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBHYT.Location = new System.Drawing.Point(101, 77);
             this.txtBHYT.Name = "txtBHYT";
-            this.txtBHYT.Size = new System.Drawing.Size(314, 20);
+            this.txtBHYT.Size = new System.Drawing.Size(314, 23);
             this.txtBHYT.TabIndex = 1;
+            this.txtBHYT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtName
             // 
-            this.txtName.Enabled = false;
+            this.txtName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(101, 46);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(314, 20);
+            this.txtName.Size = new System.Drawing.Size(314, 23);
             this.txtName.TabIndex = 1;
             // 
             // txtMedia
             // 
-            this.txtMedia.Enabled = false;
+            this.txtMedia.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedia.Location = new System.Drawing.Point(101, 15);
             this.txtMedia.Name = "txtMedia";
-            this.txtMedia.Size = new System.Drawing.Size(133, 20);
+            this.txtMedia.Size = new System.Drawing.Size(133, 23);
             this.txtMedia.TabIndex = 1;
+            this.txtMedia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -466,10 +608,10 @@
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(266, 200);
+            this.xtraTabControl1.Location = new System.Drawing.Point(310, 200);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1032, 405);
+            this.xtraTabControl1.Size = new System.Drawing.Size(988, 558);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -483,7 +625,7 @@
             this.xtraTabPage1.Controls.Add(this.panelControl2);
             this.xtraTabPage1.Controls.Add(this.panelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1026, 377);
+            this.xtraTabPage1.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage1.Text = "Y Lệnh Thuốc";
             // 
             // panelControl2
@@ -493,7 +635,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl2.Location = new System.Drawing.Point(0, 1);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1024, 138);
+            this.panelControl2.Size = new System.Drawing.Size(980, 230);
             this.panelControl2.TabIndex = 2;
             // 
             // panelControl1
@@ -501,9 +643,9 @@
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.gridControl1);
-            this.panelControl1.Location = new System.Drawing.Point(-1, 139);
+            this.panelControl1.Location = new System.Drawing.Point(-1, 228);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1026, 235);
+            this.panelControl1.Size = new System.Drawing.Size(982, 299);
             this.panelControl1.TabIndex = 1;
             // 
             // gridControl1
@@ -512,7 +654,7 @@
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1022, 231);
+            this.gridControl1.Size = new System.Drawing.Size(978, 295);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -528,130 +670,80 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(925, 577);
+            this.xtraTabPage2.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage2.Text = "Cận Lâm Sàng";
             // 
             // xtraTabPage5
             // 
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(925, 577);
+            this.xtraTabPage5.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage5.Text = "Phẫu thuật - Thủ Thuật";
             // 
             // xtraTabPage6
             // 
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(925, 577);
+            this.xtraTabPage6.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage6.Text = "Kết quả Cận Lâm Sàng";
             // 
             // xtraTabPage7
             // 
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(925, 577);
+            this.xtraTabPage7.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage7.Text = "Kết luận Khám";
             // 
-            // txtluutru
+            // xtraTabPage4
             // 
-            this.txtluutru.Enabled = false;
-            this.txtluutru.Location = new System.Drawing.Point(510, 15);
-            this.txtluutru.Name = "txtluutru";
-            this.txtluutru.Size = new System.Drawing.Size(157, 20);
-            this.txtluutru.TabIndex = 5;
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(291, 544);
+            this.xtraTabPage4.Text = "DS Nội Trú Chuyển Viện";
             // 
-            // txtnamsinh
+            // medicalrecordid
             // 
-            this.txtnamsinh.Enabled = false;
-            this.txtnamsinh.Location = new System.Drawing.Point(510, 46);
-            this.txtnamsinh.Name = "txtnamsinh";
-            this.txtnamsinh.Size = new System.Drawing.Size(157, 20);
-            this.txtnamsinh.TabIndex = 5;
+            this.medicalrecordid.Caption = "Bệnh Án";
+            this.medicalrecordid.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.medicalrecordid.FieldName = "medicalrecordid";
+            this.medicalrecordid.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.medicalrecordid.Name = "medicalrecordid";
+            this.medicalrecordid.Visible = true;
+            this.medicalrecordid.VisibleIndex = 0;
+            this.medicalrecordid.Width = 57;
             // 
-            // txtfrom
+            // fullname
             // 
-            this.txtfrom.Enabled = false;
-            this.txtfrom.Location = new System.Drawing.Point(510, 77);
-            this.txtfrom.Name = "txtfrom";
-            this.txtfrom.Size = new System.Drawing.Size(157, 20);
-            this.txtfrom.TabIndex = 5;
+            this.fullname.Caption = "Họ";
+            this.fullname.FieldName = "fullname";
+            this.fullname.Name = "fullname";
+            this.fullname.Visible = true;
+            this.fullname.VisibleIndex = 1;
+            this.fullname.Width = 118;
             // 
-            // txtKhoa
+            // name
             // 
-            this.txtKhoa.Enabled = false;
-            this.txtKhoa.Location = new System.Drawing.Point(510, 108);
-            this.txtKhoa.Name = "txtKhoa";
-            this.txtKhoa.Size = new System.Drawing.Size(235, 20);
-            this.txtKhoa.TabIndex = 5;
+            this.name.Caption = "Tên";
+            this.name.FieldName = "name";
+            this.name.Name = "name";
+            this.name.Visible = true;
+            this.name.VisibleIndex = 2;
+            this.name.Width = 46;
             // 
-            // txtRavien
+            // status
             // 
-            this.txtRavien.Enabled = false;
-            this.txtRavien.Location = new System.Drawing.Point(510, 135);
-            this.txtRavien.Name = "txtRavien";
-            this.txtRavien.Size = new System.Drawing.Size(235, 20);
-            this.txtRavien.TabIndex = 5;
+            this.status.Caption = "T.T";
+            this.status.FieldName = "status";
+            this.status.Name = "status";
+            this.status.Visible = true;
+            this.status.VisibleIndex = 3;
+            this.status.Width = 52;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(687, 15);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 16);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Trạng Thái";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(687, 46);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 16);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Giới Tính";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(687, 77);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 16);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Đến Ngày";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(773, 15);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(164, 20);
-            this.txtStatus.TabIndex = 7;
-            // 
-            // txtsex
-            // 
-            this.txtsex.Enabled = false;
-            this.txtsex.Location = new System.Drawing.Point(773, 46);
-            this.txtsex.Name = "txtsex";
-            this.txtsex.Size = new System.Drawing.Size(164, 20);
-            this.txtsex.TabIndex = 7;
-            // 
-            // txtto
-            // 
-            this.txtto.Enabled = false;
-            this.txtto.Location = new System.Drawing.Point(773, 77);
-            this.txtto.Name = "txtto";
-            this.txtto.Size = new System.Drawing.Size(164, 20);
-            this.txtto.TabIndex = 7;
-            // 
-            // FrmSearch
+            // FrmNgoaiTru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 605);
+            this.ClientSize = new System.Drawing.Size(1298, 758);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanelKhamBenh);
-            this.Name = "FrmSearch";
+            this.Name = "FrmNgoaiTru";
             this.Text = "FrmSearch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmSearch_Load);
@@ -662,6 +754,9 @@
             this.dockPanel1_Container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
+            this.xtraTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).EndInit();
             this.panelControlKhoa_Bacsy.ResumeLayout(false);
             this.panelControlKhoa_Bacsy.PerformLayout();
@@ -696,7 +791,6 @@
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer1;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraEditors.PanelControl panelControlKhoa_Bacsy;
         private System.Windows.Forms.CheckBox checkBox1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
@@ -735,6 +829,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        private DevExpress.XtraGrid.Columns.GridColumn medicalrecordid;
+        private DevExpress.XtraGrid.Columns.GridColumn fullname;
+        private DevExpress.XtraGrid.Columns.GridColumn name;
+        private DevExpress.XtraGrid.Columns.GridColumn status;
 
     }
 }

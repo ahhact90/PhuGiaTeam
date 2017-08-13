@@ -176,6 +176,28 @@ namespace DAL
             sql = string.Format(sql, BA);
             return ExecuteQuery(sql);
         }
+        /// <summary>
+        /// Hàm lấy thông tin chuyển viện ngoại trú
+        /// </summary>
+        /// <param name="BA"></param>
+        /// <returns></returns>
+        public System.Data.DataTable Select_CV_NgoaiTru()
+        {
+            var sql = "SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode,CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount,age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE a.tohospital <> 0 AND a.treatmentdivisionid = 0 order by a.id desc";
+            sql = string.Format(sql);
+            return ExecuteQuery(sql);
+        }
+        /// <summary>
+        /// Ham lấy thông tin bệnh nhân chi tiết
+        /// </summary>
+        /// <param name="BA"></param>
+        /// <returns></returns>
+        public System.Data.DataTable Select_ThongTinBA_chitiet(string BA)
+        {
+            var sql = "SELECT *, his_general_full_address(homenumber, address, precinct_name) AS full_address, UPPER(full_name) AS full_name_upper, is_card, CASE WHEN archives_number_home IS NOT NULL OR archives_number_home <> '' THEN 1 ELSE 0 END is_home_treatment_file, CASE WHEN medical_objects = 1 THEN CASE WHEN insurance_discount <> 0 THEN 'BH:' || insurance_discount || '%' ELSE '' END ELSE CASE WHEN medical_objects = 3 THEN 'Chính Sách' ELSE 'Thu Phí ' || (100 - object_remission) || '%' END END || CASE WHEN object_remission <> 0 THEN CASE WHEN insurance_discount = 0 THEN 'Miễn phí:' || object_remission || '%' ELSE '+' || 'Miễn :' || object_remission || '%' END ELSE '' END AS medical_object, CASE WHEN suggestion_policy = 9 THEN finish_plan_time::date + treatment_day ELSE CASE WHEN treatment_id <> 0 THEN finish_plan_time ELSE close_time END END AS date_signal FROM his_medical_info_get('{0}|0|0')";
+            sql = string.Format(sql, BA);
+            return ExecuteQuery(sql);
+        }
 
         #endregion
     }

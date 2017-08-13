@@ -70,9 +70,9 @@
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.dockPanel14Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.dockPanel15Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.dockPanel14Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.dockPanel6Document = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -99,9 +99,9 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dockPanel14Document)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel15Document)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockPanel14Document)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel6Document)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             this.SuspendLayout();
@@ -509,7 +509,7 @@
             this.dockPanel15.Options.ShowAutoHideButton = false;
             this.dockPanel15.Options.ShowCloseButton = false;
             this.dockPanel15.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel15.Size = new System.Drawing.Size(1336, 345);
+            this.dockPanel15.Size = new System.Drawing.Size(1336, 720);
             this.dockPanel15.Text = "Chi tiết thuốc";
             // 
             // dockPanel15_Container
@@ -517,7 +517,7 @@
             this.dockPanel15_Container.Controls.Add(this.gridControl1);
             this.dockPanel15_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel15_Container.Name = "dockPanel15_Container";
-            this.dockPanel15_Container.Size = new System.Drawing.Size(1336, 345);
+            this.dockPanel15_Container.Size = new System.Drawing.Size(1336, 720);
             this.dockPanel15_Container.TabIndex = 0;
             // 
             // gridControl1
@@ -527,7 +527,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1336, 345);
+            this.gridControl1.Size = new System.Drawing.Size(1336, 720);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -576,16 +576,6 @@
             this.dockPanel15Document});
             this.tabbedView1.Orientation = System.Windows.Forms.Orientation.Vertical;
             // 
-            // dockPanel14Document
-            // 
-            this.dockPanel14Document.Caption = "Lệnh Truy Vấn";
-            this.dockPanel14Document.ControlName = "dockPanel14";
-            this.dockPanel14Document.FloatLocation = new System.Drawing.Point(0, 0);
-            this.dockPanel14Document.FloatSize = new System.Drawing.Size(200, 200);
-            this.dockPanel14Document.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.False;
-            this.dockPanel14Document.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
-            this.dockPanel14Document.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.False;
-            // 
             // documentGroup2
             // 
             this.documentGroup2.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
@@ -601,6 +591,16 @@
             this.dockPanel15Document.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.False;
             this.dockPanel15Document.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.dockPanel15Document.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // dockPanel14Document
+            // 
+            this.dockPanel14Document.Caption = "Lệnh Truy Vấn";
+            this.dockPanel14Document.ControlName = "dockPanel14";
+            this.dockPanel14Document.FloatLocation = new System.Drawing.Point(0, 0);
+            this.dockPanel14Document.FloatSize = new System.Drawing.Size(200, 200);
+            this.dockPanel14Document.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.False;
+            this.dockPanel14Document.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
+            this.dockPanel14Document.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.False;
             // 
             // dockPanel6Document
             // 
@@ -646,9 +646,9 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dockPanel14Document)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel15Document)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockPanel14Document)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockPanel6Document)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             this.ResumeLayout(false);

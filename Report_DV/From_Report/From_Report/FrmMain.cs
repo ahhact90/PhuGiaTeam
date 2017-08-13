@@ -95,8 +95,8 @@ namespace From_Report
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            foreach (var x in MdiChildren) if (x is FrmSearch) return;
-            var frm = new FrmSearch() { MdiParent = this };
+            foreach (var x in MdiChildren) if (x is FrmNgoaiTru) return;
+            var frm = new FrmNgoaiTru() { MdiParent = this };
             frm.Show();
         }
 
