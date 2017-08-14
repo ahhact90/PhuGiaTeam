@@ -34,11 +34,16 @@
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanelKhamBenh = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chbox_hientai = new System.Windows.Forms.CheckBox();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.medicalrecordid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.fullname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.status = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControlKhoa_Bacsy = new DevExpress.XtraEditors.PanelControl();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBA = new System.Windows.Forms.TextBox();
@@ -83,11 +88,12 @@
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
-            this.medicalrecordid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.fullname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.status = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.mmedicalrecordid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nfullname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nstatus = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanelKhamBenh.SuspendLayout();
@@ -97,6 +103,7 @@
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).BeginInit();
             this.panelControlKhoa_Bacsy.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -109,6 +116,8 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -174,7 +183,7 @@
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Controls.Add(this.checkBox1);
+            this.dockPanel1_Container.Controls.Add(this.chbox_hientai);
             this.dockPanel1_Container.Controls.Add(this.xtraTabControl2);
             this.dockPanel1_Container.Controls.Add(this.panelControlKhoa_Bacsy);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
@@ -182,16 +191,18 @@
             this.dockPanel1_Container.Size = new System.Drawing.Size(302, 731);
             this.dockPanel1_Container.TabIndex = 0;
             // 
-            // checkBox1
+            // chbox_hientai
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1, 711);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(257, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Chỉ Hiển Thị Danh Sách Bệnh Nhân Trong Ngày";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chbox_hientai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.chbox_hientai.AutoSize = true;
+            this.chbox_hientai.Location = new System.Drawing.Point(1, 711);
+            this.chbox_hientai.Name = "chbox_hientai";
+            this.chbox_hientai.Size = new System.Drawing.Size(257, 17);
+            this.chbox_hientai.TabIndex = 0;
+            this.chbox_hientai.Text = "Chỉ Hiển Thị Danh Sách Bệnh Nhân Trong Ngày";
+            this.chbox_hientai.UseVisualStyleBackColor = true;
+            this.chbox_hientai.CheckedChanged += new System.EventHandler(this.chbox_hientai_CheckedChanged);
+            this.chbox_hientai.Click += new System.EventHandler(this.chbox_hientai_Click);
             // 
             // xtraTabControl2
             // 
@@ -206,6 +217,7 @@
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
             this.xtraTabPage4});
+            this.xtraTabControl2.Click += new System.EventHandler(this.xtraTabControl2_Click);
             // 
             // xtraTabPage3
             // 
@@ -244,6 +256,51 @@
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView2_RowStyle);
             this.gridView2.Click += new System.EventHandler(this.gridView2_Click);
+            // 
+            // medicalrecordid
+            // 
+            this.medicalrecordid.Caption = "Bệnh Án";
+            this.medicalrecordid.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.medicalrecordid.FieldName = "medicalrecordid";
+            this.medicalrecordid.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.medicalrecordid.Name = "medicalrecordid";
+            this.medicalrecordid.Visible = true;
+            this.medicalrecordid.VisibleIndex = 0;
+            this.medicalrecordid.Width = 57;
+            // 
+            // fullname
+            // 
+            this.fullname.Caption = "Họ";
+            this.fullname.FieldName = "fullname";
+            this.fullname.Name = "fullname";
+            this.fullname.Visible = true;
+            this.fullname.VisibleIndex = 1;
+            this.fullname.Width = 118;
+            // 
+            // name
+            // 
+            this.name.Caption = "Tên";
+            this.name.FieldName = "name";
+            this.name.Name = "name";
+            this.name.Visible = true;
+            this.name.VisibleIndex = 2;
+            this.name.Width = 46;
+            // 
+            // status
+            // 
+            this.status.Caption = "T.T";
+            this.status.FieldName = "status";
+            this.status.Name = "status";
+            this.status.Visible = true;
+            this.status.VisibleIndex = 3;
+            this.status.Width = 52;
+            // 
+            // xtraTabPage4
+            // 
+            this.xtraTabPage4.Controls.Add(this.gridControl3);
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(291, 544);
+            this.xtraTabPage4.Text = "DS Nội Trú Chuyển Viện";
             // 
             // panelControlKhoa_Bacsy
             // 
@@ -691,49 +748,71 @@
             this.xtraTabPage7.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage7.Text = "Kết luận Khám";
             // 
-            // xtraTabPage4
+            // gridControl3
             // 
-            this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(291, 544);
-            this.xtraTabPage4.Text = "DS Nội Trú Chuyển Viện";
+            this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl3.EmbeddedNavigator.TextStringFormat = "Dòng {0} / {1}";
+            this.gridControl3.Location = new System.Drawing.Point(0, 0);
+            this.gridControl3.MainView = this.gridView3;
+            this.gridControl3.Name = "gridControl3";
+            this.gridControl3.Size = new System.Drawing.Size(291, 544);
+            this.gridControl3.TabIndex = 0;
+            this.gridControl3.UseEmbeddedNavigator = true;
+            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            this.gridControl3.Click += new System.EventHandler(this.gridControl3_Click);
             // 
-            // medicalrecordid
+            // gridView3
             // 
-            this.medicalrecordid.Caption = "Bệnh Án";
-            this.medicalrecordid.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.medicalrecordid.FieldName = "medicalrecordid";
-            this.medicalrecordid.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.medicalrecordid.Name = "medicalrecordid";
-            this.medicalrecordid.Visible = true;
-            this.medicalrecordid.VisibleIndex = 0;
-            this.medicalrecordid.Width = 57;
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.mmedicalrecordid,
+            this.nfullname,
+            this.nname,
+            this.nstatus});
+            this.gridView3.GridControl = this.gridControl3;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsBehavior.Editable = false;
+            this.gridView3.OptionsView.ShowAutoFilterRow = true;
+            this.gridView3.OptionsView.ShowFooter = true;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView3_RowStyle);
+            this.gridView3.Click += new System.EventHandler(this.gridView3_Click);
             // 
-            // fullname
+            // mmedicalrecordid
             // 
-            this.fullname.Caption = "Họ";
-            this.fullname.FieldName = "fullname";
-            this.fullname.Name = "fullname";
-            this.fullname.Visible = true;
-            this.fullname.VisibleIndex = 1;
-            this.fullname.Width = 118;
+            this.mmedicalrecordid.Caption = "Bệnh Án";
+            this.mmedicalrecordid.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.mmedicalrecordid.FieldName = "medicalrecordid";
+            this.mmedicalrecordid.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.mmedicalrecordid.Name = "mmedicalrecordid";
+            this.mmedicalrecordid.Visible = true;
+            this.mmedicalrecordid.VisibleIndex = 0;
+            this.mmedicalrecordid.Width = 67;
             // 
-            // name
+            // nfullname
             // 
-            this.name.Caption = "Tên";
-            this.name.FieldName = "name";
-            this.name.Name = "name";
-            this.name.Visible = true;
-            this.name.VisibleIndex = 2;
-            this.name.Width = 46;
+            this.nfullname.Caption = "Họ";
+            this.nfullname.FieldName = "fullname";
+            this.nfullname.Name = "nfullname";
+            this.nfullname.Visible = true;
+            this.nfullname.VisibleIndex = 1;
+            this.nfullname.Width = 206;
             // 
-            // status
+            // nname
             // 
-            this.status.Caption = "T.T";
-            this.status.FieldName = "status";
-            this.status.Name = "status";
-            this.status.Visible = true;
-            this.status.VisibleIndex = 3;
-            this.status.Width = 52;
+            this.nname.Caption = "Tên";
+            this.nname.FieldName = "name";
+            this.nname.Name = "nname";
+            this.nname.Visible = true;
+            this.nname.VisibleIndex = 2;
+            // 
+            // nstatus
+            // 
+            this.nstatus.Caption = "T.T";
+            this.nstatus.FieldName = "status";
+            this.nstatus.Name = "nstatus";
+            this.nstatus.Visible = true;
+            this.nstatus.VisibleIndex = 3;
             // 
             // FrmNgoaiTru
             // 
@@ -747,6 +826,7 @@
             this.Text = "FrmSearch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmSearch_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmNgoaiTru_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanelKhamBenh.ResumeLayout(false);
@@ -757,6 +837,7 @@
             this.xtraTabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).EndInit();
             this.panelControlKhoa_Bacsy.ResumeLayout(false);
             this.panelControlKhoa_Bacsy.PerformLayout();
@@ -771,6 +852,8 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -792,7 +875,7 @@
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraEditors.PanelControl panelControlKhoa_Bacsy;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chbox_hientai;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
@@ -836,6 +919,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn fullname;
         private DevExpress.XtraGrid.Columns.GridColumn name;
         private DevExpress.XtraGrid.Columns.GridColumn status;
+        private DevExpress.XtraGrid.GridControl gridControl3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Columns.GridColumn mmedicalrecordid;
+        private DevExpress.XtraGrid.Columns.GridColumn nfullname;
+        private DevExpress.XtraGrid.Columns.GridColumn nname;
+        private DevExpress.XtraGrid.Columns.GridColumn nstatus;
 
     }
 }

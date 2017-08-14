@@ -198,6 +198,28 @@ namespace DAL
             sql = string.Format(sql, BA);
             return ExecuteQuery(sql);
         }
+        /// <summary>
+        /// Hàm lấy thông tin bệnh nhân theo ngày hiện tại
+        /// </summary>
+        /// <param name="BA"></param>
+        /// <returns></returns>
+        public System.Data.DataTable Select_ThongTinBA_hientai()
+        {
+            var sql = "SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode,CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount,age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE a.tohospital <> 0 AND a.treatmentdivisionid <> 0  AND creationdate::date = current_date order by a.id desc";
+            sql = string.Format(sql);
+            return ExecuteQuery(sql);
+        }
+        /// <summary>
+        /// Hàm thông tin chuyển viện nội trú
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public System.Data.DataTable Select_CV_NoiTru()
+        {
+            var sql = "SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode,CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount,age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE a.tohospital <> 0 AND a.treatmentdivisionid <> 0 order by a.id desc";
+            sql = string.Format(sql);
+            return ExecuteQuery(sql);
+        }
 
         #endregion
     }
