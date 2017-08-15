@@ -248,6 +248,7 @@
             this.ribbonPageGroup3.AllowTextClipping = false;
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.ShowCaptionButton = false;
             this.ribbonPageGroup3.Text = "BQP Khác";
             // 
             // ribbonPageGroup4
@@ -255,6 +256,7 @@
             this.ribbonPageGroup4.AllowTextClipping = false;
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.ShowCaptionButton = false;
             this.ribbonPageGroup4.Text = "BQP Quân (QN)";
             // 
             // ribbonPageGroup5

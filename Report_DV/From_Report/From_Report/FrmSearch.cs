@@ -292,7 +292,7 @@ namespace From_Report
 
         private void btnCV_Click(object sender, EventArgs e)
         {
-            string tmp_bv = txtBA.Text.ToString().Trim();
+            string tmp_bv = txtMedia.Text.ToString().Trim();
             ds = _DanhMuc.Giay_CV(tmp_bv);
             if (ds == null)
             {
