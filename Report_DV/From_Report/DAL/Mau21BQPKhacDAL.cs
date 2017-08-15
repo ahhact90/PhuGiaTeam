@@ -221,6 +221,13 @@ namespace DAL
             return ExecuteQuery(sql);
         }
 
+        public DataSet Giay_CV(string BA)
+        {
+            var sql = "SELECT *, his_general_full_address(homenumber, address, precinct_name) AS full_address, UPPER(full_name) AS full_name_upper, is_card, CASE WHEN archives_number_home IS NOT NULL OR archives_number_home <> '' THEN 1 ELSE 0 END is_home_treatment_file,CASE WHEN medical_objects = 1 THEN CASE WHEN insurance_discount <> 0 THEN 'BH:' || insurance_discount || '%' ELSE '' END ELSE CASE WHEN medical_objects = 3 THEN 'Chính Sách' ELSE 'Thu Phí ' || (100 - object_remission) || '%' END END ||CASE WHEN object_remission <> 0 THEN CASE WHEN insurance_discount = 0 THEN 'Miễn phí:' || object_remission || '%' ELSE '+' || 'Miễn :' || object_remission || '%' END ELSE '' END AS medical_object,CASE WHEN suggestion_policy = 9 THEN finish_plan_time::date + treatment_day ELSE CASE WHEN treatment_id <> 0 THEN finish_plan_time ELSE close_time END END AS date_signal FROM his_medical_info_get('{0}|0|0')";
+            sql = string.Format(sql, BA);
+            return ExecuteDataset(sql);
+        }
+
         #endregion
     }
 }

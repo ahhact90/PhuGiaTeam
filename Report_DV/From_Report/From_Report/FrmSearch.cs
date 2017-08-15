@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.Design.GroupSort;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraGrid.Views.BandedGrid;
 
 namespace From_Report
 {
@@ -286,10 +290,32 @@ namespace From_Report
             }
         }
 
-        private void gridControl3_Click(object sender, EventArgs e)
+        private void btnCV_Click(object sender, EventArgs e)
         {
+            string tmp_bv = txtBA.Text.ToString().Trim();
+            ds = _DanhMuc.Giay_CV(tmp_bv);
+            if (ds == null)
+            {
+                MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Close();
+            }
+            try
+            {
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            Report.Rpt_Chuyentuyen f21 = new Report.Rpt_Chuyentuyen();
+            f21.DataSource = ds;
+            f21.DataMember = ds.Tables[0].TableName;            
+            f21.ShowPreview();
+      
         }
+
+        
 
 
     }

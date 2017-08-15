@@ -44,7 +44,14 @@
             this.name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.status = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.mmedicalrecordid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nfullname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nstatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControlKhoa_Bacsy = new DevExpress.XtraEditors.PanelControl();
+            this.btnCV = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtBA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,15 +92,21 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.mmedicalrecordid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nfullname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.nstatus = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanelKhamBenh.SuspendLayout();
@@ -104,6 +117,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).BeginInit();
             this.panelControlKhoa_Bacsy.SuspendLayout();
             this.dockPanel2.SuspendLayout();
@@ -116,8 +131,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -302,8 +316,74 @@
             this.xtraTabPage4.Size = new System.Drawing.Size(291, 544);
             this.xtraTabPage4.Text = "DS Nội Trú Chuyển Viện";
             // 
+            // gridControl3
+            // 
+            this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl3.EmbeddedNavigator.TextStringFormat = "Dòng {0} / {1}";
+            this.gridControl3.Location = new System.Drawing.Point(0, 0);
+            this.gridControl3.MainView = this.gridView3;
+            this.gridControl3.Name = "gridControl3";
+            this.gridControl3.Size = new System.Drawing.Size(291, 544);
+            this.gridControl3.TabIndex = 0;
+            this.gridControl3.UseEmbeddedNavigator = true;
+            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.mmedicalrecordid,
+            this.nfullname,
+            this.nname,
+            this.nstatus});
+            this.gridView3.GridControl = this.gridControl3;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsBehavior.Editable = false;
+            this.gridView3.OptionsView.ShowAutoFilterRow = true;
+            this.gridView3.OptionsView.ShowFooter = true;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView3_RowStyle);
+            this.gridView3.Click += new System.EventHandler(this.gridView3_Click);
+            // 
+            // mmedicalrecordid
+            // 
+            this.mmedicalrecordid.Caption = "Bệnh Án";
+            this.mmedicalrecordid.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.mmedicalrecordid.FieldName = "medicalrecordid";
+            this.mmedicalrecordid.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.mmedicalrecordid.Name = "mmedicalrecordid";
+            this.mmedicalrecordid.Visible = true;
+            this.mmedicalrecordid.VisibleIndex = 0;
+            this.mmedicalrecordid.Width = 67;
+            // 
+            // nfullname
+            // 
+            this.nfullname.Caption = "Họ";
+            this.nfullname.FieldName = "fullname";
+            this.nfullname.Name = "nfullname";
+            this.nfullname.Visible = true;
+            this.nfullname.VisibleIndex = 1;
+            this.nfullname.Width = 206;
+            // 
+            // nname
+            // 
+            this.nname.Caption = "Tên";
+            this.nname.FieldName = "name";
+            this.nname.Name = "nname";
+            this.nname.Visible = true;
+            this.nname.VisibleIndex = 2;
+            // 
+            // nstatus
+            // 
+            this.nstatus.Caption = "T.T";
+            this.nstatus.FieldName = "status";
+            this.nstatus.Name = "nstatus";
+            this.nstatus.Visible = true;
+            this.nstatus.VisibleIndex = 3;
+            // 
             // panelControlKhoa_Bacsy
             // 
+            this.panelControlKhoa_Bacsy.Controls.Add(this.btnCV);
             this.panelControlKhoa_Bacsy.Controls.Add(this.btnSearch);
             this.panelControlKhoa_Bacsy.Controls.Add(this.txtBA);
             this.panelControlKhoa_Bacsy.Controls.Add(this.label1);
@@ -312,12 +392,23 @@
             this.panelControlKhoa_Bacsy.Size = new System.Drawing.Size(296, 127);
             this.panelControlKhoa_Bacsy.TabIndex = 0;
             // 
+            // btnCV
+            // 
+            this.btnCV.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCV.Location = new System.Drawing.Point(92, 55);
+            this.btnCV.Name = "btnCV";
+            this.btnCV.Size = new System.Drawing.Size(97, 57);
+            this.btnCV.TabIndex = 3;
+            this.btnCV.Text = "In Giấy Chuyển Viện";
+            this.btnCV.UseVisualStyleBackColor = true;
+            this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(87, 70);
+            this.btnSearch.Location = new System.Drawing.Point(7, 57);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(129, 23);
+            this.btnSearch.Size = new System.Drawing.Size(79, 55);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -726,9 +817,123 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.richTextBox6);
+            this.xtraTabPage2.Controls.Add(this.richTextBox5);
+            this.xtraTabPage2.Controls.Add(this.label21);
+            this.xtraTabPage2.Controls.Add(this.label20);
+            this.xtraTabPage2.Controls.Add(this.richTextBox4);
+            this.xtraTabPage2.Controls.Add(this.label19);
+            this.xtraTabPage2.Controls.Add(this.richTextBox3);
+            this.xtraTabPage2.Controls.Add(this.label18);
+            this.xtraTabPage2.Controls.Add(this.richTextBox2);
+            this.xtraTabPage2.Controls.Add(this.label17);
+            this.xtraTabPage2.Controls.Add(this.richTextBox1);
+            this.xtraTabPage2.Controls.Add(this.label16);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage2.Text = "Cận Lâm Sàng";
+            // 
+            // richTextBox6
+            // 
+            this.richTextBox6.Location = new System.Drawing.Point(33, 372);
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.Size = new System.Drawing.Size(725, 37);
+            this.richTextBox6.TabIndex = 9;
+            this.richTextBox6.Text = "";
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Location = new System.Drawing.Point(33, 313);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.Size = new System.Drawing.Size(725, 32);
+            this.richTextBox5.TabIndex = 9;
+            this.richTextBox5.Text = "";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(33, 352);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(80, 13);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Người Hộ Tống";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(33, 293);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(129, 13);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Phương Tiện Vận Chuyển";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(33, 245);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(721, 41);
+            this.richTextBox4.TabIndex = 7;
+            this.richTextBox4.Text = "";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(33, 225);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(133, 13);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Tình trạng lúc chuyển viện";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(33, 171);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(721, 51);
+            this.richTextBox3.TabIndex = 5;
+            this.richTextBox3.Text = "";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(33, 151);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 13);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Thuốc đã dùng";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(33, 95);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(723, 53);
+            this.richTextBox2.TabIndex = 3;
+            this.richTextBox2.Text = "";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(33, 75);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(71, 13);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Cận lâm sàng";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(33, 31);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(725, 41);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(33, 11);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Dấu hiệu lâm sàng:";
             // 
             // xtraTabPage5
             // 
@@ -747,72 +952,6 @@
             this.xtraTabPage7.Name = "xtraTabPage7";
             this.xtraTabPage7.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage7.Text = "Kết luận Khám";
-            // 
-            // gridControl3
-            // 
-            this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.EmbeddedNavigator.TextStringFormat = "Dòng {0} / {1}";
-            this.gridControl3.Location = new System.Drawing.Point(0, 0);
-            this.gridControl3.MainView = this.gridView3;
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(291, 544);
-            this.gridControl3.TabIndex = 0;
-            this.gridControl3.UseEmbeddedNavigator = true;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            this.gridControl3.Click += new System.EventHandler(this.gridControl3_Click);
-            // 
-            // gridView3
-            // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.mmedicalrecordid,
-            this.nfullname,
-            this.nname,
-            this.nstatus});
-            this.gridView3.GridControl = this.gridControl3;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsBehavior.Editable = false;
-            this.gridView3.OptionsView.ShowAutoFilterRow = true;
-            this.gridView3.OptionsView.ShowFooter = true;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
-            this.gridView3.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView3_RowStyle);
-            this.gridView3.Click += new System.EventHandler(this.gridView3_Click);
-            // 
-            // mmedicalrecordid
-            // 
-            this.mmedicalrecordid.Caption = "Bệnh Án";
-            this.mmedicalrecordid.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.mmedicalrecordid.FieldName = "medicalrecordid";
-            this.mmedicalrecordid.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.mmedicalrecordid.Name = "mmedicalrecordid";
-            this.mmedicalrecordid.Visible = true;
-            this.mmedicalrecordid.VisibleIndex = 0;
-            this.mmedicalrecordid.Width = 67;
-            // 
-            // nfullname
-            // 
-            this.nfullname.Caption = "Họ";
-            this.nfullname.FieldName = "fullname";
-            this.nfullname.Name = "nfullname";
-            this.nfullname.Visible = true;
-            this.nfullname.VisibleIndex = 1;
-            this.nfullname.Width = 206;
-            // 
-            // nname
-            // 
-            this.nname.Caption = "Tên";
-            this.nname.FieldName = "name";
-            this.nname.Name = "nname";
-            this.nname.Visible = true;
-            this.nname.VisibleIndex = 2;
-            // 
-            // nstatus
-            // 
-            this.nstatus.Caption = "T.T";
-            this.nstatus.FieldName = "status";
-            this.nstatus.Name = "nstatus";
-            this.nstatus.Visible = true;
-            this.nstatus.VisibleIndex = 3;
             // 
             // FrmNgoaiTru
             // 
@@ -838,6 +977,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlKhoa_Bacsy)).EndInit();
             this.panelControlKhoa_Bacsy.ResumeLayout(false);
             this.panelControlKhoa_Bacsy.PerformLayout();
@@ -852,8 +993,8 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            this.xtraTabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -925,6 +1066,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn nfullname;
         private DevExpress.XtraGrid.Columns.GridColumn nname;
         private DevExpress.XtraGrid.Columns.GridColumn nstatus;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnCV;
 
     }
 }
