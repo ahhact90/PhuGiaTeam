@@ -860,7 +860,7 @@
             // xrTableCell18
             // 
             this.xrTableCell18.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.card_code")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.code")});
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.Weight = 0.96475235024282824D;
             // 
