@@ -31,6 +31,7 @@ namespace From_Report
             InitializeComponent();
             barEditItem_dfrom.EditValue = DateTime.Today; //= DateTime.Today;DateTime.Now
             barEditItem_dto.EditValue = DateTime.Today.AddDays(+1).Date;
+            
            
         }
 
@@ -98,6 +99,11 @@ namespace From_Report
             foreach (var x in MdiChildren) if (x is FrmNgoaiTru) return;
             var frm = new FrmNgoaiTru() { MdiParent = this };
             frm.Show();
+        }
+
+        private void repositoryItemTextEdit2_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
 
         

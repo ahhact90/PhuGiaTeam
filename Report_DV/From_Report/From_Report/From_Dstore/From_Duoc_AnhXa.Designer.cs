@@ -159,6 +159,16 @@
             this.dockPanel2.ID = new System.Guid("b434e5f9-3e22-418f-a14f-e386d7d5ddb1");
             this.dockPanel2.Location = new System.Drawing.Point(0, 309);
             this.dockPanel2.Name = "dockPanel2";
+            this.dockPanel2.Options.AllowDockAsTabbedDocument = false;
+            this.dockPanel2.Options.AllowDockFill = false;
+            this.dockPanel2.Options.AllowDockLeft = false;
+            this.dockPanel2.Options.AllowDockRight = false;
+            this.dockPanel2.Options.AllowDockTop = false;
+            this.dockPanel2.Options.AllowFloating = false;
+            this.dockPanel2.Options.FloatOnDblClick = false;
+            this.dockPanel2.Options.ShowAutoHideButton = false;
+            this.dockPanel2.Options.ShowCloseButton = false;
+            this.dockPanel2.Options.ShowMaximizeButton = false;
             this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 326);
             this.dockPanel2.Size = new System.Drawing.Size(1114, 326);
             // 
@@ -215,6 +225,7 @@
             this.gridView1.GridControl = this.grdCtrlThuocAX;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.AllowHtmlDrawGroups = false;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);

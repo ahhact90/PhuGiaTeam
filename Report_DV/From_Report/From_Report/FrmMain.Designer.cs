@@ -169,6 +169,7 @@
             // 
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            this.repositoryItemTextEdit2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.repositoryItemTextEdit2_KeyDown);
             // 
             // barButtonItem2
             // 

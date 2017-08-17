@@ -92,17 +92,17 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.rtxt_Nght = new System.Windows.Forms.RichTextBox();
+            this.rtxtpt = new System.Windows.Forms.RichTextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.rtxcv = new System.Windows.Forms.RichTextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.rtxtthuoc = new System.Windows.Forms.RichTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtxtcls = new System.Windows.Forms.RichTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxtls = new System.Windows.Forms.RichTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
@@ -817,37 +817,37 @@
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.richTextBox6);
-            this.xtraTabPage2.Controls.Add(this.richTextBox5);
+            this.xtraTabPage2.Controls.Add(this.rtxt_Nght);
+            this.xtraTabPage2.Controls.Add(this.rtxtpt);
             this.xtraTabPage2.Controls.Add(this.label21);
             this.xtraTabPage2.Controls.Add(this.label20);
-            this.xtraTabPage2.Controls.Add(this.richTextBox4);
+            this.xtraTabPage2.Controls.Add(this.rtxcv);
             this.xtraTabPage2.Controls.Add(this.label19);
-            this.xtraTabPage2.Controls.Add(this.richTextBox3);
+            this.xtraTabPage2.Controls.Add(this.rtxtthuoc);
             this.xtraTabPage2.Controls.Add(this.label18);
-            this.xtraTabPage2.Controls.Add(this.richTextBox2);
+            this.xtraTabPage2.Controls.Add(this.rtxtcls);
             this.xtraTabPage2.Controls.Add(this.label17);
-            this.xtraTabPage2.Controls.Add(this.richTextBox1);
+            this.xtraTabPage2.Controls.Add(this.rtxtls);
             this.xtraTabPage2.Controls.Add(this.label16);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage2.Text = "Cận Lâm Sàng";
             // 
-            // richTextBox6
+            // rtxt_Nght
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(33, 372);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(725, 37);
-            this.richTextBox6.TabIndex = 9;
-            this.richTextBox6.Text = "";
+            this.rtxt_Nght.Location = new System.Drawing.Point(33, 372);
+            this.rtxt_Nght.Name = "rtxt_Nght";
+            this.rtxt_Nght.Size = new System.Drawing.Size(725, 37);
+            this.rtxt_Nght.TabIndex = 9;
+            this.rtxt_Nght.Text = "";
             // 
-            // richTextBox5
+            // rtxtpt
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(33, 313);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(725, 32);
-            this.richTextBox5.TabIndex = 9;
-            this.richTextBox5.Text = "";
+            this.rtxtpt.Location = new System.Drawing.Point(33, 313);
+            this.rtxtpt.Name = "rtxtpt";
+            this.rtxtpt.Size = new System.Drawing.Size(725, 32);
+            this.rtxtpt.TabIndex = 9;
+            this.rtxtpt.Text = "";
             // 
             // label21
             // 
@@ -867,13 +867,13 @@
             this.label20.TabIndex = 8;
             this.label20.Text = "Phương Tiện Vận Chuyển";
             // 
-            // richTextBox4
+            // rtxcv
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(33, 245);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(721, 41);
-            this.richTextBox4.TabIndex = 7;
-            this.richTextBox4.Text = "";
+            this.rtxcv.Location = new System.Drawing.Point(33, 245);
+            this.rtxcv.Name = "rtxcv";
+            this.rtxcv.Size = new System.Drawing.Size(721, 41);
+            this.rtxcv.TabIndex = 7;
+            this.rtxcv.Text = "";
             // 
             // label19
             // 
@@ -884,13 +884,13 @@
             this.label19.TabIndex = 6;
             this.label19.Text = "Tình trạng lúc chuyển viện";
             // 
-            // richTextBox3
+            // rtxtthuoc
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(33, 171);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(721, 51);
-            this.richTextBox3.TabIndex = 5;
-            this.richTextBox3.Text = "";
+            this.rtxtthuoc.Location = new System.Drawing.Point(33, 171);
+            this.rtxtthuoc.Name = "rtxtthuoc";
+            this.rtxtthuoc.Size = new System.Drawing.Size(721, 51);
+            this.rtxtthuoc.TabIndex = 5;
+            this.rtxtthuoc.Text = "";
             // 
             // label18
             // 
@@ -901,13 +901,13 @@
             this.label18.TabIndex = 4;
             this.label18.Text = "Thuốc đã dùng";
             // 
-            // richTextBox2
+            // rtxtcls
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(33, 95);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(723, 53);
-            this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "";
+            this.rtxtcls.Location = new System.Drawing.Point(33, 95);
+            this.rtxtcls.Name = "rtxtcls";
+            this.rtxtcls.Size = new System.Drawing.Size(723, 53);
+            this.rtxtcls.TabIndex = 3;
+            this.rtxtcls.Text = "";
             // 
             // label17
             // 
@@ -918,13 +918,13 @@
             this.label17.TabIndex = 2;
             this.label17.Text = "Cận lâm sàng";
             // 
-            // richTextBox1
+            // rtxtls
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(33, 31);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(725, 41);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.rtxtls.Location = new System.Drawing.Point(33, 31);
+            this.rtxtls.Name = "rtxtls";
+            this.rtxtls.Size = new System.Drawing.Size(725, 41);
+            this.rtxtls.TabIndex = 1;
+            this.rtxtls.Text = "";
             // 
             // label16
             // 
@@ -1066,16 +1066,16 @@
         private DevExpress.XtraGrid.Columns.GridColumn nfullname;
         private DevExpress.XtraGrid.Columns.GridColumn nname;
         private DevExpress.XtraGrid.Columns.GridColumn nstatus;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtxtcls;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxtls;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox rtxcv;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox rtxtthuoc;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.RichTextBox rtxt_Nght;
+        private System.Windows.Forms.RichTextBox rtxtpt;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnCV;

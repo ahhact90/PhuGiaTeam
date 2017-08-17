@@ -15,7 +15,7 @@ using DevExpress.XtraGrid.Views.BandedGrid;
 
 namespace From_Report
 {
-    public partial class FrmNgoaiTru : Form
+    public partial class FrmNgoaiTru : Form 
     {
         #region Variable
         DataTable dt = new DataTable();
@@ -314,7 +314,43 @@ namespace From_Report
             f21.ShowPreview();
       
         }
+        private void repositoryItemTextEdit2_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+                try
+                {
+                    string tmp_bv = barEdItem_Search.EditValue.ToString().Trim();
+                    dt = _DanhMuc.Select_ThongTinBA_chitiet(tmp_bv.Trim());
+                    if (dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            txtName.Text = dt.Rows[i]["full_name"].ToString();
+                            txtBHYT.Text = dt.Rows[i]["code"].ToString();
+                            txtMedia.Text = dt.Rows[i]["id"].ToString();
+                            txtBN.Text = dt.Rows[i]["patient_id"].ToString();
+                            txtDoituong.Text = dt.Rows[i]["medical_object"].ToString();
+                            txtvaovien.Text = dt.Rows[i]["reception_time"].ToString();
+                            txtnamsinh.Text = dt.Rows[i]["birthday"].ToString();
+                            txtfrom.Text = dt.Rows[i]["date_from"].ToString();
+                            txtto.Text = dt.Rows[i]["date_to"].ToString();
+                            txtsex.Text = dt.Rows[i]["sex_name"].ToString();
+                            txtKhoa.Text = dt.Rows[i]["division_name"].ToString();
+                            txtRavien.Text = dt.Rows[i]["close_time"].ToString();
+                            txtStatus.Text = dt.Rows[i]["status"].ToString();
+                        }
+                    }
 
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+        }
         
 
 
