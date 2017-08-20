@@ -567,7 +567,7 @@
             // xrTableCell61
             // 
             this.xrTableCell61.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.finish_plan_time", "{0:mm}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable1.finish_plan_time", "{0:MM}")});
             this.xrTableCell61.Name = "xrTableCell61";
             this.xrTableCell61.Text = "xrTableCell61";
             this.xrTableCell61.Weight = 1.0396819705317495D;
