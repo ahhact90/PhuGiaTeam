@@ -107,6 +107,7 @@
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
+            this.btUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanelKhamBenh.SuspendLayout();
@@ -817,6 +818,7 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.btUpdate);
             this.xtraTabPage2.Controls.Add(this.rtxt_Nght);
             this.xtraTabPage2.Controls.Add(this.rtxtpt);
             this.xtraTabPage2.Controls.Add(this.label21);
@@ -953,6 +955,17 @@
             this.xtraTabPage7.Size = new System.Drawing.Size(982, 530);
             this.xtraTabPage7.Text = "Kết luận Khám";
             // 
+            // btUpdate
+            // 
+            this.btUpdate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.Location = new System.Drawing.Point(33, 415);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(108, 42);
+            this.btUpdate.TabIndex = 10;
+            this.btUpdate.Text = "Cập Nhật OK";
+            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
+            // 
             // FrmNgoaiTru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1079,6 +1092,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnCV;
+        private System.Windows.Forms.Button btUpdate;
 
     }
 }

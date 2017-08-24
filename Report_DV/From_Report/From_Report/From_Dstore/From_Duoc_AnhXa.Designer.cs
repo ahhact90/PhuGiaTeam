@@ -197,6 +197,7 @@
             // grdCtrlThuocAX
             // 
             this.grdCtrlThuocAX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdCtrlThuocAX.EmbeddedNavigator.TextStringFormat = "Dòng {0} / {1}";
             this.grdCtrlThuocAX.Location = new System.Drawing.Point(0, 0);
             this.grdCtrlThuocAX.MainView = this.gridView1;
             this.grdCtrlThuocAX.Name = "grdCtrlThuocAX";
