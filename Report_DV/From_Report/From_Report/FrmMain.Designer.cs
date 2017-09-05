@@ -164,6 +164,7 @@
             this.barEdItem_Search.Id = 12;
             this.barEdItem_Search.Name = "barEdItem_Search";
             this.barEdItem_Search.Width = 150;
+            this.barEdItem_Search.EditValueChanged += new System.EventHandler(this.barEdItem_Search_EditValueChanged);
             // 
             // repositoryItemTextEdit2
             // 

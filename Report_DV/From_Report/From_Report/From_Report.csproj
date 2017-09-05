@@ -195,6 +195,12 @@
     <Compile Include="Report\Rpt_DS_TT_PT.Designer.cs">
       <DependentUpon>Rpt_DS_TT_PT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\rp_SoA1_BQP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rp_SoA1_BQP.Designer.cs">
+      <DependentUpon>rp_SoA1_BQP.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmBHYT.resx">
       <DependentUpon>FrmBHYT.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Rpt_DS_TT_PT.resx">
       <DependentUpon>Rpt_DS_TT_PT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rp_SoA1_BQP.resx">
+      <DependentUpon>rp_SoA1_BQP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

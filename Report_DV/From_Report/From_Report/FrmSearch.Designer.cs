@@ -1,6 +1,6 @@
 ﻿namespace From_Report
 {
-    partial class FrmNgoaiTru
+    partial class FrmSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -92,6 +92,9 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.timeEditcv = new DevExpress.XtraEditors.TimeEdit();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btUpdate = new System.Windows.Forms.Button();
             this.rtxt_Nght = new System.Windows.Forms.RichTextBox();
             this.rtxtpt = new System.Windows.Forms.RichTextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -107,7 +110,6 @@
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
-            this.btUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanelKhamBenh.SuspendLayout();
@@ -133,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEditcv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -193,7 +196,7 @@
             this.dockPanelKhamBenh.Options.ShowCloseButton = false;
             this.dockPanelKhamBenh.Options.ShowMaximizeButton = false;
             this.dockPanelKhamBenh.OriginalSize = new System.Drawing.Size(310, 200);
-            this.dockPanelKhamBenh.Size = new System.Drawing.Size(310, 758);
+            this.dockPanelKhamBenh.Size = new System.Drawing.Size(310, 741);
             this.dockPanelKhamBenh.Text = "Khám Bệnh";
             // 
             // dockPanel1_Container
@@ -203,14 +206,14 @@
             this.dockPanel1_Container.Controls.Add(this.panelControlKhoa_Bacsy);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(302, 731);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(302, 714);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // chbox_hientai
             // 
             this.chbox_hientai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chbox_hientai.AutoSize = true;
-            this.chbox_hientai.Location = new System.Drawing.Point(1, 711);
+            this.chbox_hientai.Location = new System.Drawing.Point(1, 694);
             this.chbox_hientai.Name = "chbox_hientai";
             this.chbox_hientai.Size = new System.Drawing.Size(257, 17);
             this.chbox_hientai.TabIndex = 0;
@@ -227,7 +230,7 @@
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage3;
-            this.xtraTabControl2.Size = new System.Drawing.Size(297, 572);
+            this.xtraTabControl2.Size = new System.Drawing.Size(297, 555);
             this.xtraTabControl2.TabIndex = 2;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
@@ -238,7 +241,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.gridControl2);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(291, 544);
+            this.xtraTabPage3.Size = new System.Drawing.Size(291, 527);
             this.xtraTabPage3.Text = "DS Ngoại Trú Chuyển Viện";
             // 
             // gridControl2
@@ -248,7 +251,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(291, 544);
+            this.gridControl2.Size = new System.Drawing.Size(291, 527);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.UseEmbeddedNavigator = true;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -314,7 +317,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gridControl3);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(291, 544);
+            this.xtraTabPage4.Size = new System.Drawing.Size(291, 527);
             this.xtraTabPage4.Text = "DS Nội Trú Chuyển Viện";
             // 
             // gridControl3
@@ -324,7 +327,7 @@
             this.gridControl3.Location = new System.Drawing.Point(0, 0);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(291, 544);
+            this.gridControl3.Size = new System.Drawing.Size(291, 527);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.UseEmbeddedNavigator = true;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -758,9 +761,11 @@
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(310, 200);
+            this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(988, 558);
+            this.xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.xtraTabControl1.Size = new System.Drawing.Size(988, 541);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -774,7 +779,7 @@
             this.xtraTabPage1.Controls.Add(this.panelControl2);
             this.xtraTabPage1.Controls.Add(this.panelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(982, 530);
+            this.xtraTabPage1.Size = new System.Drawing.Size(982, 513);
             this.xtraTabPage1.Text = "Y Lệnh Thuốc";
             // 
             // panelControl2
@@ -784,7 +789,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl2.Location = new System.Drawing.Point(0, 1);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(980, 230);
+            this.panelControl2.Size = new System.Drawing.Size(980, 213);
             this.panelControl2.TabIndex = 2;
             // 
             // panelControl1
@@ -792,7 +797,7 @@
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.gridControl1);
-            this.panelControl1.Location = new System.Drawing.Point(-1, 228);
+            this.panelControl1.Location = new System.Drawing.Point(-1, 211);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(982, 299);
             this.panelControl1.TabIndex = 1;
@@ -818,6 +823,9 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.AutoScroll = true;
+            this.xtraTabPage2.Controls.Add(this.timeEditcv);
+            this.xtraTabPage2.Controls.Add(this.label22);
             this.xtraTabPage2.Controls.Add(this.btUpdate);
             this.xtraTabPage2.Controls.Add(this.rtxt_Nght);
             this.xtraTabPage2.Controls.Add(this.rtxtpt);
@@ -832,12 +840,47 @@
             this.xtraTabPage2.Controls.Add(this.rtxtls);
             this.xtraTabPage2.Controls.Add(this.label16);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(982, 530);
+            this.xtraTabPage2.Size = new System.Drawing.Size(982, 513);
             this.xtraTabPage2.Text = "Cận Lâm Sàng";
+            // 
+            // timeEditcv
+            // 
+            this.timeEditcv.EditValue = new System.DateTime(2017, 8, 24, 0, 0, 0, 0);
+            this.timeEditcv.Location = new System.Drawing.Point(39, 417);
+            this.timeEditcv.Name = "timeEditcv";
+            this.timeEditcv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.timeEditcv.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+            this.timeEditcv.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.timeEditcv.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+            this.timeEditcv.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.timeEditcv.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm:ss";
+            this.timeEditcv.Size = new System.Drawing.Size(179, 20);
+            this.timeEditcv.TabIndex = 12;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(37, 387);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(131, 13);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Ngày chuyển viện dự kiến";
+            // 
+            // btUpdate
+            // 
+            this.btUpdate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.Location = new System.Drawing.Point(33, 481);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(108, 42);
+            this.btUpdate.TabIndex = 10;
+            this.btUpdate.Text = "Cập Nhật OK";
+            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // rtxt_Nght
             // 
-            this.rtxt_Nght.Location = new System.Drawing.Point(33, 372);
+            this.rtxt_Nght.Location = new System.Drawing.Point(33, 343);
             this.rtxt_Nght.Name = "rtxt_Nght";
             this.rtxt_Nght.Size = new System.Drawing.Size(725, 37);
             this.rtxt_Nght.TabIndex = 9;
@@ -845,7 +888,7 @@
             // 
             // rtxtpt
             // 
-            this.rtxtpt.Location = new System.Drawing.Point(33, 313);
+            this.rtxtpt.Location = new System.Drawing.Point(33, 282);
             this.rtxtpt.Name = "rtxtpt";
             this.rtxtpt.Size = new System.Drawing.Size(725, 32);
             this.rtxtpt.TabIndex = 9;
@@ -854,7 +897,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(33, 352);
+            this.label21.Location = new System.Drawing.Point(33, 323);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(80, 13);
             this.label21.TabIndex = 8;
@@ -863,7 +906,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(33, 293);
+            this.label20.Location = new System.Drawing.Point(33, 262);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(129, 13);
             this.label20.TabIndex = 8;
@@ -871,16 +914,16 @@
             // 
             // rtxcv
             // 
-            this.rtxcv.Location = new System.Drawing.Point(33, 245);
+            this.rtxcv.Location = new System.Drawing.Point(33, 204);
             this.rtxcv.Name = "rtxcv";
-            this.rtxcv.Size = new System.Drawing.Size(721, 41);
+            this.rtxcv.Size = new System.Drawing.Size(721, 52);
             this.rtxcv.TabIndex = 7;
             this.rtxcv.Text = "";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(33, 225);
+            this.label19.Location = new System.Drawing.Point(33, 184);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(133, 13);
             this.label19.TabIndex = 6;
@@ -888,16 +931,16 @@
             // 
             // rtxtthuoc
             // 
-            this.rtxtthuoc.Location = new System.Drawing.Point(33, 171);
+            this.rtxtthuoc.Location = new System.Drawing.Point(33, 144);
             this.rtxtthuoc.Name = "rtxtthuoc";
-            this.rtxtthuoc.Size = new System.Drawing.Size(721, 51);
+            this.rtxtthuoc.Size = new System.Drawing.Size(721, 35);
             this.rtxtthuoc.TabIndex = 5;
             this.rtxtthuoc.Text = "";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(33, 151);
+            this.label18.Location = new System.Drawing.Point(33, 124);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 13);
             this.label18.TabIndex = 4;
@@ -905,16 +948,16 @@
             // 
             // rtxtcls
             // 
-            this.rtxtcls.Location = new System.Drawing.Point(33, 95);
+            this.rtxtcls.Location = new System.Drawing.Point(33, 86);
             this.rtxtcls.Name = "rtxtcls";
-            this.rtxtcls.Size = new System.Drawing.Size(723, 53);
+            this.rtxtcls.Size = new System.Drawing.Size(723, 34);
             this.rtxtcls.TabIndex = 3;
             this.rtxtcls.Text = "";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(33, 75);
+            this.label17.Location = new System.Drawing.Point(33, 66);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(71, 13);
             this.label17.TabIndex = 2;
@@ -924,7 +967,7 @@
             // 
             this.rtxtls.Location = new System.Drawing.Point(33, 31);
             this.rtxtls.Name = "rtxtls";
-            this.rtxtls.Size = new System.Drawing.Size(725, 41);
+            this.rtxtls.Size = new System.Drawing.Size(725, 31);
             this.rtxtls.TabIndex = 1;
             this.rtxtls.Text = "";
             // 
@@ -939,42 +982,34 @@
             // 
             // xtraTabPage5
             // 
+            this.xtraTabPage5.AutoScroll = true;
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(982, 530);
+            this.xtraTabPage5.Size = new System.Drawing.Size(982, 513);
             this.xtraTabPage5.Text = "Phẫu thuật - Thủ Thuật";
             // 
             // xtraTabPage6
             // 
+            this.xtraTabPage6.AutoScroll = true;
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(982, 530);
+            this.xtraTabPage6.Size = new System.Drawing.Size(982, 513);
             this.xtraTabPage6.Text = "Kết quả Cận Lâm Sàng";
             // 
             // xtraTabPage7
             // 
+            this.xtraTabPage7.AutoScroll = true;
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(982, 530);
+            this.xtraTabPage7.Size = new System.Drawing.Size(982, 513);
             this.xtraTabPage7.Text = "Kết luận Khám";
             // 
-            // btUpdate
-            // 
-            this.btUpdate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUpdate.Location = new System.Drawing.Point(33, 415);
-            this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(108, 42);
-            this.btUpdate.TabIndex = 10;
-            this.btUpdate.Text = "Cập Nhật OK";
-            this.btUpdate.UseVisualStyleBackColor = true;
-            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
-            // 
-            // FrmNgoaiTru
+            // FrmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 758);
+            this.ClientSize = new System.Drawing.Size(1298, 741);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanelKhamBenh);
-            this.Name = "FrmNgoaiTru";
+            this.Name = "FrmSearch";
             this.Text = "FrmSearch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmSearch_Load);
@@ -1008,6 +1043,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEditcv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1093,6 +1129,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnCV;
         private System.Windows.Forms.Button btUpdate;
+        private DevExpress.XtraEditors.TimeEdit timeEditcv;
+        private System.Windows.Forms.Label label22;
 
     }
 }

@@ -23,6 +23,12 @@ namespace From_Report
         DataSet ds = new DataSet();       
         public static string StrConnect = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
+        //public string search = barEdItem_Search.EditValue.ToString();
+        public string search
+        {
+            set;
+            get;
+        }
        
 
         #endregion
@@ -30,8 +36,7 @@ namespace From_Report
         {
             InitializeComponent();
             barEditItem_dfrom.EditValue = DateTime.Today; //= DateTime.Today;DateTime.Now
-            barEditItem_dto.EditValue = DateTime.Today.AddDays(+1).Date;
-            
+            barEditItem_dto.EditValue = DateTime.Today.AddDays(+1).Date;     
            
         }
 
@@ -64,18 +69,16 @@ namespace From_Report
             foreach (var x in MdiChildren) if (x is FrmService) return;
             var frm = new FrmService() { MdiParent = this };
             frm.Show();
-           
+            frm.Activate();
           
         }
 
         private void barbtnSetting_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //From_CauHinh.FromCauHinh fsetting = new From_CauHinh.FromCauHinh();
-            //fsetting.Show();
+        {           
             foreach (var x in MdiChildren) if (x is From_CauHinh.FromCauHinh) return;
             var frm = new From_CauHinh.FromCauHinh() { MdiParent = this };
             frm.Show();
-
+            frm.Activate();
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -84,6 +87,7 @@ namespace From_Report
             foreach (var x in MdiChildren) if (x is From_Dstore.From_Duoc_AnhXa) return;
             var frm = new From_Dstore.From_Duoc_AnhXa() { MdiParent = this };
             frm.Show();
+            frm.Activate();
 
         }
 
@@ -92,17 +96,26 @@ namespace From_Report
             foreach (var x in MdiChildren) if (x is From_CauHinh.FrmMH) return;
             var frm = new From_CauHinh.FrmMH() { MdiParent = this };
             frm.Show();
+            frm.Activate();
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            foreach (var x in MdiChildren) if (x is FrmNgoaiTru) return;
-            var frm = new FrmNgoaiTru() { MdiParent = this };
+            foreach (var x in MdiChildren) if (x is FrmSearch) return;
+            var frm = new FrmSearch() { MdiParent = this };
             frm.Show();
+            frm.Activate();
         }
 
         private void repositoryItemTextEdit2_KeyDown(object sender, KeyEventArgs e)
         {
+
+        }
+
+        private void barEdItem_Search_EditValueChanged(object sender, EventArgs e)
+        {
+            FrmSearch.cal_search = this.barEdItem_Search.EditValue.ToString();
+            //MessageBox.Show(FrmSearch.cal_search);
 
         }
 

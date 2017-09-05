@@ -15,7 +15,7 @@ using DevExpress.XtraGrid.Views.BandedGrid;
 
 namespace From_Report
 {
-    public partial class FrmNgoaiTru : Form 
+    public partial class FrmSearch : Form 
     {
         #region Variable
         DataTable dt = new DataTable();
@@ -23,9 +23,27 @@ namespace From_Report
         public static string StrConnect = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _DanhMuc = new DAL.Mau21BQPKhacDAL(StrConnect);
         string m_medicalrecordid;
+
+        public static string cal_from
+        {
+            get;
+            set;
+        }
+
+        public static string cal_to
+        {
+            get;
+            set;
+        }
+        public static string cal_search
+        {
+            get;
+            set;
+        }
+
         #endregion
 
-        public FrmNgoaiTru()
+        public FrmSearch()
         {
             InitializeComponent();
         }
@@ -52,22 +70,23 @@ namespace From_Report
 
                     throw;
                 }
-            }
-          
 
+            }
+  
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtBA.Text.Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập số bệnh án");
+               // MessageBox.Show("Vui lòng nhập số bệnh án");
             }
             else
             {
                 try
                 {
-                    string tmp_bv = txtBA.Text.ToString().Trim();
+                    //string tmp_bv = txtBA.Text.ToString().Trim();
+                    string tmp_bv =  FrmSearch.cal_search.ToString().Trim();
                     dt = _DanhMuc.Select_ThongTinBA_chitiet(tmp_bv.Trim());
                     if (dt.Rows.Count > 0)
                     {
@@ -183,8 +202,40 @@ namespace From_Report
 
         private void FrmNgoaiTru_KeyDown(object sender, KeyEventArgs e)
         {
-           
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    string tmp_bv = FrmSearch.cal_search.ToString().Trim();
+                    dt = _DanhMuc.Select_ThongTinBA_chitiet(tmp_bv.Trim());
+                    if (dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            txtName.Text = dt.Rows[i]["full_name"].ToString();
+                            txtBHYT.Text = dt.Rows[i]["code"].ToString();
+                            txtMedia.Text = dt.Rows[i]["id"].ToString();
+                            txtBN.Text = dt.Rows[i]["patient_id"].ToString();
+                            txtDoituong.Text = dt.Rows[i]["medical_object"].ToString();
+                            txtvaovien.Text = dt.Rows[i]["reception_time"].ToString();
+                            txtnamsinh.Text = dt.Rows[i]["birthday"].ToString();
+                            txtfrom.Text = dt.Rows[i]["date_from"].ToString();
+                            txtto.Text = dt.Rows[i]["date_to"].ToString();
+                            txtsex.Text = dt.Rows[i]["sex_name"].ToString();
+                            txtKhoa.Text = dt.Rows[i]["division_name"].ToString();
+                            txtRavien.Text = dt.Rows[i]["close_time"].ToString();
+                            txtStatus.Text = dt.Rows[i]["status"].ToString();
+                        }
+                    }
 
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
         }
 
         private void chbox_hientai_CheckedChanged(object sender, EventArgs e)
@@ -242,11 +293,8 @@ namespace From_Report
             if (view == null) return;
             if (e.RowHandle % 2 == 0)
             {
-
-                // e.Appearance.BackColor = Color.WhiteSmoke;
                 e.Appearance.ForeColor = Color.MediumBlue;
-                //e.HighPriority = true;
-
+               
 
             }
             else
@@ -314,21 +362,12 @@ namespace From_Report
             f21.ShowPreview();
       
         }
-        private void repositoryItemTextEdit2_KeyDown(object sender, KeyEventArgs e)
-        {
-           
-               
-            
-
-        }
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
 
         }
-        
-
-
+       
     }
 }
 
