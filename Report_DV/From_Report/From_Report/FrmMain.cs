@@ -114,9 +114,7 @@ namespace From_Report
 
         private void barEdItem_Search_EditValueChanged(object sender, EventArgs e)
         {
-            FrmSearch.cal_search = this.barEdItem_Search.EditValue.ToString();
-            //MessageBox.Show(FrmSearch.cal_search);
-
+            FrmSearch.cal_search = this.barEdItem_Search.EditValue.ToString(); 
         }
 
         
