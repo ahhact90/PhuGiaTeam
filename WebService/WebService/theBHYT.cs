@@ -105,5 +105,8 @@ namespace WebService
                 this.eval_g = value;
             }
         }
+        public theBHYT()
+        {
+        }
     }
 }

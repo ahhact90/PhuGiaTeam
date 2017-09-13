@@ -51,11 +51,11 @@
             this.txtNamsinh = new System.Windows.Forms.TextBox();
             this.txtCskcb = new System.Windows.Forms.TextBox();
             this.txtTuNgay = new System.Windows.Forms.TextBox();
-            this.txtDenngay = new System.Windows.Forms.TextBox();
             this.txtHoten = new System.Windows.Forms.TextBox();
             this.comboSex = new System.Windows.Forms.ComboBox();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtsex = new System.Windows.Forms.TextBox();
+            this.txtDenngay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -272,14 +272,6 @@
             this.txtTuNgay.Size = new System.Drawing.Size(190, 23);
             this.txtTuNgay.TabIndex = 3;
             // 
-            // txtDenngay
-            // 
-            this.txtDenngay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDenngay.Location = new System.Drawing.Point(143, 347);
-            this.txtDenngay.Name = "txtDenngay";
-            this.txtDenngay.Size = new System.Drawing.Size(190, 23);
-            this.txtDenngay.TabIndex = 3;
-            // 
             // txtHoten
             // 
             this.txtHoten.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,11 +311,19 @@
             this.txtsex.Size = new System.Drawing.Size(94, 23);
             this.txtsex.TabIndex = 3;
             // 
+            // txtDenngay
+            // 
+            this.txtDenngay.Location = new System.Drawing.Point(142, 350);
+            this.txtDenngay.Name = "txtDenngay";
+            this.txtDenngay.Size = new System.Drawing.Size(191, 20);
+            this.txtDenngay.TabIndex = 14;
+            // 
             // WebService_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 542);
+            this.Controls.Add(this.txtDenngay);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.comboSex);
             this.Controls.Add(this.label5);
@@ -336,7 +336,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtHoten);
             this.Controls.Add(this.txtMathe);
-            this.Controls.Add(this.txtDenngay);
             this.Controls.Add(this.txtTuNgay);
             this.Controls.Add(this.txtCskcb);
             this.Controls.Add(this.txtsex);
@@ -355,6 +354,7 @@
             this.Name = "WebService_Update";
             this.Text = "WebService_Update";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.WebService_Update_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,10 +385,10 @@
         private System.Windows.Forms.TextBox txtNamsinh;
         private System.Windows.Forms.TextBox txtCskcb;
         private System.Windows.Forms.TextBox txtTuNgay;
-        private System.Windows.Forms.TextBox txtDenngay;
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.ComboBox comboSex;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.TextBox txtsex;
+        private System.Windows.Forms.TextBox txtDenngay;
     }
 }

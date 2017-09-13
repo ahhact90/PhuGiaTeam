@@ -19,6 +19,7 @@ using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 
 
+
 namespace WebService
 {
     public partial class WebService_Update : Form
@@ -26,7 +27,6 @@ namespace WebService
         public WebService_Update()
         {
             InitializeComponent();
-
 
         }
         private void upwebservice()
@@ -239,6 +239,7 @@ namespace WebService
 									':'
 								});
                             string text4 = array4[1].Replace("\"", "");
+                            //MessageBox.Show(value);
                             theBHYT value = new theBHYT
                             {
                                 maThe = mathe,
@@ -246,9 +247,10 @@ namespace WebService
                                 ngaySinh = Conversions.ToString(Interaction.IIf(Operators.CompareString(ngaysinh.Substring(4, 4), "0101", false) == 0, System.DateTime.ParseExact(ngaysinh, "yyyyMMdd", null).ToString("yyyy"), System.DateTime.ParseExact(ngaysinh, "yyyyMMdd", null).ToString("dd/MM/yyyy"))),
                                 gioiTinh = gioitinh,
                                 maCSKCB = macskcb,
-                                ngayBD = System.DateTime.ParseExact(tungay, "ddMMyyyy", null).ToString("dd/MM/yyyy"),
-                                ngayKT = System.DateTime.ParseExact(denngay, "ddMMyyyy", null).ToString("dd/MM/yyyy")
+                                ngayBD = System.DateTime.ParseExact(tungay, "yyyyMMdd", null).ToString("dd/MM/yyyy"),
+                                ngayKT = System.DateTime.ParseExact(denngay, "yyyyMMdd", null).ToString("dd/MM/yyyy")
                             };
+                           
                             string str = string.Format("token={0}&id_token={1}&username={2}&password={3}", new object[]
 								{
 									text3,
@@ -275,6 +277,15 @@ namespace WebService
                 IL_352:
                 break;
             }
+        }
+
+        private void WebService_Update_Load(object sender, EventArgs e)
+        {
+            txtTinh.Text = @"92";
+            txtCSKB.Text = @"92002";
+            txtUser.Text = @"92002_BV";
+            txtPass.Text = @"benhvien@121";
+            txtCskcb.Text = @"92002";
         }
     }
 }
