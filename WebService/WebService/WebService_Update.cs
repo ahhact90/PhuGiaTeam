@@ -244,11 +244,11 @@ namespace WebService
                             {
                                 maThe = mathe,
                                 hoTen = hoten,
-                                ngaySinh = Conversions.ToString(Interaction.IIf(Operators.CompareString(ngaysinh.Substring(4, 4), "0101", false) == 0, System.DateTime.ParseExact(ngaysinh, "yyyyMMdd", null).ToString("yyyy"), System.DateTime.ParseExact(ngaysinh, "yyyyMMdd", null).ToString("dd/MM/yyyy"))),
+                                ngaySinh = "15/02/1978",
                                 gioiTinh = gioitinh,
                                 maCSKCB = macskcb,
-                                ngayBD = System.DateTime.ParseExact(tungay, "yyyyMMdd", null).ToString("dd/MM/yyyy"),
-                                ngayKT = System.DateTime.ParseExact(denngay, "yyyyMMdd", null).ToString("dd/MM/yyyy")
+                                ngayBD = "01/01/2017",
+                                ngayKT = "31/12/2017"
                             };
                            
                             string str = string.Format("token={0}&id_token={1}&username={2}&password={3}", new object[]
@@ -258,7 +258,7 @@ namespace WebService
 									username,
 									password
 								});
-                            HttpResponseMessage result3 = httpClient.PostAsJsonAsync(System.Convert.ToString("api/egw/nhanLichSuKCB?") + str, value).Result;
+                            HttpResponseMessage result3 = httpClient.PostAsJsonAsync(System.Convert.ToString("api/egw/KQNhanLichSuKCB595?") + str, value).Result;
                             string result4 = result3.Content.ReadAsStringAsync().Result;
                             //result5 = NClient.eval_b(result4);
                             MessageBox.Show(result4);
