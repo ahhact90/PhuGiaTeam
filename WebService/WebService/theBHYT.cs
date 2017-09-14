@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebService
 {
-    class theBHYT
+    public class theBHYT
     {
         private string eval_a;
 
