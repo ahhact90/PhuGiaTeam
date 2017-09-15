@@ -175,11 +175,21 @@ namespace WebService
         private void btnCheck_Click(object sender, EventArgs e)
         {
             string mathe = txtMathe.Text.Trim(); 
-            string hoten = txtHoten.Text.Trim(); 
-            string ngaysinh = txtNamsinh.Text.Trim();
+            string hoten = txtHoten.Text.Trim();
+            string ngaysinh = txtNamsinh.Text.Trim(); 
+            if (ngaysinh.Length <= 4)
+	            {
+                     ngaysinh = System.DateTime.ParseExact(ngaysinh, "yyyy", null).ToString("yyyy");
+	            }   
+                                 else
+	            {
+                     ngaysinh = System.DateTime.ParseExact(ngaysinh, "dd/MM/yyyy", null).ToString("dd/MM/yyyy");
+	            }
+                      
+            MessageBox.Show(ngaysinh);
             int gioitinh = int.Parse(txtsex.Text.Trim());
-            string tungay = txtTuNgay.Text.Trim();
-            string denngay = txtDenngay.Text.Trim();
+            //string tungay = System.DateTime.ParseExact(txtTuNgay.Text.Trim(), "dd/MM/yyyy", null).ToString("dd/MM/yyyy");
+            //string denngay = System.DateTime.ParseExact(txtDenngay.Text.Trim(), "dd/MM/yyyy", null).ToString("dd/MM/yyyy");
             string macskcb = txtCskcb.Text.Trim();
             string result5;
             string username = txtUser.Text.Trim();
@@ -238,17 +248,16 @@ namespace WebService
 								{
 									':'
 								});
-                            string text4 = array4[1].Replace("\"", "");
-                            //MessageBox.Show(value);
+                            string text4 = array4[1].Replace("\"", "");                            
                             theBHYT value = new theBHYT
                             {
                                 maThe = mathe,
                                 hoTen = hoten,
-                                ngaySinh = "15/02/1978",
+                                ngaySinh = ngaysinh,
                                 gioiTinh = gioitinh,
                                 maCSKCB = macskcb,
-                                ngayBD = "01/01/2017",
-                                ngayKT = "31/12/2017"
+                               // ngayBD = tungay,
+                               // ngayKT = denngay
                             };
                            
                             string str = string.Format("token={0}&id_token={1}&username={2}&password={3}", new object[]

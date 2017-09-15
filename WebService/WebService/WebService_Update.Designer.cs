@@ -313,17 +313,17 @@
             // 
             // txtDenngay
             // 
-            this.txtDenngay.Location = new System.Drawing.Point(142, 350);
+            this.txtDenngay.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDenngay.Location = new System.Drawing.Point(143, 344);
             this.txtDenngay.Name = "txtDenngay";
-            this.txtDenngay.Size = new System.Drawing.Size(191, 20);
-            this.txtDenngay.TabIndex = 14;
+            this.txtDenngay.Size = new System.Drawing.Size(190, 23);
+            this.txtDenngay.TabIndex = 3;
             // 
             // WebService_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 542);
-            this.Controls.Add(this.txtDenngay);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.comboSex);
             this.Controls.Add(this.label5);
@@ -336,6 +336,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtHoten);
             this.Controls.Add(this.txtMathe);
+            this.Controls.Add(this.txtDenngay);
             this.Controls.Add(this.txtTuNgay);
             this.Controls.Add(this.txtCskcb);
             this.Controls.Add(this.txtsex);
