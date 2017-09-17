@@ -17,8 +17,8 @@ using System.Net;
 using System.Net.Http.Headers;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
-
-
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace WebService
 {
@@ -269,15 +269,33 @@ namespace WebService
                             HttpResponseMessage result3 = httpClient.PostAsJsonAsync(System.Convert.ToString("api/egw/KQNhanLichSuKCB595?") + str, value).Result;
                             string result4 = result3.Content.ReadAsStringAsync().Result;
                             //result5 = NClient.eval_b(result4);
-                            WriteLog(result4);                           
-                            string result6 = result4.Replace("{", "");
-                            string result7 = result6.Replace("}", "");
-                            string[] array10 = result7.Split(new char[]
-						            {
-							            ','
-						            });
-                           
-                            MessageBox.Show(result7);
+                            JObject resj = JObject.Parse(result4);
+                            //WriteLog(resj);                          
+                            IList<JToken> results = resj.Children().ToList();
+
+                            // serialize JSON results into .NET objects
+                            IList<WebService_Update> searchResults = new List<WebService_Update>();
+                            foreach (JToken result4 in results)
+                            {
+                                SearchResult searchResult = JsonConvert.DeserializeObject<SearchResult>(result.ToString());
+                                searchResults.Add(searchResult);
+                            }
+
+                            // List the properties of the searchResults IList
+                            foreach (SearchResult item in searchResults)
+                            {
+                                Console.WriteLine(item.Title);
+                                Console.WriteLine(item.Content);
+                                Console.WriteLine(item.Url);
+                            }
+                           // gridControl1.DataSource = UTL.DataBase.ArrayToDataTable(array10,true);
+                           // string json = JsonConvert.SerializeObject(result4, Formatting.Indented);
+                           /* foreach (var pair in result4)
+                            {
+                                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+                            }
+                            * */
+                            
                             num = 3;
                             continue;
                         }
@@ -330,10 +348,7 @@ namespace WebService
             txtCskcb.Text = @"92002";
         }
 
-        private void btQR_Click(object sender, EventArgs e)
-        {
-            rtxtQr2.Text = UTL.DataBase.ConvertHexStrToUnicode(rtxtQR.Text.ToString);
-        }
+        
     }
 }
 

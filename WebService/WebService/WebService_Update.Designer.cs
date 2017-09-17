@@ -56,9 +56,10 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtsex = new System.Windows.Forms.TextBox();
             this.txtDenngay = new System.Windows.Forms.TextBox();
-            this.rtxtQR = new System.Windows.Forms.RichTextBox();
-            this.rtxtQr2 = new System.Windows.Forms.RichTextBox();
-            this.btQR = new System.Windows.Forms.Button();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -322,40 +323,27 @@
             this.txtDenngay.Size = new System.Drawing.Size(190, 23);
             this.txtDenngay.TabIndex = 3;
             // 
-            // rtxtQR
+            // gridControl1
             // 
-            this.rtxtQR.Location = new System.Drawing.Point(476, 229);
-            this.rtxtQR.Name = "rtxtQR";
-            this.rtxtQR.Size = new System.Drawing.Size(483, 117);
-            this.rtxtQR.TabIndex = 14;
-            this.rtxtQR.Text = "";
+            this.gridControl1.Location = new System.Drawing.Point(14, 443);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1003, 145);
+            this.gridControl1.TabIndex = 14;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // rtxtQr2
+            // gridView1
             // 
-            this.rtxtQr2.Location = new System.Drawing.Point(476, 380);
-            this.rtxtQr2.Name = "rtxtQr2";
-            this.rtxtQr2.Size = new System.Drawing.Size(483, 118);
-            this.rtxtQr2.TabIndex = 15;
-            this.rtxtQr2.Text = "";
-            // 
-            // btQR
-            // 
-            this.btQR.Location = new System.Drawing.Point(168, 450);
-            this.btQR.Name = "btQR";
-            this.btQR.Size = new System.Drawing.Size(96, 34);
-            this.btQR.TabIndex = 16;
-            this.btQR.Text = "QR";
-            this.btQR.UseVisualStyleBackColor = true;
-            this.btQR.Click += new System.EventHandler(this.btQR_Click);
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
             // WebService_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 542);
-            this.Controls.Add(this.btQR);
-            this.Controls.Add(this.rtxtQr2);
-            this.Controls.Add(this.rtxtQR);
+            this.ClientSize = new System.Drawing.Size(1029, 610);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.comboSex);
             this.Controls.Add(this.label5);
@@ -388,6 +376,8 @@
             this.Text = "WebService_Update";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.WebService_Update_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,8 +413,7 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.TextBox txtsex;
         private System.Windows.Forms.TextBox txtDenngay;
-        private System.Windows.Forms.RichTextBox rtxtQR;
-        private System.Windows.Forms.RichTextBox rtxtQr2;
-        private System.Windows.Forms.Button btQR;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
