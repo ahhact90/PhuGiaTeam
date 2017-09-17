@@ -157,7 +157,7 @@ namespace UTL
             return dt;
         }
 
-        private static string ConvertHexStrToUnicode(string hexString)
+        public static string ConvertHexStrToUnicode(string hexString)
         {
             int length = hexString.Length;
             byte[] array = new byte[length / 2];

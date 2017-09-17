@@ -329,6 +329,11 @@ namespace WebService
             txtPass.Text = @"benhvien@121";
             txtCskcb.Text = @"92002";
         }
+
+        private void btQR_Click(object sender, EventArgs e)
+        {
+            rtxtQr2.Text = UTL.DataBase.ConvertHexStrToUnicode(rtxtQR.Text.ToString);
+        }
     }
 }
 

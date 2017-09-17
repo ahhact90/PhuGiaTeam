@@ -346,6 +346,7 @@
             this.btQR.TabIndex = 16;
             this.btQR.Text = "QR";
             this.btQR.UseVisualStyleBackColor = true;
+            this.btQR.Click += new System.EventHandler(this.btQR_Click);
             // 
             // WebService_Update
             // 
