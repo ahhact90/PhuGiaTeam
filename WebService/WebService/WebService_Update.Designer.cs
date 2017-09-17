@@ -56,6 +56,9 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtsex = new System.Windows.Forms.TextBox();
             this.txtDenngay = new System.Windows.Forms.TextBox();
+            this.rtxtQR = new System.Windows.Forms.RichTextBox();
+            this.rtxtQr2 = new System.Windows.Forms.RichTextBox();
+            this.btQR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -156,7 +159,7 @@
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(629, 22);
+            this.txtPath.Location = new System.Drawing.Point(610, 29);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(296, 20);
             this.txtPath.TabIndex = 10;
@@ -319,11 +322,39 @@
             this.txtDenngay.Size = new System.Drawing.Size(190, 23);
             this.txtDenngay.TabIndex = 3;
             // 
+            // rtxtQR
+            // 
+            this.rtxtQR.Location = new System.Drawing.Point(476, 229);
+            this.rtxtQR.Name = "rtxtQR";
+            this.rtxtQR.Size = new System.Drawing.Size(483, 117);
+            this.rtxtQR.TabIndex = 14;
+            this.rtxtQR.Text = "";
+            // 
+            // rtxtQr2
+            // 
+            this.rtxtQr2.Location = new System.Drawing.Point(476, 380);
+            this.rtxtQr2.Name = "rtxtQr2";
+            this.rtxtQr2.Size = new System.Drawing.Size(483, 118);
+            this.rtxtQr2.TabIndex = 15;
+            this.rtxtQr2.Text = "";
+            // 
+            // btQR
+            // 
+            this.btQR.Location = new System.Drawing.Point(168, 450);
+            this.btQR.Name = "btQR";
+            this.btQR.Size = new System.Drawing.Size(96, 34);
+            this.btQR.TabIndex = 16;
+            this.btQR.Text = "QR";
+            this.btQR.UseVisualStyleBackColor = true;
+            // 
             // WebService_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 542);
+            this.Controls.Add(this.btQR);
+            this.Controls.Add(this.rtxtQr2);
+            this.Controls.Add(this.rtxtQR);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.comboSex);
             this.Controls.Add(this.label5);
@@ -391,5 +422,8 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.TextBox txtsex;
         private System.Windows.Forms.TextBox txtDenngay;
+        private System.Windows.Forms.RichTextBox rtxtQR;
+        private System.Windows.Forms.RichTextBox rtxtQr2;
+        private System.Windows.Forms.Button btQR;
     }
 }

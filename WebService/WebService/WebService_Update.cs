@@ -184,9 +184,8 @@ namespace WebService
                                  else
 	            {
                      ngaysinh = System.DateTime.ParseExact(ngaysinh, "dd/MM/yyyy", null).ToString("dd/MM/yyyy");
-	            }
-                      
-            MessageBox.Show(ngaysinh);
+	            }                      
+            //MessageBox.Show(ngaysinh);
             int gioitinh = int.Parse(txtsex.Text.Trim());
             //string tungay = System.DateTime.ParseExact(txtTuNgay.Text.Trim(), "dd/MM/yyyy", null).ToString("dd/MM/yyyy");
             //string denngay = System.DateTime.ParseExact(txtDenngay.Text.Trim(), "dd/MM/yyyy", null).ToString("dd/MM/yyyy");
@@ -247,6 +246,7 @@ namespace WebService
                             string[] array4 = array[2].Split(new char[]
 								{
 									':'
+
 								});
                             string text4 = array4[1].Replace("\"", "");                            
                             theBHYT value = new theBHYT
@@ -256,8 +256,7 @@ namespace WebService
                                 ngaySinh = ngaysinh,
                                 gioiTinh = gioitinh,
                                 maCSKCB = macskcb,
-                               // ngayBD = tungay,
-                               // ngayKT = denngay
+                              
                             };
                            
                             string str = string.Format("token={0}&id_token={1}&username={2}&password={3}", new object[]
@@ -270,7 +269,15 @@ namespace WebService
                             HttpResponseMessage result3 = httpClient.PostAsJsonAsync(System.Convert.ToString("api/egw/KQNhanLichSuKCB595?") + str, value).Result;
                             string result4 = result3.Content.ReadAsStringAsync().Result;
                             //result5 = NClient.eval_b(result4);
-                            MessageBox.Show(result4);
+                            WriteLog(result4);                           
+                            string result6 = result4.Replace("{", "");
+                            string result7 = result6.Replace("}", "");
+                            string[] array10 = result7.Split(new char[]
+						            {
+							            ','
+						            });
+                           
+                            MessageBox.Show(result7);
                             num = 3;
                             continue;
                         }
@@ -278,6 +285,7 @@ namespace WebService
                         goto IL_32D;
                     case 4:
                         result5 = "<THE_BHYT>Lỗi xác thực cổng trực tuyến</THE_BHYT>";
+                        MessageBox.Show(result5);
                         num = 0;
                         continue;
                 }
@@ -287,7 +295,32 @@ namespace WebService
                 break;
             }
         }
-
+        public void WriteLog(string Contents)
+        {
+            try
+            {
+                string path = "E:\\Log\\log.txt";
+                if (File.Exists(path))
+                {
+                    File.AppendAllText(path, string.Concat(new string[]
+					{						
+						Contents,
+						Environment.NewLine
+					}));
+                }
+                else
+                {
+                    File.WriteAllText(path, string.Concat(new string[]
+					{
+						Contents,
+						Environment.NewLine
+					}));
+                }
+            }
+            catch
+            {
+            }
+        }
         private void WebService_Update_Load(object sender, EventArgs e)
         {
             txtTinh.Text = @"92";
