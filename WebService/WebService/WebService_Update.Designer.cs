@@ -58,6 +58,7 @@
             this.txtDenngay = new System.Windows.Forms.TextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.thongbao = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -338,11 +339,20 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
+            // thongbao
+            // 
+            this.thongbao.Location = new System.Drawing.Point(504, 256);
+            this.thongbao.Name = "thongbao";
+            this.thongbao.Size = new System.Drawing.Size(578, 110);
+            this.thongbao.TabIndex = 15;
+            this.thongbao.Text = "";
+            // 
             // WebService_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 610);
+            this.ClientSize = new System.Drawing.Size(1202, 744);
+            this.Controls.Add(this.thongbao);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.comboSex);
@@ -415,5 +425,6 @@
         private System.Windows.Forms.TextBox txtDenngay;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.RichTextBox thongbao;
     }
 }
