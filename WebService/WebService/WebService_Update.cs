@@ -470,6 +470,10 @@ namespace WebService
             }
             return return_Datatable;
         }
+
+       
+
+
         /// <summary>
         /// Thay đổi định dạng ngày tháng năm
         /// </summary>
@@ -519,6 +523,34 @@ namespace WebService
                 result = "";
             }
             return result;
+        }
+
+        private void txtQR_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                try
+                {
+                    string bhyt = this.txtQR.Text;
+                    string[] infoinsurance = bhyt.Split(new char[]
+					{
+						'|'
+					});
+                    this.txtHoten.Text = UTL.DataBase.GetStringUTF8FromHex(infoinsurance[1]);
+                    this.txtNamsinh.Text = infoinsurance[2];
+                    this.comboSex.SelectedIndex = int.Parse(infoinsurance[3]) - 1;
+                    this.txtMathe.Text = infoinsurance[0].Replace('-', ' ').Replace(" ", string.Empty);
+                    this.txtTuNgay.Text = infoinsurance[6];
+                    this.txtDenngay.Text = infoinsurance[7];
+                    this.txtCskcb.Text = infoinsurance[5].Replace('-', ' ').Replace(" ", string.Empty);
+                    //this.checkBHYT(this.txtmathe.Text, this.txthoten.Text, this.txtngaysinh.Text, this.txtgiotinh.SelectedIndex + 1, this.txttungay.Text, this.txtdenngay.Text, this.txtcskcb.Text);
+                    //this.textBox1.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
         }
 
     }

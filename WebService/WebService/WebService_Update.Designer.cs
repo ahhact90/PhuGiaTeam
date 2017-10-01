@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTinh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,11 +55,12 @@
             this.txtHoten = new System.Windows.Forms.TextBox();
             this.comboSex = new System.Windows.Forms.ComboBox();
             this.btnCheck = new System.Windows.Forms.Button();
-            this.txtsex = new System.Windows.Forms.TextBox();
+            this.txtQR = new System.Windows.Forms.TextBox();
             this.txtDenngay = new System.Windows.Forms.TextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.thongbao = new System.Windows.Forms.RichTextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -308,13 +310,14 @@
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // txtsex
+            // txtQR
             // 
-            this.txtsex.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsex.Location = new System.Drawing.Point(294, 254);
-            this.txtsex.Name = "txtsex";
-            this.txtsex.Size = new System.Drawing.Size(94, 23);
-            this.txtsex.TabIndex = 3;
+            this.txtQR.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQR.Location = new System.Drawing.Point(564, 111);
+            this.txtQR.Name = "txtQR";
+            this.txtQR.Size = new System.Drawing.Size(462, 23);
+            this.txtQR.TabIndex = 3;
+            this.txtQR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQR_KeyDown);
             // 
             // txtDenngay
             // 
@@ -329,7 +332,7 @@
             this.gridControl1.Location = new System.Drawing.Point(14, 443);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1003, 145);
+            this.gridControl1.Size = new System.Drawing.Size(1012, 145);
             this.gridControl1.TabIndex = 14;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -341,9 +344,9 @@
             // 
             // thongbao
             // 
-            this.thongbao.Location = new System.Drawing.Point(504, 256);
+            this.thongbao.Location = new System.Drawing.Point(372, 256);
             this.thongbao.Name = "thongbao";
-            this.thongbao.Size = new System.Drawing.Size(578, 110);
+            this.thongbao.Size = new System.Drawing.Size(654, 110);
             this.thongbao.TabIndex = 15;
             this.thongbao.Text = "";
             // 
@@ -369,7 +372,7 @@
             this.Controls.Add(this.txtDenngay);
             this.Controls.Add(this.txtTuNgay);
             this.Controls.Add(this.txtCskcb);
-            this.Controls.Add(this.txtsex);
+            this.Controls.Add(this.txtQR);
             this.Controls.Add(this.txtNamsinh);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label12);
@@ -421,10 +424,11 @@
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.ComboBox comboSex;
         private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.TextBox txtsex;
+        private System.Windows.Forms.TextBox txtQR;
         private System.Windows.Forms.TextBox txtDenngay;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.RichTextBox thongbao;
+        private System.Windows.Forms.Timer timer1;
     }
 }

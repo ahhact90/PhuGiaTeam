@@ -182,5 +182,28 @@ namespace UTL
             });
             return table;
         }
+        /// <summary>
+        /// Đọc mã QR
+        /// </summary>
+        /// <param name="Text"></param>
+        /// <returns></returns>
+        public static string GetStringUTF8FromHex(string Text)
+        {
+            string result;
+            if (Text == null || Text.Length == 0)
+            {
+                result = string.Empty;
+            }
+            else
+            {
+                List<byte> Bytes = new List<byte>();
+                for (int Index = 0; Index <= Text.Length - 1; Index += 2)
+                {
+                    Bytes.Add(Convert.ToByte(Text.Substring(Index, 2), 16));
+                }
+                result = Encoding.UTF8.GetString(Bytes.ToArray());
+            }
+            return result;
+        }
     }
 }

@@ -95,8 +95,8 @@ namespace WebService
                 dataSet2.Tables.Add(_Export.Select_Bang2(i));
                 dataSet3.Tables.Add(_Export.Select_Bang3(i));
                 dataSet4.Tables.Add(_Export.Select_his_chitiet_bhyt(i));
-                                                 
-                
+
+
 
                 if (dataTable.Rows.Count == 0)
                 {
@@ -107,7 +107,7 @@ namespace WebService
                     this.sobh = dataSet.Tables[0].Rows[0]["ma_the"].ToString();
                     this.sobn = dataSet.Tables[0].Rows[0]["ma_bn"].ToString();
                     this.doituong_bn = dataSet4.Tables[0].Rows[0]["doituong_bn"].ToString();
-                    this.ten_bn = dataSet4.Tables[0].Rows[0]["tenbn"].ToString(); 
+                    this.ten_bn = dataSet4.Tables[0].Rows[0]["tenbn"].ToString();
                     XmlDocument xmlDocument = new XmlDocument();
                     StringBuilder stringBuilder = new StringBuilder();
                     using (XmlWriter xmlWriter = XmlWriter.Create(stringBuilder, new XmlWriterSettings
@@ -353,18 +353,18 @@ namespace WebService
         #endregion
 
         private void btnExport_Click(object sender, EventArgs e)
-        {    
-            
-        }     
+        {
 
-        
-        
+        }
+
+
+
         /// <summary>
         /// Lấy đường để xuất file Export XML
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-       
+
         private void btnExprot_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -392,7 +392,7 @@ namespace WebService
         private void WebService_BQP_Load(object sender, EventArgs e)
         {
             string STR_DBNAME = @"E:\TecaBQP\QD917";
-            txtPathEx.Text = STR_DBNAME;            
+            txtPathEx.Text = STR_DBNAME;
             string STR_DBNAME_BACKUP = @"E:\TecaBQP\QD917\Backup";
             txtBackup_BQP.Text = STR_DBNAME_BACKUP;
         }
@@ -437,7 +437,7 @@ namespace WebService
                         else if (rdoNgTNT.Checked == true)
                         {
                             string doituongbn = "1,3,4";
-                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);                            
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
 
                         }
                         //// Nội Trú
@@ -469,14 +469,14 @@ namespace WebService
                                 _Export.FinishMed(MedID);
                                 string Medical = MedID.ToString();
                                 //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + MedID);
-                                writelog(Medical);                               
+                                writelog(Medical);
                                 goto sleep;
 
                             }
                             else
                             {
                                 _Export.his_fee_sync_tonghop_bqp(MedID);
-                                Export3file(lashpath, MedID);                                
+                                Export3file(lashpath, MedID);
                                 Export3file(pathBackup, MedID);
                                 _Export.Finish_his_medical(MedID);
                             }
@@ -494,13 +494,11 @@ namespace WebService
             }
             );  // Tao mot luong du lieu rieng de may chay khong bi treo
             thread.Start();
-
         }
 
-            
 
     }
-    }
+}
 
 
 
