@@ -31,6 +31,8 @@ namespace WebService
         public static string StrConnect = UTL.DataBase.GetConfig();
         public static string lashpath = UTL.DataBase.GetConfig();
         DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
+        public string lashpath1;
+        public string pathBackup1;
         /// <summary>
         /// Ket noi Postgrest
         /// </summary>
@@ -478,6 +480,98 @@ namespace WebService
                                 _Export.his_fee_sync_tonghop_bqp(MedID);
                                 Export3file(lashpath, MedID);
                                 Export3file(pathBackup, MedID);
+                                _Export.Finish_his_medical(MedID);
+                            }
+
+
+                        }
+                    sleep:
+                        Thread.Sleep(5000);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+            }
+            );  // Tao mot luong du lieu rieng de may chay khong bi treo
+            thread.Start();
+        }
+
+        /// <summary>
+        /// Ham export file xml
+        /// </summary>
+        public void ExportXml()
+        {
+            btnExport.Enabled = false;
+            Thread thread = new Thread(() =>
+            {
+
+                while (true)
+                {
+                    try
+                    {
+                        //MedID = _Export.Select_Medical_BQP();
+
+                        if (rdoNgTru.Checked == true)
+                        {
+                            string doituongbn = "1,3";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+
+                        }
+                        //// Thận Nhân Tạo
+                        else if (rdoTNT.Checked == true)
+                        {
+                            string doituongbn = "4";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+                        //// Thận Nhân Tạo + Ngoại Trú
+                        else if (rdoNgTNT.Checked == true)
+                        {
+                            string doituongbn = "1,3,4";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+                        //// Nội Trú
+                        else if (rdoNTru.Checked == true)
+                        {
+                            string doituongbn = "2";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+
+                        }
+                        else
+                        {
+                            string doituongbn = "1,2,3,4";
+                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
+                        }
+
+
+
+                        if (MedID < 0)
+                        {
+                            goto sleep;
+                        }
+
+                        if (MedID > 0L)
+                        {
+                            string tam = _Export.his_find_medical(MedID);
+                            if (tam == "Error")
+                            {
+
+                                _Export.FinishMed(MedID);
+                                string Medical = MedID.ToString();
+                                //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + MedID);
+                                writelog(Medical);
+                                goto sleep;
+
+                            }
+                            else
+                            {
+                                _Export.his_fee_sync_tonghop_bqp(MedID);
+                                Export3file(lashpath, MedID);
+                                //Export3file(pathBackup1, MedID);
                                 _Export.Finish_his_medical(MedID);
                             }
 
