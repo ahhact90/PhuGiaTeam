@@ -104,7 +104,7 @@
             // barBtIt
             // 
             this.barBtIt.Caption = "DANH MỤC KỸ THUẬT";
-            this.barBtIt.Glyph = global::From_Report.Properties.Resources.ChecklistFile;
+            this.barBtIt.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtIt.Glyph")));
             this.barBtIt.Id = 3;
             this.barBtIt.Name = "barBtIt";
             this.barBtIt.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -113,7 +113,7 @@
             // barBHYT
             // 
             this.barBHYT.Caption = "Tổng Hợp BHYT";
-            this.barBHYT.Glyph = global::From_Report.Properties.Resources._1489554673_ambulance;
+            this.barBHYT.Glyph = ((System.Drawing.Image)(resources.GetObject("barBHYT.Glyph")));
             this.barBHYT.Id = 4;
             this.barBHYT.Name = "barBHYT";
             this.barBHYT.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -122,7 +122,7 @@
             // barbtnSetting
             // 
             this.barbtnSetting.Caption = "Cấu Hình Hệ Thống";
-            this.barbtnSetting.Glyph = global::From_Report.Properties.Resources.Android_Setting;
+            this.barbtnSetting.Glyph = ((System.Drawing.Image)(resources.GetObject("barbtnSetting.Glyph")));
             this.barbtnSetting.Id = 9;
             this.barbtnSetting.Name = "barbtnSetting";
             this.barbtnSetting.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -131,7 +131,7 @@
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Cập nhật Mã Ánh Xạ";
-            this.barButtonItem1.Glyph = global::From_Report.Properties.Resources._1497103905_chemistry;
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
             this.barButtonItem1.Id = 10;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
