@@ -354,15 +354,7 @@ namespace WebService
 
         private void btnExport_Click(object sender, EventArgs e)
         {    
-            string lashpath = txtPathEx.Text.Trim();
-            string pathBackup = txtBackup.Text.Trim() +"\\"+ DateTime.Now.ToString("yyyyMMdd");
            
-                if(!Directory.Exists(pathBackup))
-                {
-                  Directory.CreateDirectory(pathBackup); 
-                }
-                //MessageBox.Show(pathBackup);
-
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
             {
@@ -407,6 +399,15 @@ namespace WebService
                                 MedID = _Export.Select_Medical_CT_With_doituong(doituongbn);
 
                             }
+
+                            string lashpath = txtPathEx.Text.Trim();
+                            string pathBackup = txtBackup.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
+
+                            if (!Directory.Exists(pathBackup))
+                            {
+                                Directory.CreateDirectory(pathBackup);
+                            }
+                            //MessageBox.Show(pathBackup);
 
 
                             if (MedID < 0 )

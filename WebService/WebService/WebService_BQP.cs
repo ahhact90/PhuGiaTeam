@@ -64,7 +64,9 @@ namespace WebService
         private string username = "92002_BV";
         private string password = "dfe99ede6292051396d3cbea73f4985d";
         //private string lashpath;
-
+        private string STR_DBNAME = @"E:\TecaBQP\QD917";
+        private string STR_DBNAME_BACKUP = @"E:\TecaBQP\QD917\Backup";
+        private bool running = true;
         #endregion
         #region Methods
 
@@ -358,7 +360,13 @@ namespace WebService
         {
 
         }
-
+        /// <summary>
+        ///  Kill Threat
+        /// </summary>
+        public static void KillCurrentThread()
+        {
+            Thread.CurrentThread.Abort();
+        }
 
 
         /// <summary>
@@ -388,28 +396,18 @@ namespace WebService
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             //this.Close();
+            KillCurrentThread();
             Application.Exit();
         }
 
         private void WebService_BQP_Load(object sender, EventArgs e)
-        {
-            string STR_DBNAME = @"E:\TecaBQP\QD917";
-            txtPathEx.Text = STR_DBNAME;
-            string STR_DBNAME_BACKUP = @"E:\TecaBQP\QD917\Backup";
+        {           
+            txtPathEx.Text = STR_DBNAME;            
             txtBackup_BQP.Text = STR_DBNAME_BACKUP;
         }
 
         private void btnExport_Click_1(object sender, EventArgs e)
-        {
-            string lashpath = txtPathEx.Text.Trim();
-            //string pathBackup = txtBackup_BQP.Text.Trim();
-
-            string pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
-
-            if (!Directory.Exists(pathBackup))
-            {
-                Directory.CreateDirectory(pathBackup);
-            }
+        {           
 
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
@@ -454,7 +452,14 @@ namespace WebService
                             string doituongbn = "1,2,3,4";
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
                         }
+                        string lashpath = txtPathEx.Text.Trim();
+                        //string pathBackup = txtBackup_BQP.Text.Trim();
+                        string pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
 
+                        if (!Directory.Exists(pathBackup))
+                        {
+                            Directory.CreateDirectory(pathBackup);
+                        }
 
 
                         if (MedID < 0)
@@ -498,16 +503,20 @@ namespace WebService
             thread.Start();
         }
 
+
+
         /// <summary>
         /// Ham export file xml
         /// </summary>
         public void ExportXml()
         {
+
+            MessageBox.Show("Bat dau chay exxport");
             btnExport.Enabled = false;
             Thread thread = new Thread(() =>
             {
 
-                while (true)
+                while (running)
                 {
                     try
                     {
@@ -551,7 +560,9 @@ namespace WebService
 
                         if (MedID < 0)
                         {
-                            goto sleep;
+                            running = false;
+                           // goto sleep;
+                            
                         }
 
                         if (MedID > 0L)
@@ -579,6 +590,8 @@ namespace WebService
                         }
                     sleep:
                         Thread.Sleep(5000);
+                       //KillCurrentThread();
+                        
                     }
                     catch (Exception ex)
                     {
@@ -589,6 +602,8 @@ namespace WebService
             );  // Tao mot luong du lieu rieng de may chay khong bi treo
             thread.Start();
         }
+
+        
 
 
     }

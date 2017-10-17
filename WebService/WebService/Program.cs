@@ -16,9 +16,9 @@ namespace WebService
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new WebService_BQP());
+            Application.Run(new WebService_BQP());
             //Application.Run(new WebService());
-            Application.Run(new WebService_Update());
+            //Application.Run(new WebService_Update());
             //Application.Run(new BlockInternet());
         }
     }
