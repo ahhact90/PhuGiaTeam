@@ -27,8 +27,7 @@ namespace WebService
         }
         #region Variable
 
-        public static string StrConnect = UTL.DataBase.GetConfig();
-        public static string lashpath = UTL.DataBase.GetConfig();
+        public static string StrConnect = UTL.DataBase.GetConfig();       
         DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
         /// <summary>
         /// Ket noi Postgrest
@@ -61,6 +60,8 @@ namespace WebService
         private string username = "92002_BV";
         private string password = "dfe99ede6292051396d3cbea73f4985d";
         //private string lashpath;
+        private string lashpath;
+        private string pathBackup;
 
         #endregion
         #region Methods
@@ -400,8 +401,8 @@ namespace WebService
 
                             }
 
-                            string lashpath = txtPathEx.Text.Trim();
-                            string pathBackup = txtBackup.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
+                             lashpath = txtPathEx.Text.Trim();
+                             pathBackup = txtBackup.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
 
                             if (!Directory.Exists(pathBackup))
                             {
@@ -440,7 +441,7 @@ namespace WebService
                         
                             }
                             sleep:
-                            Thread.Sleep(1500000);
+                            Thread.Sleep(5000);
                         }
                         catch (Exception ex)
                         {

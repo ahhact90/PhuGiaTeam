@@ -28,10 +28,8 @@ namespace WebService
         #region Variable
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();
-        public static string StrConnect = UTL.DataBase.GetConfig();
-        public static string lashpath = UTL.DataBase.GetConfig();
-        DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);
-        public string lashpath1;
+        public static string StrConnect = UTL.DataBase.GetConfig();       
+        DAL.Mau21BQPKhacDAL _Export = new DAL.Mau21BQPKhacDAL(StrConnect);       
         public string pathBackup1;
         /// <summary>
         /// Ket noi Postgrest
@@ -62,11 +60,12 @@ namespace WebService
         private string access1;
         private string token;
         private string username = "92002_BV";
-        private string password = "dfe99ede6292051396d3cbea73f4985d";
-        //private string lashpath;
+        private string password = "dfe99ede6292051396d3cbea73f4985d";       
         private string STR_DBNAME = @"E:\TecaBQP\QD917";
         private string STR_DBNAME_BACKUP = @"E:\TecaBQP\QD917\Backup";
         private bool running = true;
+        private string lashpath ;
+        private string pathBackup;
         #endregion
         #region Methods
 
@@ -452,9 +451,9 @@ namespace WebService
                             string doituongbn = "1,2,3,4";
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
                         }
-                        string lashpath = txtPathEx.Text.Trim();
-                        //string pathBackup = txtBackup_BQP.Text.Trim();
-                        string pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
+
+                         lashpath = txtPathEx.Text.Trim();                       
+                         pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
 
                         if (!Directory.Exists(pathBackup))
                         {
@@ -482,6 +481,8 @@ namespace WebService
                             }
                             else
                             {
+
+
                                 _Export.his_fee_sync_tonghop_bqp(MedID);
                                 Export3file(lashpath, MedID);
                                 Export3file(pathBackup, MedID);
@@ -491,107 +492,7 @@ namespace WebService
 
                         }
                     sleep:
-                        Thread.Sleep(1500000);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString());
-                    }
-                }
-            }
-            );  // Tao mot luong du lieu rieng de may chay khong bi treo
-            thread.Start();
-        }
-
-
-
-        /// <summary>
-        /// Ham export file xml
-        /// </summary>
-        public void ExportXml()
-        {
-
-            MessageBox.Show("Bat dau chay exxport");
-            btnExport.Enabled = false;
-            Thread thread = new Thread(() =>
-            {
-
-                while (running)
-                {
-                    try
-                    {
-                        //MedID = _Export.Select_Medical_BQP();
-
-                        if (rdoNgTru.Checked == true)
-                        {
-                            string doituongbn = "1,3";
-                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
-
-
-                        }
-                        //// Thận Nhân Tạo
-                        else if (rdoTNT.Checked == true)
-                        {
-                            string doituongbn = "4";
-                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
-
-                        }
-                        //// Thận Nhân Tạo + Ngoại Trú
-                        else if (rdoNgTNT.Checked == true)
-                        {
-                            string doituongbn = "1,3,4";
-                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
-
-                        }
-                        //// Nội Trú
-                        else if (rdoNTru.Checked == true)
-                        {
-                            string doituongbn = "2";
-                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
-
-                        }
-                        else
-                        {
-                            string doituongbn = "1,2,3,4";
-                            MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
-                        }
-
-
-
-                        if (MedID < 0)
-                        {
-                            //running = false;
-                            goto sleep;
-                            
-                        }
-
-                        if (MedID > 0L)
-                        {
-                            string tam = _Export.his_find_medical(MedID);
-                            if (tam == "Error")
-                            {
-
-                                _Export.FinishMed(MedID);
-                                string Medical = MedID.ToString();
-                                //MessageBox.Show("Bệnh án đã gửi lên cổng thông tin rồi. Vui lòng kiểm tra lại " + MedID);
-                                writelog(Medical);
-                                goto sleep;
-
-                            }
-                            else
-                            {
-                                _Export.his_fee_sync_tonghop_bqp(MedID);
-                                Export3file(lashpath, MedID);
-                                //Export3file(pathBackup1, MedID);
-                                _Export.Finish_his_medical(MedID);
-                            }
-
-
-                        }
-                    sleep:
                         Thread.Sleep(5000);
-                       //KillCurrentThread();
-                        
                     }
                     catch (Exception ex)
                     {
@@ -602,6 +503,8 @@ namespace WebService
             );  // Tao mot luong du lieu rieng de may chay khong bi treo
             thread.Start();
         }
+
+
 
         
 
