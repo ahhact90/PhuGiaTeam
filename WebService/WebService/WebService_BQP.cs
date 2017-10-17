@@ -491,7 +491,7 @@ namespace WebService
 
                         }
                     sleep:
-                        Thread.Sleep(5000);
+                        Thread.Sleep(1500000);
                     }
                     catch (Exception ex)
                     {
@@ -560,8 +560,8 @@ namespace WebService
 
                         if (MedID < 0)
                         {
-                            running = false;
-                           // goto sleep;
+                            //running = false;
+                            goto sleep;
                             
                         }
 

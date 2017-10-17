@@ -203,7 +203,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnExport);
             this.Name = "WebService";
-            this.Text = "WebService";
+            this.Text = "WebService_CanTho";
             this.Load += new System.EventHandler(this.WebService_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
