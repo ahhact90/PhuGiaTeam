@@ -409,6 +409,16 @@ namespace WebService
         {           
 
             btnExport.Enabled = false;
+            lashpath = txtPathEx.Text.Trim();
+            pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd")+"BQP";
+            //MessageBox.Show(StrConnect);
+
+
+            if (!Directory.Exists(pathBackup))
+            {
+                Directory.CreateDirectory(pathBackup);
+            }
+
             Thread thread = new Thread(() =>
             {
 
@@ -452,14 +462,7 @@ namespace WebService
                             MedID = _Export.Select_Medical_BQP_With_doituong(doituongbn);
                         }
 
-                         lashpath = txtPathEx.Text.Trim();                       
-                         pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
-
-                        if (!Directory.Exists(pathBackup))
-                        {
-                            Directory.CreateDirectory(pathBackup);
-                        }
-
+                       
 
                         if (MedID < 0)
                         {

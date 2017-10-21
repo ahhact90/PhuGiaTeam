@@ -60,6 +60,8 @@ namespace WebService
         private string username = "92002_BV";
         private string password = "dfe99ede6292051396d3cbea73f4985d";
         //private string lashpath;
+        private string STR_DBNAME = @"E:\Teca\VAS\QD917";
+        private string STR_DBNAME_BACKUP = @"E:\Teca\VAS\QD917\Backup";
         private string lashpath;
         private string pathBackup;
 
@@ -354,9 +356,18 @@ namespace WebService
         #endregion
 
         private void btnExport_Click(object sender, EventArgs e)
-        {    
+        {
            
             btnExport.Enabled = false;
+
+            lashpath = txtPathEx.Text.Trim();
+            pathBackup = txtBackup.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd") +"CanTho";
+
+            if (!Directory.Exists(pathBackup))
+            {
+                Directory.CreateDirectory(pathBackup);
+            }
+
             Thread thread = new Thread(() =>
             {
               
@@ -401,13 +412,7 @@ namespace WebService
 
                             }
 
-                             lashpath = txtPathEx.Text.Trim();
-                             pathBackup = txtBackup.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd");
-
-                            if (!Directory.Exists(pathBackup))
-                            {
-                                Directory.CreateDirectory(pathBackup);
-                            }
+                            
                             //MessageBox.Show(pathBackup);
 
 
@@ -457,8 +462,9 @@ namespace WebService
 
         private void WebService_Load(object sender, EventArgs e)
         {
-            string STR_DBNAME = @"E:\Teca\VAS\QD917";
+            
             txtPathEx.Text = STR_DBNAME;
+            txtBackup.Text = STR_DBNAME_BACKUP;
 
         }
 
