@@ -169,7 +169,10 @@ namespace From_Report.From_Dstore
                         string ax_tmp = txtMaAX.Text.ToString();
                         string text = tmp_bv + '|' + ax_tmp;
                         Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());
-                        _DanhMuc.Update_AX(text, use_type, mDrug,group_type);
+                        _DanhMuc.Update_AX(text, use_type,group_type,mDrug);
+                        //string tam =  _DanhMuc.Update_AX(text, use_type,group_type,mDrug).ToString();
+                        //MessageBox.Show(mDrug.ToString());
+                        //MessageBox.Show(tam);
                         MessageBox.Show("Cập nhật thành công");
                         From_Duoc_AnhXa_Load(sender, e);
                     }

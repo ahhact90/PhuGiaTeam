@@ -120,13 +120,14 @@ namespace DAL
                     @"JOIN (SELECT id,drug_name,component,content_name,unit_name FROM his_vw_usingdrug) b  ON a.usingdrugid = b.id JOIN (SELECT id,description,use_type_id,service_type_id FROM his_drug) c on c.id = a.id order by mainimexid,drug_name";
             return ExecuteQuery(sql);
         }
-        public int Update_AX(string mAX, Int32 mUse_type,Int32 mDrug,string mService_type)
+        public int Update_AX(string mAX, Int32 mUse_type,string mService_type,Int32 mDrug)
         {              
             try
             {
-                var sql = @"UPDATE his_drug set description = '{0}',use_type_id = {1},service_type_id={3} WHERE id = {2}";
-                sql = String.Format(sql, mAX, mUse_type, mDrug, mService_type);
-                return ExecuteNonQuery(sql);            }
+                var sql = @"UPDATE his_drug set description = '{0}',use_type_id = {1},service_type_id={2} WHERE id = {3}";
+                sql = String.Format(sql, mAX, mUse_type, mService_type,mDrug);
+                return ExecuteNonQuery(sql);            
+            }
             catch { return -1; }              
         }
         public DataTable Duongdung()
