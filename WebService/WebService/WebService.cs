@@ -64,6 +64,8 @@ namespace WebService
         private string STR_DBNAME_BACKUP = @"E:\Teca\VAS\QD917\Backup";
         private string lashpath;
         private string pathBackup;
+        private string pathexport = "";
+        private string pathexportbackup = "";
 
         #endregion
         #region Methods
@@ -331,7 +333,7 @@ namespace WebService
             try
             {
                 //string path = "\\\\172.251.110.194\\Log\\log.txt";
-                string path = txtBackup.Text.Trim() + string.Format("\\log_{0}_CanTho.txt", System.DateTime.Now.ToString("yyyyMMdd"));
+                string path = pathexportbackup + string.Format("\\log_{0}_CanTho.txt", System.DateTime.Now.ToString("yyyyMMdd"));
                 sohoso = Int64.Parse(MedID);
                 //dt = _Export.Select_his_chitiet_bhyt(sohoso);                
                 ds.Tables.Add(_Export.Select_his_chitiet_bhyt(sohoso));
@@ -360,13 +362,13 @@ namespace WebService
            
             btnExport.Enabled = false;
 
-            lashpath = txtPathEx.Text.Trim();
-            pathBackup = txtBackup.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd") +"CanTho";
+            //lashpath = txtPathEx.Text.Trim();
+            //pathBackup = txtBackup.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd") +"CanTho";
 
-            if (!Directory.Exists(pathBackup))
-            {
-                Directory.CreateDirectory(pathBackup);
-            }
+            //if (!Directory.Exists(pathBackup))
+            //{
+            //    Directory.CreateDirectory(pathBackup);
+            //}
 
             Thread thread = new Thread(() =>
             {
@@ -420,6 +422,15 @@ namespace WebService
                             {                                
                                 goto sleep;
                             }
+
+                            lashpath = pathexport;
+                            pathBackup = pathexportbackup + "\\" + DateTime.Now.ToString("yyyyMMdd") + "CanTho";
+
+                            if (!Directory.Exists(pathBackup))
+                            {
+                                Directory.CreateDirectory(pathBackup);
+                            }
+
                    
                             if (MedID > 0L)
                             {
@@ -463,8 +474,9 @@ namespace WebService
         private void WebService_Load(object sender, EventArgs e)
         {
             
-            txtPathEx.Text = STR_DBNAME;
-            txtBackup.Text = STR_DBNAME_BACKUP;
+            //txtPathEx.Text = STR_DBNAME;
+            //txtBackup.Text = STR_DBNAME_BACKUP;
+            Get_XML();
 
         }
 
@@ -496,7 +508,31 @@ namespace WebService
             {
                 txtBackup.Text = fbd.SelectedPath;
             }
-        }     
+        }
+        /// <summary>
+        /// Doc fie cau hinh config
+        /// </summary>
+        public void Get_XML()
+        {
+            try
+            {
+                using (DataSet dataSet = new DataSet())
+                {
 
+                    if (File.Exists(Application.StartupPath + "\\config.xml"))
+                    {
+                        dataSet.ReadXml(Application.StartupPath + "\\config.xml");
+
+                        this.pathexport = dataSet.Tables[0].Rows[0]["pathexport"].ToString();
+                        this.pathexportbackup = dataSet.Tables[0].Rows[0]["pathexportbackup"].ToString();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     } 
-}
+} // ket thuc

@@ -66,6 +66,8 @@ namespace WebService
         private bool running = true;
         private string lashpath ;
         private string pathBackup;
+        private string pathexport = "";
+        private string pathexportbackup = "";
         #endregion
         #region Methods
 
@@ -331,7 +333,7 @@ namespace WebService
             try
             {
                 //string path = "\\\\172.251.110.194\\Log\\log.txt";
-                string path = txtBackup_BQP.Text.Trim() + string.Format("\\log_{0}_BQP.txt", System.DateTime.Now.ToString("yyyyMMdd"));
+                string path = pathexportbackup + string.Format("\\log_{0}_BQP.txt", System.DateTime.Now.ToString("yyyyMMdd"));
                 sohoso = Int64.Parse(MedID);
                 //dt = _Export.Select_his_chitiet_bhyt(sohoso);                
                 ds.Tables.Add(_Export.Select_his_chitiet_bhyt(sohoso));
@@ -401,23 +403,24 @@ namespace WebService
 
         private void WebService_BQP_Load(object sender, EventArgs e)
         {           
-            txtPathEx.Text = STR_DBNAME;            
-            txtBackup_BQP.Text = STR_DBNAME_BACKUP;
+            //txtPathEx.Text = STR_DBNAME;            
+            //txtBackup_BQP.Text = STR_DBNAME_BACKUP;
+            Get_XML();
         }
 
         private void btnExport_Click_1(object sender, EventArgs e)
         {           
 
             btnExport.Enabled = false;
-            lashpath = txtPathEx.Text.Trim();
-            pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd")+"BQP";
+            //lashpath = txtPathEx.Text.Trim();
+            //pathBackup = txtBackup_BQP.Text.Trim() + "\\" + DateTime.Now.ToString("yyyyMMdd")+"BQP";
             //MessageBox.Show(StrConnect);
 
 
-            if (!Directory.Exists(pathBackup))
-            {
-                Directory.CreateDirectory(pathBackup);
-            }
+            //if (!Directory.Exists(pathBackup))
+            //{
+            //    Directory.CreateDirectory(pathBackup);
+            //}
 
             Thread thread = new Thread(() =>
             {
@@ -469,6 +472,16 @@ namespace WebService
                             goto sleep;
                         }
 
+                        lashpath = pathexport;
+                        pathBackup = pathexportbackup + "\\" + DateTime.Now.ToString("yyyyMMdd") + "BQP";
+                       // MessageBox.Show(StrConnect);
+
+
+                        if (!Directory.Exists(pathBackup))
+                        {
+                            Directory.CreateDirectory(pathBackup);
+                        }
+
                         if (MedID > 0L)
                         {
                             string tam = _Export.his_find_medical(MedID);
@@ -505,6 +518,29 @@ namespace WebService
             }
             );  // Tao mot luong du lieu rieng de may chay khong bi treo
             thread.Start();
+        }
+
+        public void Get_XML()
+        {
+            try
+            {
+                using (DataSet dataSet = new DataSet())
+                {
+                   
+                    if (File.Exists(Application.StartupPath + "\\config.xml"))
+                    {
+                        dataSet.ReadXml(Application.StartupPath + "\\config.xml");
+
+                        this.pathexport = dataSet.Tables[0].Rows[0]["pathexport"].ToString();
+                        this.pathexportbackup = dataSet.Tables[0].Rows[0]["pathexportbackup"].ToString();
+                    }                    
+                  
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 

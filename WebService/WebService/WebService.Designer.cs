@@ -68,6 +68,7 @@
             // 
             // txtPathEx
             // 
+            this.txtPathEx.Enabled = false;
             this.txtPathEx.Location = new System.Drawing.Point(27, 107);
             this.txtPathEx.Name = "txtPathEx";
             this.txtPathEx.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -77,6 +78,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(350, 106);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -108,6 +110,7 @@
             // 
             // txtBackup
             // 
+            this.txtBackup.Enabled = false;
             this.txtBackup.Location = new System.Drawing.Point(27, 174);
             this.txtBackup.Name = "txtBackup";
             this.txtBackup.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -117,6 +120,7 @@
             // 
             // simpleButton1
             // 
+            this.simpleButton1.Enabled = false;
             this.simpleButton1.Location = new System.Drawing.Point(350, 174);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(22, 19);

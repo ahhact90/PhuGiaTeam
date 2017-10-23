@@ -57,6 +57,7 @@
             // 
             this.txtPathEx.Location = new System.Drawing.Point(30, 97);
             this.txtPathEx.Name = "txtPathEx";
+            this.txtPathEx.ReadOnly = true;
             this.txtPathEx.Size = new System.Drawing.Size(417, 20);
             this.txtPathEx.TabIndex = 1;
             // 
@@ -74,6 +75,7 @@
             // 
             this.txtBackup_BQP.Location = new System.Drawing.Point(30, 165);
             this.txtBackup_BQP.Name = "txtBackup_BQP";
+            this.txtBackup_BQP.ReadOnly = true;
             this.txtBackup_BQP.Size = new System.Drawing.Size(417, 20);
             this.txtBackup_BQP.TabIndex = 1;
             // 
@@ -101,6 +103,7 @@
             // 
             // btnExprot
             // 
+            this.btnExprot.Enabled = false;
             this.btnExprot.Location = new System.Drawing.Point(469, 97);
             this.btnExprot.Name = "btnExprot";
             this.btnExprot.Size = new System.Drawing.Size(26, 20);
@@ -112,6 +115,7 @@
             // 
             // btnbackup
             // 
+            this.btnbackup.Enabled = false;
             this.btnbackup.Location = new System.Drawing.Point(469, 164);
             this.btnbackup.Name = "btnbackup";
             this.btnbackup.Size = new System.Drawing.Size(26, 20);
