@@ -163,7 +163,7 @@
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(610, 29);
+            this.txtPath.Location = new System.Drawing.Point(730, 33);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(296, 20);
             this.txtPath.TabIndex = 10;
@@ -171,7 +171,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(495, 26);
+            this.label5.Location = new System.Drawing.Point(561, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 13);
             this.label5.TabIndex = 11;

@@ -544,7 +544,7 @@ namespace WebService
                     this.txtDenngay.Text = infoinsurance[7];
                     this.txtCskcb.Text = infoinsurance[5].Replace('-', ' ').Replace(" ", string.Empty);
                     //this.checkBHYT(this.txtmathe.Text, this.txthoten.Text, this.txtngaysinh.Text, this.txtgiotinh.SelectedIndex + 1, this.txttungay.Text, this.txtdenngay.Text, this.txtcskcb.Text);
-                    //this.textBox1.Text = "";
+                    txtQR.Text = "";
                 }
                 catch (Exception ex)
                 {
