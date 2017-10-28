@@ -79,14 +79,15 @@ namespace From_Report
         {
             if (txtBA.Text.Length == 0)
             {
-               // MessageBox.Show("Vui lòng nhập số bệnh án");
+                MessageBox.Show("Vui lòng nhập số bệnh án");
             }
             else
             {
                 try
                 {
-                    //string tmp_bv = txtBA.Text.ToString().Trim();
-                    string tmp_bv =  FrmSearch.cal_search.ToString().Trim();
+                    string tmp_bv = txtBA.Text.ToString().Trim();
+                    //MessageBox.Show(txtBA.Text);
+                    //string tmp_bv =  FrmSearch.cal_search.ToString().Trim();
                     dt = _DanhMuc.Select_ThongTinBA_chitiet(tmp_bv.Trim());
                     if (dt.Rows.Count > 0)
                     {
