@@ -163,11 +163,22 @@ namespace From_Report.From_Dstore
                 }
                 else
                 {
+                    if (txtUseType.Text.Length == 0)
+                    {
+                        MessageBox.Show("Vui lòng Nhấn Enter để chọn đường dùng");
+                    }
+                    if (txtGroup.Text.Length == 0)
+                    {
+                        MessageBox.Show("Vui lòng Enter để chọn nhóm thuốc");
+                    }
+                    
                     try
                     {
                         string tmp_bv = txtMaBV.Text.ToString();
                         string ax_tmp = txtMaAX.Text.ToString();
                         string text = tmp_bv + '|' + ax_tmp;
+                        use_type = Int32.Parse(txtUseType.Text.Trim());
+                        group_type = txtGroup.Text.Trim().ToString();
                         Int32 mDrug = Int32.Parse(txtDrug.Text.ToString());
                         _DanhMuc.Update_AX(text, use_type,group_type,mDrug);
                         //string tam =  _DanhMuc.Update_AX(text, use_type,group_type,mDrug).ToString();
