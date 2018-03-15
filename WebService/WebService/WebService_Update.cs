@@ -351,7 +351,7 @@ namespace WebService
                                         kq = "Trẻ em không xuất trình thẻ";
                                         break;
                                 }
-                                if (this.tmp1.MaKetQua == "000")
+                                if (this.tmp1.MaKetQua != "999")
                                 {
                                     string kq2 = string.Format("Thông Báo : {0} | Họ Tên : {1}| Giới tính : {2}| Địa chỉ : {3}| Nơi KCBBĐ : {4}| Hạn Thẻ : Từ ngày : {5}- Đến Ngày : {6}", new object[]
 					{

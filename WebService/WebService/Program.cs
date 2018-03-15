@@ -18,8 +18,8 @@ namespace WebService
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new WebService_BQP());
             //Application.Run(new WebService());
-            //Application.Run(new WebService_Update());
-            Application.Run(new CheckBHYT());
+            Application.Run(new WebService_Update());
+            //Application.Run(new CheckBHYT());
             //Application.Run(new BlockInternet());
         }
     }
