@@ -68,11 +68,30 @@ namespace WebService
                 set;
             }
 
-            public lskcb[] dsLichSuKCB
+            public lskcb[] dsLichSuKCB2018
             {
                 get;
                 set;
             }
-      
+            public string maTheCu
+            {
+                get;
+                set;
+            }
+            public string maTheMoi
+            {
+                get;
+                set;
+            }
+            public string gtTheTuMoi
+            {
+                get;
+                set;
+            }
+            public string gtTheDenMoi
+            {       
+                get;
+                set;
+            }
     }
 }

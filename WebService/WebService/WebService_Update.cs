@@ -260,8 +260,8 @@ namespace WebService
                                 maThe = mathe,
                                 hoTen = hoten,
                                 ngaySinh = ngaysinh,
-                                gioiTinh = gioitinh,
-                                maCSKCB = macskcb,
+                                //gioiTinh = gioitinh,
+                                //maCSKCB = macskcb,
                               
                             };
                            
@@ -272,7 +272,7 @@ namespace WebService
 									username,
 									password
 								});
-                            HttpResponseMessage result3 = httpClient.PostAsJsonAsync(System.Convert.ToString("api/egw/KQNhanLichSuKCB595?") + str, value).Result;
+                            HttpResponseMessage result3 = httpClient.PostAsJsonAsync(System.Convert.ToString("api/egw/NhanLichSuKCB2018?") + str, value).Result;
                             string tmp = result3.Content.ReadAsStringAsync().Result;
 
                             try
@@ -353,7 +353,7 @@ namespace WebService
                                 }
                                 if (this.tmp1.MaKetQua != "999")
                                 {
-                                    string kq2 = string.Format("Thông Báo : {0} | Họ Tên : {1}| Giới tính : {2}| Địa chỉ : {3}| Nơi KCBBĐ : {4}| Hạn Thẻ : Từ ngày : {5}- Đến Ngày : {6}", new object[]
+                                    string kq2 = string.Format("Thông Báo : {0} | Họ Tên : {1}| Giới tính : {2}| Địa chỉ : {3}| Nơi KCBBĐ : {4}| Hạn Thẻ : Từ ngày : {5}- Đến Ngày : {6} Mã Thẻ Mới: {8}", new object[]
 					{
 						kq,
 						this.tmp1.hoten,
@@ -361,31 +361,34 @@ namespace WebService
 						this.tmp1.diachi,
 						this.tmp1.madkbd,
 						this.tmp1.gtTheTu,
-						this.tmp1.gtTheDen
+						this.tmp1.gtTheDen,
+                        this.tmp1.maTheCu,
+                        this.tmp1.maTheMoi
+
 					});
                                     this.thongbao.Text = kq2;
                                     //this.code = this.txtmathe.Text + this.tmp1.madkbd;
                                    // this.client2.srv_hms_Log_check_insurance(this.txtmathe.Text, this.txthoten.Text, this.txtngaysinh.Text, this.txtgiotinh.SelectedIndex + 1, this.txttungay.Text, this.txtdenngay.Text, this.txtcskcb.Text, kq2, this.UserID.ToString(), this.IP);
-                                    if (this.tmp1.dsLichSuKCB != null)
+                                    if (this.tmp1.dsLichSuKCB2018 != null)
                                     {
                                         DataTable dt = new DataTable();
-                                        dt.Columns.Add("maHoSo");
-                                        dt.Columns.Add("maCSKCB");
-                                        dt.Columns.Add("tuNgay");
-                                        dt.Columns.Add("denNgay");
-                                        dt.Columns.Add("tenBenh");
-                                        dt.Columns.Add("tinhTrang");
-                                        dt.Columns.Add("kqDieuTri");
-                                        for (int i = 0; i < this.tmp1.dsLichSuKCB.Length; i++)
+                                        dt.Columns.Add("Mã Hồ sơ");
+                                        dt.Columns.Add("Tên Cơ sở KCB");
+                                        dt.Columns.Add("Ngày Vào");
+                                        dt.Columns.Add("Ngày Ra");
+                                        dt.Columns.Add("Mã Bệnh");
+                                        dt.Columns.Add("Tình Trạng");
+                                        dt.Columns.Add("Kết Quả điều trị ");
+                                        for (int i = 0; i < this.tmp1.dsLichSuKCB2018.Length; i++)
                                         {
                                             DataRow dr = dt.NewRow();
-                                            dr[0] = this.tmp1.dsLichSuKCB[i].mahoso;
-                                            dr[1] = this.tmp1.dsLichSuKCB[i].maCSKCB;
-                                            dr[2] = this.tmp1.dsLichSuKCB[i].tuNgay;
-                                            dr[3] = this.tmp1.dsLichSuKCB[i].denNgay;
-                                            dr[4] = this.tmp1.dsLichSuKCB[i].tenBenh;
-                                            dr[5] = this.tmp1.dsLichSuKCB[i].tinhTrang;
-                                            dr[6] = this.tmp1.dsLichSuKCB[i].kqDieuTri;
+                                            dr[0] = this.tmp1.dsLichSuKCB2018[i].mahoso;
+                                            dr[1] = this.tmp1.dsLichSuKCB2018[i].maCSKCB;
+                                            dr[2] = getDValue1(this.tmp1.dsLichSuKCB2018[i].ngayVao,"yyyyMMddhhmm");
+                                            dr[3] = getDValue1(this.tmp1.dsLichSuKCB2018[i].ngayRa,"yyyyMMddhhmm");
+                                            dr[4] = this.tmp1.dsLichSuKCB2018[i].tenBenh;
+                                            dr[5] = this.tmp1.dsLichSuKCB2018[i].tinhTrang;
+                                            dr[6] = this.tmp1.dsLichSuKCB2018[i].kqDieuTri;
                                             dt.Rows.Add(dr);
                                         }
                                         gridControl1.DataSource = dt;
@@ -523,6 +526,28 @@ namespace WebService
                 result = "";
             }
             return result;
+        }
+
+        public string getDValue1(DateTime Values, string DateType)
+        {
+            switch (DateType)
+            {
+                case "DMY":
+                    return string.Format("{0}-{1}-{2}", Values.Day, Values.Month, Values.Year);
+
+                case "MDY":
+                    return string.Format("{0}-{1}-{2}", Values.Month, Values.Day, Values.Year);
+
+                case "YMDT":
+                    return string.Format("{0}-{1}-{2} {3}:{4}:{5}", new object[] { Values.Year, Values.Month, Values.Day, Values.Hour, Values.Minute, Values.Second });
+
+                case "DMYT":
+                    return string.Format("{0}-{1}-{2} {3}:{4}:{5}", new object[] { Values.Day, Values.Month, Values.Year, Values.Hour, Values.Minute, Values.Second });
+
+                case "yyyyMMddhhmm":
+                    return string.Format("{0}-{1}-{2} {3}:{4}:{5}", new object[] { Values.Day, Values.Month, Values.Year, Values.Hour, Values.Minute, Values.Second });
+            }
+            return string.Format("{0}-{1}-{2}", Values.Year, Values.Month, Values.Day);
         }
 
         private void txtQR_KeyDown(object sender, KeyEventArgs e)

@@ -20,13 +20,13 @@ namespace WebService
             set;
         }
 
-        public string tuNgay
+        public string ngayVao
         {
             get;
             set;
         }
 
-        public string denNgay
+        public string ngayRa
         {
             get;
             set;
@@ -49,5 +49,6 @@ namespace WebService
             get;
             set;
         }
+       
     }
 }

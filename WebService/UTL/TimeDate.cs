@@ -265,6 +265,10 @@ namespace UTL
 
                 case "DMYT":
                     return string.Format("{0}-{1}-{2} {3}:{4}:{5}", new object[] { Values.Day, Values.Month, Values.Year, Values.Hour, Values.Minute, Values.Second });
+
+                case "yyyyMMddhhmm":
+                    return string.Format("{0}/{1}/{2} {3}:{4}", new object[] { Values.Day, Values.Month, Values.Year, Values.Hour, Values.Minute });
+
             }
             return string.Format("{0}-{1}-{2}", Values.Year, Values.Month, Values.Day);
         }
