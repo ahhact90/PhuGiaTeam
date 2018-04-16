@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{0214878E-840F-46B5-AE1A-DB92873E159D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVSGPP", "WindowsFormsApplication1\TVSGPP.csproj", "{0214878E-840F-46B5-AE1A-DB92873E159D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
