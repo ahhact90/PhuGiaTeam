@@ -85,8 +85,9 @@ namespace WindowsFormsApplication1
 		};
             if (Source != "")
             {
-                text = this.CryptographyMD5(Source);
+                text = this.CryptographyMD5(Source);               
                 char[] array3 = text.ToCharArray(0, text.Trim().Length);
+               
                 for (int i = 0; i < array3.Length; i++)
                 {
                     if (i % 2 == 1)
@@ -94,6 +95,7 @@ namespace WindowsFormsApplication1
                         text += array3[i];
                     }
                 }
+                MessageBox.Show(text);
                 char[] array4 = text.Trim().ToCharArray(0, text.Trim().Length);
                 text = "";
                 for (int j = 0; j < 20; j++)
@@ -101,6 +103,7 @@ namespace WindowsFormsApplication1
                     text = ((j % 2 != 1) ? (text + array2[int.Parse(array3[j].ToString())]) : (text + array[int.Parse(array3[j].ToString())]));
                 }
             }
+            MessageBox.Show(text);
             return text;
         }
 
