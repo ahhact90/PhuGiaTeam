@@ -124,13 +124,8 @@ namespace From_Report
             GridView view = sender as GridView;
             if (view == null) return;
             if (e.RowHandle % 2 == 0)
-            {
-
-                // e.Appearance.BackColor = Color.WhiteSmoke;
-                e.Appearance.ForeColor = Color.MediumBlue;
-                //e.HighPriority = true;
-
-
+            {              
+                e.Appearance.ForeColor = Color.MediumBlue;               
             }
             else
             {

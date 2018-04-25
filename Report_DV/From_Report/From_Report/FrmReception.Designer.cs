@@ -107,10 +107,13 @@
             // dockPanel3
             // 
             this.dockPanel3.Controls.Add(this.dockPanel3_Container);
+            this.dockPanel3.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
             this.dockPanel3.DockedAsTabbedDocument = true;
             this.dockPanel3.ID = new System.Guid("eaf4c5dd-8d1b-4efa-adbc-63746bdfb0f8");
+            this.dockPanel3.Location = new System.Drawing.Point(0, 0);
             this.dockPanel3.Name = "dockPanel3";
             this.dockPanel3.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel3.Size = new System.Drawing.Size(798, 383);
             this.dockPanel3.Text = "dockPanel3";
             // 
             // dockPanel3_Container
