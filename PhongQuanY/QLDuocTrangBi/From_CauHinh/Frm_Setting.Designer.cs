@@ -34,8 +34,11 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btn_Enc = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Dec = new DevExpress.XtraEditors.SimpleButton();
+            this.txtConnect = new DevExpress.XtraEditors.SimpleButton();
+            this.lst_database = new DevExpress.XtraEditors.ListBoxControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtXuat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lst_database)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNhap
@@ -88,11 +91,29 @@
             this.btn_Dec.Text = "Giải Mã";
             this.btn_Dec.Click += new System.EventHandler(this.btn_Dec_Click);
             // 
+            // txtConnect
+            // 
+            this.txtConnect.Location = new System.Drawing.Point(29, 222);
+            this.txtConnect.Name = "txtConnect";
+            this.txtConnect.Size = new System.Drawing.Size(210, 41);
+            this.txtConnect.TabIndex = 3;
+            this.txtConnect.Text = "Kiểm tra Kết nối cơ sở dữ liệu";
+            this.txtConnect.Click += new System.EventHandler(this.txtConnect_Click);
+            // 
+            // lst_database
+            // 
+            this.lst_database.Location = new System.Drawing.Point(307, 196);
+            this.lst_database.Name = "lst_database";
+            this.lst_database.Size = new System.Drawing.Size(202, 164);
+            this.lst_database.TabIndex = 4;
+            // 
             // Frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 469);
+            this.Controls.Add(this.lst_database);
+            this.Controls.Add(this.txtConnect);
             this.Controls.Add(this.btn_Dec);
             this.Controls.Add(this.btn_Enc);
             this.Controls.Add(this.labelControl2);
@@ -103,6 +124,7 @@
             this.Text = "Frm_Setting";
             ((System.ComponentModel.ISupportInitialize)(this.txtNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtXuat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lst_database)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +138,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btn_Enc;
         private DevExpress.XtraEditors.SimpleButton btn_Dec;
+        private DevExpress.XtraEditors.SimpleButton txtConnect;
+        private DevExpress.XtraEditors.ListBoxControl lst_database;
     }
 }
