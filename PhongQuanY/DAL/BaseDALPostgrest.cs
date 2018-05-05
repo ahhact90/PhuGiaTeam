@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using Npgsql;
 using System.Configuration;
 using System.IO;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-using MySql.Data.MySqlClient;
+
 
 
 namespace DAL
 {
-    public abstract class BaseDAL
+    public abstract class BaseDALPostgrest
     {
         #region Contansts
         protected const string STR_BACKUP = @"BACKUP DATABASE {0} " +
@@ -31,7 +32,7 @@ namespace DAL
         protected const string STR_DBNAME = "master";
 
         protected const string STR_DFO = "set dateformat dmy";
-
+     
 
         #endregion
 
@@ -42,9 +43,9 @@ namespace DAL
         #endregion
 
         #region Properties
-        protected MySqlConnection Cnn { get; set; }
-        protected MySqlCommand Cmd { get; set; }
-        protected MySqlDataAdapter Da { get; set; }
+        protected NpgsqlConnection Cnn { get; set; }
+        protected NpgsqlCommand Cmd { get; set; }
+        protected NpgsqlDataAdapter Da { get; set; }
 
         public static string FileDb { set; get; }
         public static string DbName { set; get; }
@@ -58,21 +59,21 @@ namespace DAL
         /// Constructor
         /// </summary>
 
-        public BaseDAL()
+        public BaseDALPostgrest()
         {
-            //Cnn = new MySqlConnection(string.Format(DAL.Properties.Settings.Default.Setting)); // default connection string
-            //Cnn = new MySqlConnection("server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS");
-            //Cnn = new MySqlConnection("server = 172.251.110.3; port = 5432; user id = bv121; password = @bv121@ ; Database = HMIS");
-            //Cmd = new MySqlCommand() { Connection = Cnn };
-            //Da = new MySqlDataAdapter();         
+            //Cnn = new NpgsqlConnection(string.Format(DAL.Properties.Settings.Default.Setting)); // default connection string
+            //Cnn = new NpgsqlConnection("server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS");
+            //Cnn = new NpgsqlConnection("server = 172.251.110.3; port = 5432; user id = bv121; password = @bv121@ ; Database = HMIS");
+            //Cmd = new NpgsqlCommand() { Connection = Cnn };
+            //Da = new NpgsqlDataAdapter();         
 
         }
 
-        public BaseDAL(string connectString)
+        public BaseDALPostgrest(string connectString)
         {
-            Cnn = new MySqlConnection(connectString);
-            Cmd = new MySqlCommand() { Connection = Cnn };
-            Da = new MySqlDataAdapter();
+            Cnn = new NpgsqlConnection(connectString);
+            Cmd = new NpgsqlCommand() { Connection = Cnn };
+            Da = new NpgsqlDataAdapter();
 
         }
         #endregion
@@ -142,7 +143,7 @@ namespace DAL
             catch { return -1; }
             finally { Close(); }
         }
-
+        
         /// <summary>
         /// Return Dataset
         /// </summary>
@@ -153,7 +154,7 @@ namespace DAL
             try
             {
                 Open();
-                MySqlDataAdapter Da = new MySqlDataAdapter(que, Cnn);
+                NpgsqlDataAdapter Da = new NpgsqlDataAdapter(que, Cnn);
                 DataSet ds = new DataSet();
                 Da.Fill(ds);
                 return ds;
@@ -179,8 +180,9 @@ namespace DAL
         #endregion
 
         #region More
-
+       
 
         #endregion
     }
 }
+
