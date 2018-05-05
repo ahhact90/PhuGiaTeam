@@ -104,7 +104,7 @@ namespace UTL
                     else
                     {
                         uID = "postgres";
-                        pass = "oUIJpYLtYPc=";
+                        pass = "SebRMrg8c7Y=";  //Pass ket noi co so du lieu 123456
                         port = "5432";
                         database = "HMIS";
                         text = "localhost";
