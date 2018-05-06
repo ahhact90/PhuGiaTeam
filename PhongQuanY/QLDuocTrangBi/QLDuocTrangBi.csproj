@@ -63,16 +63,49 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_CauHinh\Frm_PhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_CauHinh\Frm_PhanQuyen.Designer.cs">
+      <DependentUpon>Frm_PhanQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_CauHinh\Frm_Setting.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="From_CauHinh\Frm_Setting.Designer.cs">
       <DependentUpon>Frm_Setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_ChucNang\Frm_DVTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_ChucNang\Frm_DVTinh.Designer.cs">
+      <DependentUpon>Frm_DVTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From_ChucNang\Frm_NuocSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_ChucNang\Frm_NuocSX.Designer.cs">
+      <DependentUpon>Frm_NuocSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From_Login\Frm_BanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_Login\Frm_BanQuyen.Designer.cs">
+      <DependentUpon>Frm_BanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From_Login\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_Login\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="From_CauHinh\Frm_Setting.resx">
       <DependentUpon>Frm_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From_ChucNang\Frm_DVTinh.resx">
+      <DependentUpon>Frm_DVTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -97,6 +130,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
