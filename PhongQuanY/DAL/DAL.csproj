@@ -59,7 +59,8 @@
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
     <Compile Include="BaseDALPostgrest.cs" />
-    <Compile Include="TestConnect.cs" />
+    <Compile Include="NuocSXDAL.cs" />
+    <Compile Include="TestConnectDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

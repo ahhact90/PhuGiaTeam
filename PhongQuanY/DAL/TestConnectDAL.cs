@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class TestConnect : BaseDAL
+    public class TestConnectDAL : BaseDAL
     {  
 
         #region Contrustor
-          public TestConnect(string connectString) : base(connectString) { }
+          public TestConnectDAL(string connectString) : base(connectString) { }
         #endregion
 
         #region Kiểm tra kết nối đến cơ sở dữ liệu My SQL
