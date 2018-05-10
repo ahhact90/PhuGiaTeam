@@ -16,7 +16,7 @@ namespace QLDuocTrangBi.From_CauHinh
         public static string _key = "29fa797a-d341-4755-af56-8bf5aa6c9e5d";
         public static string _key1 = "2010-01-01;TRUONG ANH VU;COD-FWG-674-ECF";
         public static string StrConnect = UTL.DataBase.GetConfigMySQL();
-        DAL.TestConnect _TestConnect = new DAL.TestConnect(StrConnect);
+        DAL.TestConnectDAL _TestConnect = new DAL.TestConnectDAL(StrConnect);
 
 
         #endregion
