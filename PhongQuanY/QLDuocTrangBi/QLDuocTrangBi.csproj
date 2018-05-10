@@ -63,16 +63,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="From_CauHinh\Frm_PhanQuyen.cs">
+    <Compile Include="From_ChucNang\Frm_PhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From_CauHinh\Frm_PhanQuyen.Designer.cs">
+    <Compile Include="From_ChucNang\Frm_PhanQuyen.Designer.cs">
       <DependentUpon>Frm_PhanQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="From_CauHinh\Frm_Setting.cs">
+    <Compile Include="From_ChucNang\Frm_Setting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From_CauHinh\Frm_Setting.Designer.cs">
+    <Compile Include="From_ChucNang\Frm_Setting.Designer.cs">
       <DependentUpon>Frm_Setting.cs</DependentUpon>
     </Compile>
     <Compile Include="From_ChucNang\Frm_DVTinh.cs">
@@ -101,11 +101,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="From_CauHinh\Frm_Setting.resx">
+    <EmbeddedResource Include="From_ChucNang\Frm_Setting.resx">
       <DependentUpon>Frm_Setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_ChucNang\Frm_DVTinh.resx">
       <DependentUpon>Frm_DVTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From_ChucNang\Frm_NuocSX.resx">
+      <DependentUpon>Frm_NuocSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
