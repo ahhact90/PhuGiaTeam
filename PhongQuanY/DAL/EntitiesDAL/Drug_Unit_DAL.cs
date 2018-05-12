@@ -31,7 +31,10 @@ namespace DAL.EntitiesDAL
 
         public bool Insert(object obj)
         {
-            throw new NotImplementedException();
+            var o = (Drug_Unit)obj;
+            var sql = "Insert into  tbl_drugunit(id,unitname) values {0},{1}";
+            sql = string.Format(sql, o.id, o.unitname);
+            return ExecuteNonQuery(sql) > 0 ? true : false;
         }
 
         public DataTable Search(string name)
