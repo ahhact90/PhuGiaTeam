@@ -15,9 +15,10 @@ namespace QLDuocTrangBi
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Application.Run(new From_CauHinh.Frm_Setting());
+            Application.SetCompatibleTextRenderingDefault(false);            
+            //Application.Run(new From_CauHinh.Frm_Setting());
+            Application.Run(new From_ChucNang.Frm_DVT());
+
         }
     }
 }
