@@ -64,6 +64,29 @@ namespace QLDuocTrangBi.From_ChucNang
         /// <returns></returns>
         protected override void PerformDelete()
         {
+            try
+            {
+                var id1 = gv_data.GetFocusedRowCellValue("id") + "";
+                DialogResult result;
+                
+                result = XtraMessageBox.Show("Bạn có chắc xóa không ? ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.OK)
+                {
+                    var ok = _dal.Delete(id1);
+                    if (ok)
+                    {
+                        PerformRefresh();
+                    }
+                    else
+                        XtraMessageBox.Show("Lỗi! Không xóa được", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+
+                XtraMessageBox.Show("Vui lòng chọn dữ liệu cần xóa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
             
 
             base.PerformDelete();
@@ -241,7 +264,8 @@ namespace QLDuocTrangBi.From_ChucNang
         /// </summary>
         protected override void DataBindingControl()
         {
-
+            //txtDvt.DataBindings.Add("Text", _dt, ".id");
+            //txtTenDVT.DataBindings.Add("Text", _dt, ".unitname");
             //txt_SttBienLai.DataBindings.Add("Text", _dt, ".STT_BLP");
             //cbo_SttPhieuMuon.DataBindings.Add("EditValue", _dt, "STT_PM");
             //cbo_MaCuonSach.DataBindings.Add("EditValue", _dt, ".MACUONSACH");
