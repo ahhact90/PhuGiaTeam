@@ -74,7 +74,11 @@ namespace QLDuocTrangBi.From_ChucNang
         /// </summary>
         protected override void PerformEdit()
         {
-            ReadOnlyControl(false);           
+            ReadOnlyControl(false); 
+           
+            //txtDvt.Properties.ReadOnly = true;
+            //txtTenDVT.Properties.ReadOnly = true;           
+            
             base.PerformEdit();
         }
 
@@ -156,30 +160,37 @@ namespace QLDuocTrangBi.From_ChucNang
 
             if (IsEdit)
             {
-                var id1 = gv_data.GetFocusedRowCellValue("id") + "";
-
-
-                var o = new DAL.Entities.Drug_Unit()
+                //var id1 = gv_data.GetFocusedRowCellValue("id") + "";
+                try
                 {
-                    id = Convert.ToInt32(txtDvt.Text),
-                    unitname = Convert.ToString(txtTenDVT.Text)
+                    var o = new DAL.Entities.Drug_Unit()
+                    {
+                        id = Convert.ToInt32(txtDvt.Text),
+                        unitname = Convert.ToString(txtTenDVT.Text)
 
-                };
+                    };
 
-                var oki = _dal.Update(o);
+                    var oki = _dal.Update(o);
 
-                if (oki)
-                {
-                    XtraMessageBox.Show("Đã lưu thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    PerformRefresh();
-                    ChangeStatus();
+                    if (oki)
+                    {
+                        XtraMessageBox.Show("Đã lưu thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        PerformRefresh();
+                        ChangeStatus();
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Lỗi! Lưu thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ChangeStatus(false);
+                        ReadOnlyControl(false);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    XtraMessageBox.Show("Lỗi! Lưu thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ChangeStatus(false);
-                    ReadOnlyControl(false);
+
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                               
             }
 
 
@@ -318,6 +329,20 @@ namespace QLDuocTrangBi.From_ChucNang
         }
 
         #endregion
+
+        private void gv_data_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            //int oneValueOfCellOfRow = int.Parse(gv_data.GetRowCellValue(e.RowHandle, "id").ToString());
+            //txtDvt.Text = gv_data.GetRowCellValue(e.RowHandle, "id").ToString();
+            //txtTenDVT.Text = gv_data.GetRowCellValue(e.RowHandle, "unitname").ToString();  
+        }
+
+        private void gv_data_Click(object sender, EventArgs e)
+        {
+            txtDvt.Text = gv_data.GetFocusedRowCellValue("id").ToString();           
+            txtTenDVT.Text = gv_data.GetFocusedRowCellValue("unitname").ToString();  
+           
+        }
 
        
     }

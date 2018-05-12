@@ -134,6 +134,8 @@
             this.gv_data.Name = "gv_data";
             this.gv_data.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.gv_data.OptionsView.ShowGroupPanel = false;
+            this.gv_data.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gv_data_RowClick);
+            this.gv_data.Click += new System.EventHandler(this.gv_data_Click);
             // 
             // Frm_DVT
             // 

@@ -78,7 +78,7 @@ namespace DAL.EntitiesDAL
         public bool Update(object obj)
         {
             var o = (Drug_Unit)obj;
-            var sql = "Update From tbl_drugunit Set unitname = '{0}' Where id = {1}";
+            var sql = "Update tbl_drugunit Set unitname = '{0}' Where id = {1}";
             sql = string.Format(sql,o.unitname,o.id);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
