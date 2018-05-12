@@ -67,10 +67,8 @@ namespace QLDuocTrangBi.From_ChucNang
             try
             {
                 var id1 = gv_data.GetFocusedRowCellValue("id") + "";
-                DialogResult result;
-                
+                DialogResult result;                
                 result = XtraMessageBox.Show("Bạn có chắc xóa không ? ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-
                 if (result == DialogResult.OK)
                 {
                     var ok = _dal.Delete(id1);
