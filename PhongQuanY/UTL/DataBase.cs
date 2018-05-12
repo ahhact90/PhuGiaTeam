@@ -32,14 +32,14 @@ namespace UTL
         public static string getHosPath(string Database, string Pass, string IPSrv, string Port, string UID)
         {
             string text = Encrypt("tckt", "2010-01-01;TRUONG ANH VU;COD-FWG-674-ECF", true);
-            return string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};Timeout={5};CommandTimeout={5};", new object[]
+            return string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};", new object[]
 			{
 				IPSrv,
 				Port,
 				UID,
 				Decrypt(Pass, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true),
-				Database,
-				1000
+				Database
+				
 			});
         }
         /// <summary>

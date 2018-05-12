@@ -11,9 +11,25 @@ namespace QLDuocTrangBi.From_ChucNang
 {
     public partial class Frm_DVT : PRE.Catalog.FrmBase
     {
+        #region Variable
+        public static string StrConnect = UTL.DataBase.GetConfig();
+        DAL.EntitiesDAL.Drug_Unit_DAL _dal = new DAL.EntitiesDAL.Drug_Unit_DAL(StrConnect);       
+
+        DataTable _dt = new DataTable();
+        DataTable _dt2 = new DataTable();
+        DataTable _dt3 = new DataTable();
+
+        #endregion
+
         public Frm_DVT()
         {
             InitializeComponent();
+            
+        }
+
+        private void Frm_DVT_Load(object sender, EventArgs e)
+        {
+            PerformRefresh();
         }
 
         #region Override
@@ -76,7 +92,21 @@ namespace QLDuocTrangBi.From_ChucNang
         /// </summary>
         protected override void PerformRefresh()
         {
-            
+            ReadOnlyControl();
+            LoadData();
+            ChangeStatus();
+            ResetText();
+
+           
+
+            if (_dt != null)
+            {
+                // Binding data
+                ClearDataBindings();
+                if (_dt.Rows.Count > 0) DataBindingControl();
+            }
+
+
 
 
 
@@ -88,7 +118,62 @@ namespace QLDuocTrangBi.From_ChucNang
         /// </summary>
         protected override void PerformSave()
         {
-            
+            if (IsAdd)
+            {
+
+                var o = new DAL.Entities.Drug_Unit()
+                {
+
+                    id = Convert.ToInt32(txtDvt.Text),                    
+                    unitname = Convert.ToString(txtTenDVT.Text)
+
+
+                };
+
+                var oki = _dal.Insert(o);
+                if (oki)
+                {
+                    XtraMessageBox.Show("Đã lưu thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PerformRefresh();
+                    ChangeStatus(false);
+                    PerformAdd();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Lỗi! Lưu thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ChangeStatus(false);
+                    ReadOnlyControl(false);
+                }
+            }
+
+            if (IsEdit)
+            {
+                var id1 = gv_data.GetFocusedRowCellValue("id") + "";
+
+
+                var o = new DAL.Entities.Drug_Unit()
+                {
+                    id = Convert.ToInt32(txtDvt.Text),
+                    unitname = Convert.ToString(txtTenDVT.Text)
+
+                };
+
+                var oki = _dal.Update(o);
+
+                if (oki)
+                {
+                    XtraMessageBox.Show("Đã lưu thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PerformRefresh();
+                    ChangeStatus();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Lỗi! Lưu thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ChangeStatus(false);
+                    ReadOnlyControl(false);
+                }
+            }
+
 
             base.PerformSave();
         }
@@ -98,6 +183,8 @@ namespace QLDuocTrangBi.From_ChucNang
         /// </summary>
         protected override void ResetText()
         {
+            txtDvt.ResetText();
+            txtTenDVT.ResetText();
             //txt_SttBienLai.ResetText();
             //cbo_SttPhieuMuon.ResetText();
             //cbo_MaCuonSach.ResetText();
@@ -155,15 +242,9 @@ namespace QLDuocTrangBi.From_ChucNang
         protected override void ReadOnlyControl(bool isReadOnly = true)
         {
 
-            //txt_SttBienLai.Properties.ReadOnly = isReadOnly;
-            //txt_LyDo.Properties.ReadOnly = isReadOnly;
-            //txt_SoTien.Properties.ReadOnly = isReadOnly;
-            //txt_HoTen.Properties.ReadOnly = isReadOnly;
-            //dte_NgayLap.Properties.ReadOnly = isReadOnly;
-            //cbo_SttPhieuMuon.Properties.ReadOnly = isReadOnly;
-            //cbo_MaCuonSach.Properties.ReadOnly = isReadOnly;
-            //txt_TenDauSach.Properties.ReadOnly = isReadOnly;
-            //gridControl_BienLaiPhat.Enabled = isReadOnly;
+            txtDvt.Properties.ReadOnly = isReadOnly;
+            txtTenDVT.Properties.ReadOnly = isReadOnly;
+            
 
             base.ReadOnlyControl(isReadOnly);
         }
@@ -199,7 +280,7 @@ namespace QLDuocTrangBi.From_ChucNang
         /// </summary>
         protected override void LoadData()
         {
-            //_dt = _dal.Select();
+            _dt = _dal.Select();
             //_dt2 = _dal2.Select();
             //_dt3 = _dal3.Select();
             //cbo_MaCuonSach.Properties.DataSource = _dt2;
@@ -207,13 +288,13 @@ namespace QLDuocTrangBi.From_ChucNang
 
             try
             {
-                //if (_dt != null)
-                //{
-                //    gridControl_BienLaiPhat.DataSource = _dt;
+                if (_dt != null)
+                {
+                    grc_data.DataSource = _dt;
 
-                //    gridView_BienLaiPhat.OptionsBehavior.ReadOnly = true;
-                //    gridView_BienLaiPhat.OptionsView.ColumnAutoWidth = true;
-                //}
+                    gv_data.OptionsBehavior.ReadOnly = true;
+                    gv_data.OptionsView.ColumnAutoWidth = true;
+                }
 
                 base.LoadData();
             }
@@ -226,5 +307,7 @@ namespace QLDuocTrangBi.From_ChucNang
         }
 
         #endregion
+
+       
     }
 }

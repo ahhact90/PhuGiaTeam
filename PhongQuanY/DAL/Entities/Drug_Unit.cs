@@ -8,7 +8,7 @@ namespace DAL.Entities
 {
     public class Drug_Unit
     {
-        public string id { set; get; }
+        public Int32 id { set; get; }
         public string unitname { set; get; }
        
     }

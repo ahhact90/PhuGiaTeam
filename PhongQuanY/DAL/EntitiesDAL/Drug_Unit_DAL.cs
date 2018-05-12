@@ -10,6 +10,11 @@ namespace DAL.EntitiesDAL
 {
     public class Drug_Unit_DAL : BaseDAL, UTL.IBaseDAL
     {
+         #region Contrustor
+            public static string StrConnect = UTL.DataBase.GetConfig();
+            public Drug_Unit_DAL(string StrConnect) : base(StrConnect) { }
+        #endregion
+
         #region Implement
 
         public int Count()
@@ -32,7 +37,7 @@ namespace DAL.EntitiesDAL
         public bool Insert(object obj)
         {
             var o = (Drug_Unit)obj;
-            var sql = "Insert into  tbl_drugunit(id,unitname) values {0},{1}";
+            var sql = "Insert into  tbl_drugunit (id,unitname) values ({0},'{1}')";
             sql = string.Format(sql, o.id, o.unitname);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
@@ -43,8 +48,10 @@ namespace DAL.EntitiesDAL
         }
 
         public DataTable Select()
-        {
-            throw new NotImplementedException();
+        {  
+            var sql = "SELECT * FROM tbl_drugunit";
+            sql = string.Format(sql);
+            return ExecuteQuery(sql);
         }
 
         public DataTable Select(object obj)
@@ -70,7 +77,7 @@ namespace DAL.EntitiesDAL
         public bool Update(object obj)
         {
             var o = (Drug_Unit)obj;
-            var sql = "Update From tbl_drugunit Set unitname = {0} Where id = {1}";
+            var sql = "Update From tbl_drugunit Set unitname = '{0}' Where id = {1}";
             sql = string.Format(sql,o.unitname,o.id);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
