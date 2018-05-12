@@ -325,7 +325,7 @@ namespace QLDuocTrangBi.From_ChucNang
             //_dt2 = _dal2.Select();
             //_dt3 = _dal3.Select();
             //cbo_MaCuonSach.Properties.DataSource = _dt2;
-            //cbo_SttPhieuMuon.Properties.DataSource = _dt3;
+            //cbo_SttPhieuMuon.Properties.DataSource = _dt3;           
 
             try
             {
