@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using DAL.Entities;
 
 namespace DAL.EntitiesDAL
 {
@@ -18,7 +19,9 @@ namespace DAL.EntitiesDAL
 
         public bool Delete(string id)
         {
-            throw new NotImplementedException();
+            var sql = "Delete From tbl_drugunit Where id = {0}";
+            sql = string.Format(sql, id);
+            return ExecuteNonQuery(sql) > 0 ? true : false;
         }
 
         public object GetByKey(object key)
@@ -63,7 +66,10 @@ namespace DAL.EntitiesDAL
 
         public bool Update(object obj)
         {
-            throw new NotImplementedException();
+            var o = (Drug_Unit)obj;
+            var sql = "Update From tbl_drugunit Set unitname = {0} Where id = {1}";
+            sql = string.Format(sql,o.unitname,o.id);
+            return ExecuteNonQuery(sql) > 0 ? true : false;
         }
 
         #endregion
