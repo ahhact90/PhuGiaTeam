@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
     <Compile Include="BaseDALPostgrest.cs" />
+    <Compile Include="Entities\Drug_Unit.cs" />
     <Compile Include="NuocSXDAL.cs" />
     <Compile Include="TestConnectDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
