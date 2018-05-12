@@ -70,6 +70,12 @@
     <Compile Include="From_ChucNang\FrmBase.designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_ChucNang\Frm_DVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_ChucNang\Frm_DVT.Designer.cs">
+      <DependentUpon>Frm_DVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_ChucNang\Frm_PhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +87,6 @@
     </Compile>
     <Compile Include="From_ChucNang\Frm_Setting.Designer.cs">
       <DependentUpon>Frm_Setting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="From_ChucNang\Frm_DVTinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From_ChucNang\Frm_DVTinh.Designer.cs">
-      <DependentUpon>Frm_DVTinh.cs</DependentUpon>
     </Compile>
     <Compile Include="From_ChucNang\Frm_NuocSX.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
     <EmbeddedResource Include="From_ChucNang\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="From_ChucNang\Frm_DVT.resx">
+      <DependentUpon>Frm_DVT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="From_ChucNang\Frm_Setting.resx">
       <DependentUpon>Frm_Setting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="From_ChucNang\Frm_DVTinh.resx">
-      <DependentUpon>Frm_DVTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_ChucNang\Frm_NuocSX.resx">
       <DependentUpon>Frm_NuocSX.cs</DependentUpon>
@@ -129,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

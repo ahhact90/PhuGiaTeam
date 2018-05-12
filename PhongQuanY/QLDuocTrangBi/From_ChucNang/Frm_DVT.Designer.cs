@@ -1,6 +1,6 @@
 ﻿namespace QLDuocTrangBi.From_ChucNang
 {
-    partial class Frm_DVTinh
+    partial class Frm_DVT
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ((System.ComponentModel.ISupportInitialize)(this._dtb)).BeginInit();
             this.SuspendLayout();
             // 
-            // Frm_DVTinh
+            // Frm_DVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 583);
-            this.Name = "Frm_DVTinh";
-            this.Text = "Frm_DVTinh";
+            this.ClientSize = new System.Drawing.Size(810, 513);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "Frm_DVT";
+            ((System.ComponentModel.ISupportInitialize)(this._dtb)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

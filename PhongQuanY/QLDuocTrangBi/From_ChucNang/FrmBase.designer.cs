@@ -108,21 +108,21 @@
             // btnAdd
             // 
             this.btnAdd.Caption = "&Thêm";
-            //this.btnAdd.Glyph = global::PRE.Properties.Resources._1;
             this.btnAdd.Id = 0;
+            this.btnAdd.LargeGlyph = global::QLDuocTrangBi.Properties.Resources._1;
             this.btnAdd.Name = "btnAdd";
             // 
             // btnEdit
             // 
             this.btnEdit.Caption = "&Sửa";
-           // this.btnEdit.Glyph = global::PRE.Properties.Resources._4;
+            this.btnEdit.Glyph = global::QLDuocTrangBi.Properties.Resources._4;
             this.btnEdit.Id = 1;
             this.btnEdit.Name = "btnEdit";
             // 
             // btnDelete
             // 
             this.btnDelete.Caption = "&Xóa";
-            //this.btnDelete.Glyph = global::PRE.Properties.Resources._6;
+            this.btnDelete.Glyph = global::QLDuocTrangBi.Properties.Resources._3;
             this.btnDelete.Id = 2;
             this.btnDelete.Name = "btnDelete";
             // 
@@ -130,7 +130,7 @@
             // 
             this.btnSave.Caption = "&Lưu";
             this.btnSave.Enabled = false;
-           // this.btnSave.Glyph = global::PRE.Properties.Resources.save;
+            this.btnSave.Glyph = global::QLDuocTrangBi.Properties.Resources.save;
             this.btnSave.Id = 3;
             this.btnSave.Name = "btnSave";
             // 
@@ -138,35 +138,35 @@
             // 
             this.btnCancel.Caption = "&Hủy";
             this.btnCancel.Enabled = false;
-            //this.btnCancel.Glyph = global::PRE.Properties.Resources._3;
+            this.btnCancel.Glyph = global::QLDuocTrangBi.Properties.Resources._6;
             this.btnCancel.Id = 4;
             this.btnCancel.Name = "btnCancel";
             // 
             // btnSearch
             // 
             this.btnSearch.Caption = "&Tìm kiếm";
-           // this.btnSearch.Glyph = global::PRE.Properties.Resources._5;
+            this.btnSearch.Glyph = global::QLDuocTrangBi.Properties.Resources._5;
             this.btnSearch.Id = 5;
             this.btnSearch.Name = "btnSearch";
             // 
             // btnRefresh
             // 
             this.btnRefresh.Caption = "&Làm tươi";
-            //this.btnRefresh.Glyph = global::PRE.Properties.Resources.refresh;
+            this.btnRefresh.Glyph = global::QLDuocTrangBi.Properties.Resources.refresh1;
             this.btnRefresh.Id = 6;
             this.btnRefresh.Name = "btnRefresh";
             // 
             // btnPrint
             // 
             this.btnPrint.Caption = "&In";
-            //this.btnPrint.Glyph = global::PRE.Properties.Resources.printer;
+            this.btnPrint.Glyph = global::QLDuocTrangBi.Properties.Resources.printer;
             this.btnPrint.Id = 7;
             this.btnPrint.Name = "btnPrint";
             // 
             // btnClose
             // 
             this.btnClose.Caption = "&Đóng";
-           // this.btnClose.Glyph = global::PRE.Properties.Resources._2;
+            this.btnClose.Glyph = global::QLDuocTrangBi.Properties.Resources._2;
             this.btnClose.Id = 8;
             this.btnClose.Name = "btnClose";
             // 
@@ -187,14 +187,14 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(767, 55);
+            this.barDockControlTop.Size = new System.Drawing.Size(413, 55);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 54);
-            this.barDockControlBottom.Size = new System.Drawing.Size(767, 23);
+            this.barDockControlBottom.Size = new System.Drawing.Size(413, 23);
             // 
             // barDockControlLeft
             // 
@@ -207,7 +207,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(767, 55);
+            this.barDockControlRight.Location = new System.Drawing.Point(413, 55);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 0);
             // 
             // bbiMenuAdd
@@ -245,7 +245,6 @@
             // bbiLapHD
             // 
             this.bbiLapHD.Caption = "&Lập Hóa đơn";
-           // this.bbiLapHD.Glyph = global::PRE.Properties.Resources.article_48;
             this.bbiLapHD.Id = 14;
             this.bbiLapHD.Name = "bbiLapHD";
             // 
@@ -253,7 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 77);
+            this.ClientSize = new System.Drawing.Size(413, 77);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
