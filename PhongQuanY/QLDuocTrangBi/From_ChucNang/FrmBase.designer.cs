@@ -108,21 +108,21 @@
             // btnAdd
             // 
             this.btnAdd.Caption = "&Thêm";
-            this.btnAdd.Glyph = global::PRE.Properties.Resources._1;
+            //this.btnAdd.Glyph = global::PRE.Properties.Resources._1;
             this.btnAdd.Id = 0;
             this.btnAdd.Name = "btnAdd";
             // 
             // btnEdit
             // 
             this.btnEdit.Caption = "&Sửa";
-            this.btnEdit.Glyph = global::PRE.Properties.Resources._4;
+           // this.btnEdit.Glyph = global::PRE.Properties.Resources._4;
             this.btnEdit.Id = 1;
             this.btnEdit.Name = "btnEdit";
             // 
             // btnDelete
             // 
             this.btnDelete.Caption = "&Xóa";
-            this.btnDelete.Glyph = global::PRE.Properties.Resources._6;
+            //this.btnDelete.Glyph = global::PRE.Properties.Resources._6;
             this.btnDelete.Id = 2;
             this.btnDelete.Name = "btnDelete";
             // 
@@ -130,7 +130,7 @@
             // 
             this.btnSave.Caption = "&Lưu";
             this.btnSave.Enabled = false;
-            this.btnSave.Glyph = global::PRE.Properties.Resources.save;
+           // this.btnSave.Glyph = global::PRE.Properties.Resources.save;
             this.btnSave.Id = 3;
             this.btnSave.Name = "btnSave";
             // 
@@ -138,35 +138,35 @@
             // 
             this.btnCancel.Caption = "&Hủy";
             this.btnCancel.Enabled = false;
-            this.btnCancel.Glyph = global::PRE.Properties.Resources._3;
+            //this.btnCancel.Glyph = global::PRE.Properties.Resources._3;
             this.btnCancel.Id = 4;
             this.btnCancel.Name = "btnCancel";
             // 
             // btnSearch
             // 
             this.btnSearch.Caption = "&Tìm kiếm";
-            this.btnSearch.Glyph = global::PRE.Properties.Resources._5;
+           // this.btnSearch.Glyph = global::PRE.Properties.Resources._5;
             this.btnSearch.Id = 5;
             this.btnSearch.Name = "btnSearch";
             // 
             // btnRefresh
             // 
             this.btnRefresh.Caption = "&Làm tươi";
-            this.btnRefresh.Glyph = global::PRE.Properties.Resources.refresh;
+            //this.btnRefresh.Glyph = global::PRE.Properties.Resources.refresh;
             this.btnRefresh.Id = 6;
             this.btnRefresh.Name = "btnRefresh";
             // 
             // btnPrint
             // 
             this.btnPrint.Caption = "&In";
-            this.btnPrint.Glyph = global::PRE.Properties.Resources.printer;
+            //this.btnPrint.Glyph = global::PRE.Properties.Resources.printer;
             this.btnPrint.Id = 7;
             this.btnPrint.Name = "btnPrint";
             // 
             // btnClose
             // 
             this.btnClose.Caption = "&Đóng";
-            this.btnClose.Glyph = global::PRE.Properties.Resources._2;
+           // this.btnClose.Glyph = global::PRE.Properties.Resources._2;
             this.btnClose.Id = 8;
             this.btnClose.Name = "btnClose";
             // 
@@ -245,7 +245,7 @@
             // bbiLapHD
             // 
             this.bbiLapHD.Caption = "&Lập Hóa đơn";
-            this.bbiLapHD.Glyph = global::PRE.Properties.Resources.article_48;
+           // this.bbiLapHD.Glyph = global::PRE.Properties.Resources.article_48;
             this.bbiLapHD.Id = 14;
             this.bbiLapHD.Name = "bbiLapHD";
             // 
