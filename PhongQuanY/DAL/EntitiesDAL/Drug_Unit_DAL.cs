@@ -11,8 +11,9 @@ namespace DAL.EntitiesDAL
     public class Drug_Unit_DAL : BaseDAL, UTL.IBaseDAL
     {
          #region Contrustor
-            public static string StrConnect = UTL.DataBase.GetConfig();
-            public Drug_Unit_DAL(string StrConnect) : base(StrConnect) { }
+            //public static string StrConnect = UTL.DataBase.GetConfig();
+        public static string StrConnect;
+        public Drug_Unit_DAL(string StrConnect) : base(StrConnect) { }
         #endregion
 
         #region Implement

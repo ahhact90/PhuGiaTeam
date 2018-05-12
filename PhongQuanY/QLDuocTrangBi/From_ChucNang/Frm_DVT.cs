@@ -120,30 +120,38 @@ namespace QLDuocTrangBi.From_ChucNang
         {
             if (IsAdd)
             {
-
-                var o = new DAL.Entities.Drug_Unit()
+                try
                 {
+                    var o = new DAL.Entities.Drug_Unit()
+                    {
 
-                    id = Convert.ToInt32(txtDvt.Text),                    
-                    unitname = Convert.ToString(txtTenDVT.Text)
+                        id = Convert.ToInt32(txtDvt.Text),
+                        unitname = Convert.ToString(txtTenDVT.Text)
 
 
-                };
+                    };
 
-                var oki = _dal.Insert(o);
-                if (oki)
-                {
-                    XtraMessageBox.Show("Đã lưu thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    PerformRefresh();
-                    ChangeStatus(false);
-                    PerformAdd();
+                    var oki = _dal.Insert(o);
+                    if (oki)
+                    {
+                        XtraMessageBox.Show("Đã lưu thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        PerformRefresh();
+                        ChangeStatus(false);
+                        PerformAdd();
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Lỗi! Lưu thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ChangeStatus(false);
+                        ReadOnlyControl(false);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    XtraMessageBox.Show("Lỗi! Lưu thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ChangeStatus(false);
-                    ReadOnlyControl(false);
+
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                
             }
 
             if (IsEdit)
@@ -280,7 +288,7 @@ namespace QLDuocTrangBi.From_ChucNang
         /// </summary>
         protected override void LoadData()
         {
-            _dt = _dal.Select();
+            _dt = _dal.Select();            
             //_dt2 = _dal2.Select();
             //_dt3 = _dal3.Select();
             //cbo_MaCuonSach.Properties.DataSource = _dt2;
@@ -291,9 +299,12 @@ namespace QLDuocTrangBi.From_ChucNang
                 if (_dt != null)
                 {
                     grc_data.DataSource = _dt;
-
                     gv_data.OptionsBehavior.ReadOnly = true;
                     gv_data.OptionsView.ColumnAutoWidth = true;
+                    //gv_data.Columns[0].Visible = false;
+                    gv_data.Columns[0].Caption = "ID";
+                    gv_data.Columns[1].Caption = "Đơn vị tính";
+                    gv_data.BestFitColumns();                    
                 }
 
                 base.LoadData();
