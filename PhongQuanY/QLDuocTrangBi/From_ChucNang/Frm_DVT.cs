@@ -12,7 +12,7 @@ namespace QLDuocTrangBi.From_ChucNang
     public partial class Frm_DVT : PRE.Catalog.FrmBase
     {
         #region Variable
-        public static string StrConnect = UTL.DataBase.GetConfig();
+        public static string StrConnect = UTL.DataBase.GetConfigMySQL();
         DAL.EntitiesDAL.Drug_Unit_DAL _dal = new DAL.EntitiesDAL.Drug_Unit_DAL(StrConnect);       
 
         DataTable _dt = new DataTable();
