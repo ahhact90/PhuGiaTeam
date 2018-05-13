@@ -31,16 +31,16 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNSX = new DevExpress.XtraEditors.TextEdit();
+            this.txtMa = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gc_NSX = new DevExpress.XtraGrid.GridControl();
             this.gv_NSX = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this._dtb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNSX.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_NSX)).BeginInit();
@@ -51,8 +51,8 @@
             // 
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txtNSX);
+            this.groupControl1.Controls.Add(this.txtMa);
             this.groupControl1.Location = new System.Drawing.Point(0, 57);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(392, 135);
@@ -75,19 +75,19 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Mã Nước";
             // 
-            // textEdit2
+            // txtNSX
             // 
-            this.textEdit2.Location = new System.Drawing.Point(111, 83);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(269, 20);
-            this.textEdit2.TabIndex = 0;
+            this.txtNSX.Location = new System.Drawing.Point(111, 83);
+            this.txtNSX.Name = "txtNSX";
+            this.txtNSX.Size = new System.Drawing.Size(269, 20);
+            this.txtNSX.TabIndex = 0;
             // 
-            // textEdit1
+            // txtMa
             // 
-            this.textEdit1.Location = new System.Drawing.Point(111, 36);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(269, 20);
-            this.textEdit1.TabIndex = 0;
+            this.txtMa.Location = new System.Drawing.Point(111, 36);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(269, 20);
+            this.txtMa.TabIndex = 0;
             // 
             // groupControl2
             // 
@@ -115,6 +115,7 @@
             this.gv_NSX.Name = "gv_NSX";
             this.gv_NSX.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.gv_NSX.OptionsView.ShowGroupPanel = false;
+            this.gv_NSX.Click += new System.EventHandler(this.gv_NSX_Click);
             // 
             // Frm_NuocSX
             // 
@@ -133,8 +134,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNSX.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_NSX)).EndInit();
@@ -150,8 +151,8 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtNSX;
+        private DevExpress.XtraEditors.TextEdit txtMa;
         private DevExpress.XtraGrid.GridControl gc_NSX;
         private DevExpress.XtraGrid.Views.Grid.GridView gv_NSX;
     }

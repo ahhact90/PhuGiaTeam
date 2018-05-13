@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using DAL.Entities;
 
 namespace DAL.EntitiesDAL
 {
@@ -77,8 +78,8 @@ namespace DAL.EntitiesDAL
         public bool Update(object obj)
         {
             var o = (Country)obj;
-            var sql = "Update tbl_country Set country_code = '{0}',country_name ='{1}' Where id = {2}";
-            sql = string.Format(sql, o.country_code, o.country_name,o.id);
+            var sql = "Update tbl_country Set country_code = '{0}',country_name ='{1}' Where country_code = {0}";
+            sql = string.Format(sql, o.country_code, o.country_name);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
 
