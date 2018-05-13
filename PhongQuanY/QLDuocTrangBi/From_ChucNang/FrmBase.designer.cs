@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.barMain = new DevExpress.XtraBars.BarManager(this.components);
+            this.barMain = new DevExpress.XtraBars.BarManager();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();

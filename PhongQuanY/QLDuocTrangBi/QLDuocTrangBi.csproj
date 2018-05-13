@@ -79,6 +79,12 @@
     <Compile Include="From_ChucNang\Frm_DVT.Designer.cs">
       <DependentUpon>Frm_DVT.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_ChucNang\Frm_HoatChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_ChucNang\Frm_HoatChat.Designer.cs">
+      <DependentUpon>Frm_HoatChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_ChucNang\Frm_NuocSX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From_ChucNang\Frm_DVT.resx">
       <DependentUpon>Frm_DVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From_ChucNang\Frm_HoatChat.resx">
+      <DependentUpon>Frm_HoatChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_ChucNang\Frm_NuocSX.resx">
       <DependentUpon>Frm_NuocSX.cs</DependentUpon>
