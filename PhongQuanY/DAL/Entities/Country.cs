@@ -8,6 +8,8 @@ namespace DAL.Entities
 {
     public class Country
     {
-
+        public Int32 id { set; get; }
+        public string country_code { set; get; }
+        public string country_name { set; get; }
     }
 }
