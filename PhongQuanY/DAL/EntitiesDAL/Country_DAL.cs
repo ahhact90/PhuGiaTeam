@@ -24,7 +24,7 @@ namespace DAL.EntitiesDAL
 
         public bool Delete(string id)
         {
-            var sql = "Delete From tbl_drugunit Where id = {0}";
+            var sql = "Delete From tbl_country Where id = {0}";
             sql = string.Format(sql, id);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
@@ -36,9 +36,9 @@ namespace DAL.EntitiesDAL
 
         public bool Insert(object obj)
         {
-            var o = (Country_DAL)obj;
-            var sql = "Insert into  tbl_drugunit (unitname) values ('{0}')";
-            sql = string.Format(sql, o.country_name);
+            var o = (Country)obj;
+            var sql = "Insert into  tbl_country (country_code,country_name) values ('{0}','{1}')";
+            sql = string.Format(sql,o.country_code, o.country_name);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
 
@@ -48,8 +48,8 @@ namespace DAL.EntitiesDAL
         }
 
         public DataTable Select()
-        {  
-            var sql = "SELECT * FROM tbl_drugunit";
+        {
+            var sql = "SELECT * FROM tbl_country";
             sql = string.Format(sql);
             return ExecuteQuery(sql);
         }
@@ -76,9 +76,9 @@ namespace DAL.EntitiesDAL
 
         public bool Update(object obj)
         {
-            var o = (Country_DAL)obj;
-            var sql = "Update tbl_drugunit Set unitname = '{0}' Where id = {1}";
-            sql = string.Format(sql,o.unitname,o.id);
+            var o = (Country)obj;
+            var sql = "Update tbl_country Set country_code = '{0}',country_name ='{1}' Where id = {2}";
+            sql = string.Format(sql, o.country_code, o.country_name,o.id);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
 
