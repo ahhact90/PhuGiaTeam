@@ -43,7 +43,7 @@ namespace QLDuocTrangBi.From_ChucNang
                     ReadOnlyControl(false);
                     ClearDataBindings();
                     ChangeStatus(false);
-
+                    txtDvt.Properties.ReadOnly = true;
                     base.PerformAdd();   
             
         }
@@ -150,7 +150,7 @@ namespace QLDuocTrangBi.From_ChucNang
                     var o = new DAL.Entities.Drug_Unit()
                     {
 
-                        id = Convert.ToInt32(txtDvt.Text),
+                        //id = Convert.ToInt32(txtDvt.Text),
                         unitname = Convert.ToString(txtTenDVT.Text)
 
 

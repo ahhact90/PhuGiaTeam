@@ -38,8 +38,8 @@ namespace DAL.EntitiesDAL
         public bool Insert(object obj)
         {
             var o = (Drug_Unit)obj;
-            var sql = "Insert into  tbl_drugunit (id,unitname) values ({0},'{1}')";
-            sql = string.Format(sql, o.id, o.unitname);
+            var sql = "Insert into  tbl_drugunit (unitname) values ('{0}')";
+            sql = string.Format(sql, o.unitname);
             return ExecuteNonQuery(sql) > 0 ? true : false;
         }
 
