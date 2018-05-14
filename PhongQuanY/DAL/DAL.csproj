@@ -65,7 +65,6 @@
     <Compile Include="Entities\Country.cs" />
     <Compile Include="Entities\Drug_Unit.cs" />
     <Compile Include="Entities\HoatChat.cs" />
-    <Compile Include="NuocSXDAL.cs" />
     <Compile Include="TestConnectDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
