@@ -92,7 +92,7 @@ namespace QLDuocTrangBi.From_ChucNang
             ReadOnlyControl(false);
 
             //txtMa.Properties.ReadOnly = true;
-            //txtNSX.Properties.ReadOnly = true;           
+            //txtTen.Properties.ReadOnly = true;           
 
             base.PerformEdit();
         }
@@ -181,8 +181,8 @@ namespace QLDuocTrangBi.From_ChucNang
                 {
                     var o = new DAL.Entities.HoatChat()
                     {
-                        HoatChat_code = Convert.ToString(txtMa.Text),
-                        HoatChat_name = Convert.ToString(txtNSX.Text)
+                        id = Convert.ToInt32(txtMa.Text),
+                        generic = Convert.ToString(txtTen.Text)
 
                     };
 
@@ -219,7 +219,7 @@ namespace QLDuocTrangBi.From_ChucNang
         protected override void ResetText()
         {
             txtMa.ResetText();
-            txtNSX.ResetText();
+            txtTen.ResetText();
             //txt_SttBienLai.ResetText();
             //cbo_SttPhieuMuon.ResetText();
             //cbo_MaCuonSach.ResetText();
@@ -258,7 +258,7 @@ namespace QLDuocTrangBi.From_ChucNang
         protected override void DataBindingControl()
         {
             //txtMa.DataBindings.Add("Text", _dt, ".id");
-            //txtNSX.DataBindings.Add("Text", _dt, ".unitname");
+            //txtTen.DataBindings.Add("Text", _dt, ".unitname");
             //txt_SttBienLai.DataBindings.Add("Text", _dt, ".STT_BLP");
             //cbo_SttPhieuMuon.DataBindings.Add("EditValue", _dt, "STT_PM");
             //cbo_MaCuonSach.DataBindings.Add("EditValue", _dt, ".MACUONSACH");
@@ -279,7 +279,7 @@ namespace QLDuocTrangBi.From_ChucNang
         {
 
             txtMa.Properties.ReadOnly = isReadOnly;
-            txtNSX.Properties.ReadOnly = isReadOnly;
+            txtTen.Properties.ReadOnly = isReadOnly;
 
 
             base.ReadOnlyControl(isReadOnly);
@@ -326,13 +326,13 @@ namespace QLDuocTrangBi.From_ChucNang
             {
                 if (_dt != null)
                 {
-                    gc_NSX.DataSource = _dt;
+                    gc_hoatchat.DataSource = _dt;
                     gv_hoatchat.OptionsBehavior.ReadOnly = true;
                     gv_hoatchat.OptionsView.ColumnAutoWidth = true;
                     //gv_hoatchat.Columns[0].Visible = false;
                     gv_hoatchat.Columns[0].Caption = "ID";
-                    gv_hoatchat.Columns[1].Caption = "Mã Nước";
-                    gv_hoatchat.Columns[2].Caption = "Tên Nước";
+                    gv_hoatchat.Columns[1].Caption = "Tên hoạt chất";
+                   // gv_hoatchat.Columns[2].Caption = "Tên Nước";
                     gv_hoatchat.BestFitColumns();
                 }
 
@@ -347,5 +347,11 @@ namespace QLDuocTrangBi.From_ChucNang
         }
 
         #endregion
+
+        private void gv_hoatchat_Click(object sender, EventArgs e)
+        {
+            txtMa.Text = gv_hoatchat.GetFocusedRowCellValue("id").ToString();
+            txtTen.Text = gv_hoatchat.GetFocusedRowCellValue("generic").ToString();  
+        }
     }
 }

@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTen = new DevExpress.XtraEditors.TextEdit();
+            this.txtMa = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gc_hoatchat = new DevExpress.XtraGrid.GridControl();
             this.gv_hoatchat = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.txtMa = new DevExpress.XtraEditors.TextEdit();
-            this.txtTen = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this._dtb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_hoatchat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_hoatchat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -58,6 +58,36 @@
             this.groupControl1.Size = new System.Drawing.Size(387, 128);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Thông tin hoạt chất";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(18, 79);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(70, 13);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "Tên Hoạt Chất";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(18, 35);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(66, 13);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Mã Hoạt Chất";
+            // 
+            // txtTen
+            // 
+            this.txtTen.Location = new System.Drawing.Point(104, 77);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(271, 20);
+            this.txtTen.TabIndex = 0;
+            // 
+            // txtMa
+            // 
+            this.txtMa.Location = new System.Drawing.Point(104, 34);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(271, 20);
+            this.txtMa.TabIndex = 0;
             // 
             // groupControl2
             // 
@@ -85,36 +115,7 @@
             this.gv_hoatchat.Name = "gv_hoatchat";
             this.gv_hoatchat.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.gv_hoatchat.OptionsView.ShowGroupPanel = false;
-            // 
-            // txtMa
-            // 
-            this.txtMa.Location = new System.Drawing.Point(104, 34);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(271, 20);
-            this.txtMa.TabIndex = 0;
-            // 
-            // txtTen
-            // 
-            this.txtTen.Location = new System.Drawing.Point(104, 77);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(271, 20);
-            this.txtTen.TabIndex = 0;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(18, 35);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(66, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Mã Hoạt Chất";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(18, 79);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(70, 13);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Tên Hoạt Chất";
+            this.gv_hoatchat.Click += new System.EventHandler(this.gv_hoatchat_Click);
             // 
             // Frm_HoatChat
             // 
@@ -132,12 +133,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_hoatchat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_hoatchat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
