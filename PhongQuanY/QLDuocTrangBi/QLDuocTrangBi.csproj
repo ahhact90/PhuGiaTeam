@@ -73,6 +73,12 @@
     <Compile Include="From_ChucNang\FrmBase.designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="From_ChucNang\Frm_Congty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From_ChucNang\Frm_Congty.Designer.cs">
+      <DependentUpon>Frm_Congty.cs</DependentUpon>
+    </Compile>
     <Compile Include="From_ChucNang\Frm_DVT.cs">
       <SubType>Form</SubType>
     </Compile>
