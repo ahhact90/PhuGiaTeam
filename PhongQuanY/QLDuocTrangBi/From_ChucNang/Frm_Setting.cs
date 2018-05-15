@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QLDuocTrangBi.From_CauHinh
 {
@@ -62,7 +63,7 @@ namespace QLDuocTrangBi.From_CauHinh
                 lst_database.DataSource = result2;
                 lst_database.DisplayMember = "Database";
                 lst_database.ValueMember = "Database";
-                MessageBox.Show("Kết nối CSDL thành công");
+                MessageBox.Show("Kết nối CSDL thành công");           
                 
             }
             catch
@@ -73,3 +74,4 @@ namespace QLDuocTrangBi.From_CauHinh
         }
     }
 }
+

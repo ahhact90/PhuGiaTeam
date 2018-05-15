@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            ((System.ComponentModel.ISupportInitialize)(this._dtb)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // Frm_Congty
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1114, 487);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "Frm_Congty";
+            ((System.ComponentModel.ISupportInitialize)(this._dtb)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

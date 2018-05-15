@@ -123,6 +123,9 @@
     <EmbeddedResource Include="From_ChucNang\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="From_ChucNang\Frm_Congty.resx">
+      <DependentUpon>Frm_Congty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="From_ChucNang\Frm_DVT.resx">
       <DependentUpon>Frm_DVT.cs</DependentUpon>
     </EmbeddedResource>
