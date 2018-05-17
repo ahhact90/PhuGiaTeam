@@ -8,11 +8,13 @@ using System.Windows.Forms;
 
 namespace QLDuocTrangBi.From_ChucNang
 {
-    public partial class Frm_Congty : PRE.Catalog.FrmBase
+    public partial class Frm_NhapHoaDon : PRE.Catalog.FrmBase
     {
-        public Frm_Congty()
+        public Frm_NhapHoaDon()
         {
             InitializeComponent();
         }
+
+
     }
 }

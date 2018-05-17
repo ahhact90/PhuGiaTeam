@@ -35,6 +35,7 @@
     <Reference Include="DAL">
       <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -73,11 +74,11 @@
     <Compile Include="From_ChucNang\FrmBase.designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="From_ChucNang\Frm_Congty.cs">
+    <Compile Include="From_ChucNang\Frm_NhapHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From_ChucNang\Frm_Congty.Designer.cs">
-      <DependentUpon>Frm_Congty.cs</DependentUpon>
+    <Compile Include="From_ChucNang\Frm_NhapHoaDon.Designer.cs">
+      <DependentUpon>Frm_NhapHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="From_ChucNang\Frm_DVT.cs">
       <SubType>Form</SubType>
@@ -123,8 +124,8 @@
     <EmbeddedResource Include="From_ChucNang\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From_ChucNang\Frm_Congty.resx">
-      <DependentUpon>Frm_Congty.cs</DependentUpon>
+    <EmbeddedResource Include="From_ChucNang\Frm_NhapHoaDon.resx">
+      <DependentUpon>Frm_NhapHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From_ChucNang\Frm_DVT.resx">
       <DependentUpon>Frm_DVT.cs</DependentUpon>
