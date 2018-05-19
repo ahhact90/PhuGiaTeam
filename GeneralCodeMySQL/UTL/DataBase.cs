@@ -180,7 +180,7 @@ namespace UTL
                         uID = "root";
                         pass = "SebRMrg8c7Y=";  //Pass ket noi co so du lieu 123456
                         port = "3306";
-                        database = "qlnhathuoc1";
+                        database = "qlnhathuoc";
                         
                     }
                     //strconnection = getHosPath(database, pass, text, port, uID);
