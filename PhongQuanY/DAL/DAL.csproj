@@ -59,9 +59,11 @@
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
     <Compile Include="BaseDALPostgrest.cs" />
+    <Compile Include="EntitiesDAL\Congty_DAL.cs" />
     <Compile Include="EntitiesDAL\Country_DAL.cs" />
     <Compile Include="EntitiesDAL\Drug_Unit_DAL.cs" />
     <Compile Include="EntitiesDAL\HoatChatDAL.cs" />
+    <Compile Include="Entities\Congty.cs" />
     <Compile Include="Entities\Country.cs" />
     <Compile Include="Entities\Drug_Unit.cs" />
     <Compile Include="Entities\HoatChat.cs" />

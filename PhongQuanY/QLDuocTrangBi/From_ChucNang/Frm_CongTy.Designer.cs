@@ -32,15 +32,15 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.gc_Congty = new DevExpress.XtraGrid.GridControl();
+            this.gv_Congty = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtFax = new DevExpress.XtraEditors.TextEdit();
+            this.txtDienthoai = new DevExpress.XtraEditors.TextEdit();
+            this.txtMathue = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCongty2 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_congty1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -56,15 +56,15 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Congty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Congty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienthoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMathue.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCongty2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_congty1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -93,13 +93,13 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.groupControl2);
-            this.xtraTabPage1.Controls.Add(this.textEdit6);
-            this.xtraTabPage1.Controls.Add(this.textEdit5);
-            this.xtraTabPage1.Controls.Add(this.textEdit4);
-            this.xtraTabPage1.Controls.Add(this.textEdit3);
+            this.xtraTabPage1.Controls.Add(this.txtFax);
+            this.xtraTabPage1.Controls.Add(this.txtDienthoai);
+            this.xtraTabPage1.Controls.Add(this.txtMathue);
+            this.xtraTabPage1.Controls.Add(this.txtDiaChi);
             this.xtraTabPage1.Controls.Add(this.textEdit7);
-            this.xtraTabPage1.Controls.Add(this.textEdit2);
-            this.xtraTabPage1.Controls.Add(this.textEdit1);
+            this.xtraTabPage1.Controls.Add(this.txtCongty2);
+            this.xtraTabPage1.Controls.Add(this.txt_congty1);
             this.xtraTabPage1.Controls.Add(this.labelControl5);
             this.xtraTabPage1.Controls.Add(this.labelControl4);
             this.xtraTabPage1.Controls.Add(this.labelControl3);
@@ -114,58 +114,58 @@
             this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl2.Controls.Add(this.gridControl1);
+            this.groupControl2.Controls.Add(this.gc_Congty);
             this.groupControl2.Location = new System.Drawing.Point(0, 279);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(987, 298);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = " ";
             // 
-            // gridControl1
+            // gc_Congty
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(983, 276);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gc_Congty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gc_Congty.Location = new System.Drawing.Point(2, 20);
+            this.gc_Congty.MainView = this.gv_Congty;
+            this.gc_Congty.Name = "gc_Congty";
+            this.gc_Congty.Size = new System.Drawing.Size(983, 276);
+            this.gc_Congty.TabIndex = 0;
+            this.gc_Congty.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gv_Congty});
             // 
-            // gridView1
+            // gv_Congty
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gv_Congty.GridControl = this.gc_Congty;
+            this.gv_Congty.Name = "gv_Congty";
+            this.gv_Congty.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gv_Congty.OptionsView.ShowGroupPanel = false;
             // 
-            // textEdit6
+            // txtFax
             // 
-            this.textEdit6.Location = new System.Drawing.Point(104, 233);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(605, 20);
-            this.textEdit6.TabIndex = 1;
+            this.txtFax.Location = new System.Drawing.Point(104, 233);
+            this.txtFax.Name = "txtFax";
+            this.txtFax.Size = new System.Drawing.Size(605, 20);
+            this.txtFax.TabIndex = 1;
             // 
-            // textEdit5
+            // txtDienthoai
             // 
-            this.textEdit5.Location = new System.Drawing.Point(104, 198);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(605, 20);
-            this.textEdit5.TabIndex = 1;
+            this.txtDienthoai.Location = new System.Drawing.Point(104, 198);
+            this.txtDienthoai.Name = "txtDienthoai";
+            this.txtDienthoai.Size = new System.Drawing.Size(605, 20);
+            this.txtDienthoai.TabIndex = 1;
             // 
-            // textEdit4
+            // txtMathue
             // 
-            this.textEdit4.Location = new System.Drawing.Point(104, 163);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(605, 20);
-            this.textEdit4.TabIndex = 1;
+            this.txtMathue.Location = new System.Drawing.Point(104, 163);
+            this.txtMathue.Name = "txtMathue";
+            this.txtMathue.Size = new System.Drawing.Size(605, 20);
+            this.txtMathue.TabIndex = 1;
             // 
-            // textEdit3
+            // txtDiaChi
             // 
-            this.textEdit3.Location = new System.Drawing.Point(104, 128);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(605, 20);
-            this.textEdit3.TabIndex = 1;
+            this.txtDiaChi.Location = new System.Drawing.Point(104, 128);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(605, 20);
+            this.txtDiaChi.TabIndex = 1;
             // 
             // textEdit7
             // 
@@ -174,19 +174,19 @@
             this.textEdit7.Size = new System.Drawing.Size(605, 20);
             this.textEdit7.TabIndex = 1;
             // 
-            // textEdit2
+            // txtCongty2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(104, 93);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(605, 20);
-            this.textEdit2.TabIndex = 1;
+            this.txtCongty2.Location = new System.Drawing.Point(104, 93);
+            this.txtCongty2.Name = "txtCongty2";
+            this.txtCongty2.Size = new System.Drawing.Size(605, 20);
+            this.txtCongty2.TabIndex = 1;
             // 
-            // textEdit1
+            // txt_congty1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(104, 58);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(605, 20);
-            this.textEdit1.TabIndex = 1;
+            this.txt_congty1.Location = new System.Drawing.Point(104, 58);
+            this.txt_congty1.Name = "txt_congty1";
+            this.txt_congty1.Size = new System.Drawing.Size(605, 20);
+            this.txt_congty1.TabIndex = 1;
             // 
             // labelControl5
             // 
@@ -262,15 +262,15 @@
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Congty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Congty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienthoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMathue.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCongty2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_congty1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,15 +288,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtFax;
+        private DevExpress.XtraEditors.TextEdit txtDienthoai;
+        private DevExpress.XtraEditors.TextEdit txtMathue;
+        private DevExpress.XtraEditors.TextEdit txtDiaChi;
         private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtCongty2;
+        private DevExpress.XtraEditors.TextEdit txt_congty1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gc_Congty;
+        private DevExpress.XtraGrid.Views.Grid.GridView gv_Congty;
     }
 }
