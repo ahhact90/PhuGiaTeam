@@ -45,7 +45,7 @@ namespace DAL
         protected MySqlConnection Cnn { get; set; }
         protected MySqlCommand Cmd { get; set; }
         protected MySqlDataAdapter Da { get; set; }
-
+       
         public static string FileDb { set; get; }
         public static string DbName { set; get; }
         #endregion
@@ -73,6 +73,7 @@ namespace DAL
             Cnn = new MySqlConnection(connectString);
             Cmd = new MySqlCommand() { Connection = Cnn };
             Da = new MySqlDataAdapter();
+           
 
         }
         #endregion

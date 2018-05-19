@@ -21,6 +21,13 @@ namespace DAL
               return ExecuteQuery(sql);           
 
           }
+          public DataTable ShowTable(string dbname)
+          {
+              var sql = @"use {0};show tables;";                          
+              sql = string.Format(sql, dbname);
+              return ExecuteQuery(sql);       
+
+          }
         
         #endregion
     }
