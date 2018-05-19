@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralCode", "GeneralCode\GeneralCode.csproj", "{1A56F19F-D8DF-49A7-AC2B-D521ED707C72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTL", "UTL\UTL.csproj", "{55A3F1EF-7928-488F-83C2-0DE6BB51B46E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C532C55A-FC27-46F5-A42C-29E5F0B0CA3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{548A2A75-7675-43B8-808C-9A363387B0EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A56F19F-D8DF-49A7-AC2B-D521ED707C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A56F19F-D8DF-49A7-AC2B-D521ED707C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A56F19F-D8DF-49A7-AC2B-D521ED707C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A56F19F-D8DF-49A7-AC2B-D521ED707C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A3F1EF-7928-488F-83C2-0DE6BB51B46E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A3F1EF-7928-488F-83C2-0DE6BB51B46E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A3F1EF-7928-488F-83C2-0DE6BB51B46E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A3F1EF-7928-488F-83C2-0DE6BB51B46E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C532C55A-FC27-46F5-A42C-29E5F0B0CA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C532C55A-FC27-46F5-A42C-29E5F0B0CA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C532C55A-FC27-46F5-A42C-29E5F0B0CA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C532C55A-FC27-46F5-A42C-29E5F0B0CA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548A2A75-7675-43B8-808C-9A363387B0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548A2A75-7675-43B8-808C-9A363387B0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548A2A75-7675-43B8-808C-9A363387B0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548A2A75-7675-43B8-808C-9A363387B0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
