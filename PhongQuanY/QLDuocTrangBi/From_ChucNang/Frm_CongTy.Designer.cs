@@ -30,7 +30,6 @@
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -47,6 +46,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this._dtb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -89,12 +89,6 @@
             this.xtraTabPage1,
             this.xtraTabPage2,
             this.xtraTabPage3});
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(992, 580);
-            this.xtraTabPage2.Text = "Hàm lượng";
             // 
             // xtraTabPage1
             // 
@@ -238,6 +232,12 @@
             this.labelControl1.Size = new System.Drawing.Size(67, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên công ty";
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(992, 580);
+            this.xtraTabPage2.Text = "Hàm lượng";
             // 
             // xtraTabPage3
             // 
