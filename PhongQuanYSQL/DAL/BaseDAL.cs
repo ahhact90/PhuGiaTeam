@@ -8,7 +8,7 @@ using System.Configuration;
 using System.IO;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-using MySql.Data.MySqlClient;
+
 
 
 namespace DAL
@@ -42,9 +42,9 @@ namespace DAL
         #endregion
 
         #region Properties
-        protected MySqlConnection Cnn { get; set; }
-        protected MySqlCommand Cmd { get; set; }
-        protected MySqlDataAdapter Da { get; set; }
+        protected SqlConnection Cnn { get; set; }
+        protected SqlCommand Cmd { get; set; }
+        protected SqlDataAdapter Da { get; set; }
 
         public static string FileDb { set; get; }
         public static string DbName { set; get; }
@@ -70,9 +70,9 @@ namespace DAL
 
         public BaseDAL(string connectString)
         {
-            Cnn = new MySqlConnection(connectString);
-            Cmd = new MySqlCommand() { Connection = Cnn };
-            Da = new MySqlDataAdapter();
+            Cnn = new SqlConnection(connectString);
+            Cmd = new SqlCommand() { Connection = Cnn };
+            Da = new SqlDataAdapter();
 
         }
         #endregion
@@ -153,7 +153,7 @@ namespace DAL
             try
             {
                 Open();
-                MySqlDataAdapter Da = new MySqlDataAdapter(que, Cnn);
+                SqlDataAdapter Da = new SqlDataAdapter(que, Cnn);
                 DataSet ds = new DataSet();
                 Da.Fill(ds);
                 return ds;
