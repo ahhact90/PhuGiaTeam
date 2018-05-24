@@ -8,7 +8,7 @@ using System.Configuration;
 using System.IO;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-using MySql.Data.MySqlClient;
+
 
 
 namespace DAL
@@ -42,9 +42,9 @@ namespace DAL
         #endregion
 
         #region Properties
-        protected MySqlConnection Cnn { get; set; }
-        protected MySqlCommand Cmd { get; set; }
-        protected MySqlDataAdapter Da { get; set; }
+        protected SqlConnection Cnn { get; set; }
+        protected SqlCommand Cmd { get; set; }
+        protected SqlDataAdapter Da { get; set; }
 
         public static string FileDb { set; get; }
         public static string DbName { set; get; }
@@ -60,19 +60,19 @@ namespace DAL
 
         public BaseDAL()
         {
-            //Cnn = new MySqlConnection(string.Format(DAL.Properties.Settings.Default.Setting)); // default connection string
-            //Cnn = new MySqlConnection("server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS");
-            //Cnn = new MySqlConnection("server = 172.251.110.3; port = 5432; user id = bv121; password = @bv121@ ; Database = HMIS");
-            //Cmd = new MySqlCommand() { Connection = Cnn };
-            //Da = new MySqlDataAdapter();         
+            //Cnn = new SqlConnection(string.Format(DAL.Properties.Settings.Default.Setting)); // default connection string
+            //Cnn = new SqlConnection("server = localhost; port = 5432; user id = postgres; password = P@$121# ; Database = HMIS");
+            //Cnn = new SqlConnection("server = 172.251.110.3; port = 5432; user id = bv121; password = @bv121@ ; Database = HMIS");
+            //Cmd = new SqlCommand() { Connection = Cnn };
+            //Da = new SqlDataAdapter();         
 
         }
 
         public BaseDAL(string connectString)
         {
-            Cnn = new MySqlConnection(connectString);
-            Cmd = new MySqlCommand() { Connection = Cnn };
-            Da = new MySqlDataAdapter();
+            Cnn = new SqlConnection(connectString);
+            Cmd = new SqlCommand() { Connection = Cnn };
+            Da = new SqlDataAdapter();
 
         }
         #endregion
@@ -153,7 +153,7 @@ namespace DAL
             try
             {
                 Open();
-                MySqlDataAdapter Da = new MySqlDataAdapter(que, Cnn);
+                SqlDataAdapter Da = new SqlDataAdapter(que, Cnn);
                 DataSet ds = new DataSet();
                 Da.Fill(ds);
                 return ds;
