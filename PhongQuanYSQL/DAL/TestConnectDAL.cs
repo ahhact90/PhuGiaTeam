@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace DAL
 {
@@ -13,8 +14,8 @@ namespace DAL
           public TestConnectDAL(string connectString) : base(connectString) { }
         #endregion
 
-        #region Kiểm tra kết nối đến cơ sở dữ liệu My SQL
-          public System.Data.DataTable Showdata()
+        #region Kiểm tra kết nối đến cơ sở dữ liệu SQL
+          public DataTable Showdata()
           {
               var sql = "show databases;";
               return ExecuteQuery(sql);
