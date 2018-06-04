@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLDuocPhongQY
 {
-    public partial class Form1 : Form
+    public partial class Frm_Test : Form
     {
-        public Form1()
+        public Frm_Test()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace QLDuocPhongQY
 {
-    partial class Form1
+    partial class Frm_Test
     {
         /// <summary>
         /// Required designer variable.
