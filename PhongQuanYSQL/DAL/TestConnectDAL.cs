@@ -17,13 +17,8 @@ namespace DAL
         #region Kiểm tra kết nối đến cơ sở dữ liệu SQL
           public DataTable Showdata()
           {
-              var sql = "show databases;";
-              return ExecuteQuery(sql);
-              //select TABLE_SCHEMA, TABLE_NAME,COLUMN_NAME from information_schema.columns
-              //   where table_schema = 'qlnhathuoc'
-              //  order by table_name,ordinal_position
-              ////var sql = "select TABLE_SCHEMA, TABLE_NAME,COLUMN_NAME from information_schema.columns where table_schema = 'qlnhathuoc'";
-              //return ExecuteQuery(sql);
+              var sql = "SP_DATABASES;";
+              return ExecuteQuery(sql);             
 
           }
         

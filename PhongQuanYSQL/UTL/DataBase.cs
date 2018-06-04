@@ -71,12 +71,12 @@ namespace UTL
         /// <param name="Pass"></param>
         /// <param name="Database"></param>
         /// <returns></returns>
-         public static string getHosPathSQL(string IPSrv, string Port, string UID, string Pass,string Database)
-        {           
-            return string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};", new object[]
+         public static string getHosPathSQL(string IPSrv, string UID, string Pass,string Database)
+        {
+            return string.Format("Data Source={0};User Id={2};Password={3};Initial Catalog={4};", new object[]
 			{
 				IPSrv,
-				Port,
+				//Port,
 				UID,
 				Decrypt(Pass, "29fa797a-d341-4755-af56-8bf5aa6c9e5d", true),
 				Database			
@@ -225,14 +225,14 @@ namespace UTL
                 {
                     string uID; // user Id
                     string pass;
-                    string port;
+                   // string port;
                     string database;
                     string server;
                     if (File.Exists(Application.StartupPath + "\\config.xml"))
                     {
                         dataSet.ReadXml(Application.StartupPath + "\\config.xml");
                         server = dataSet.Tables[0].Rows[0]["Server"].ToString();
-                        port = dataSet.Tables[0].Rows[0]["Port"].ToString();
+                       // port = dataSet.Tables[0].Rows[0]["Port"].ToString();
                         uID = dataSet.Tables[0].Rows[0]["UID"].ToString();
                         pass = dataSet.Tables[0].Rows[0]["Pass"].ToString();
                         database = dataSet.Tables[0].Rows[0]["Host"].ToString();
@@ -242,12 +242,12 @@ namespace UTL
                         server = ".\\SQLEXPRESS";
                         uID = "sa";
                         pass = "SebRMrg8c7Y=";  //Pass ket noi co so du lieu 123456
-                        port = "1433";
-                        database = "qlnhathuoc";
+                       // port = "1433";
+                        database = "QLDuocTrangBi";
 
                     }
                     //strconnection = getHosPath(database, pass, text, port, uID);
-                    strconnection = getHosPathSQL(server, port, uID, pass, database);
+                    strconnection = getHosPathSQL(server,  uID, pass, database);
                 }
                 return strconnection;
             }

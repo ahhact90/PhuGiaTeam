@@ -12,9 +12,32 @@ namespace QLDuocPhongQY
 {
     public partial class Frm_Test : Form
     {
+        #region Variable        
+        public static string StrConnect = UTL.DataBase.GetConfigSQL();
+        DAL.TestConnectDAL _TestConnect = new DAL.TestConnectDAL(StrConnect);
+        #endregion
         public Frm_Test()
         {
             InitializeComponent();
+        }
+
+        private void btbConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable result2 = new DataTable();
+                result2 = _TestConnect.Showdata();
+                lst_database.DataSource = result2;
+                lst_database.DisplayMember = "Database_name";
+                lst_database.ValueMember = "Database_name";
+                MessageBox.Show("Kết nối CSDL thành công");
+
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối CSDL");
+
+            }
         }
     }
 }
