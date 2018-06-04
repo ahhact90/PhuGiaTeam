@@ -17,7 +17,7 @@ namespace DAL
         #region Kiểm tra kết nối đến cơ sở dữ liệu SQL
           public DataTable Showdata()
           {
-              var sql = "SP_DATABASES;";
+              var sql = "SELECT name FROM sys.databases;";
               return ExecuteQuery(sql);             
 
           }

@@ -27,9 +27,8 @@ namespace QLDuocPhongQY
             {
                 DataTable result2 = new DataTable();
                 result2 = _TestConnect.Showdata();
-                lst_database.DataSource = result2;
-                lst_database.DisplayMember = "Database_name";
-                lst_database.ValueMember = "Database_name";
+                dataGridView1.DataSource = result2;
+                //lst_database.DisplayMember = "DATABASE_NAME";               
                 MessageBox.Show("Kết nối CSDL thành công");
 
             }

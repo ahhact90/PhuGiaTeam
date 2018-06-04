@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.btbConnect = new DevExpress.XtraEditors.SimpleButton();
-            this.lst_database = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btbConnect
@@ -41,23 +42,24 @@
             this.btbConnect.Text = "Kiemtra Ket Noi";
             this.btbConnect.Click += new System.EventHandler(this.btbConnect_Click);
             // 
-            // lst_database
+            // dataGridView1
             // 
-            this.lst_database.FormattingEnabled = true;
-            this.lst_database.Location = new System.Drawing.Point(181, 14);
-            this.lst_database.Name = "lst_database";
-            this.lst_database.Size = new System.Drawing.Size(209, 368);
-            this.lst_database.TabIndex = 2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(128, 105);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 2;
             // 
             // Frm_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 544);
-            this.Controls.Add(this.lst_database);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btbConnect);
             this.Name = "Frm_Test";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -65,7 +67,7 @@
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton btbConnect;
-        private System.Windows.Forms.ListBox lst_database;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

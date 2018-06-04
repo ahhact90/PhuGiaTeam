@@ -243,7 +243,7 @@ namespace UTL
                         uID = "sa";
                         pass = "SebRMrg8c7Y=";  //Pass ket noi co so du lieu 123456
                        // port = "1433";
-                        database = "QLDuocTrangBi";
+                        database = "QLDuocTrangB1i";
 
                     }
                     //strconnection = getHosPath(database, pass, text, port, uID);
