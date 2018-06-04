@@ -108,21 +108,21 @@
             // btnAdd
             // 
             this.btnAdd.Caption = "&Thêm";
+            this.btnAdd.Glyph = global::QLDuocPhongQY.Properties.Resources._1;
             this.btnAdd.Id = 0;
-            //this.btnAdd.LargeGlyph = global::QLDuocTrangBi.Properties.Resources._1;
             this.btnAdd.Name = "btnAdd";
             // 
             // btnEdit
             // 
             this.btnEdit.Caption = "&Sửa";
-           // this.btnEdit.Glyph = global::QLDuocTrangBi.Properties.Resources._4;
+            this.btnEdit.Glyph = global::QLDuocPhongQY.Properties.Resources._4;
             this.btnEdit.Id = 1;
             this.btnEdit.Name = "btnEdit";
             // 
             // btnDelete
             // 
             this.btnDelete.Caption = "&Xóa";
-            //this.btnDelete.Glyph = global::QLDuocTrangBi.Properties.Resources._3;
+            this.btnDelete.Glyph = global::QLDuocPhongQY.Properties.Resources._3;
             this.btnDelete.Id = 2;
             this.btnDelete.Name = "btnDelete";
             // 
@@ -130,7 +130,7 @@
             // 
             this.btnSave.Caption = "&Lưu";
             this.btnSave.Enabled = false;
-            //this.btnSave.Glyph = global::QLDuocTrangBi.Properties.Resources.save;
+            this.btnSave.Glyph = global::QLDuocPhongQY.Properties.Resources.save;
             this.btnSave.Id = 3;
             this.btnSave.Name = "btnSave";
             // 
@@ -138,35 +138,34 @@
             // 
             this.btnCancel.Caption = "&Hủy";
             this.btnCancel.Enabled = false;
-            //this.btnCancel.Glyph = global::QLDuocTrangBi.Properties.Resources._6;
+            this.btnCancel.Glyph = global::QLDuocPhongQY.Properties.Resources._6;
             this.btnCancel.Id = 4;
             this.btnCancel.Name = "btnCancel";
             // 
             // btnSearch
             // 
             this.btnSearch.Caption = "&Tìm kiếm";
-            //this.btnSearch.Glyph = global::QLDuocTrangBi.Properties.Resources._5;
+            this.btnSearch.Glyph = global::QLDuocPhongQY.Properties.Resources._5;
             this.btnSearch.Id = 5;
             this.btnSearch.Name = "btnSearch";
             // 
             // btnRefresh
             // 
             this.btnRefresh.Caption = "&Làm tươi";
-            //this.btnRefresh.Glyph = global::QLDuocTrangBi.Properties.Resources.refresh1;
+            this.btnRefresh.Glyph = global::QLDuocPhongQY.Properties.Resources.refresh1;
             this.btnRefresh.Id = 6;
             this.btnRefresh.Name = "btnRefresh";
             // 
             // btnPrint
             // 
             this.btnPrint.Caption = "&In";
-            //this.btnPrint.Glyph = global::QLDuocTrangBi.Properties.Resources.printer;
+            this.btnPrint.Glyph = global::QLDuocPhongQY.Properties.Resources.printer;
             this.btnPrint.Id = 7;
             this.btnPrint.Name = "btnPrint";
             // 
             // btnClose
             // 
             this.btnClose.Caption = "&Đóng";
-            //this.btnClose.Glyph = global::QLDuocTrangBi.Properties.Resources._2;
             this.btnClose.Id = 8;
             this.btnClose.Name = "btnClose";
             // 
