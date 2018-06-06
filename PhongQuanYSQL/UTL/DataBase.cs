@@ -73,7 +73,7 @@ namespace UTL
         /// <returns></returns>
          public static string getHosPathSQL(string IPSrv, string UID, string Pass,string Database)
         {
-            return string.Format("Data Source={0};User Id={2};Password={3};Initial Catalog={4};", new object[]
+            return string.Format("Data Source={0};User Id={1};Password={2};Initial Catalog={3};Persist Security Info=True", new object[]
 			{
 				IPSrv,
 				//Port,
