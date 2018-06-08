@@ -27,11 +27,20 @@ namespace QLDuocPhongQY
             {
                 DataTable result2 = new DataTable();
                 result2 = _TestConnect.Showdata();
-                dataGridView1.DataSource = result2;                               
-                MessageBox.Show("Kết nối CSDL thành công");
-                gridControl1.DataSource = result2;
-                MessageBox.Show("Kết nối CSDL thành công");
-            }
+                
+                if (result2.Rows.Count > 0)
+                {
+                    dataGridView1.DataSource = result2;
+                    gridControl1.DataSource = result2;
+                    MessageBox.Show("Kết nối CSDL thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Kết nối thất bại");
+                }
+               
+               
+                            }
             catch
             {
                 MessageBox.Show("Lỗi kết nối CSDL");
