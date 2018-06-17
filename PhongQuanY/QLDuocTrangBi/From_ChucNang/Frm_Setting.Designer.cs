@@ -102,9 +102,9 @@
             // 
             // lst_database
             // 
-            this.lst_database.Location = new System.Drawing.Point(307, 196);
+            this.lst_database.Location = new System.Drawing.Point(284, 196);
             this.lst_database.Name = "lst_database";
-            this.lst_database.Size = new System.Drawing.Size(202, 164);
+            this.lst_database.Size = new System.Drawing.Size(189, 164);
             this.lst_database.TabIndex = 4;
             // 
             // Frm_Setting

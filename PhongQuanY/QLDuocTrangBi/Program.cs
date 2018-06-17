@@ -17,7 +17,7 @@ namespace QLDuocTrangBi
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
             //Application.Run(new From_CauHinh.Frm_Setting());
-            Application.Run(new From_ChucNang.Frm_CongTy());
+            Application.Run(new From_ChucNang.Frm_DVT());
             //Application.Run(new FrmTest());
         }
     }

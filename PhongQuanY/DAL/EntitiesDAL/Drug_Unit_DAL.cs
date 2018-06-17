@@ -50,7 +50,7 @@ namespace DAL.EntitiesDAL
 
         public DataTable Select()
         {  
-            var sql = "SELECT * FROM tbl_drugunit";
+            var sql = "SELECT * FROM tbl_drugunit ";
             sql = string.Format(sql);
             return ExecuteQuery(sql);
         }
