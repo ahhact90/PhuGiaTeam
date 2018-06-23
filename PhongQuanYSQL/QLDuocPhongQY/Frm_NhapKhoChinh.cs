@@ -10,9 +10,19 @@ namespace QLDuocPhongQY
 {
     public partial class Frm_NhapKhoChinh : PRE.Catalog.FrmBase
     {
+        #region Variable
+
+
+
+        #endregion
         public Frm_NhapKhoChinh()
         {
             InitializeComponent();
         }
+
+        
+
+
+
     }
 }
