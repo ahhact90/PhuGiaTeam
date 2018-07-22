@@ -58,9 +58,6 @@
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,6 +78,12 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdCtrl_ChitietThuoc = new DevExpress.XtraGrid.GridControl();
             this.grdViewThuoc = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridLookUpEdit_DonViGiao = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridLookUpEdit_KhoNhanHang = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridLookUpEdit_LyDoNhap = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
@@ -106,9 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -117,6 +117,12 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrl_ChitietThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewThuoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_DonViGiao.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_KhoNhanHang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_LyDoNhap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -315,6 +321,9 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.gridLookUpEdit_LyDoNhap);
+            this.xtraTabPage1.Controls.Add(this.gridLookUpEdit_KhoNhanHang);
+            this.xtraTabPage1.Controls.Add(this.gridLookUpEdit_DonViGiao);
             this.xtraTabPage1.Controls.Add(this.textEdit4);
             this.xtraTabPage1.Controls.Add(this.textEdit3);
             this.xtraTabPage1.Controls.Add(this.textEdit2);
@@ -323,9 +332,6 @@
             this.xtraTabPage1.Controls.Add(this.dateEdit2);
             this.xtraTabPage1.Controls.Add(this.dateEdit3);
             this.xtraTabPage1.Controls.Add(this.dateEdit1);
-            this.xtraTabPage1.Controls.Add(this.comboBoxEdit2);
-            this.xtraTabPage1.Controls.Add(this.comboBoxEdit3);
-            this.xtraTabPage1.Controls.Add(this.comboBoxEdit1);
             this.xtraTabPage1.Controls.Add(this.label11);
             this.xtraTabPage1.Controls.Add(this.label13);
             this.xtraTabPage1.Controls.Add(this.label6);
@@ -412,33 +418,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Size = new System.Drawing.Size(281, 20);
             this.dateEdit1.TabIndex = 2;
-            // 
-            // comboBoxEdit2
-            // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(135, 129);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(281, 20);
-            this.comboBoxEdit2.TabIndex = 1;
-            // 
-            // comboBoxEdit3
-            // 
-            this.comboBoxEdit3.Location = new System.Drawing.Point(135, 216);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Size = new System.Drawing.Size(281, 20);
-            this.comboBoxEdit3.TabIndex = 1;
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(135, 71);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(281, 20);
-            this.comboBoxEdit1.TabIndex = 1;
             // 
             // label11
             // 
@@ -633,6 +612,68 @@
             this.grdViewThuoc.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.grdViewThuoc.OptionsView.ShowGroupPanel = false;
             // 
+            // gridLookUpEdit_DonViGiao
+            // 
+            this.gridLookUpEdit_DonViGiao.Location = new System.Drawing.Point(135, 213);
+            this.gridLookUpEdit_DonViGiao.Name = "gridLookUpEdit_DonViGiao";
+            this.gridLookUpEdit_DonViGiao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_DonViGiao.Properties.NullText = "";
+            this.gridLookUpEdit_DonViGiao.Properties.View = this.gridView1;
+            this.gridLookUpEdit_DonViGiao.Size = new System.Drawing.Size(281, 20);
+            this.gridLookUpEdit_DonViGiao.TabIndex = 5;
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridLookUpEdit_KhoNhanHang
+            // 
+            this.gridLookUpEdit_KhoNhanHang.EditValue = "";
+            this.gridLookUpEdit_KhoNhanHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.gridLookUpEdit_KhoNhanHang.Location = new System.Drawing.Point(135, 71);
+            this.gridLookUpEdit_KhoNhanHang.Name = "gridLookUpEdit_KhoNhanHang";
+            this.gridLookUpEdit_KhoNhanHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_KhoNhanHang.Properties.NullText = "";
+            this.gridLookUpEdit_KhoNhanHang.Properties.View = this.gridView3;
+            this.gridLookUpEdit_KhoNhanHang.Size = new System.Drawing.Size(281, 20);
+            this.gridLookUpEdit_KhoNhanHang.TabIndex = 6;
+            // 
+            // gridView3
+            // 
+            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridLookUpEdit_LyDoNhap
+            // 
+            this.gridLookUpEdit_LyDoNhap.Location = new System.Drawing.Point(135, 129);
+            this.gridLookUpEdit_LyDoNhap.Name = "gridLookUpEdit_LyDoNhap";
+            this.gridLookUpEdit_LyDoNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_LyDoNhap.Properties.NullText = "";
+            this.gridLookUpEdit_LyDoNhap.Properties.View = this.gridLookUpEdit2View;
+            this.gridLookUpEdit_LyDoNhap.Size = new System.Drawing.Size(281, 20);
+            this.gridLookUpEdit_LyDoNhap.TabIndex = 7;
+            // 
+            // gridLookUpEdit2View
+            // 
+            this.gridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit2View.Name = "gridLookUpEdit2View";
+            this.gridLookUpEdit2View.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit2View.OptionsView.ShowGroupPanel = false;
+            // 
             // NhapKhoChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,9 +711,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
@@ -682,6 +720,12 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrl_ChitietThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewThuoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_DonViGiao.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_KhoNhanHang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_LyDoNhap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -714,9 +758,6 @@
         private DevExpress.XtraEditors.DateEdit dateEdit2;
         private DevExpress.XtraEditors.DateEdit dateEdit3;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         private System.Windows.Forms.Label label13;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -741,6 +782,12 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit_DonViGiao;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit_LyDoNhap;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit2View;
+        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit_KhoNhanHang;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
 
     }
 }
