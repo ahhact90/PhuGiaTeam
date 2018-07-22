@@ -50,6 +50,12 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridLookUpEdit_LyDoNhap = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridLookUpEdit_KhoNhanHang = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridLookUpEdit_DonViGiao = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
@@ -78,12 +84,6 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdCtrl_ChitietThuoc = new DevExpress.XtraGrid.GridControl();
             this.grdViewThuoc = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridLookUpEdit_DonViGiao = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridLookUpEdit_KhoNhanHang = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridLookUpEdit_LyDoNhap = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
@@ -98,6 +98,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_LyDoNhap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_KhoNhanHang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_DonViGiao.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
@@ -117,12 +123,6 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrl_ChitietThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewThuoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_DonViGiao.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_KhoNhanHang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_LyDoNhap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -347,6 +347,71 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(639, 383);
             this.xtraTabPage1.Text = "Thông tin phiếu nhập kho";
+            // 
+            // gridLookUpEdit_LyDoNhap
+            // 
+            this.gridLookUpEdit_LyDoNhap.Location = new System.Drawing.Point(135, 129);
+            this.gridLookUpEdit_LyDoNhap.Name = "gridLookUpEdit_LyDoNhap";
+            this.gridLookUpEdit_LyDoNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_LyDoNhap.Properties.ImmediatePopup = true;
+            this.gridLookUpEdit_LyDoNhap.Properties.NullText = "";
+            this.gridLookUpEdit_LyDoNhap.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.gridLookUpEdit_LyDoNhap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.gridLookUpEdit_LyDoNhap.Properties.View = this.gridLookUpEdit2View;
+            this.gridLookUpEdit_LyDoNhap.Size = new System.Drawing.Size(281, 20);
+            this.gridLookUpEdit_LyDoNhap.TabIndex = 7;
+            // 
+            // gridLookUpEdit2View
+            // 
+            this.gridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit2View.Name = "gridLookUpEdit2View";
+            this.gridLookUpEdit2View.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit2View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridLookUpEdit_KhoNhanHang
+            // 
+            this.gridLookUpEdit_KhoNhanHang.EditValue = "";
+            this.gridLookUpEdit_KhoNhanHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.gridLookUpEdit_KhoNhanHang.Location = new System.Drawing.Point(135, 71);
+            this.gridLookUpEdit_KhoNhanHang.Name = "gridLookUpEdit_KhoNhanHang";
+            this.gridLookUpEdit_KhoNhanHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_KhoNhanHang.Properties.NullText = "";
+            this.gridLookUpEdit_KhoNhanHang.Properties.View = this.gridView3;
+            this.gridLookUpEdit_KhoNhanHang.Size = new System.Drawing.Size(281, 20);
+            this.gridLookUpEdit_KhoNhanHang.TabIndex = 6;
+            // 
+            // gridView3
+            // 
+            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridLookUpEdit_DonViGiao
+            // 
+            this.gridLookUpEdit_DonViGiao.Location = new System.Drawing.Point(135, 213);
+            this.gridLookUpEdit_DonViGiao.Name = "gridLookUpEdit_DonViGiao";
+            this.gridLookUpEdit_DonViGiao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_DonViGiao.Properties.NullText = "";
+            this.gridLookUpEdit_DonViGiao.Properties.View = this.gridView1;
+            this.gridLookUpEdit_DonViGiao.Size = new System.Drawing.Size(281, 20);
+            this.gridLookUpEdit_DonViGiao.TabIndex = 5;
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // textEdit4
             // 
@@ -590,7 +655,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 433);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1257, 395);
+            this.groupControl2.Size = new System.Drawing.Size(1257, 316);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = " ";
             // 
@@ -600,7 +665,7 @@
             this.grdCtrl_ChitietThuoc.Location = new System.Drawing.Point(2, 20);
             this.grdCtrl_ChitietThuoc.MainView = this.grdViewThuoc;
             this.grdCtrl_ChitietThuoc.Name = "grdCtrl_ChitietThuoc";
-            this.grdCtrl_ChitietThuoc.Size = new System.Drawing.Size(1253, 373);
+            this.grdCtrl_ChitietThuoc.Size = new System.Drawing.Size(1253, 294);
             this.grdCtrl_ChitietThuoc.TabIndex = 0;
             this.grdCtrl_ChitietThuoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdViewThuoc});
@@ -612,73 +677,11 @@
             this.grdViewThuoc.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this.grdViewThuoc.OptionsView.ShowGroupPanel = false;
             // 
-            // gridLookUpEdit_DonViGiao
-            // 
-            this.gridLookUpEdit_DonViGiao.Location = new System.Drawing.Point(135, 213);
-            this.gridLookUpEdit_DonViGiao.Name = "gridLookUpEdit_DonViGiao";
-            this.gridLookUpEdit_DonViGiao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
-            this.gridLookUpEdit_DonViGiao.Properties.NullText = "";
-            this.gridLookUpEdit_DonViGiao.Properties.View = this.gridView1;
-            this.gridLookUpEdit_DonViGiao.Size = new System.Drawing.Size(281, 20);
-            this.gridLookUpEdit_DonViGiao.TabIndex = 5;
-            // 
-            // gridView1
-            // 
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridLookUpEdit_KhoNhanHang
-            // 
-            this.gridLookUpEdit_KhoNhanHang.EditValue = "";
-            this.gridLookUpEdit_KhoNhanHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gridLookUpEdit_KhoNhanHang.Location = new System.Drawing.Point(135, 71);
-            this.gridLookUpEdit_KhoNhanHang.Name = "gridLookUpEdit_KhoNhanHang";
-            this.gridLookUpEdit_KhoNhanHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
-            this.gridLookUpEdit_KhoNhanHang.Properties.NullText = "";
-            this.gridLookUpEdit_KhoNhanHang.Properties.View = this.gridView3;
-            this.gridLookUpEdit_KhoNhanHang.Size = new System.Drawing.Size(281, 20);
-            this.gridLookUpEdit_KhoNhanHang.TabIndex = 6;
-            // 
-            // gridView3
-            // 
-            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridLookUpEdit_LyDoNhap
-            // 
-            this.gridLookUpEdit_LyDoNhap.Location = new System.Drawing.Point(135, 129);
-            this.gridLookUpEdit_LyDoNhap.Name = "gridLookUpEdit_LyDoNhap";
-            this.gridLookUpEdit_LyDoNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
-            this.gridLookUpEdit_LyDoNhap.Properties.NullText = "";
-            this.gridLookUpEdit_LyDoNhap.Properties.View = this.gridLookUpEdit2View;
-            this.gridLookUpEdit_LyDoNhap.Size = new System.Drawing.Size(281, 20);
-            this.gridLookUpEdit_LyDoNhap.TabIndex = 7;
-            // 
-            // gridLookUpEdit2View
-            // 
-            this.gridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit2View.Name = "gridLookUpEdit2View";
-            this.gridLookUpEdit2View.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit2View.OptionsView.ShowGroupPanel = false;
-            // 
             // NhapKhoChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 828);
+            this.ClientSize = new System.Drawing.Size(1257, 749);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "NhapKhoChinh";
@@ -700,6 +703,12 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_LyDoNhap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_KhoNhanHang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_DonViGiao.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
@@ -720,12 +729,6 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdCtrl_ChitietThuoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewThuoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_DonViGiao.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_KhoNhanHang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit_LyDoNhap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit2View)).EndInit();
             this.ResumeLayout(false);
 
         }
