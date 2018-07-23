@@ -380,7 +380,10 @@
             this.gridLookUpEdit_KhoNhanHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_KhoNhanHang.Properties.ImmediatePopup = true;
             this.gridLookUpEdit_KhoNhanHang.Properties.NullText = "";
+            this.gridLookUpEdit_KhoNhanHang.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.gridLookUpEdit_KhoNhanHang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.gridLookUpEdit_KhoNhanHang.Properties.View = this.gridView3;
             this.gridLookUpEdit_KhoNhanHang.Size = new System.Drawing.Size(281, 20);
             this.gridLookUpEdit_KhoNhanHang.TabIndex = 6;
@@ -400,7 +403,10 @@
             this.gridLookUpEdit_DonViGiao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.gridLookUpEdit_DonViGiao.Properties.ImmediatePopup = true;
             this.gridLookUpEdit_DonViGiao.Properties.NullText = "";
+            this.gridLookUpEdit_DonViGiao.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.gridLookUpEdit_DonViGiao.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.gridLookUpEdit_DonViGiao.Properties.View = this.gridView1;
             this.gridLookUpEdit_DonViGiao.Size = new System.Drawing.Size(281, 20);
             this.gridLookUpEdit_DonViGiao.TabIndex = 5;
