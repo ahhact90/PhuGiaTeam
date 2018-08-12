@@ -18,7 +18,15 @@ namespace DAL
           public DataTable Showdata()
           {
               var sql = "SELECT name FROM sys.databases;";
-              return ExecuteQuery(sql);             
+              return ExecuteQuery(sql);            
+
+          }
+
+          public DataTable BackupData(string database, string disk)
+          {
+              var sql = @"BACKUP DATABASE {0} TO DISK='{1}'";
+              sql = string.Format(sql, database, disk);
+              return ExecuteQuery(sql);
 
           }
         

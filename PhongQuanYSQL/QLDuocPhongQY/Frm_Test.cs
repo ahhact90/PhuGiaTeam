@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using SECURITY;
+using DevExpress.XtraEditors;
 
 namespace QLDuocPhongQY
 {
@@ -87,6 +88,46 @@ namespace QLDuocPhongQY
         private void btRead_Click(object sender, EventArgs e)
         {
             RTxtKQ.Text = method_0();
+        }
+
+        private void Frm_Test_Load(object sender, EventArgs e)
+        {
+            lblThumuc.Text = Application.StartupPath + "\\Backup";
+            textEdit_tenfile.Text = "backup_" + DateTime.Now.ToString("dd_MM_yyyy") + ".bak";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!(textEdit_tenfile.Text.Trim() == "") && XtraMessageBox.Show("Bạn có chắc chắn thực hiện Backup dữ liệu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+		{
+			
+			try
+			{
+				string text = Application.StartupPath + "\\Backup\\" + textEdit_tenfile.Text.Trim();
+				if (File.Exists(text))
+				{
+					
+					XtraMessageBox.Show("Tên File đã tồn tại, vui lòng nhập tên khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+				}
+				else
+				{
+					//object @object = base.db.getObject("SELECT db_name()");
+                    string data = "QLDuocTrangBi";
+					if  (!(string.Concat(data) == ""))
+					{
+                        _TestConnect.BackupData(data, text);
+						
+					}
+				}
+			}
+			catch
+			{
+			}
+			finally
+			{
+				
+			}
+		}
         }
     }
 }
