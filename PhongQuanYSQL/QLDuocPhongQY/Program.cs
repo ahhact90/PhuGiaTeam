@@ -16,7 +16,7 @@ namespace QLDuocPhongQY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhapKhoChinh());
+            Application.Run(new FrmTest_Treview());
         }
     }
 }
