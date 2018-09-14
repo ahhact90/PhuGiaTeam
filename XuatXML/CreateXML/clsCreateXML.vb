@@ -433,14 +433,14 @@ select
 	replace(convert(nvarchar,b1.ngaybd,111),'/','') + isnull(Stuff((select ';' + replace(convert(nvarchar,ngaybd,111),'/','') from thebn where makcb = @makcb For Xml Path('')),1,0,''),'')  gt_the_tu,
     replace(convert(nvarchar,b1.ngaykt,111),'/','') + isnull(Stuff((select ';' + replace(convert(nvarchar,ngaykt,111),'/','') from thebn where makcb = @makcb For Xml Path('')),1,0,''),'')  gt_the_den,
 	(
-		case 
-			when 
-				b1.dangdt=1 
-			then
-				(select top 1 b2.tenbenh from chandoanravien{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idravien in (select idravien from ravien{1} where makcb = @makcb))
-			else
-				Stuff((select ';' + b2.tenbenh from chandoankhambenh{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idkhambenh in (select idkhambenh from khambenh{1} where makcb = @makcb) For Xml Path('')),1,1,'')
-		end
+	case 
+	    when 
+	        b1.dangdt=1 
+	    then
+	        Stuff((select ';' + b2.tenbenh from chandoandieutri{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where iddieutri in (select iddieutri from dieutri{1} where makcb = @makcb) For Xml Path('')),1,1,'')
+	    else
+	    Stuff((select ';' + b2.tenbenh from chandoankhambenh{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idkhambenh in (select idkhambenh from khambenh{1} where makcb = @makcb) For Xml Path('')),1,1,'')
+	end
 	)ten_benh,
 	(
 		case 
@@ -1003,14 +1003,14 @@ select
 	replace(convert(nvarchar,b1.ngaybd,111),'/','') + isnull(Stuff((select ';' + replace(convert(nvarchar,ngaybd,111),'/','') from thebn where makcb = @makcb For Xml Path('')),1,0,''),'')  gt_the_tu,
     replace(convert(nvarchar,b1.ngaykt,111),'/','') + isnull(Stuff((select ';' + replace(convert(nvarchar,ngaykt,111),'/','') from thebn where makcb = @makcb For Xml Path('')),1,0,''),'')  gt_the_den,
 	(
-		case 
-			when 
-				b1.dangdt=1 
-			then
-				(select top 1 b2.tenbenh from chandoanravien{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idravien in (select idravien from ravien{1} where makcb = @makcb) and benhchinh = 1)
-			else
-				Stuff((select ';' + b2.tenbenh from chandoankhambenh{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idkhambenh in (select idkhambenh from khambenh{1} where makcb = @makcb) and benhchinh = 1 For Xml Path('')),1,1,'')
-		end
+	    case 
+	        when 
+	            b1.dangdt=1 
+	        then
+	            Stuff((select ';' + b2.tenbenh from chandoandieutri{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where iddieutri in (select iddieutri from dieutri{1} where makcb = @makcb) For Xml Path('')),1,1,'')
+	        else
+	        Stuff((select ';' + b2.tenbenh from chandoankhambenh{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idkhambenh in (select idkhambenh from khambenh{1} where makcb = @makcb) For Xml Path('')),1,1,'')
+	    end
 	)ten_benh,
 	(
 		case 
