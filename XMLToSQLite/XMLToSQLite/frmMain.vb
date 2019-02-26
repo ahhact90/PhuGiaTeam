@@ -86,7 +86,9 @@
         _s &= vbNewLine & "TEN_BENH  TEXT,"
         _s &= vbNewLine & "MA_BAC_SI  TEXT,"
         _s &= vbNewLine & "MA_TINH TEXT,"
-        _s &= vbNewLine & "MA_TINH_THE TEXT"
+        _s &= vbNewLine & "MA_TINH_THE TEXT,"
+        _s &= vbNewLine & "LIEU_DUNG TEXT,"
+        _s &= vbNewLine & "NGAYNHAN_CONG TEXT"
         _s &= vbNewLine & ")"
         sql.RunSQL(_s)
         Dim _dt As DataTable = sql.GetTable("select * from sqlite_master")
