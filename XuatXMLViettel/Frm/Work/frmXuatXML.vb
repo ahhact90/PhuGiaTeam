@@ -254,14 +254,14 @@ where datt=1
                     Dim DK = (CDec(_dtBN.Rows.Count) * CDec(timex) / CDec(i))
                     If chkXuatLuon.Checked AndAlso chkBH.Checked Then
                         Try
-                            IO.File.WriteAllText(LayFLDSave(item!makcb.ToString, False) & "\" & Now.ToString("ddMMyy") & "_" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", q.XmlReturn_)
+                            IO.File.WriteAllText(LayFLDSave(item!makcb.ToString, False) & "\" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", q.XmlReturn_)
                         Catch ex As Exception
                         End Try
                     End If
                     If chkXuat121.Checked Then
                         Dim q2 As New CreateXML.clsCreateXML121(item!makcb, dbHis.ConnectString, dbXML.ConnectString)
                         Dim dt As DataTable = q2.GetXML()
-                        dt.DataSet.WriteXml(LayFLDSave(item!makcb.ToString, True) & "\121File_" & Now.ToString("ddMMyy") & "_" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", XmlWriteMode.WriteSchema)
+                        dt.DataSet.WriteXml(LayFLDSave(item!makcb.ToString, True) & "\121File_" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", XmlWriteMode.WriteSchema)
                     End If
                     lbltrangthai.Text = "Đang xuất: " & i & " / " & _dtBN.Rows.Count & "  - " & FormatNumber(timex, 2) & " ms - " & (timex \ 60000) & ":" & ((timex \ 1000) - (timex \ 60000) * 60) & " ( dự kiến: " & FormatNumber(DK, 2) & " - " & (DK \ 60000) & ":" & ((DK \ 1000) - (DK \ 60000) * 60) & ")"
                     lbltrangthai.Refresh()
@@ -386,14 +386,14 @@ where datt=1
                         Dim q = NewCLSXML(item!makcb, dbHis.ConnectString, dbXML.ConnectString)
                         q.GetXML()
                         Dim _xml As String = q.XmlReturn_
-                        IO.File.WriteAllText(LayFLDSave(item!makcb.ToString, False) & "\" & Now.ToString("ddMMyy") & "_" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", _xml)
+                        IO.File.WriteAllText(LayFLDSave(item!makcb.ToString, False) & "\" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", _xml)
                     Catch ex As Exception
                     End Try
                 End If
                 If chkXuat121.Checked Then
                     Dim q2 As New CreateXML.clsCreateXML121(item!makcb, dbHis.ConnectString, dbXML.ConnectString)
                     Dim dt As DataTable = q2.GetXML()
-                    dt.DataSet.WriteXml(LayFLDSave(item!makcb.ToString, True) & "\121File_" & Now.ToString("ddMMyy") & "_" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", XmlWriteMode.WriteSchema)
+                    dt.DataSet.WriteXml(LayFLDSave(item!makcb.ToString, True) & "\121File_" & item!makcb & "_" & chuyenthanhkhongdau(item!hoten.ToString).Replace("-", "_") & "_" & item!mabn.ToString & ".xml", XmlWriteMode.WriteSchema)
                 End If
                 My.Application.DoEvents()
             Next
