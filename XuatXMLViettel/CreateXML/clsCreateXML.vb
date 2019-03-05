@@ -71,7 +71,7 @@ select
 		end
 	),'')
 	ma_benhkhac,
-	isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'')ma_lydo_vvien,
+	isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'')ma_lydo_vvien,
 	isnull(b1.mangt,'') ma_noi_chuyen,isnull((select top 1 phanloaitainan from tainanthuongtich where makcb = @makcb),'')ma_tai_nan,
 	(case when b1.dangdt=1 then isnull((select replace(convert(nvarchar,ngay,111),'/','') + replace(left(convert(nvarchar,ngay,108),5),':','') from dangkynhapvien{1} where makcb =@makcb),'') else replace(convert(nvarchar,b1.ngaydk,111),'/','') + replace(left(convert(nvarchar,b1.ngaydk,108),5),':','') end)  ngay_vao,
 	replace(convert(nvarchar,b3.ngay,111),'/','') + replace(left(convert(nvarchar,b3.ngay,108),5),':','') ngay_ra,convert(int,b3.songaydieutri) so_ngay_dtri,b3.makq ket_qua_dtri,b3.mahtr tinh_trang_rv,
@@ -469,8 +469,8 @@ select
 	(case when b1.dangdt=1 then isnull((select replace(convert(nvarchar,ngay,111),'/','') + replace(left(convert(nvarchar,ngay,108),5),':','') from dangkynhapvien{1} where makcb =@makcb),'') else replace(convert(nvarchar,b1.ngaydk,111),'/','') + replace(left(convert(nvarchar,b1.ngaydk,108),5),':','') end)  ngay_vao,
 	replace(convert(nvarchar,b3.ngay,111),'/','') + replace(left(convert(nvarchar,b3.ngay,108),5),':','') ngay_ra,convert(int,b3.songaydieutri) so_ngay_dtri,b3.makq ket_qua_dtri,b3.mahtr tinh_trang_rv,
 	replace(convert(nvarchar,b4.ngaytt,111),'/','') + replace(left(convert(nvarchar,b4.ngaytt,108),5),':','') ngay_ttoan,convert(decimal(18,2),0) t_thuoc,convert(decimal(18,2),0) t_vtyt,convert(decimal(18,2),b4.tongchiphi-b4.tongtientru-b4.tongbn100) t_tongchi,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b4.tienbntt - b4.tongbn100) else 0 end) t_bntt,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b4.tienbntt - b4.tongbn100) end) t_bncct,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b4.tienbntt - b4.tongbn100) else 0 end) t_bntt,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b4.tienbntt - b4.tongbn100) end) t_bncct,
 
 	convert(decimal(18,2),b4.tienbh) t_bhtt,0 t_nguonkhac,0 t_ngoaids,year(b4.ngaytt) nam_qt,month(b4.ngaytt) thang_qt,isnull(convert(nvarchar,ngay55,112),'') mien_cung_ct,
 	(case when b1.dtngoaitru = 1 then 2 else (case when b1.dangdt=1 then 3 else 1 end) end) ma_loai_kcb,
@@ -507,7 +507,7 @@ set @makcb ='{0}'
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia))) thanh_tien,
     (case when b3.pthuong is not null then b3.pthuong when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong
     ,0 t_nguonkhac, 
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc<%= BangBN %> where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc<%= BangBN %> where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
  t_bntt,
 convert(decimal(18,2),b3.tienbh) t_bhtt,
 
@@ -521,7 +521,7 @@ convert(decimal(18,2),b3.tienbh) t_bhtt,
                 (
                     case 
                     when 
-                        isnull(b1.duyetcapcuu,0)=1 
+                        isnull(b1.cappcuu,0)=1 
                     then 
                         2 
                     else 
@@ -566,11 +566,11 @@ convert(decimal(18,2),b3.tienbh) t_bhtt,
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_dichvu{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),b3.dongia)) thanh_tien,
     (case  when b3.pthuong is not null then b3.pthuong when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong
     ,0 t_nguonkhac,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end) end)  t_bntt,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end) end)  t_bntt,
 
 convert(decimal(18,2),b3.tienbh) t_bhtt,0 t_ngoaids,
 
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') &lt;&gt; 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bncct,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') &lt;&gt; 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bncct,
     isnull(b8.mahis,'000' + convert(nvarchar,b3.makk)) ma_khoa,b5.chungchihn ma_bac_si,isnull((case when b2.idkhambenh is not null then isnull((select top 1 mabenh from chandoankhambenh{1} where idkhambenh=b2.idkhambenh and benhchinh = 1),N'<%= _benhBN %>') else isnull((select top 1 mabenh from chandoandieutri{1} where iddieutri=b2.iddieutri and benhchinh = 1),N'<%= _benhBN %>') end),'') ma_benh,
     replace(convert(nvarchar,b2.ngay,111),'/','') + replace(left(convert(nvarchar,b2.ngay,108),5),':','') ngay_yl,0 ma_pttt
     From dangky{1} b1
@@ -598,11 +598,11 @@ set @makcb ='{0}'
     b7.tendonvitinh don_vi_tinh,1 pham_vi,convert(decimal(18,2),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_dichvu{1} where idttchitiet = b3.idttchitiet),0)) so_luong,convert(decimal(18,3),b3.dongia) don_gia,'' tt_thau,
     convert(decimal(18,0),b3.tyle) tyle_tt, 
     convert(decimal(18,2),convert(decimal(18,2),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_dichvu{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),b3.dongia) * convert(decimal(18,2),b3.tyle) / convert(decimal(18,2),100)) thanh_tien
-    ,'' t_trantt,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong,0 t_nguonkhac,(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bntt,
+    ,'' t_trantt,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong,0 t_nguonkhac,(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bntt,
 
 convert(decimal(18,2),b3.tienbh) t_bhtt,
 
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,
 0 t_ngoaids,
     isnull(b8.mahis,'000' + convert(nvarchar,b3.makk)) ma_khoa,<%= If(dbHis.GetTable("select top 1 1 from sys.columns where object_id=object_id('dmdichvu') and name = 'magiuong'").Rows.Count > 0, "IsNull(b4.magiuong,'')", "IsNull((select maxml from dmgiuong where magiuong = b3.magiuongxml),'')") %> ma_giuong,b5.chungchihn ma_bac_si,(case when b2.idkhambenh is not null then isnull((select top 1 mabenh from chandoankhambenh{1} where idkhambenh=b2.idkhambenh and benhchinh = 1),N'<%= _benhBN %>') else isnull((select top 1 mabenh from chandoandieutri{1} where iddieutri=b2.iddieutri and benhchinh = 1),N'<%= _benhBN %>') end) ma_benh,
     replace(convert(nvarchar,b2.ngay,111),'/','') + replace(left(convert(nvarchar,b2.ngay,108),5),':','') ngay_yl,isnull((select top 1 replace(convert(nvarchar,ngay,111),'/','')+ replace(left(convert(nvarchar,ngay,108),5),':','') from dalam{1} where madv =b4.madv and idthanhtoan=b2.idthanhtoan),'') ngay_kq,0 ma_pttt
@@ -629,10 +629,10 @@ convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia)/IsNull(b4.tylesoluongxml,1)
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia))) thanh_tien
     ,'' t_trantt,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong,0 t_nguonkhac,
 
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
  t_bntt,
 convert(decimal(18,2),b3.tienbh) t_bhtt,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,0 t_ngoaids,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,0 t_ngoaids,
     isnull(b6.mahis,'000' + convert(nvarchar,b3.makk)) ma_khoa,'' ma_giuong,b5.chungchihn ma_bac_si,(case when b2.idkhambenh is not null then isnull((select top 1 mabenh from chandoankhambenh{1} where idkhambenh=b2.idkhambenh and benhchinh = 1),N'<%= _benhBN %>') else isnull((select top 1 mabenh from chandoandieutri{1} where iddieutri=b2.iddieutri and benhchinh = 1),N'<%= _benhBN %>') end) ma_benh,
     replace(convert(nvarchar,b2.ngay,111),'/','') + replace(left(convert(nvarchar,b2.ngay,108),5),':','') ngay_yl,'' ngay_kq,0 ma_pttt
     From dangky{1} b1
@@ -1037,7 +1037,7 @@ select
 		end
 	),'')
 	ma_benhkhac,
-	isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'')ma_lydo_vvien,
+	isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'')ma_lydo_vvien,
 	isnull(b1.mangt,'') ma_noi_chuyen,isnull((select top 1 phanloaitainan from tainanthuongtich where makcb = @makcb),'')ma_tai_nan,
 	(
         case when b1.dangdt=1 then 
@@ -1049,8 +1049,8 @@ select
 	replace(convert(nvarchar,b3.ngay,111),'/','-') + ' ' + convert(nvarchar,b3.ngay,108) ngay_ra,
     convert(int,b3.songaydieutri) so_ngay_dtri,b3.makq ket_qua_dtri,b3.mahtr tinh_trang_rv,
 	replace(convert(nvarchar,b4.ngaytt,111),'/','') + replace(left(convert(nvarchar,b4.ngaytt,108),5),':','') ngay_ttoan,convert(decimal(18,2),0) t_thuoc,convert(decimal(18,2),0) t_vtyt,convert(decimal(18,2),b4.tongchiphi-b4.tongtientru-b4.tongbn100) t_tongchi,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b4.tienbntt - b4.tongbn100) else 0 end) t_bntt,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b4.tienbntt - b4.tongbn100) end) t_bncct,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b4.tienbntt - b4.tongbn100) else 0 end) t_bntt,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b4.tienbntt - b4.tongbn100) end) t_bncct,
 
 	convert(decimal(18,2),b4.tienbh) t_bhtt,0 t_nguonkhac,0 t_ngoaids,year(b4.ngaytt) nam_qt,month(b4.ngaytt) thang_qt,isnull(convert(nvarchar,ngay55,112),'') mien_cung_ct,
 	(case when b1.dtngoaitru = 1 then 2 else (case when b1.dangdt=1 then 3 else 1 end) end) ma_loai_kcb,
@@ -1087,7 +1087,7 @@ set @makcb ='{0}'
     convert(decimal(18,0),b3.tyle) tyle_tt, 
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia))) thanh_tien,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong
     ,0 t_nguonkhac, 
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc<%= BangBN %> where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc<%= BangBN %> where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
  t_bntt,
 convert(decimal(18,2),b3.tienbh) t_bhtt,
 0 t_ngoaids,
@@ -1100,7 +1100,7 @@ convert(decimal(18,2),b3.tienbh) t_bhtt,
                 (
                     case 
                     when 
-                        isnull(b1.duyetcapcuu,0)=1 
+                        isnull(b1.cappcuu,0)=1 
                     then 
                         2 
                     else 
@@ -1144,11 +1144,11 @@ convert(decimal(18,2),b3.tienbh) t_bhtt,
     convert(decimal(18,0),b3.tyle) tyle_tt, 
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_dichvu{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),b3.dongia)) thanh_tien,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong
     ,0 t_nguonkhac,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end) end)  t_bntt,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end) end)  t_bntt,
 
 convert(decimal(18,2),b3.tienbh) t_bhtt,0 t_ngoaids,
 
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') &lt;&gt; 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bncct,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') &lt;&gt; 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bncct,
     isnull(b8.mahis,'000' + convert(nvarchar,b3.makk)) ma_khoa,b8.tenkk tenkhoa,b5.chungchihn ma_bac_si,isnull((case when b2.idkhambenh is not null then isnull((select top 1 mabenh from chandoankhambenh{1} where idkhambenh=b2.idkhambenh and benhchinh = 1),N'<%= _benhBN %>') else isnull((select top 1 mabenh from chandoandieutri{1} where iddieutri=b2.iddieutri and benhchinh = 1),N'<%= _benhBN %>') end),'') ma_benh,
     replace(convert(nvarchar,b2.ngay,111),'/','-') + ' ' + convert(nvarchar,b2.ngay,108) ngay_yl,0 ma_pttt
     From dangky{1} b1
@@ -1187,9 +1187,9 @@ set @makcb ='{0}'
     convert(decimal(18,2),convert(decimal(18,2),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_dichvu{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),b3.dongia) * convert(decimal(18,2),b3.tyle) / convert(decimal(18,2),100)) thanh_tien
     ,'' t_trantt,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong,
     0 t_nguonkhac,
-    (case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bntt,
+    (case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) t_bntt,
     convert(decimal(18,2),b3.tienbh) t_bhtt,
-    (case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,
+    (case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,
     0 t_ngoaids,
     isnull(b8.mahis,'000' + convert(nvarchar,b3.makk)) ma_khoa,
     b8.tenkk tenkhoa,
@@ -1223,10 +1223,10 @@ set @makcb ='{0}'
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia))) thanh_tien
     ,'' t_trantt,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong,0 t_nguonkhac,
 
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then convert(decimal(18,2),b3.tienbn) else 0 end) + (case when isnull(b3.tyle,100) = 100 then 0 else convert(decimal(18,2),convert(decimal(18,2),(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,2),isnull(b3.giabhytcn,b3.dongia))) * convert(decimal(18,2),(100 - b3.tyle)) / convert(decimal(18,2),100)) end)
  t_bntt,
 convert(decimal(18,2),b3.tienbh) t_bhtt,
-(case when isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,0 t_ngoaids,
+(case when isnull((case when isnull(b1.cappcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'') = 3 then 0 else convert(decimal(18,2),b3.tienbn) end) t_bncct,0 t_ngoaids,
     isnull(b6.mahis,'000' + convert(nvarchar,b3.makk)) ma_khoa,b6.tenkk tenkhoa,'' ma_giuong,b5.chungchihn ma_bac_si,(case when b2.idkhambenh is not null then isnull((select top 1 mabenh from chandoankhambenh{1} where idkhambenh=b2.idkhambenh and benhchinh = 1),N'<%= _benhBN %>') else isnull((select top 1 mabenh from chandoandieutri{1} where iddieutri=b2.iddieutri and benhchinh = 1),N'<%= _benhBN %>') end) ma_benh,
     replace(convert(nvarchar,b2.ngay,111),'/','-') + ' ' + convert(nvarchar,b2.ngay,108) ngay_yl,'' ngay_kq,0 ma_pttt
     From dangky{1} b1
