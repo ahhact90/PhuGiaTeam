@@ -464,7 +464,7 @@ select
 		end
 	),'')
 	ma_benhkhac,
-	isnull((case when isnull(b1.duyetcapcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'')ma_lydo_vvien,
+	'isnull((case when isnull(b1.capcuu,0)=1 then 2 else (case when Exists(select top 1 1 from dmtuyendksd where matdk=b1.matdk and matltdk=1) then 1 else 3 end) end ),'')ma_lydo_vvien,
 	isnull(b1.mangt,'') ma_noi_chuyen,isnull((select top 1 phanloaitainan from tainanthuongtich where makcb = @makcb),'')ma_tai_nan,
 	(case when b1.dangdt=1 then isnull((select replace(convert(nvarchar,ngay,111),'/','') + replace(left(convert(nvarchar,ngay,108),5),':','') from dangkynhapvien{1} where makcb =@makcb),'') else replace(convert(nvarchar,b1.ngaydk,111),'/','') + replace(left(convert(nvarchar,b1.ngaydk,108),5),':','') end)  ngay_vao,
 	replace(convert(nvarchar,b3.ngay,111),'/','') + replace(left(convert(nvarchar,b3.ngay,108),5),':','') ngay_ra,convert(int,b3.songaydieutri) so_ngay_dtri,b3.makq ket_qua_dtri,b3.mahtr tinh_trang_rv,
