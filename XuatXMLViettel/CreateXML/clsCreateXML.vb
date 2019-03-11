@@ -1596,7 +1596,7 @@ and isnull(b1.mota,'')  &lt;&gt; ''
             item("TEN_KHOA_XML1") = itemHC!tenkhoa
             item("MA_KHOA") = itemThuoc!ma_khoa
             item("MA_KHOA_XML1") = itemHC!ma_khoa
-            item("TEN_BENH") = dbHis.GetTable("select tenbenh from dmbenh where mabenh like '" & itemThuoc!ma_benh.ToString & "'").Rows(0)(0).ToString
+            item("TEN_BENH") = dtHC.Rows(0)!ten_benh.ToString
             item("MA_BAC_SI") = itemThuoc!ma_bac_si
             item("MA_TINH") = "92"
             item("MA_TINH_THE") = itemHC!ma_the.ToString.Substring(3, 2)
@@ -1693,7 +1693,7 @@ and isnull(b1.mota,'')  &lt;&gt; ''
             item("TEN_KHOA_XML1") = itemHC!tenkhoa
             item("MA_KHOA") = itemThuoc!ma_khoa
             item("MA_KHOA_XML1") = itemHC!ma_khoa
-            item("TEN_BENH") = dbHis.GetTable("select tenbenh from dmbenh where mabenh like '" & itemThuoc!ma_benh.ToString & "'").Rows(0)(0).ToString
+            item("TEN_BENH") = dtHC.Rows(0)!ten_benh.ToString
             item("MA_BAC_SI") = itemThuoc!MA_BAC_SI
             item("MA_TINH") = "92"
             item("MA_TINH_THE") = itemHC!ma_the.ToString.Substring(3, 2)
