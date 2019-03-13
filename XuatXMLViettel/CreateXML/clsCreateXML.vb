@@ -437,7 +437,7 @@ select
 	    when 
 	        b1.dangdt=1 
 	    then
-	        Stuff((select ';' + b2.tenbenh from chandoanravien{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where iddieutri in (select iddieutri from dieutri{1} where makcb = @makcb) For Xml Path('')),1,1,'')
+	        Stuff((select ';' + b2.tenbenh from chandoanravien{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idravien in (select idravien from ravien{1} where makcb = @makcb) For Xml Path('')),1,1,'')
 	    else
 	    Stuff((select ';' + b2.tenbenh from chandoankhambenh{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idkhambenh in (select idkhambenh from khambenh{1} where makcb = @makcb) For Xml Path('')),1,1,'')
 	end
@@ -1010,7 +1010,7 @@ select
 	        when 
 	            b1.dangdt=1 
 	        then
-	            Stuff((select ';' + b2.tenbenh from chandoanravien{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where iddieutri in (select iddieutri from dieutri{1} where makcb = @makcb) For Xml Path('')),1,1,'')
+	            Stuff((select ';' + b2.tenbenh from chandoanravien{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idravien in (select idravien from ravien{1} where makcb = @makcb) For Xml Path('')),1,1,'')
 	        else
 	        Stuff((select ';' + b2.tenbenh from chandoankhambenh{1} b1 join dmbenh b2 on b1.mabenh = b2.mabenh where idkhambenh in (select idkhambenh from khambenh{1} where makcb = @makcb) For Xml Path('')),1,1,'')
 	    end
