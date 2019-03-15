@@ -503,7 +503,7 @@ set @makcb ='{0}'
     select (select maloaik from dmkhoan where makhoan = b3.makhoan) maloaik,@makcb ma_lk,1 stt,isnull(b4.{2},'') ma_thuoc,b4.manhombh ma_nhom,b4.tenhh ten_thuoc,
     b4.dvt don_vi_tinh,isnull(b4.hamluong,'') ham_luong,b6.maddtt duong_dung,case when isnull(b3.ghichu,'') = '' then '.' else b3.ghichu end lieu_dung,
     isnull(sodangky,'') so_dang_ky,isnull(b4.ttthau,'.') tt_thau,1 pham_vi,convert(decimal(18,3),IsNull(b4.tylesoluongxml,1)*(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0))) so_luong,convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia)/IsNull(b4.tylesoluongxml,1)) don_gia,
-    convert(decimal(18,0),b3.tyle) tyle_tt, 
+    Case when IsNull(b4.tylept,100) &lt; 100 and IsNull(b4.tylept,100)>0 Then Convert(decimal(18,0),IsNull(b4.tylept,100)) When IsNull(b4.tylett,100) &lt; 100 and IsNull(b4.tylett,100)>0 Then Convert(decimal(18,0),IsNull(b4.tylett,100)) Else convert(decimal(18,0),b3.tyle) End tyle_tt, 
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia))) thanh_tien,
     (case when b3.pthuong is not null then b3.pthuong when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong
     ,0 t_nguonkhac, 
@@ -625,7 +625,7 @@ convert(decimal(18,2),b3.tienbh) t_bhtt,
     select (select maloaik from dmkhoan where makhoan = b3.makhoan) maloaik,@makcb ma_lk,1 stt,IsNull((select {4} from dmdichvu where madv = (select madv from ttphieuttchitiet_dichvu{1} where idttchitiet = b2.idctpt)),'') ma_dich_vu,b4.{5} ma_vat_tu,b4.manhombh ma_nhom,'' goi_vtyt,b4.tenhh ten_vat_tu,IsNull((select tendv from tendvtheongay where madv = (select madv from ttphieuttchitiet_dichvu{1} where idttchitiet = b2.idctpt) and madt = b1.madt and ngayad = '{2}'),'') ten_dich_vu,
     b4.dvt don_vi_tinh,1 pham_vi,convert(decimal(18,2),IsNull(b4.tylesoluongxml,1)*(b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0))) so_luong,
 convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia)/IsNull(b4.tylesoluongxml,1)) don_gia,isnull(b4.ttthau,'.') tt_thau,
-    convert(decimal(18,0),b3.tyle) tyle_tt,
+    Case when IsNull(b4.tylept,100) &lt; 100 and IsNull(b4.tylept,100)>0 Then Convert(decimal(18,0),IsNull(b4.tylept,100)) When IsNull(b4.tylett,100) &lt; 100 and IsNull(b4.tylett,100)>0 Then Convert(decimal(18,0),IsNull(b4.tylett,100)) Else convert(decimal(18,0),b3.tyle) End tyle_tt, 
     convert(decimal(18,2),convert(decimal(18,3),b3.soluong-isnull((select Sum(soluong) from tttralaihhchitiet_thuoc{1} where idttchitiet = b3.idttchitiet),0)) * convert(decimal(18,3),isnull(b3.giabhytcn,b3.dongia))) thanh_tien
     ,'' t_trantt,(case when b3.pthuong is not null then b3.pthuong  when b3.makhoan in (select makhoan from dmkhoan where maloaik=1) then 100 else {6} end) muc_huong,0 t_nguonkhac,
 
