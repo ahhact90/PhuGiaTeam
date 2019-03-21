@@ -447,9 +447,11 @@ select
 			when 
 				b1.dangdt=1 
 			then
-				(select top 1 mabenh from chandoanravien{1} where idravien in (select idravien from ravien{1} where makcb = @makcb) and benhchinh = 1)
+				/*(select top 1 mabenh from chandoanravien{1} where idravien in (select idravien from ravien{1} where makcb = @makcb) and benhchinh = 1)*/
+                Stuff((select ';' + mabenh from chandoanravien{1} where idravien in (select idravien from ravien{1} where makcb = @makcb) and benhchinh = 1 For Xml Path('')),1,1,'')
 			else
-				(select top 1  mabenh from chandoankhambenh{1} where idkhambenh = (select top 1 idkhambenh from khambenh{1} where makcb = @makcb order by ngaykham desc) and benhchinh = 1)
+				/*(select top 1  mabenh from chandoankhambenh{1} where idkhambenh = (select top 1 idkhambenh from khambenh{1} where makcb = @makcb order by ngaykham desc) and benhchinh = 1)*/
+                Stuff((select ';'+ mabenh from chandoankhambenh{1} where idkhambenh in (select  idkhambenh from khambenh{1} where makcb = @makcb) and benhchinh = 1 For Xml Path('')),1,1,'')
 		end
 	)
 	ma_benh,
@@ -1020,9 +1022,11 @@ select
 			when 
 				b1.dangdt=1 
 			then
-				(select top 1 mabenh from chandoanravien{1} where idravien in (select idravien from ravien{1} where makcb = @makcb) and benhchinh = 1)
+				/*(select top 1 mabenh from chandoanravien{1} where idravien in (select idravien from ravien{1} where makcb = @makcb) and benhchinh = 1)*/
+                 Stuff((select ';' + mabenh from chandoanravien{1} where idravien in (select idravien from ravien{1} where makcb = @makcb) and benhchinh = 1 For Xml Path('')),1,1,'')
 			else
-				(select top 1  mabenh from chandoankhambenh{1} where idkhambenh = (select top 1 idkhambenh from khambenh{1} where makcb = @makcb order by ngaykham desc) and benhchinh = 1)
+				/*(select top 1  mabenh from chandoankhambenh{1} where idkhambenh = (select top 1 idkhambenh from khambenh{1} where makcb = @makcb order by ngaykham desc) and benhchinh = 1)*/
+                 Stuff((select ';'+ mabenh from chandoankhambenh{1} where idkhambenh in (select  idkhambenh from khambenh{1} where makcb = @makcb) and benhchinh = 1 For Xml Path('')),1,1,'')
 		end
 	)
 	ma_benh,
