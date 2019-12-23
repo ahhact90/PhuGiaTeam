@@ -22,3 +22,6 @@ E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\De
 E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.Form1.resources
 E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.Properties.Resources.resources
 E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.csproj.GenerateResource.Cache
+C:\Users\Administrator.BDZIUBOAWT51A4B\Desktop\CheckOut 2018\PhugiaTeam\trunk\Lien Thong\NMCNPM\QLHS\QLHS\bin\Debug\QLHS.exe.config
+C:\Users\Administrator.BDZIUBOAWT51A4B\Desktop\CheckOut 2018\PhugiaTeam\trunk\Lien Thong\NMCNPM\QLHS\QLHS\obj\Debug\QLHS.exe
+C:\Users\Administrator.BDZIUBOAWT51A4B\Desktop\CheckOut 2018\PhugiaTeam\trunk\Lien Thong\NMCNPM\QLHS\QLHS\obj\Debug\QLHS.pdb
