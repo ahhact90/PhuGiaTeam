@@ -1,0 +1,24 @@
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\bin\Debug\QLHS.exe.config
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\bin\Debug\QLHS.exe
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\bin\Debug\QLHS.pdb
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\obj\Debug\QLHS.csprojResolveAssemblyReference.cache
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\obj\Debug\QLHS.Form1.resources
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\obj\Debug\QLHS.Properties.Resources.resources
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\obj\Debug\QLHS.csproj.GenerateResource.Cache
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\obj\Debug\QLHS.exe
+D:\CT171\GiaoDienPM\QLHSVS\QLHS\QLHS\obj\Debug\QLHS.pdb
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\QLHS.exe.config
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.exe
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.pdb
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\QLHS.exe
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\QLHS.pdb
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\mscorlib.dll
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\normidna.nlp
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\normnfc.nlp
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\normnfd.nlp
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\normnfkc.nlp
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\bin\Debug\normnfkd.nlp
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.csprojResolveAssemblyReference.cache
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.Form1.resources
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.Properties.Resources.resources
+E:\19 Kinh Doan Online Video Business\QLHS-20191222T145313Z-001\QLHS\QLHS\obj\Debug\QLHS.csproj.GenerateResource.Cache
