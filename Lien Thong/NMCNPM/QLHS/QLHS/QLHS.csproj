@@ -59,6 +59,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NhapHocSinh.cs">
@@ -67,12 +70,22 @@
     <Compile Include="NhapHocSinh.Designer.cs">
       <DependentUpon>NhapHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Đăng Nhập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đăng Nhập.Designer.cs">
+      <DependentUpon>Đăng Nhập.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapHocSinh.resx">
       <DependentUpon>NhapHocSinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\QLHS.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\QLHS.NhapHocSinh.resources" />
+    <EmbeddedResource Include="obj\Debug\QLHS.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\QLHS.Đăng_Nhập.resources" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,7 +95,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Đăng Nhập.resx">
+      <DependentUpon>Đăng Nhập.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\normidna.nlp" />
+    <None Include="bin\Debug\normnfc.nlp" />
+    <None Include="bin\Debug\normnfd.nlp" />
+    <None Include="bin\Debug\normnfkc.nlp" />
+    <None Include="bin\Debug\normnfkd.nlp" />
+    <None Include="bin\Debug\QLHS.exe.config" />
+    <None Include="bin\Debug\QLHS.vshost.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\QLHS.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\QLHS.csprojResolveAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +123,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\mscorlib.dll" />
+    <Content Include="bin\Debug\QLHS.exe" />
+    <Content Include="bin\Debug\QLHS.pdb" />
+    <Content Include="bin\Debug\QLHS.vshost.exe" />
+    <None Include="logon.png" />
+    <Content Include="obj\Debug\QLHS.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\QLHS.exe" />
+    <Content Include="obj\Debug\qlhs.exe.licenses" />
+    <Content Include="obj\Debug\QLHS.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
