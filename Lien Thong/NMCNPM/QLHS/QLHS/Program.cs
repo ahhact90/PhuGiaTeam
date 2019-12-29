@@ -16,7 +16,10 @@ namespace QLHS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Đăng_Nhập());
+            Application.Run(new TimHocSinh());
+            //DevExpress.UserSkins.BonusSkins.Register();
+            //DevExpress.UserSkins.OfficeSkins.Register();    
+            //DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(ribbonGalleryBarItem1, true);
         }
     }
 }

@@ -12,7 +12,8 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using DevExpress.XtraLayout.Helpers;
 using DevExpress.XtraLayout;
-
+using DevExpress.Skins;
+using DevExpress.UserSkins;
 namespace QLHS
 {
     public partial class NhapHocSinh : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -20,6 +21,9 @@ namespace QLHS
         public NhapHocSinh()
         {
             InitializeComponent();
+            //DevExpress.UserSkins.BonusSkins.Register();
+            //DevExpress.UserSkins.OfficeSkins.Register();
+            DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1, true);
             dataLayoutControl1.DataSource = GetDataSource();
             dataLayoutControl1.RetrieveFields();
             List<BaseLayoutItem> flatList = new FlatItemsList().GetItemsList(dataLayoutControl1.Root);
