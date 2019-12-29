@@ -7,13 +7,13 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
+using DevExpress.XtraBars;
 
 namespace QLHS
 {
-    public partial class Đăng_Nhập : DevExpress.XtraEditors.XtraForm
+    public partial class Search : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Đăng_Nhập()
+        public Search()
         {
             InitializeComponent();
         }
