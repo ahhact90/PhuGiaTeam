@@ -16,7 +16,7 @@ namespace QLHS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Search());
+            Application.Run(new NhapHocSinh());
             //Application.Run(new Search());
             //DevExpress.UserSkins.BonusSkins.Register();
             //DevExpress.UserSkins.OfficeSkins.Register();    
