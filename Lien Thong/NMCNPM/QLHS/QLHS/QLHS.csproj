@@ -89,6 +89,18 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapDMLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapDMLop.Designer.cs">
+      <DependentUpon>NhapDMLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapGiaoVien.Designer.cs">
+      <DependentUpon>NhapGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapDMLop.resx">
+      <DependentUpon>NhapDMLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapGiaoVien.resx">
+      <DependentUpon>NhapGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapHocSinh.resx">
       <DependentUpon>NhapHocSinh.cs</DependentUpon>
